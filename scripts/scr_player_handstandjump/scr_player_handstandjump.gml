@@ -54,7 +54,7 @@ function scr_player_handstandjump()
 			}
 			if (key_jump && grounded)
 			{
-				movespeed = 10;
+				//movespeed = 10;
 				sprite_index = spr_mach2jump;
 				instance_create(x, y, obj_jumpdust);
 				state = states.mach2;
@@ -62,7 +62,7 @@ function scr_player_handstandjump()
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);
 			}
-			if ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles))
+			if (grounded && (scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles))
 			{
 				grav = 0.5;
 				movespeed = 0;
@@ -77,6 +77,11 @@ function scr_player_handstandjump()
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);
 				scr_sound(sound_bump);
+			}
+			if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))))
+			{
+				wallspeed = movespeed;
+				state = states.climbwall;
 			}
 			image_speed = 0.3;
 			if (!instance_exists(obj_slidecloud) && grounded && movespeed > 5)

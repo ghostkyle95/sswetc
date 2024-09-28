@@ -6,7 +6,7 @@ function scr_player_machroll()
 		hsp = (xscale * movespeed) - 5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (xscale * movespeed) + 5;
-	mach2 = 100;
+	//mach2 = 100;
 	machslideAnim = true;
 	move = key_right + key_left;
 	if (grounded)
@@ -66,8 +66,8 @@ function scr_player_machroll()
 	{
 		image_index = 0;
 		scr_sound(sound_rollgetup);
-		movespeed = min(movespeed, 12);
-		state = states.mach2
+		//movespeed = min(movespeed, 12);
+		state = states.mach1
 		sprite_index = spr_player_rollgetup;
 	}
 	if (grounded)
