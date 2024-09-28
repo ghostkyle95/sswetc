@@ -13,7 +13,6 @@ function scr_player_freefallprep()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	sprite_index = spr_player_bodyslamstart;
 	move = key_left + key_right;
 	if (!grounded)
 	{
@@ -49,10 +48,18 @@ function scr_player_freefallprep()
 			xscale = move;
 	}
 	image_speed = 0.5;
-	if (floor(image_index) == (image_number - 1))
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_bodyslamstart)
 	{
 		vsp += 14;
 		state = states.freefall;
 		freefallsmash = false;
+		sprite_index = spr_player_bodyslamfall;
+	}
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_bodyslamstartOLD)
+	{
+		vsp += 14;
+		state = states.freefall;
+		freefallsmash = false;
+		sprite_index = spr_player_bodyslamfallOLD;
 	}
 }

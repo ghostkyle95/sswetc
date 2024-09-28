@@ -38,6 +38,13 @@ function scr_player_jump()
 		vsp /= 5;
 		jumpstop = true;
 	}
+	if (key_jump2 && key_up && !grounded)
+	{
+		image_index = 0;
+		state = states.freefallprep;
+		sprite_index = spr_player_bodyslamstartOLD;
+		vsp = -8;
+	}
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)

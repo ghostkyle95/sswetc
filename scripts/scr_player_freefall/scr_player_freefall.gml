@@ -36,8 +36,6 @@ function scr_player_freefall()
 		if (move != 0)
 			xscale = move;
 	}
-	if (!global.cane)
-		sprite_index = spr_player_bodyslamfall;
 	if (global.cane)
 		sprite_index = spr_caneslam;
 	if ((grounded && !input_buffer_jump < 8) && !place_meeting(x, y + 1, obj_destructibles))
@@ -77,7 +75,10 @@ function scr_player_freefall()
 			bounce = false;
 			instance_create(x, y, obj_landcloud);
 			freefallstart = 0;
-			sprite_index = spr_player_bodyslamland;
+			if sprite_index == spr_player_bodyslamfall
+				sprite_index = spr_player_bodyslamland;
+			else if sprite_index == spr_player_bodyslamfallOLD
+				sprite_index = spr_player_bodyslamlandOLD;
 		}
 	}
 	if (place_meeting(x, y + 1, obj_destructibles))
