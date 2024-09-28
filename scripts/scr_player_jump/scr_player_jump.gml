@@ -38,7 +38,7 @@ function scr_player_jump()
 		vsp /= 5;
 		jumpstop = true;
 	}
-	if (key_jump && key_up && !grounded)
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2)
 	{
 		image_index = 0;
 		state = states.freefallprep;
