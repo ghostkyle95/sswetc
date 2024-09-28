@@ -66,24 +66,6 @@ function scr_player_crouch()
 		xscale = move;
 		crouchAnim = false;
 	}
-	if (key_taunt2 && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
-	{
-		taunttimer = 20;
-		tauntstoredmovespeed = movespeed;
-		tauntstoredsprite = sprite_index;
-		tauntstoredstate = state;
-		state = states.backbreaker;
-		if (supertauntcharged)
-		{
-			image_index = 0;
-			sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
-		}
-		else
-		{
-			image_index = irandom_range(0, sprite_get_number(spr_player_taunt));
-			sprite_index = spr_player_taunt;
-		}
-		instance_create(x, y, obj_taunteffect);
-	}
+	//scr_cantaunt()
 	image_speed = 0.3;
 }

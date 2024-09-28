@@ -93,25 +93,7 @@ function scr_player_mach1()
 			}
 			if (!instance_exists(obj_dashcloud) && grounded)
 				instance_create(x, y, obj_dashcloud);
-			if (key_taunt2)
-			{
-				taunttimer = 20;
-				tauntstoredmovespeed = movespeed;
-				tauntstoredsprite = sprite_index;
-				tauntstoredstate = state;
-				state = states.backbreaker;
-				if (supertauntcharged)
-				{
-					image_index = 0;
-					sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
-				}
-				else
-				{
-					image_index = irandom_range(0, sprite_get_number(spr_player_taunt));
-					sprite_index = spr_player_taunt;
-				}
-				instance_create(x, y, obj_taunteffect);
-			}
+			scr_cantaunt()
 			if (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
 				scr_sound(sound_suplex1);
@@ -122,6 +104,11 @@ function scr_player_mach1()
 				image_index = 0;
 				sprite_index = spr_suplexdash;
 				state = states.handstandjump;
+			}
+			if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))) && character == "P")
+			{
+				wallspeed = movespeed;
+				state = states.climbwall;
 			}
 			break;
 	}

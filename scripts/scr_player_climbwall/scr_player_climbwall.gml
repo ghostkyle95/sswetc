@@ -4,8 +4,8 @@ function scr_player_climbwall()
 		windingAnim++;
 	suplexmove = false;
 	vsp = -wallspeed;
-	if (wallspeed > 0)
-		wallspeed -= 0.25;
+	if wallspeed < 24 
+		wallspeed += 0.025
 	crouchslideAnim = true;
 	sprite_index = spr_climbwall;
 	if (wallspeed <= 0 || !key_attack)

@@ -8,7 +8,7 @@ function scr_player_backbreaker()
 	else
 		hsp = xscale * movespeed;
 	landAnim = false;
-	if (sprite_index == spr_pizzelle_taunt || sprite_index == spr_gumbob_taunt || sprite_index == spr_player_supertaunt || sprite_index == spr_pizzano_taunt)
+	if (sprite_index == spr_taunt)
 	{
 		taunttimer--;
 		vsp = 0;
@@ -18,7 +18,7 @@ function scr_player_backbreaker()
 		state = states.machslide;
 		sprite_index = spr_player_crouchslide;
 	}
-	if (sprite_index == spr_pizzelle_taunt || sprite_index == spr_gumbob_taunt || sprite_index == spr_player_supertaunt || sprite_index == spr_pizzano_taunt)
+	if (sprite_index == spr_taunt)
 	{
 		if (!instance_exists(parryid))
 		{
@@ -58,7 +58,7 @@ function scr_player_backbreaker()
 			state = tauntstoredstate;
 		}
 	}
-	if (taunttimer == 0 && (sprite_index == spr_pizzelle_taunt || sprite_index == spr_gumbob_taunt || sprite_index == spr_player_supertaunt || sprite_index == spr_pizzano_taunt))
+	if (taunttimer == 0 && (sprite_index == spr_taunt))
 	{
 		movespeed = tauntstoredmovespeed;
 		sprite_index = tauntstoredsprite;
@@ -84,10 +84,10 @@ function scr_player_backbreaker()
 		obj_tv.message = "GET BACK TO THE START!!";
 		obj_tv.alarm[0] = 150;
 	}
-	if (sprite_index != spr_player_taunt)
+	if (sprite_index != spr_taunt)
 		image_speed = 0.35;
 	else if (sprite_index == spr_player_supertaunt1 || sprite_index == spr_player_supertaunt2 || sprite_index == spr_player_supertaunt3)
 		image_speed = 0.5;
-	else if (sprite_index == spr_player_taunt)
+	else if (sprite_index == spr_taunt)
 		image_speed = 0;
 }

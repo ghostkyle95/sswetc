@@ -45,7 +45,7 @@ function scr_player_mach3()
 				sprite_index = spr_player_mach4;
 			if (floor(image_index) == (image_number - 1) && (sprite_index == spr_player_rollgetup || sprite_index == spr_player_dashpad))
 				sprite_index = spr_player_mach4;
-			if ((movespeed > 20 && sprite_index != spr_player_crazyrun) && sprite_index != spr_player_dive && sprite_index != spr_player_rollgetup)
+			if ((movespeed > 20 && sprite_index != spr_player_crazyrun) && sprite_index != spr_dive && sprite_index != spr_player_rollgetup)
 			{
 				flash = true;
 				sprite_index = spr_player_crazyrun;
@@ -56,7 +56,7 @@ function scr_player_mach3()
 				input_buffer_jump = 10000000000;
 			else if (key_jump)
 				input_buffer_jump = 0;
-			if (key_up && sprite_index != spr_player_dashpad && sprite_index != spr_player_dive)
+			if (key_up && sprite_index != spr_player_dashpad && sprite_index != spr_dive)
 			{
 				scr_sound(sound_superjumpcharge1);
 				sprite_index = spr_player_superjumpprep;
@@ -92,9 +92,9 @@ function scr_player_mach3()
 				flash = false;
 				state = states.machroll;
 			}
-			if (sprite_index == spr_player_dive && grounded)
+			if (sprite_index == spr_dive && grounded)
 				sprite_index = spr_player_mach4;
-			if (!key_down && sprite_index == spr_player_dive && !grounded)
+			if (!key_down && sprite_index == spr_dive && !grounded)
 			{
 				vsp = 15;
 				sprite_index = spr_player_mach4;
@@ -149,7 +149,7 @@ function scr_player_mach3()
 					state = states.climbwall;
 				}
 			}
-			if (!instance_exists(obj_chargeeffect) && sprite_index != spr_player_dive)
+			if (!instance_exists(obj_chargeeffect) && sprite_index != spr_dive)
 				instance_create(x, y, obj_chargeeffect);
 			if (!instance_exists(obj_superdashcloud) && grounded)
 				instance_create(x, y, obj_superdashcloud);
@@ -161,25 +161,7 @@ function scr_player_mach3()
 				image_speed = 0.35;
 			if (sprite_index == spr_player_dashpad)
 				image_speed = 0.3;
-			if (key_taunt2)
-			{
-				taunttimer = 20;
-				tauntstoredmovespeed = movespeed;
-				tauntstoredsprite = sprite_index;
-				tauntstoredstate = state;
-				state = states.backbreaker;
-				if (supertauntcharged)
-				{
-					image_index = 0;
-					sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
-				}
-				else
-				{
-					image_index = irandom_range(0, sprite_get_number(spr_player_taunt));
-					sprite_index = spr_player_taunt;
-				}
-				instance_create(x, y, obj_taunteffect);
-			}
+		scr_cantaunt()
 			if (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
 				scr_sound(sound_suplex1);

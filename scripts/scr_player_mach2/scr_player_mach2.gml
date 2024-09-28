@@ -77,7 +77,7 @@ function scr_player_mach2()
 				machpunchAnim = false;
 			if (mach2 < 100)
 				mach2 += 1.5;
-			if (mach2 >= 100 && grounded && character == "P")
+			if (mach2 >= 100 && grounded)
 			{
 				machhitAnim = false;
 				state = states.mach3;
@@ -87,14 +87,14 @@ function scr_player_mach2()
 				if (movespeed < 12)
 					movespeed = 12;
 			}
-			if (movespeed >= 10 && grounded && character == "N")
+			/*if (movespeed >= 10 && grounded && character == "N")
 			{
 				if (!charged)
 				{
 					charged = true;
 					flash = true;
 				}
-			}
+			}*/
 			if (sprite_index != spr_null)
 			{
 				if (key_jump)
@@ -153,25 +153,7 @@ function scr_player_mach2()
 				sprite_index = spr_secondjump2;
 			if (grounded && (floor(image_index) == (image_number - 1) && sprite_index == spr_player_rollgetup))
 				sprite_index = spr_mach;
-			if (key_taunt2)
-			{
-				taunttimer = 20;
-				tauntstoredmovespeed = movespeed;
-				tauntstoredsprite = sprite_index;
-				tauntstoredstate = state;
-				state = states.backbreaker;
-				if (supertauntcharged)
-				{
-					image_index = 0;
-					sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
-				}
-				else
-				{
-					image_index = irandom_range(0, sprite_get_number(spr_player_taunt));
-					sprite_index = spr_player_taunt;
-				}
-				instance_create(x, y, obj_taunteffect);
-			}
+			scr_cantaunt()
 			if (sprite_index == spr_player_rollgetup)
 				image_speed = 0.4;
 			else

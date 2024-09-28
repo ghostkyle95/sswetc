@@ -297,25 +297,7 @@ function scr_player_normal()
 		state = states.pizzanoshoulderbash;
 		movespeed = 10;
 	}
-	if (key_taunt2)
-	{
-		taunttimer = 20;
-		tauntstoredmovespeed = movespeed;
-		tauntstoredsprite = sprite_index;
-		tauntstoredstate = state;
-		state = states.backbreaker;
-		if (supertauntcharged)
-		{
-			image_index = 0;
-			sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
-		}
-		else
-		{
-			image_index = irandom_range(0, sprite_get_number(spr_player_taunt));
-			sprite_index = spr_player_taunt;
-		}
-		instance_create(x, y, obj_taunteffect);
-	}
+			scr_cantaunt()
 	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
 		instance_create(x, y + 43, obj_cloudeffect);
 	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (sprite_index == spr_player_downslopes || sprite_index == spr_player_upslopes))

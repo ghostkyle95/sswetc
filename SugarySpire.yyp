@@ -1249,6 +1249,7 @@
     {"id":{"name":"bg_entryway2_buildings","path":"sprites/bg_entryway2_buildings/bg_entryway2_buildings.yy",},},
     {"id":{"name":"spr_player_crawl","path":"sprites/spr_player_crawl/spr_player_crawl.yy",},},
     {"id":{"name":"spr_player_grabbed","path":"sprites/spr_player_grabbed/spr_player_grabbed.yy",},},
+    {"id":{"name":"scr_cantaunt","path":"scripts/scr_cantaunt/scr_cantaunt.yy",},},
     {"id":{"name":"spr_babybear_dead","path":"sprites/spr_babybear_dead/spr_babybear_dead.yy",},},
     {"id":{"name":"spr_player_freefallland","path":"sprites/spr_player_freefallland/spr_player_freefallland.yy",},},
     {"id":{"name":"spr_pizzano_sjumpprep","path":"sprites/spr_pizzano_sjumpprep/spr_pizzano_sjumpprep.yy",},},

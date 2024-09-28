@@ -1,30 +1,34 @@
 function scr_player_crouchslide()
 {
+	movespeed = 12
 	if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
 		hsp = xscale * movespeed;
 	else if (place_meeting(x, y + 1, obj_railh))
 		hsp = (xscale * movespeed) - 5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (xscale * movespeed) + 5;
-	if (movespeed >= 0 && !scr_slope() && grounded)
-		movespeed -= 0.2;
+	/*if (movespeed >= 0 && !scr_slope() && grounded)
+		movespeed -= 0.2;*/
 	mask_index = spr_crouchmask;
-	if (key_attack2 && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
+	if (!key_down && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
 	{
 		switch (character)
 		{
 			default:
 				sprite_index = spr_player_rollgetup;
 				image_index = 0;
-				mach2 = 35;
-				state = states.mach2;
-				if (movespeed < 10)
-					movespeed = 10;
+				//mach2 = 35;
+				state = states.mach3;
+				/*if (movespeed < 10)
+					movespeed = 10;*/
 				break;
 			case "N":
-				sprite_index = spr_pizzano_mach2;
+				sprite_index = spr_player_rollgetup;
 				image_index = 0;
-				state = states.machpizzano;
+				//mach2 = 35;
+				state = states.mach3;
+				/*if (movespeed < 10)
+					movespeed = 10;*/
 				break;
 		}
 	}
@@ -52,7 +56,7 @@ function scr_player_crouchslide()
 		instance_create(x + (xscale * 10), y + (xscale * 10), obj_bumpeffect);
 	}
 	var _xscale = xscale;
-	if (place_meeting(x, y + 1, obj_slope))
+	/*if (place_meeting(x, y + 1, obj_slope))
 	{
 		with (instance_place(x, y + 1, obj_slope))
 		{
@@ -73,7 +77,7 @@ function scr_player_crouchslide()
 					other.movespeed += (0.25 * slope_acceleration);
 			}
 		}
-	}
+	}*/
 	if (!instance_exists(obj_slidecloud) && grounded && movespeed > 5)
 		instance_create(x, y, obj_slidecloud);
 	image_speed = 0.35;

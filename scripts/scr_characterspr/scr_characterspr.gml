@@ -85,12 +85,12 @@ function scr_characterspr()
 		spr_tumblestart = spr_player_tumblestart;
 		spr_tumble = spr_player_tumble;
 		spr_tumbleend = spr_player_tumbleend;
-		spr_player_taunt = spr_pizzelle_taunt;
 		spr_machroll = spr_player_machroll;
 		spr_dive = spr_player_dive;
 		spr_cottonidle = spr_cotton_idle;
 		spr_escapeidle = spr_player_escapeidle;
 		spr_timesupidle = spr_player_timesupidle;
+		spr_taunt = spr_pizzelle_taunt;
 	}
 	if (character == "N")
 	{
