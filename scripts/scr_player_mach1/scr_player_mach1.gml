@@ -72,11 +72,16 @@ function scr_player_mach1()
 				image_index = 0;
 				mach2 = 0;
 			}
-			if (key_down)
+			if (key_down && !place_meeting(x, y, obj_dashpad) && !grounded && sprite_index != spr_dive)
 			{
-				sprite_index = spr_crouchslip;
-				state = states.crouchslide;
-				mach2 = 0;
+				flash = false;
+				state = states.machroll;
+				vsp = 15;
+			}
+			if (key_down && !place_meeting(x, y, obj_dashpad) && grounded)
+			{
+				flash = false;
+				state = states.machroll;
 			}
 			image_speed = 0.45;
 			if (key_jump && grounded && key_attack)
@@ -110,6 +115,8 @@ function scr_player_mach1()
 				wallspeed = movespeed;
 				state = states.climbwall;
 			}
+			if (grounded && (floor(image_index) == (image_number - 1) && sprite_index == spr_player_rollgetup))
+				sprite_index = spr_mach1;
 			break;
 	}
 }

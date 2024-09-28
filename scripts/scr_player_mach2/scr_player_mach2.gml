@@ -125,12 +125,16 @@ function scr_player_mach2()
 				image_index = 0;
 				mach2 = 35;
 			}
-			if (key_down2 && grounded)
+			if (key_down && !place_meeting(x, y, obj_dashpad) && !grounded && sprite_index != spr_dive)
 			{
-				sprite_index = spr_crouchslip;
-				if (character == "P")
-					machhitAnim = false;
-				state = states.crouchslide;
+				flash = false;
+				state = states.machroll;
+				vsp = 15;
+			}
+			if (key_down && !place_meeting(x, y, obj_dashpad) && grounded)
+			{
+				flash = false;
+				state = states.machroll;
 			}
 			if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))) && character == "P")
 			{
@@ -158,7 +162,7 @@ function scr_player_mach2()
 				image_speed = 0.4;
 			else
 				image_speed = 0.65;
-			if (character == "N" && key_down2)
+			/*if (character == "N" && key_down2)
 			{
 				sprite_index = spr_pizzano_crouchslide;
 				state = states.machroll;
@@ -170,7 +174,7 @@ function scr_player_mach2()
 				image_index = 0;
 				state = states.Sjump;
 				sprite_index = spr_pizzano_sjumpprep;
-			}
+			}*/
 			if (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
 				scr_sound(sound_suplex1);

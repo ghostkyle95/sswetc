@@ -81,7 +81,7 @@ function scr_player_mach3()
 				image_index = 0;
 				mach2 = 100;
 			}
-			if (key_down && !place_meeting(x, y, obj_dashpad) && !grounded && sprite_index != spr_player_dive)
+			if (key_down && !place_meeting(x, y, obj_dashpad) && !grounded && sprite_index != spr_dive)
 			{
 				flash = false;
 				state = states.machroll;
