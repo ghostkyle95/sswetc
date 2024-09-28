@@ -38,12 +38,12 @@ function scr_player_jump()
 		vsp /= 5;
 		jumpstop = true;
 	}
-	if (key_jump2 && key_up && !grounded)
+	if (key_jump && key_up && !grounded)
 	{
 		image_index = 0;
 		state = states.freefallprep;
 		sprite_index = spr_player_bodyslamstartOLD;
-		vsp = -8;
+		vsp = -12;
 	}
 	if (ladderbuffer > 0)
 		ladderbuffer--;
@@ -76,33 +76,6 @@ function scr_player_jump()
 		sprite_index = spr_mach1;
 		jumpAnim = true;
 		state = states.mach1;
-		image_index = 0;
-	}
-	if (key_attack && character == "N" && charged)
-	{
-		sprite_index = spr_pizzano_sjumpprepside;
-		image_index = 0;
-		movespeed = 0;
-		mach2 = 0;
-		charged = false;
-		state = states.rocketfistpizzano;
-	}
-	if (key_up && character == "N" && charged)
-	{
-		alarm[0] = 240;
-		sprite_index = spr_pizzano_sjumpprep;
-		image_index = 0;
-		movespeed = 0;
-		mach2 = 0;
-		state = states.Sjump;
-	}
-	if (key_attack && grounded && fallinganimation < 40 && character == "DEEZNUTS")
-	{
-		mach2 = 0;
-		movespeed = 0;
-		sprite_index = spr_null;
-		jumpAnim = true;
-		state = states.machpizzano;
 		image_index = 0;
 	}
 	if (grounded && vsp > 0 && !key_attack)

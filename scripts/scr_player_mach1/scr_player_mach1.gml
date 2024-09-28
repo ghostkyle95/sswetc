@@ -49,7 +49,7 @@ function scr_player_mach1()
 			{
 				if (mach2 < 35)
 					mach2++;
-				if (mach2 >= 35)
+				if (mach2 >= 35) && (sprite_index != spr_player_rollgetup)
 				{
 					charged = 0;
 					movespeed = 10;

@@ -66,6 +66,7 @@ function scr_player_machroll()
 	{
 		image_index = 0;
 		scr_sound(sound_rollgetup);
+		movespeed = min(movespeed, 12);
 		state = states.mach2
 		sprite_index = spr_player_rollgetup;
 	}

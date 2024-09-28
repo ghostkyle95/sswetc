@@ -77,7 +77,7 @@ function scr_player_mach2()
 				machpunchAnim = false;
 			if (mach2 < 100)
 				mach2 += 1.5;
-			if (mach2 >= 100 && grounded)
+			if (mach2 >= 100 && grounded && sprite_index != spr_player_rollgetup)
 			{
 				machhitAnim = false;
 				state = states.mach3;
