@@ -238,6 +238,7 @@
     {"name":"TV Thingamajigs","order":42,"path":"folders/Sprites/Unused/TV Thingamajigs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
+    {"name":"Noise","order":112,"path":"folders/Scripts/State Scripts/Noise.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_talisman","order":33,"path":"objects/obj_talisman/obj_talisman.yy",},
@@ -490,6 +491,7 @@
     {"name":"obj_platform","order":2,"path":"objects/obj_platform/obj_platform.yy",},
     {"name":"obj_train","order":1,"path":"objects/obj_train/obj_train.yy",},
     {"name":"obj_collect","order":1,"path":"objects/obj_collect/obj_collect.yy",},
+    {"name":"obj_Options_Modded","order":4,"path":"objects/obj_Options_Modded/obj_Options_Modded.yy",},
     {"name":"obj_checkpoint","order":5,"path":"objects/obj_checkpoint/obj_checkpoint.yy",},
     {"name":"spr_playerN_knightdoublejumpfall","order":164,"path":"sprites/spr_playerN_knightdoublejumpfall/spr_playerN_knightdoublejumpfall.yy",},
     {"name":"obj_keydoor","order":2,"path":"objects/obj_keydoor/obj_keydoor.yy",},
@@ -550,6 +552,7 @@
     {"name":"tile_hub","order":6,"path":"tilesets/tile_hub/tile_hub.yy",},
     {"name":"obj_geyserspawner","order":3,"path":"objects/obj_geyserspawner/obj_geyserspawner.yy",},
     {"name":"obj_sluggy","order":14,"path":"objects/obj_sluggy/obj_sluggy.yy",},
+    {"name":"spr_paln","order":5,"path":"sprites/spr_paln/spr_paln.yy",},
     {"name":"obj_coneprojectile","order":1,"path":"objects/obj_coneprojectile/obj_coneprojectile.yy",},
     {"name":"ts_molasses2","order":17,"path":"tilesets/ts_molasses2/ts_molasses2.yy",},
     {"name":"spr_playerN_minigunduck","order":210,"path":"sprites/spr_playerN_minigunduck/spr_playerN_minigunduck.yy",},

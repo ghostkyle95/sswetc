@@ -20,7 +20,7 @@ function scr_player_finishingblow()
 			hp = 0;
 			alarm[1] = 5;
 			thrown = true;
-			if (other.sprite_index != spr_uppercutfinishingblow)
+			if (other.sprite_index != other.spr_uppercutfinishingblow)
 			{
 				hsp = obj_player.xscale * 20;
 				vsp = -6;

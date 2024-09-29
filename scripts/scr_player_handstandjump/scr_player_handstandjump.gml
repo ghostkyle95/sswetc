@@ -3,6 +3,7 @@ function scr_player_handstandjump()
 	switch (character)
 	{
 		case "P":
+		case "PTN":
 		case "N":
 			move = key_left + key_right;
 			landAnim = false;

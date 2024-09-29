@@ -3,6 +3,7 @@ function scr_player_mach3()
 	switch (character)
 	{
 		case "P":
+		case "PTN":
 		case "N":
 			if (grounded)
 				Sjumpcan_doublejump = true;
@@ -162,7 +163,7 @@ function scr_player_mach3()
 			if (sprite_index == spr_plrdashpad)
 				image_speed = 0.3;
 		scr_cantaunt()
-			if ((character == "P") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
+			if ((character == "P" || character == "PTN") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
 				scr_sound(sound_suplex1);
 				instance_create(x, y, obj_slaphitbox);

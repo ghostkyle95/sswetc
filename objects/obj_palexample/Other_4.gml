@@ -1,6 +1,15 @@
 if (obj_player.character == "P")
-	sprite_index = spr_pizzelleselectpal;
+{
+	idleanim = spr_pizzelleselectpal;
+	selectanim = spr_pizzelleselectedpal;
+}
 else if (obj_player.character == "N")
-	sprite_index = spr_pizzanoselectpal;
+{
+	idleanim = spr_pizzanoselectpal;
+	selectanim = spr_pizzelleselectedpal;
+}
 else
-	sprite_index = spr_gumbob_idle;
+{
+	idleanim = spr_pizzelleselectpal;
+	selectanim = spr_pizzelleselectedpal;
+}

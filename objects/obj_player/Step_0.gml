@@ -1,6 +1,10 @@
 scr_getinput();
 scr_characterspr();
 scr_playerstate();
+if (character == "PTN" && grounded && vsp > 0)
+{
+	noisewalljump = 0
+}
 if (state != states.comingoutdoor)
 	image_blend = make_color_hsv(0, 0, 255);
 if (firetrailbuffer > 0)

@@ -49,26 +49,3 @@ if (global.panic || global.starrmode)
 		draw_text(random_range(1, -1) + 480, random_range(1, -1) + 65, string_hash_to_newline(string(global.minutes) + ":" + string(global.seconds)));
 	}
 }
-if (global.debugmode)
-{
-	draw_set_font(global.font);
-	draw_set_halign(fa_center);
-	draw_set_color(c_white);
-	draw_text(260, 450, angle);
-	draw_text(325, 450, angledir);
-	draw_text(100, 400, obj_player.x);
-	draw_text(100, 450, obj_player.y);
-	var roomname = string_upper(room_get_name(room));
-	draw_text(150, 0, roomname);
-}
-if (global.debugmode)
-{
-	draw_set_font(font_dev);
-	draw_set_halign(fa_left);
-	draw_set_color(c_white);
-	draw_text(0, 50, obj_player.state);
-	roomname = string_upper(room_get_name(room));
-	draw_text(0, 100, roomname);
-	var spritename = string_upper(sprite_get_name(obj_player.sprite_index));
-	draw_text(0, 150, spritename);
-}

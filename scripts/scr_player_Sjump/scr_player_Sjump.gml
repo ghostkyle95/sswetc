@@ -44,7 +44,7 @@ function scr_player_Sjump()
 		movespeed = 0;
 	}
 	image_speed = 0.5;
-	if (key_attack2 && !grounded && vsp < -10 && character == "P")
+	if (key_attack2 && !grounded && vsp < -10 && (character == "P" || character == "PTN"))
 	{
 		if (move != 0)
 			xscale = move;
@@ -68,7 +68,8 @@ function scr_player_Sjump()
 		vsp = 0;
 		mach2 = 0;
 		state = states.rocketfistpizzano;
-		xscale = move;
+		if move != 0
+			xscale = move;
 	}
 	scr_collide_player();
 }

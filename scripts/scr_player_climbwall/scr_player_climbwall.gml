@@ -1,5 +1,18 @@
 function scr_player_climbwall()
 {
+    if (character == "PTN")
+	{
+		sprite_index = spr_playerN_wallbounce
+		state = states.machcancel
+		savedmove = xscale
+		vsp = (-((17 * (1 - noisewalljump * 0.15))))
+		noisewalljump++
+		hsp = 0
+		movespeed = 0
+		image_index = 0
+		return;
+    }
+	
 	if (windingAnim < 200)
 		windingAnim++;
 	suplexmove = false;

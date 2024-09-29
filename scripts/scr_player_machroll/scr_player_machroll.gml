@@ -74,14 +74,45 @@ function scr_player_machroll()
 		sprite_index = spr_machroll;
 	else if (sprite_index != spr_dive)
 	{
-		sprite_index = spr_dive;
-		vsp = 10;
+		if character != "PTN"
+		{
+			sprite_index = spr_dive;
+			vsp = 10;
+		}
+		else
+		{	
+            sprite_index = spr_playerN_divebomb
+            state = states.machcancel
+            savedmove = xscale
+            vsp = 20
+            movespeed = hsp
+            input_buffer_slap = 0
+            input_buffer_jump = 0
+            image_index = 0
+            return;
+		}
 	}
 	if (key_jump2 && !grounded)
 	{
-		image_index = 0;
-		state = states.freefallprep;
-		sprite_index = spr_bodyslamstart;
-		vsp = -5;
+		if character != "PTN"
+		{
+			image_index = 0;
+			state = states.freefallprep;
+			sprite_index = spr_bodyslamstart;
+			vsp = -5;
+		}
+		else
+		{
+            sprite_index = spr_playerN_divebomb
+            state = states.machcancel
+            vsp = 20
+            hsp = 0
+            savedmove = xscale
+            movespeed = 0
+            input_buffer_slap = 0
+            input_buffer_jump = 0
+            image_index = 0
+            return;
+		}
 	}
 }

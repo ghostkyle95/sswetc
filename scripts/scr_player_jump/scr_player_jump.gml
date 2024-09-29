@@ -167,7 +167,7 @@ function scr_player_jump()
 		scr_sound(sound_rollgetup);
 		scr_sound(sound_suplex1);
 	}
-	if ((character == "P") && (!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane))
+	if ((character == "P" || character == "PTN") && (!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane))
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);

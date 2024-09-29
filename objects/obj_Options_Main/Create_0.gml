@@ -4,6 +4,7 @@ enum option_selected
 	audio,
 	video,
 	input,
+	modded,
 	misc
 }
 image_speed = 0.35;

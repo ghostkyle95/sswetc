@@ -37,7 +37,7 @@ if (!global.panic)
 			pausedmusic = mu_hub;
 		}
 	}
-	if (string_letters(roomname) == "entryway" && obj_player.character == "P")
+	if (string_letters(roomname) == "entryway" && (obj_player.character == "P" || obj_player.character == "PTN"))
 	{
 		if (!audio_is_playing(mu_waffle))
 		{

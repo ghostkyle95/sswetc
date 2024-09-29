@@ -77,8 +77,10 @@ if (global.hurtcounter >= global.hurtmilestone)
 	alarm[0] = 150;
 	if (obj_player.character == "P")
 		character = "PIZZELLE";
-	else
+	else if (obj_player.character == "N")
 		character = "THE PIZZANO";
+	else if (obj_player.character == "PTN")
+		character = "THE NOISE";
 	message = "YOU HAVE HURT " + string(character) + " " + string(global.hurtmilestone) + " TIMES...";
 	global.hurtmilestone += 3;
 }

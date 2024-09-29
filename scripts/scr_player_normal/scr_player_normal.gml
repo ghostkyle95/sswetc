@@ -54,14 +54,14 @@ function scr_player_normal()
 								else
 									sprite_index = spr_idle;
 						}
-						else if (character == "P")
+						else if !(windingAnim < 1800)
 						{
 							idle = 0;
 							windingAnim--;
 							sprite_index = spr_winding;
 						}
 					}
-					else if (facehurt && character == "P")
+					else if (facehurt)
 					{
 						windingAnim = false;
 						if (sprite_index != spr_facehurtup && sprite_index != spr_facehurt)
@@ -160,7 +160,7 @@ function scr_player_normal()
 		state = states.jump;
 		image_index = 0;
 	}
-	if (character == "P" || character == "N")
+	if (character == "P" || character == "N" || character == "PTN")
 	{
 		if (key_attack && grounded && !place_meeting(x + xscale, y, obj_solid))
 		{
@@ -241,7 +241,7 @@ function scr_player_normal()
 	}
 	else
 		image_speed = 0.35;
-	if ((character == "P") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != "G" && !key_attack)
+	if ((character == "P" || character == "PTN") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != "G" && !key_attack)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);

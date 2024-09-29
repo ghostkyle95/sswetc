@@ -60,7 +60,7 @@ function scr_player_mach2()
 	}
 	if (!grounded)
 		machpunchAnim = false;
-	if (movespeed >= 12 && grounded)
+	if (movespeed >= 12 && grounded && sprite_index != spr_playerN_sidewayspin)
 	{
 		machhitAnim = false;
 		state = states.mach3;
@@ -68,6 +68,10 @@ function scr_player_mach2()
 		sprite_index = spr_mach4;
 		instance_create(x, y, obj_jumpdust);
 	}
+	if animation_end() && sprite_index == spr_playerN_sidewayspin
+		sprite_index = spr_playerN_sidewayspinend
+    if (grounded && (sprite_index == spr_playerN_sidewayspin || sprite_index == spr_playerN_sidewayspinend))
+        sprite_index = spr_mach
 	/*if (movespeed >= 10 && grounded && character == "N")
 	{
 		if (!charged)
@@ -124,7 +128,7 @@ function scr_player_mach2()
 		with (instance_create(x, y, obj_dashcloud))
 			sprite_index = spr_dashcloud2;
 	}
-	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump)
+	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
 		sprite_index = spr_secondjump1;
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_secondjump1)
 		sprite_index = spr_secondjump2;
@@ -148,7 +152,7 @@ function scr_player_mach2()
 		state = states.Sjump;
 		sprite_index = spr_pizzano_sjumpprep;
 	}*/
-	if ((character == "P") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
+	if ((character == "P" || character == "PTN") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);

@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "scootercutsceneidk",
-  "creationCodeFile": null,
+  "creationCodeFile": "rooms/scootercutsceneidk/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

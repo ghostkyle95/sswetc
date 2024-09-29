@@ -143,3 +143,5 @@ draw_angle = 0;
 doublejumped = false;
 charged = false;
 substate = states.normal;
+savedmove = 0
+noisewalljump = 0

@@ -2,7 +2,7 @@ if (object_index != obj_charcherry)
 {
 	scr_sound(sound_slaphit);
 	instance_create(x + (obj_player.xscale * 40), y, obj_punchdust);
-	if (obj_player.character == "P")
+	if (obj_player.character == "P" || obj_player.character == "PTN")
 	{
 		if (!global.cane)
 		{
@@ -13,7 +13,7 @@ if (object_index != obj_charcherry)
 			}
 			obj_player.baddiegrabbedID = id;
 			obj_player.state = states.grab;
-			obj_player.sprite_index = spr_player_haulingstart;
+			obj_player.sprite_index = obj_player.spr_haulingstart;
 			obj_player.image_index = 0;
 			state = baddiestates.grabbed;
 			instance_destroy(other.id);
