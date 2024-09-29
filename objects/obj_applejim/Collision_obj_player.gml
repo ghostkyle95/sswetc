@@ -1,4 +1,4 @@
-if (obj_player.state == states.handstandjump && state != baddiestates.stun && state != baddiestates.applejimbash)
+if ((obj_player.state == states.handstandjump || obj_player.state == states.pizzanoshoulderbash) && state != baddiestates.stun && state != baddiestates.applejimbash)
 {
 	state = baddiestates.stun;
 	obj_player.state = states.normal;

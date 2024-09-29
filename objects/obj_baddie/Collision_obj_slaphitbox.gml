@@ -38,16 +38,5 @@ if (object_index != obj_charcherry)
 		thrown = true;
 		hsp = obj_player.xscale * 15;
 		vsp = -6;
-		with (obj_player)
-		{
-			grounded = false;
-			movespeed = -3.5;
-			vsp = -8;
-			mach2 = 0;
-			state = states.bump;
-			image_index = 0;
-			machslideAnim = true;
-			machhitAnim = false;
-		}
 	}
 }

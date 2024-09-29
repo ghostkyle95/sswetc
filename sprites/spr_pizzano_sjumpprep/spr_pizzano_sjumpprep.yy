@@ -47,7 +47,7 @@
     ],
     "top": 0,
   },
-  "origin": 4,
+  "origin": 9,
   "parent": {
     "name": "Pizzano",
     "path": "folders/Sprites/Player/Pizzano.yy",
@@ -85,7 +85,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 55,
-    "yorigin": 86,
+    "yorigin": 110,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

@@ -148,7 +148,7 @@ function scr_player_mach2()
 		state = states.Sjump;
 		sprite_index = spr_pizzano_sjumpprep;
 	}*/
-	if (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
+	if ((character == "P") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -158,5 +158,24 @@ function scr_player_mach2()
 		image_index = 0;
 		sprite_index = spr_suplexdash;
 		state = states.handstandjump;
+	}
+	if ((character == "N") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
+	{
+		scr_sound(sound_suplex1);
+		instance_create(x, y, obj_slaphitbox);
+		suplexmove = true;
+		vsp = 0;
+		instance_create(x, y, obj_jumpdust);
+		image_index = 0;
+		sprite_index = choose(spr_kungfu1, spr_kungfu2);
+		state = states.pizzanoshoulderbash;
+	}
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != "N")
+	{
+		image_index = 0;
+		state = states.freefallprep;
+		sprite_index = spr_crusherstart;
+		vsp = -12;
+		scr_sound(sound_crusherjump)
 	}
 }

@@ -11,9 +11,9 @@ if (player.state == states.handstandjump && place_meeting(x, y, player))
 {
 	with (player)
 	{
-		if (state == states.handstandjump)
+		if (state == states.handstandjump || state == states.pizzanoshoulderbash)
 		{
-			sprite_index = spr_player_faucetpull;
+			sprite_index = spr_faucetpull;
 			suplexdashtimer = 7;
 			image_index = 0;
 			state = states.tackle;

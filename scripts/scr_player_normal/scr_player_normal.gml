@@ -241,7 +241,7 @@ function scr_player_normal()
 	}
 	else
 		image_speed = 0.35;
-	if ((character == "P" || character == "N") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != "G" && !key_attack)
+	if ((character == "P") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != "G" && !key_attack)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -251,6 +251,17 @@ function scr_player_normal()
 		image_index = 0;
 		sprite_index = spr_suplexdash;
 		state = states.handstandjump;
+	}
+	if ((character == "N") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
+	{
+		scr_sound(sound_suplex1);
+		instance_create(x, y, obj_slaphitbox);
+		suplexmove = true;
+		vsp = 0;
+		instance_create(x, y, obj_jumpdust);
+		image_index = 0;
+		sprite_index = choose(spr_kungfu1, spr_kungfu2);
+		state = states.pizzanoshoulderbash;
 	}
 			scr_cantaunt()
 	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))

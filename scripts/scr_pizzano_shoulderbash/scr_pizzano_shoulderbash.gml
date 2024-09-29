@@ -1,45 +1,77 @@
 function scr_pizzano_shoulderbash()
 {
 	hsp = xscale * movespeed;
+	movespeed = 12;
+	//instakillmove = 1
+	if (key_down)
+	{
+		if (grounded)
+		{
+			//instakillmove = 0
+			grav = 0.5;
+			sprite_index = spr_crouchslip;
+			machhitAnim = false;
+			state = states.crouchslide;
+			if (audio_is_playing(sound_suplex1))
+				audio_stop_sound(sound_suplex1);
+		}
+		else
+		{
+			//instakillmove = 0
+			grav = 0.5;
+			image_index = 1;
+			state = states.freefallprep;
+			sprite_index = spr_bodyslamstart;
+			vsp = -5;
+		}
+	}
 	if (key_jump && grounded)
 	{
-		state = states.pizzanotwirl;
-		vsp = -12;
-	}
-	if ((scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope)) && !place_meeting(x + xscale, y, obj_destructibles))
-	{
-		movespeed = -3.5;
-		vsp = -8;
-		mach2 = 0;
-		state = states.bump;
-		image_index = 0;
-		machslideAnim = true;
-		machhitAnim = false;
-		instance_create(x + 10, y + 10, obj_bumpeffect);
-		if (audio_is_playing(sound_suplex1))
-			audio_stop_sound(sound_suplex1);
-		scr_sound(sound_bump);
-	}
-	if ((scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope)) && !place_meeting(x + xscale, y, obj_destructibles))
-	{
-		movespeed = -3.5;
-		vsp = -8;
-		mach2 = 0;
-		state = states.bump;
-		image_index = 0;
-		machslideAnim = true;
-		machhitAnim = false;
-		instance_create(x + 10, y + 10, obj_bumpeffect);
-		if (audio_is_playing(sound_suplex1))
-			audio_stop_sound(sound_suplex1);
-		scr_sound(sound_bump);
-	}
-	if (key_attack && grounded)
-	{
-		flash = true;
+		//instakillmove = 0
+		//movespeed = 10;
+		sprite_index = spr_mach2jump;
+		instance_create(x, y, obj_jumpdust);
 		state = states.mach2;
-		image_index = 0;
+		vsp = -9;
+		if (audio_is_playing(sound_suplex1))
+			audio_stop_sound(sound_suplex1);
+	}	
+	if (floor(image_index) == (image_number - 1))
+	{
+		//instakillmove = 0
+		state = states.normal;
+		grav = 0.5;
+		flash = false;
+	}
+	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump)
+	{
+		//instakillmove = 0
+		movespeed = 10;
+		mach2 = 20;
+		state = states.mach2;
 		sprite_index = spr_mach;
-		jumpstop = false;
+	}
+	if (grounded && (scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles))
+	{
+		//instakillmove = 0
+		grav = 0.5;
+		movespeed = 0;
+		state = states.bump;
+		hsp = -2.5 * xscale;
+		vsp = -3;
+		mach2 = 0;
+		image_index = 0;
+		machslideAnim = true;
+		machhitAnim = false;
+		instance_create(x + (10 * xscale), y + 10, obj_bumpeffect);
+		if (audio_is_playing(sound_suplex1))
+			audio_stop_sound(sound_suplex1);
+		scr_sound(sound_bump);
+	}
+	if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))))
+	{
+		//instakillmove = 0
+		wallspeed = movespeed;
+		state = states.climbwall;
 	}
 }

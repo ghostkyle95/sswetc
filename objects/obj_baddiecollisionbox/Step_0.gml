@@ -78,7 +78,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					stunned = 500;
 				}
 			}
-			if (instance_exists(other.baddieID) && !instakillmove && other.baddieID.vsp > 0 && state != states.hurt && state != states.superslam && state != states.finishingblow && state != states.handstandjump)
+			if (instance_exists(other.baddieID) && !instakillmove && other.baddieID.vsp > 0 && state != states.hurt && state != states.superslam && state != states.finishingblow && state != states.handstandjump && state != states.pizzanoshoulderbash)
 			{
 				if (other.baddieID.stuntouch <= 0)
 				{
@@ -164,7 +164,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					vsp = -5;
 				}
 			}
-			if (instance_exists(other.baddieID) && other.baddieID.state != baddiestates.charge && !attacking && state != states.tackle && state != states.hurt && !y < other.baddieID.y && !y > other.baddieID.y && !grabbing && other.baddieID.state != baddiestates.stun && state != states.handstandjump && state != states.hookshot)
+			if (instance_exists(other.baddieID) && other.baddieID.state != baddiestates.charge && !attacking && state != states.tackle && state != states.hurt && !y < other.baddieID.y && !y > other.baddieID.y && !grabbing && other.baddieID.state != baddiestates.stun && state != states.handstandjump && state != states.hookshot && state != states.pizzanoshoulderbash)
 			{
 				if (x != other.baddieID.x)
 				{

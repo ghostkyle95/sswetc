@@ -1,4 +1,4 @@
-if (state == states.handstandjump)
+if (state == states.handstandjump || state == states.pizzanoshoulderbash)
 {
 	bombpeptimer = 100;
 	global.combofreeze = 30;

@@ -58,11 +58,11 @@ function scr_player_Sjump()
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 	}
-	if (key_attack2 && !grounded && vsp < -10 && character == "N")
+	if (key_attack2 && !grounded && vsp < -10 && character == "N" && sprite_index != spr_superjumpland)
 	{
 		flash = true;
 		charged = false;
-		sprite_index = spr_pizzano_sjumpprepside;
+		sprite_index = spr_superjumpprepside;
 		image_index = 0;
 		movespeed = 0;
 		vsp = 0;

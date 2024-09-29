@@ -3,7 +3,7 @@ with (obj_player)
 	if (state != states.Sjump)
 	{
 		scr_sound(sound_superjumprelease);
-		sprite_index = spr_player_superjump;
+		sprite_index = spr_superjump;
 		state = states.Sjump;
 		vsp = -12;
 		movespeed = 12;

@@ -8,7 +8,7 @@ with (obj_baddie)
 with (obj_player)
 {
 	state = states.parry;
-	sprite_index = choose(spr_player_parry1, spr_player_parry2, spr_player_parry3);
+	sprite_index = choose(spr_parry1, spr_parry2, spr_parry3);
 	image_index = 0;
 	movespeed = -8;
 	flash = true;

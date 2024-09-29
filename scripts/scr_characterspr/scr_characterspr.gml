@@ -168,6 +168,17 @@ function scr_characterspr()
 		spr_firebuttend = spr_player_fireassend;
 		spr_catched = spr_player_catched;
 		spr_donutget = spr_player_donutget;
+		spr_kungfu1 = spr_pizzano_kungfu1;
+		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_faucetpull = spr_player_faucetpull;
+		spr_superjumpprepside = spr_pizzano_sjumpprepside;
+		spr_superjumpside = spr_pizzano_sjumpside;
+		spr_rocketfistground = spr_pizzano_mach3;
+		
+		spr_bossintro = spr_player_bossintro;
+		spr_parry1 = spr_player_parry1;
+		spr_parry2 = spr_player_parry2;
+		spr_parry3 = spr_player_parry3;
 	}
 	if (character == "N")
 	{
@@ -185,8 +196,8 @@ function scr_characterspr()
 		spr_crouchfall = spr_player_crouchfall;
 		spr_couchstart = spr_player_crouchstart;
 		spr_bump = spr_player_bump;
-		spr_land = spr_player_idle;
-		spr_land2 = spr_player_walk;
+		spr_land = spr_idle;
+		spr_land2 = spr_idle;
 		spr_lookdoor = spr_player_lookdoor;
 		spr_walkfront = spr_pizzano_walkfront;
 		spr_victory = spr_player_entergate;
@@ -211,14 +222,14 @@ function scr_characterspr()
 		spr_stomp = spr_player_stomp;
 		spr_stompprep = spr_player_stompprep;
 		spr_crouchslide = spr_player_machslide;
-		spr_crouch = spr_player_crouch;
+		spr_crouch = spr_pizzano_crouch;
 		spr_bump = spr_player_bump;
 		spr_victory = spr_player_entergate;
 		spr_hurt = spr_player_hurt;
 		spr_climbwall = spr_player_climbwall;
 		spr_grab = spr_player_grab;
 		spr_mach2jump = spr_pizzano_twirl;
-		spr_Timesup = spr_pizzano_twirl;
+		spr_Timesup = spr_pizzano_timesup;
 		spr_deathstart = spr_player_deathstart;
 		spr_deathend = spr_player_deathend;
 		spr_machpunch1 = spr_player_machpunch1;
@@ -328,6 +339,17 @@ function scr_characterspr()
 		spr_firebuttend = spr_player_fireassend;
 		spr_catched = spr_player_catched;
 		spr_donutget = spr_player_donutget;
+		spr_kungfu1 = spr_pizzano_kungfu1;
+		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_faucetpull = spr_player_faucetpull;
+		spr_superjumpprepside = spr_pizzano_sjumpprepside;
+		spr_superjumpside = spr_pizzano_sjumpside;
+		spr_rocketfistground = spr_pizzano_mach3;
+		
+		spr_bossintro = spr_player_bossintro;
+		spr_parry1 = spr_player_parry1;
+		spr_parry2 = spr_player_parry2;
+		spr_parry3 = spr_player_parry3;
 	}
 	if (character == "G")
 	{
