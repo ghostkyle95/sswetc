@@ -454,7 +454,7 @@ function scr_characterspr()
 		spr_mach3hitwall = spr_playerN_mach3hitwall;
 		spr_mach4 = spr_playerN_mach3;
 		spr_machtumble = spr_playerN_spin;
-		spr_machfreefall = spr_playerN_rockethitwall;
+		spr_machfreefall = spr_playerN_fall;
 		spr_crouchslide = spr_playerN_crouchslip;
 		spr_supertaunt1 = spr_playerN_supertaunt1;
 		spr_supertaunt2 = spr_playerN_supertaunt2;
