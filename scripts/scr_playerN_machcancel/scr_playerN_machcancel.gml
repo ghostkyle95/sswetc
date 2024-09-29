@@ -43,6 +43,11 @@ function scr_playerN_machcancel(){
 			image_index = 0
 			sprite_index = spr_playerN_divebombland
 		}
+		if (animation_end() && sprite_index == spr_playerN_divebombland)
+		{
+			image_index = 0
+			sprite_index = spr_playerN_divebomb
+		}
     }
     else if (move != 0)
         movespeed = approach(movespeed, (move * 8), 1)
@@ -50,7 +55,7 @@ function scr_playerN_machcancel(){
         movespeed = approach(movespeed, 0, 0.5)
    if scr_noise_machcancel_grab()
         return;
-    if (sprite_index != spr_playerN_divebombfall && (!grounded) && sprite_index != spr_playerN_wallbounce)
+    if (sprite_index != spr_playerN_divebombfall && (!grounded) && key_down)
     {
         sprite_index = spr_playerN_divebombfall
         state = states.machcancel
@@ -59,12 +64,7 @@ function scr_playerN_machcancel(){
         image_index = 0
         return;
     }
-    if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerN_divebombland)
-    {
-        image_index = 0
-        sprite_index = spr_playerN_divebomb
-    }
-    if (grounded && vsp >= 0 && sprite_index != spr_playerN_wallbounce)
+    if (grounded && vsp >= 0 && sprite_index != spr_playerN_wallbounce && !key_down)
     {
         vsp = -7
         if (move != 0)
@@ -91,16 +91,16 @@ function scr_playerN_machcancel(){
         state = states.normal
         movespeed = abs(hsp)
     }
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != "N" && !(sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall))
+	{
+		image_index = 0;
+		state = states.freefallprep;
+		sprite_index = spr_crusherstart;
+		vsp = -16;
+		scr_sound(sound_crusherjump)
+	}
     if (sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall)
     {
-        if ((!instance_exists(dashcloudid)) && grounded)
-        {
-            with (instance_create(x, y, obj_dashcloud))
-            {
-                image_xscale = other.move
-                other.dashcloudid = id
-            }
-        }
         image_speed = abs(movespeed) / 40 + 0.4
     }
     else
@@ -123,7 +123,7 @@ function scr_noise_machcancel_grab() //gml_Script_scr_noise_machcancel_grab
             key_slap = false
             key_slap2 = false
             jumpstop = true
-				machpunchAnim = false;
+			machpunchAnim = false;
             if (vsp > -5)
                 vsp = -5
             state = states.mach2

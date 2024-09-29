@@ -43,7 +43,7 @@ function scr_player_jump()
 		image_index = 0;
 		state = states.freefallprep;
 		sprite_index = spr_crusherstart;
-		vsp = -12;
+		vsp = -16;
 		scr_sound(sound_crusherjump)
 	}
 	if (ladderbuffer > 0)
@@ -159,13 +159,16 @@ function scr_player_jump()
 	if (key_slap2 && key_up && !suplexmove)
 	{
 		grounded = false;
-		vsp = -9;
 		state = states.uppercut;
 		suplexmove = true;
 		sprite_index = spr_uppercutbegin;
 		image_index = 0;
 		scr_sound(sound_rollgetup);
 		scr_sound(sound_suplex1);
+		if character != "PTN"
+			vsp = -15;
+		else
+			vsp = -21;
 	}
 	if ((character == "P" || character == "PTN") && (!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane))
 	{

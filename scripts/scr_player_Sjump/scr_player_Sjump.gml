@@ -44,7 +44,7 @@ function scr_player_Sjump()
 		movespeed = 0;
 	}
 	image_speed = 0.5;
-	if (key_attack2 && !grounded && vsp < -10 && (character == "P" || character == "PTN"))
+	if (key_attack2 && !grounded && vsp < -10 && character == "P")
 	{
 		if (move != 0)
 			xscale = move;
@@ -57,6 +57,20 @@ function scr_player_Sjump()
 		sprite_index = spr_plrdashpad;
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
+	}
+	if (key_attack2 && !grounded && vsp < -10 && character == "PTN")
+	{
+		if (move != 0)
+			xscale = move
+		machpunchAnim = false;
+		machhitAnim = false;
+		vsp = -5
+		state = states.mach2
+		movespeed = 12
+		sprite_index = spr_playerN_sidewayspin
+		with (instance_create(x, y, obj_crazyrunothereffect))
+			image_xscale = other.xscale
+		image_index = 0
 	}
 	if (key_attack2 && !grounded && vsp < -10 && character == "N" && sprite_index != spr_superjumpland)
 	{

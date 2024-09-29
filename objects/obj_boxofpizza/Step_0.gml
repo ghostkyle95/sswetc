@@ -12,7 +12,7 @@ with (obj_player)
 			x = other.x;
 			obj_player.targetDoor = other.targetDoor;
 			obj_player.targetRoom = other.targetRoom;
-			sprite_index = spr_player_downpizzabox;
+			sprite_index = spr_downpizzabox;
 			image_index = 0;
 			state = states.door;
 		}
@@ -30,7 +30,7 @@ with (obj_player)
 			x = other.x;
 			obj_player.targetDoor = other.targetDoor;
 			obj_player.targetRoom = other.targetRoom;
-			sprite_index = spr_player_uppizzabox;
+			sprite_index = spr_uppizzabox;
 			image_index = 0;
 			state = states.door;
 		}

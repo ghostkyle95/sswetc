@@ -103,4 +103,18 @@ function scr_player_freefall()
 			image_xscale = other.xscale;
 		freefallsmash = false;
 	}
+	if key_slap2 && sprite_index == spr_crusherfall && character == "PTN"
+	{
+		if (move != 0)
+			xscale = move
+		machpunchAnim = false;
+		machhitAnim = false;
+		vsp = -5
+		state = states.mach2
+		movespeed = 12
+		sprite_index = spr_playerN_sidewayspin
+		with (instance_create(x, y, obj_crazyrunothereffect))
+			image_xscale = other.xscale
+		image_index = 0
+	}
 }

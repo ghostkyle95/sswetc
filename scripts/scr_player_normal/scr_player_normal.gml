@@ -271,7 +271,6 @@ function scr_player_normal()
 	if (key_slap2 && key_up)
 	{
 		grounded = false;
-		vsp = -15;
 		state = states.uppercut;
 		suplexmove = true;
 		sprite_index = spr_uppercutbegin;
@@ -279,6 +278,10 @@ function scr_player_normal()
 		scr_sound(sound_jump);
 		scr_sound(sound_rollgetup);
 		scr_sound(sound_suplex1);
+		if character != "PTN"
+			vsp = -15;
+		else
+			vsp = -21;
 	}
 	if (global.cane)
 	{
