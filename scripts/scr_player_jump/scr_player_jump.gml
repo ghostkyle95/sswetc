@@ -75,7 +75,7 @@ function scr_player_jump()
 			movespeed = 6;
 		sprite_index = spr_mach1;
 		jumpAnim = true;
-		state = states.mach1;
+		state = states.mach2;
 		image_index = 0;
 	}
 	if (grounded && vsp > 0 && !key_attack)

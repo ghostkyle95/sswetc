@@ -72,7 +72,7 @@ function scr_player_mach3()
 				image_index = 0;
 				mach2 = 0;
 			}
-			if ((move != 0 && xscale != move && grounded) && Dashpad_buffer <= 0)
+			if ((move == -xscale && grounded) && Dashpad_buffer <= 0)
 			{
 				scr_sound(sound_maximumspeedstop);
 				sprite_index = spr_player_machslideboost3;
@@ -85,7 +85,7 @@ function scr_player_mach3()
 			{
 				flash = false;
 				state = states.machroll;
-				vsp = 15;
+				vsp = 10;
 			}
 			if (key_down && !place_meeting(x, y, obj_dashpad) && grounded)
 			{
@@ -96,7 +96,7 @@ function scr_player_mach3()
 				sprite_index = spr_player_mach4;
 			if (!key_down && sprite_index == spr_dive && !grounded)
 			{
-				vsp = 15;
+				vsp = 10;
 				sprite_index = spr_player_mach4;
 			}
 			if (((!grounded && !place_meeting(x + hsp, y, obj_metalblock)) && scr_solid(x + hsp, y, true) && !place_meeting(x + hsp, y, obj_destructibles) && !scr_slope_ext(x + sign(hsp), y)) || (grounded && (scr_solid(x + sign(hsp), y - 2, true) && !scr_slope_ext(x + sign(hsp), y - 1)) && (!place_meeting(x + hsp, y, obj_metalblock) && !place_meeting(x + hsp, y, obj_destructibles)) && scr_slope()))
