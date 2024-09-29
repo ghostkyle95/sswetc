@@ -66,7 +66,5 @@ function scr_player_Sjumpprep()
 		movespeed = 12;
 		Sjumpcan_doublejump = false;
 	}
-	if (!audio_is_playing(sound_superjumpcharge2))
-		scr_sound(sound_superjumpcharge2);
 	image_speed = 0.35;
 }

@@ -1852,6 +1852,7 @@
     {"name":"spr_playerN_cheeseball","order":49,"path":"sprites/spr_playerN_cheeseball/spr_playerN_cheeseball.yy",},
     {"name":"spr_playerN_Sjumpstart","order":286,"path":"sprites/spr_playerN_Sjumpstart/spr_playerN_Sjumpstart.yy",},
     {"name":"spr_collectescape","order":14,"path":"sprites/spr_collectescape/spr_collectescape.yy",},
+    {"name":"sound_crusherjump","order":85,"path":"sounds/sound_crusherjump/sound_crusherjump.yy",},
     {"name":"spr_pizzytv_escape2","order":6,"path":"sprites/spr_pizzytv_escape2/spr_pizzytv_escape2.yy",},
     {"name":"spr_player_faucetpull","order":57,"path":"sprites/spr_player_faucetpull/spr_player_faucetpull.yy",},
     {"name":"spr_playerN_minigunidle","order":213,"path":"sprites/spr_playerN_minigunidle/spr_playerN_minigunidle.yy",},

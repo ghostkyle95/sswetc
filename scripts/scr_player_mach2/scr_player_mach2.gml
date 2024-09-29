@@ -10,7 +10,7 @@ function scr_player_mach2()
 	if grounded && movespeed < 12
 		movespeed += 0.1;
 	if movespeed < 6
-		movespeed = 0.6;
+		movespeed = 6;
 			
 	if (sprite_index != spr_null)
 	{

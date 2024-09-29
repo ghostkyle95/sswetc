@@ -294,7 +294,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.0.121",
+    "IDEVersion": "2023.11.1.129",
   },
   "resources": [
     {"id":{"name":"obj_talisman","path":"objects/obj_talisman/obj_talisman.yy",},},
@@ -2085,6 +2085,7 @@
     {"id":{"name":"spr_playerN_cheeseball","path":"sprites/spr_playerN_cheeseball/spr_playerN_cheeseball.yy",},},
     {"id":{"name":"spr_playerN_Sjumpstart","path":"sprites/spr_playerN_Sjumpstart/spr_playerN_Sjumpstart.yy",},},
     {"id":{"name":"spr_collectescape","path":"sprites/spr_collectescape/spr_collectescape.yy",},},
+    {"id":{"name":"sound_crusherjump","path":"sounds/sound_crusherjump/sound_crusherjump.yy",},},
     {"id":{"name":"spr_pizzytv_escape2","path":"sprites/spr_pizzytv_escape2/spr_pizzytv_escape2.yy",},},
     {"id":{"name":"spr_player_faucetpull","path":"sprites/spr_player_faucetpull/spr_player_faucetpull.yy",},},
     {"id":{"name":"spr_playerN_minigunidle","path":"sprites/spr_playerN_minigunidle/spr_playerN_minigunidle.yy",},},
