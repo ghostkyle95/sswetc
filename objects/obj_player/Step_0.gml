@@ -298,24 +298,3 @@ if (sprite_index == spr_machpunch1 && floor(image_index) == (image_number - 1))
 	sprite_index = spr_mach;
 if (sprite_index == spr_machpunch2 && floor(image_index) == (image_number - 1))
 	sprite_index = spr_mach;
-if (sprite_index == spr_mach2jump)
-{
-	if (!audio_is_playing(sfx_flip))
-		scr_sound(sfx_flip);
-}
-if (sprite_index == spr_climbwall)
-{
-	if (!audio_is_playing(sound_dash2))
-		scr_sound(sound_dash2);
-}
-if (sprite_index == spr_superjumppreplight)
-{
-	if (!audio_is_playing(sound_superjumpcharge2))
-		scr_sound(sound_superjumpcharge2);
-}
-if (audio_is_playing(sfx_flip) && sprite_index != spr_mach2jump)
-	audio_stop_sound(sfx_flip);
-if (audio_is_playing(sound_dash2) && sprite_index != spr_climbwall)
-	audio_stop_sound(sound_dash2);
-if (audio_is_playing(sound_superjumpcharge2) && sprite_index != spr_superjumppreplight)
-	audio_stop_sound(sound_superjumpcharge2);
