@@ -42,7 +42,7 @@ function scr_player_jump()
 	{
 		image_index = 0;
 		state = states.freefallprep;
-		sprite_index = spr_player_bodyslamstartOLD;
+		sprite_index = spr_crusherstart;
 		vsp = -12;
 		scr_sound(sound_crusherjump)
 	}
@@ -53,7 +53,7 @@ function scr_player_jump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && !(sprite_index == spr_player_facestomp || sprite_index == spr_player_freefall))
+	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && !(sprite_index == spr_facestomp || sprite_index == spr_freefall))
 	{
 		scr_sound(sound_jump);
 		sprite_index = spr_jump;
@@ -99,16 +99,16 @@ function scr_player_jump()
 	{
 		if (vsp > 5)
 			fallinganimation++;
-		if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index != spr_player_candyup)
-			sprite_index = spr_player_freefall;
-		if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index == spr_player_candyup)
+		if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index != spr_candyup)
+			sprite_index = spr_freefall;
+		if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index == spr_candyup)
 		{
-			sprite_index = spr_player_freefall;
+			sprite_index = spr_freefall;
 			if (!instance_exists(obj_candifiedeffect1))
 				instance_create(x, y, obj_candifiedeffect1);
 		}
 		if (fallinganimation >= 80)
-			sprite_index = spr_player_freefall2;
+			sprite_index = spr_freefall2;
 	}
 	if (!stompAnim)
 	{
@@ -121,7 +121,7 @@ function scr_player_jump()
 		{
 			if (sprite_index == spr_airdash1)
 				sprite_index = spr_airdash2;
-			if (sprite_index == spr_player_suplexdashCancel)
+			if (sprite_index == spr_suplexdashCancel)
 				sprite_index = spr_fall;
 			if (sprite_index == spr_jump)
 				sprite_index = spr_fall;
@@ -162,12 +162,12 @@ function scr_player_jump()
 		vsp = -9;
 		state = states.uppercut;
 		suplexmove = true;
-		sprite_index = spr_player_uppercutbegin;
+		sprite_index = spr_uppercutbegin;
 		image_index = 0;
 		scr_sound(sound_rollgetup);
 		scr_sound(sound_suplex1);
 	}
-	if ((!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane) && character == "P")
+	if ((!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane))
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -178,19 +178,7 @@ function scr_player_jump()
 		sprite_index = spr_suplexdash;
 		state = states.handstandjump;
 	}
-	if ((!key_down && key_slap2 && !suplexmove && !shotgunAnim) && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character == "N")
-	{
-		scr_sound(sound_suplex1);
-		instance_create(x, y, obj_slaphitbox);
-		suplexmove = true;
-		vsp = 0;
-		instance_create(x, y, obj_jumpdust);
-		image_index = 0;
-		sprite_index = spr_pizzano_shoulderbash;
-		state = states.pizzanoshoulderbash;
-		movespeed = 10;
-	}
-	if (grounded && (sprite_index == spr_player_facestomp || sprite_index == spr_player_freefall || sprite_index == spr_player_freefall2))
+	if (grounded && (sprite_index == spr_facestomp || sprite_index == spr_freefall || sprite_index == spr_freefall2))
 	{
 		scr_sound(sound_maximumspeedland);
 		with (obj_baddie)
@@ -207,7 +195,7 @@ function scr_player_jump()
 			shake_mag_acc = 30 / room_speed;
 		}
 		image_index = 0;
-		sprite_index = spr_player_freefallland;
+		sprite_index = spr_freefallland;
 		state = states.freefallland;
 		doublejumped = 0;
 	}
@@ -216,7 +204,7 @@ function scr_player_jump()
 	{
 		image_index = 0;
 		state = states.freefallprep;
-		sprite_index = spr_player_bodyslamstart;
+		sprite_index = spr_bodyslamstart;
 		vsp = -5;
 	}
 	if (global.cane)
@@ -261,13 +249,6 @@ function scr_player_jump()
 		vsp = -10;
 		sprite_index = spr_pizzano_djump;
 	}
-	if (key_jump && character == "N" && !grounded && scr_solid(x + xscale, y, true))
-	{
-		hsp = 0;
-		vsp = 0;
-		state = states.pizzanowallcling;
-		sprite_index = spr_pizzano_wallcling;
-	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_candytransitionup)
-		sprite_index = spr_player_candyup;
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_candytransitionup)
+		sprite_index = spr_candyup;
 }

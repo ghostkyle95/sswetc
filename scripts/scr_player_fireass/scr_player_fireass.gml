@@ -4,7 +4,7 @@ function scr_player_fireass()
 	image_speed = 0.35;
 	if (place_meeting(x + hsp, y, obj_solid))
 		xscale *= -1;
-	if (sprite_index == spr_player_fireass)
+	if (sprite_index == spr_firebutt)
 	{
 		move = key_left + key_right;
 		if (move != 0)
@@ -14,11 +14,11 @@ function scr_player_fireass()
 		if (grounded && vsp > 0)
 		{
 			movespeed = 6;
-			sprite_index = spr_player_fireassend;
+			sprite_index = spr_firebuttend;
 			image_index = 0;
 		}
 	}
-	if (sprite_index == spr_player_fireassend)
+	if (sprite_index == spr_firebuttend)
 	{
 		hsp = xscale * movespeed;
 		if (movespeed > 0)

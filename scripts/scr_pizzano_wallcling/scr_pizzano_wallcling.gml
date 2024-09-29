@@ -1,12 +1,12 @@
 function scr_pizzano_wallcling()
 {
 	hsp = 0;
-	if (sprite_index == spr_pizzano_wallcling)
+	if (sprite_index == spr_pizzano_mach4)
 		vsp = 0;
 	else
 		vsp = 3;
 	image_speed = 0.35;
-	if (sprite_index == spr_pizzano_wallcling && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_pizzano_mach4 && floor(image_index) == (image_number - 1))
 		sprite_index = spr_pizzano_wallslide;
 	if (key_jump && !grounded)
 	{

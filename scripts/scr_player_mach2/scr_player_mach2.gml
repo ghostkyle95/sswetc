@@ -22,8 +22,6 @@ function scr_player_mach2()
 	}
 	if (sprite_index != spr_null)
 	{
-		if (character == "P")
-		{
 			if (grounded && vsp > 0)
 				jumpstop = false;
 			if (input_buffer_jump < 8 && grounded && move != -xscale && key_attack)
@@ -33,22 +31,12 @@ function scr_player_mach2()
 				scr_sound(sound_jump);
 				vsp = -9;
 			}
-		}
-		else if (character == "N")
-		{
-			if input_buffer_jump < 8 && grounded && vsp > 0 && !jumpstop
-			{
-				state = states.pizzanotwirl;
-				sprite_index = spr_pizzano_twirl;
-				vsp = -12;
-			}
-		}
 	}
 	if (grounded && sprite_index != spr_null)
 	{
 		if (!machpunchAnim && sprite_index != spr_mach && sprite_index != spr_mach1 && sprite_index != spr_player_mach3 && sprite_index != spr_player_machhit)
 		{
-			if (sprite_index != spr_player_machhit && sprite_index != spr_player_rollgetup)
+			if (sprite_index != spr_player_machhit && sprite_index != spr_rollgetup)
 				sprite_index = spr_mach;
 		}
 		if (machpunchAnim)
@@ -77,7 +65,7 @@ function scr_player_mach2()
 		machhitAnim = false;
 		state = states.mach3;
 		flash = true;
-		sprite_index = spr_player_mach4;
+		sprite_index = spr_mach4;
 		instance_create(x, y, obj_jumpdust);
 	}
 	/*if (movespeed >= 10 && grounded && character == "N")
@@ -136,14 +124,14 @@ function scr_player_mach2()
 		with (instance_create(x, y, obj_dashcloud))
 			sprite_index = spr_dashcloud2;
 	}
-	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_player_bump)
+	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump)
 		sprite_index = spr_secondjump1;
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_secondjump1)
 		sprite_index = spr_secondjump2;
-	if grounded && floor(image_index) == image_number - 1 && (sprite_index == spr_player_rollgetup || sprite_index == spr_mach1)
+	if grounded && floor(image_index) == image_number - 1 && (sprite_index == spr_rollgetup || sprite_index == spr_mach1)
 		sprite_index = spr_mach;
 	scr_cantaunt()
-	if (sprite_index == spr_player_rollgetup)
+	if (sprite_index == spr_rollgetup)
 		image_speed = 0.4;
 	else
 		image_speed = 0.65;

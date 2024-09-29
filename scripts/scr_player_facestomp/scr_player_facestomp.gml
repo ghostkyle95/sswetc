@@ -40,7 +40,7 @@ function scr_player_facestomp()
 			audio_play_sound(sfx_land, 1, false);
 	}
 	if (!facestompAnim)
-		sprite_index = spr_player_facestomp;
+		sprite_index = spr_facestomp;
 	else if (facestompAnim)
 	{
 		sprite_index = spr_player_facestomphit;

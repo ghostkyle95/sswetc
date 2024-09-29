@@ -48,18 +48,18 @@ function scr_player_freefallprep()
 			xscale = move;
 	}
 	image_speed = 0.5;
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_bodyslamstart)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_bodyslamstart)
 	{
 		vsp += 14;
 		state = states.freefall;
 		freefallsmash = false;
-		sprite_index = spr_player_bodyslamfall;
+		sprite_index = spr_bodyslamfall;
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_bodyslamstartOLD)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_crusherstart)
 	{
 		vsp += 14;
 		state = states.freefall;
 		freefallsmash = false;
-		sprite_index = spr_player_bodyslamfallOLD;
+		sprite_index = spr_crusherfall;
 	}
 }

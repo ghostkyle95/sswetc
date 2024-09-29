@@ -29,7 +29,7 @@ function scr_player_charge()
 		state = states.grab;
 	if (key_slap2)
 	{
-		sprite_index = spr_player_swingdingend;
+		sprite_index = spr_swingdingend;
 		state = states.finishingblow;
 		image_index = 0;
 		hsp = 0;

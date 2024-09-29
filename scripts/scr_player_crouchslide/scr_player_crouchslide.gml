@@ -15,15 +15,7 @@ function scr_player_crouchslide()
 		switch (character)
 		{
 			default:
-				sprite_index = spr_player_rollgetup;
-				image_index = 0;
-				//mach2 = 35;
-				state = states.mach3;
-				/*if (movespeed < 10)
-					movespeed = 10;*/
-				break;
-			case "N":
-				sprite_index = spr_player_rollgetup;
+				sprite_index = spr_rollgetup;
 				image_index = 0;
 				//mach2 = 35;
 				state = states.mach3;

@@ -5,7 +5,7 @@ function scr_player_slap()
 		fallinganimation++;
 		if (fallinganimation >= 40 && fallinganimation < 80)
 		{
-			sprite_index = spr_player_facestomp;
+			sprite_index = spr_facestomp;
 			state = states.jump;
 		}
 	}
@@ -119,7 +119,7 @@ function scr_player_slap()
 			state = states.normal;
 		else if (!grounded)
 		{
-			sprite_index = spr_player_fall;
+			sprite_index = spr_fall;
 			state = states.jump;
 		}
 	}

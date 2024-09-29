@@ -27,7 +27,7 @@ function scr_player_normal()
 				idle = 0;
 				image_index = 0;
 			}
-			if (sprite_index != spr_caneidle && !global.panic && sprite_index != spr_player_3hpidle)
+			if (sprite_index != spr_caneidle && !global.panic && sprite_index != spr_3hpidle)
 			{
 				if (idle >= 300 && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3)
 				{
@@ -49,35 +49,25 @@ function scr_player_normal()
 						{
 							start_running = true;
 							movespeed = 0;
-							if (character == "P")
-							{
 								if (global.cane)
 									sprite_index = spr_caneidle;
 								else
 									sprite_index = spr_idle;
-							}
-							else if (character == "N")
-							{
-								if (charged)
-									sprite_index = spr_pizzano_chargedidle;
-								else
-									sprite_index = spr_idle;
-							}
 						}
 						else if (character == "P")
 						{
 							idle = 0;
 							windingAnim--;
-							sprite_index = spr_player_winding;
+							sprite_index = spr_winding;
 						}
 					}
 					else if (facehurt && character == "P")
 					{
 						windingAnim = false;
-						if (sprite_index != spr_player_facehurtup && sprite_index != spr_player_facehurt)
-							sprite_index = spr_player_facehurtup;
-						if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_facehurtup)
-							sprite_index = spr_player_facehurt;
+						if (sprite_index != spr_facehurtup && sprite_index != spr_facehurt)
+							sprite_index = spr_facehurtup;
+						if (floor(image_index) == (image_number - 1) && sprite_index == spr_facehurtup)
+							sprite_index = spr_facehurt;
 					}
 				}
 			}
@@ -92,7 +82,7 @@ function scr_player_normal()
 			idle = 0;
 			facehurt = false;
 			if (angry)
-				sprite_index = spr_player_3hpwalk;
+				sprite_index = spr_3hpwalk;
 			else if (global.cane)
 				sprite_index = spr_canewalk;
 			else
@@ -170,7 +160,7 @@ function scr_player_normal()
 		state = states.jump;
 		image_index = 0;
 	}
-	if (character == "P")
+	if (character == "P" || character == "N")
 	{
 		if (key_attack && grounded && !place_meeting(x + xscale, y, obj_solid))
 		{
@@ -181,29 +171,6 @@ function scr_player_normal()
 			jumpAnim = true;
 			state = states.mach2;
 			image_index = 0;
-		}
-	}
-	if (character == "N" && key_attack)
-	{
-		if (!charged)
-		{
-			mach2 = 0;
-			if (movespeed < 6)
-				movespeed = 6;
-			sprite_index = spr_mach1;
-			jumpAnim = true;
-			state = states.mach2;
-			image_index = 0;
-		}
-		else
-		{
-			charged = false;
-			sprite_index = spr_pizzano_sjumpprepside;
-			image_index = 0;
-			movespeed = 0;
-			vsp = 0;
-			mach2 = 0;
-			state = states.rocketfistpizzano;
 		}
 	}
 	if (character == "C" && key_attack)
@@ -274,7 +241,7 @@ function scr_player_normal()
 	}
 	else
 		image_speed = 0.35;
-	if (character == "P" && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != "G" && !key_attack)
+	if ((character == "P" || character == "N") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != "G" && !key_attack)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -284,18 +251,6 @@ function scr_player_normal()
 		image_index = 0;
 		sprite_index = spr_suplexdash;
 		state = states.handstandjump;
-	}
-	if (character == "N" && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != "G" && obj_player.sprite_index != spr_mach1 && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && !key_attack)
-	{
-		scr_sound(sound_suplex1);
-		instance_create(x, y, obj_slaphitbox);
-		suplexmove = true;
-		vsp = 0;
-		instance_create(x, y, obj_jumpdust);
-		image_index = 0;
-		sprite_index = spr_pizzano_shoulderbash;
-		state = states.pizzanoshoulderbash;
-		movespeed = 10;
 	}
 			scr_cantaunt()
 	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
@@ -308,7 +263,7 @@ function scr_player_normal()
 		vsp = -15;
 		state = states.uppercut;
 		suplexmove = true;
-		sprite_index = spr_player_uppercutbegin;
+		sprite_index = spr_uppercutbegin;
 		image_index = 0;
 		scr_sound(sound_jump);
 		scr_sound(sound_rollgetup);

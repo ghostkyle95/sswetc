@@ -7,7 +7,7 @@ function scr_player_finishingblow()
 		state = states.normal;
 		movespeed = 0;
 	}
-	if ((floor(image_index) >= 6 && !instance_exists(obj_swordhitbox)) && sprite_index != spr_player_swingdingend)
+	if ((floor(image_index) >= 6 && !instance_exists(obj_swordhitbox)) && sprite_index != spr_swingdingend)
 	{
 		movespeed = 5;
 		scr_sound(sound_punch);
@@ -20,7 +20,7 @@ function scr_player_finishingblow()
 			hp = 0;
 			alarm[1] = 5;
 			thrown = true;
-			if (other.sprite_index != spr_player_uppercutfinishingblow)
+			if (other.sprite_index != spr_uppercutfinishingblow)
 			{
 				hsp = obj_player.xscale * 20;
 				vsp = -6;
@@ -36,7 +36,7 @@ function scr_player_finishingblow()
 		global.combotime = 60;
 		global.hit += 1;
 	}
-	if (sprite_index == spr_player_swingdingend && !instance_exists(obj_swordhitbox))
+	if (sprite_index == spr_swingdingend && !instance_exists(obj_swordhitbox))
 	{
 		movespeed = 3;
 		scr_sound(sound_punch);

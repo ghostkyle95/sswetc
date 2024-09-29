@@ -6,7 +6,7 @@ function scr_player_geyser()
 	if (move != 0)
 		xscale = move;
 	vsp = approach(vsp, -18, 1);
-	sprite_index = spr_player_outofcontrolfall;
+	sprite_index = spr_outofcontrolfall;
 	if (scr_solid(x, y + vsp) && vsp < 0)
 		vsp = 5 + round(-vsp / 10);
 	if (!place_meeting(x, y, obj_geyservertical))

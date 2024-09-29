@@ -77,10 +77,10 @@ function scr_player_freefall()
 			bounce = false;
 			instance_create(x, y, obj_landcloud);
 			freefallstart = 0;
-			if sprite_index == spr_player_bodyslamfall
-				sprite_index = spr_player_bodyslamland;
-			else if sprite_index == spr_player_bodyslamfallOLD
-				sprite_index = spr_player_bodyslamlandOLD;
+			if sprite_index == spr_bodyslamfall
+				sprite_index = spr_bodyslamland;
+			else if sprite_index == spr_crusherfall
+				sprite_index = spr_crusherland;
 		}
 	}
 	if (place_meeting(x, y + 1, obj_destructibles))

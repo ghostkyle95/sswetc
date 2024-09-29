@@ -4,7 +4,7 @@ function scr_player_crouchjump()
 	fallinganimation++;
 	if (fallinganimation >= 40 && fallinganimation < 80)
 	{
-		sprite_index = spr_player_facestomp;
+		sprite_index = spr_facestomp;
 		state = states.jump;
 	}
 	mask_index = spr_crouchmask;

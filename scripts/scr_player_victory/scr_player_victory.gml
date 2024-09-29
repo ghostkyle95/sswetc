@@ -11,10 +11,10 @@ function scr_player_victory()
 	crouchAnim = true;
 	machhitAnim = false;
 	if (place_meeting(x, y, obj_keydoor) || place_meeting(x, y, obj_keydoorclock))
-		sprite_index = spr_player_enterkey;
+		sprite_index = spr_enterkey;
 	if (animation_end())
 	{
-		if (sprite_index == spr_player_enterkey)
+		if (sprite_index == spr_enterkey)
 		{
 			if (!instance_exists(obj_fadeout))
 			{

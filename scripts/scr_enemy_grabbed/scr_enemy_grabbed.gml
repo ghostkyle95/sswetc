@@ -6,7 +6,7 @@ function scr_enemy_grabbed()
 	if (obj_player.state == states.grabbing || obj_player.state == states.grab || obj_player.state == states.throwing || obj_player.state == states.slam || obj_player.state == states.charge)
 	{
 		x = obj_player.x;
-		if (obj_player.sprite_index != spr_player_haulingstart)
+		if (obj_player.sprite_index != spr_haulingstart)
 			y = obj_player.y - 40;
 		else if (floor(obj_player.image_index) == 0)
 			y = obj_player.y;

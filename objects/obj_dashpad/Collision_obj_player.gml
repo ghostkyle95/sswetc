@@ -11,7 +11,7 @@ if (other.state != states.bombpep && other.Dashpad_buffer <= 0)
 			{
 				state = states.mach3;
 				Dashpad_buffer = 25;
-				sprite_index = spr_player_dashpad;
+				sprite_index = spr_plrdashpad;
 				xscale = sign(other.image_xscale);
 				var try_y = 0;
 				while (try_y <= 16)
@@ -60,7 +60,7 @@ if (other.state != states.bombpep && other.Dashpad_buffer <= 0)
 			Dashpad_buffer = 25;
 			xscale = sign(other.image_xscale);
 			image_index = 0;
-			sprite_index = spr_player_minecartfastland;
+			sprite_index = spr_minecartfastland;
 		}
 	}
 }

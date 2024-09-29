@@ -40,7 +40,7 @@ function scr_player_bombpep()
 		alarm[7] = 60;
 		hurted = true;
 		state = states.normal;
-		sprite_index = spr_player_idle;
+		sprite_index = spr_idle;
 		image_index = 0;
 	}
 	if (bombpeptimer <= 0 && sprite_index == spr_bombpep_runabouttoexplode)

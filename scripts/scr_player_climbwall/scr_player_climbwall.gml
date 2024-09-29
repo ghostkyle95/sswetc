@@ -22,7 +22,7 @@ function scr_player_climbwall()
 		else if (mach2 >= 100)
 		{
 			state = states.mach3;
-			sprite_index = spr_player_mach4;
+			sprite_index = spr_mach4;
 		}
 		else
 		{
@@ -32,7 +32,7 @@ function scr_player_climbwall()
 	}
 	if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles) && !scr_slope_ext(x + sign(hsp), y) && !scr_slope_ext(x - sign(hsp), y))
 	{
-		sprite_index = spr_player_ceilingcrash;
+		sprite_index = spr_ceilingcrash;
 		scr_sound(sound_maximumspeedland);
 		image_index = 0;
 		state = states.Sjumpland;
@@ -50,7 +50,7 @@ function scr_player_climbwall()
 			mach2 = 100;
 			instance_create(x, y, obj_jumpdust);
 			vsp = -9;
-			sprite_index = spr_player_mach4;
+			sprite_index = spr_mach4;
 			state = states.mach3;
 			if (global.starrmode)
 				state = states.mach2;
@@ -58,7 +58,7 @@ function scr_player_climbwall()
 		}
 		else
 		{
-			sprite_index = spr_player_mach2jump;
+			sprite_index = spr_mach2jump;
 			mach2 = 35;
 			instance_create(x, y, obj_jumpdust);
 			vsp = -9;

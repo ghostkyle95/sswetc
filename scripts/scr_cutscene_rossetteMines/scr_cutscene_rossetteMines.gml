@@ -83,7 +83,7 @@ function cutscene_rosetteMines_middle()
 	}
 	if (finished)
 	{
-		obj_player.sprite_index = spr_player_donutget;
+		obj_player.sprite_index = spr_donutget;
 		obj_player.image_index = 7;
 		obj_rosette.sprite_index = spr_rosettegavetreat;
 		cutscene_event_end();
@@ -95,7 +95,7 @@ function cutscene_rosetteMines_grab()
 	with (obj_player)
 	{
 		image_speed = 0.35;
-		sprite_index = spr_player_donutget;
+		sprite_index = spr_donutget;
 		if (animation_end())
 			finished = true;
 	}

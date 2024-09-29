@@ -9,7 +9,7 @@ function scr_player_timesup()
 	if (place_meeting(x, y, obj_timesup))
 	{
 		state = states.timesup;
-		sprite_index = spr_player_outofcontrolfall;
+		sprite_index = spr_outofcontrolfall;
 		state = states.gameover;
 		sprite_index = spr_deathend;
 		alarm[10] = 5;

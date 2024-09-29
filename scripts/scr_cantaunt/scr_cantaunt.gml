@@ -11,7 +11,7 @@ function scr_cantaunt(){
 			if (supertauntcharged)
 			{
 				image_index = 0;
-				sprite_index = choose(spr_player_supertaunt1, spr_player_supertaunt2, spr_player_supertaunt3);
+				sprite_index = choose(spr_supertaunt1, spr_supertaunt2, spr_supertaunt3);
 			}
 			else
 			{

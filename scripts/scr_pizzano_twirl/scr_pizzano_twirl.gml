@@ -50,6 +50,6 @@ function scr_pizzano_twirl()
 		hsp = 0;
 		vsp = 0;
 		state = states.pizzanowallcling;
-		sprite_index = spr_pizzano_wallcling;
+		sprite_index = spr_pizzano_mach4;
 	}
 }

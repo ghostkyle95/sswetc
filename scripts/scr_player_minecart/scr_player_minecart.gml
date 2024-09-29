@@ -31,7 +31,7 @@ function scr_player_minecart()
 		instance_create(x + (32 * xscale), y, obj_chargeeffect);
 	if (scr_solid(x + xscale, y) && !place_meeting(x + xscale, y + 1, obj_minecartRail_Slope) && !place_meeting(x + xscale, y, obj_destructibles) && !place_meeting(x + xscale, y, obj_metalblock))
 	{
-		sprite_index = spr_player_mach3hitwall;
+		sprite_index = spr_mach3hitwall;
 		state = states.bump;
 		hsp = 2.5 * -xscale;
 		vsp = -3;
@@ -54,7 +54,7 @@ function scr_player_minecart()
 	{
 		vsp = -10;
 		image_index = 0;
-		sprite_index = spr_player_minecartjump;
+		sprite_index = spr_minecartjump;
 	}
 	if (grounded && !place_meeting(x, y + 1, obj_minecartRail) && !place_meeting(x, y + 1, obj_minecartRail_Slope))
 	{
@@ -66,31 +66,31 @@ function scr_player_minecart()
 			state = states.machslide;
 			vsp = -8;
 			movespeed = 6;
-			sprite_index = spr_player_hurtroll;
+			sprite_index = spr_hurtroll;
 		}
 	}
-	var groundedlandsprite = (movespeed >= 12) ? spr_player_minecartfastland : spr_player_minecartland;
-	var groundedsprite = (movespeed >= 12) ? spr_player_minecartfast : spr_player_minecart;
+	var groundedlandsprite = (movespeed >= 12) ? spr_minecartfastland : spr_minecartland;
+	var groundedsprite = (movespeed >= 12) ? spr_minecartfast : spr_plrminecart;
 	if (!grounded)
 	{
-		if (sprite_index != spr_player_minecartjump)
-			sprite_index = spr_player_minecartfall;
-		if (sprite_index == spr_player_minecartjump && animation_end())
-			sprite_index = spr_player_minecartfall;
+		if (sprite_index != spr_minecartjump)
+			sprite_index = spr_minecartfall;
+		if (sprite_index == spr_minecartjump && animation_end())
+			sprite_index = spr_minecartfall;
 	}
 	if (grounded)
 	{
-		if (sprite_index != groundedlandsprite && (sprite_index == spr_player_minecartfall || sprite_index == spr_player_minecartjump))
+		if (sprite_index != groundedlandsprite && (sprite_index == spr_minecartfall || sprite_index == spr_minecartjump))
 		{
 			sprite_index = groundedlandsprite;
 			image_index = 0;
 		}
 		if (sprite_index == groundedlandsprite && animation_end())
 			sprite_index = groundedsprite;
-		if (sprite_index != groundedsprite && (sprite_index == spr_player_minecartfast || sprite_index == spr_player_minecart))
+		if (sprite_index != groundedsprite && (sprite_index == spr_minecartfast || sprite_index == spr_plrminecart))
 			sprite_index = groundedsprite;
 	}
-	if (sprite_index == spr_player_minecartfast || sprite_index == spr_player_minecart)
+	if (sprite_index == spr_minecartfast || sprite_index == spr_plrminecart)
 		image_speed = clamp(0.5 * (movespeed / 12), 0.35, 0.6);
 	else
 		image_speed = 0.35;

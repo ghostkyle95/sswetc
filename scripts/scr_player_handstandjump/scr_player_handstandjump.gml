@@ -3,6 +3,7 @@ function scr_player_handstandjump()
 	switch (character)
 	{
 		case "P":
+		case "N":
 			move = key_left + key_right;
 			landAnim = false;
 			mach2 = 35;
@@ -18,7 +19,7 @@ function scr_player_handstandjump()
 			{
 				state = states.jump;
 				image_index = 0;
-				sprite_index = spr_player_suplexdashCancel;
+				sprite_index = spr_suplexdashCancel;
 				jumpAnim = true;
 				momemtum = false;
 				mach2 = 0;
@@ -48,7 +49,7 @@ function scr_player_handstandjump()
 					grav = 0.5;
 					image_index = 1;
 					state = states.freefallprep;
-					sprite_index = spr_player_bodyslamstart;
+					sprite_index = spr_bodyslamstart;
 					vsp = -5;
 				}
 			}
@@ -88,7 +89,7 @@ function scr_player_handstandjump()
 				instance_create(x, y, obj_slidecloud);
 			break;
 	}
-	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_player_bump)
+	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump)
 	{
 		movespeed = 10;
 		mach2 = 20;
@@ -99,7 +100,7 @@ function scr_player_handstandjump()
 	{
 		if (key_slap2 && !key_down)
 		{
-			sprite_index = spr_player_machtumble;
+			sprite_index = spr_machtumble;
 			image_index = 0;
 			image_speed = 0.2;
 			state = states.machtumble;

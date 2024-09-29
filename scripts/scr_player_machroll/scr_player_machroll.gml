@@ -10,7 +10,7 @@ function scr_player_machroll()
 	machslideAnim = true;
 	move = key_right + key_left;
 	if (grounded)
-		sprite_index = spr_player_machroll;
+		sprite_index = spr_machroll;
 	if (scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
 		scr_sound(sound_maximumspeedland);
@@ -68,7 +68,7 @@ function scr_player_machroll()
 		scr_sound(sound_rollgetup);
 		//movespeed = min(movespeed, 12);
 		state = states.mach2
-		sprite_index = spr_player_rollgetup;
+		sprite_index = spr_rollgetup;
 	}
 	if (grounded)
 		sprite_index = spr_machroll;
@@ -81,7 +81,7 @@ function scr_player_machroll()
 	{
 		image_index = 0;
 		state = states.freefallprep;
-		sprite_index = spr_player_bodyslamstart;
+		sprite_index = spr_bodyslamstart;
 		vsp = -5;
 	}
 }

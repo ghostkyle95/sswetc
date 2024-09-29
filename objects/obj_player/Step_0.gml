@@ -86,7 +86,7 @@ if (character == "P")
 	}
 }
 if (angry && sprite_index == spr_idle)
-	sprite_index = spr_player_3hpidle;
+	sprite_index = spr_3hpidle;
 scr_playersounds();
 if (state == states.machroll)
 {
@@ -95,7 +95,7 @@ if (state == states.machroll)
 }
 else
 	audio_stop_sound(sound_tumble);
-if (sprite_index == spr_player_winding && state != states.normal)
+if (sprite_index == spr_winding && state != states.normal)
 	windingAnim = 0;
 else
 	audio_stop_sound(sound_superjumpcharge2);
@@ -164,7 +164,7 @@ if (state == states.throwing || state == states.punch || state == states.backkic
 	grabbing = true;
 else
 	grabbing = false;
-if ((state == states.mach3 || state == states.machtumble || state == states.minecart || state == states.fireass || state == states.puddle || state == states.hookshot || state == states.skateboard || state == states.timesup || state == states.freefall || state == states.Sjump || state == states.machroll || state == states.shotgun || state == states.charge || (state == states.superslam && sprite_index == spr_piledriver) || (state == states.superslam && sprite_index == spr_player_piledriverstart) || state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.boxxedpep || state == states.cheesepep || state == states.cheeseball) || state == states.uppercut)
+if ((state == states.mach3 || state == states.machtumble || state == states.minecart || state == states.fireass || state == states.puddle || state == states.hookshot || state == states.skateboard || state == states.timesup || state == states.freefall || state == states.Sjump || state == states.machroll || state == states.shotgun || state == states.charge || (state == states.superslam && sprite_index == spr_piledriver) || (state == states.superslam && sprite_index == spr_piledriverstart) || state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.boxxedpep || state == states.cheesepep || state == states.cheeseball) || state == states.uppercut)
 	instakillmove = true;
 else
 	instakillmove = false;
@@ -290,28 +290,28 @@ else if (!place_meeting(x, y, obj_molasseswater))
 	grav = 0.5;
 if (Dashpad_buffer > 0)
 	Dashpad_buffer = max(Dashpad_buffer - 1, 0);
-if (sprite_index == spr_player_machpunch1 && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_machpunch1 && floor(image_index) == (image_number - 1))
 	sprite_index = spr_mach;
-if (sprite_index == spr_player_machpunch2 && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_machpunch2 && floor(image_index) == (image_number - 1))
 	sprite_index = spr_mach;
 if (sprite_index == spr_mach2jump)
 {
 	if (!audio_is_playing(sfx_flip))
 		scr_sound(sfx_flip);
 }
-if (sprite_index == spr_player_climbwall)
+if (sprite_index == spr_climbwall)
 {
 	if (!audio_is_playing(sound_dash2))
 		scr_sound(sound_dash2);
 }
-if (sprite_index == spr_player_superjumppreplight)
+if (sprite_index == spr_superjumppreplight)
 {
 	if (!audio_is_playing(sound_superjumpcharge2))
 		scr_sound(sound_superjumpcharge2);
 }
 if (audio_is_playing(sfx_flip) && sprite_index != spr_mach2jump)
 	audio_stop_sound(sfx_flip);
-if (audio_is_playing(sound_dash2) && sprite_index != spr_player_climbwall)
+if (audio_is_playing(sound_dash2) && sprite_index != spr_climbwall)
 	audio_stop_sound(sound_dash2);
-if (audio_is_playing(sound_superjumpcharge2) && sprite_index != spr_player_superjumppreplight)
+if (audio_is_playing(sound_superjumpcharge2) && sprite_index != spr_superjumppreplight)
 	audio_stop_sound(sound_superjumpcharge2);

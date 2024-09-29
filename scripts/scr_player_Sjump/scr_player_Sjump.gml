@@ -1,9 +1,6 @@
 function scr_player_Sjump()
 {
-	if (character == "P" || sprite_index != spr_pizzano_sjump)
-		hsp = 0;
-	else if (character == "N" && sprite_index == spr_pizzano_sjump)
-		hsp = move * 3;
+	hsp = 0;
 	Sjumpcan_doublejump = false;
 	mach2 = 0;
 	jumpAnim = true;
@@ -17,22 +14,15 @@ function scr_player_Sjump()
 	move = key_left + key_right;
 	if (move != 0)
 		xscale = move;
-	if (sprite_index == spr_player_superjump || sprite_index == spr_pizzano_sjump)
+	if (sprite_index == spr_superjump)
 	{
 		vsp = -movespeed;
 		movespeed = approach(movespeed, 18, 1);
 	}
-	if (sprite_index == spr_pizzano_sjumpprep)
-		vsp = 0;
-	if (sprite_index == spr_pizzano_sjumpprep && floor(image_index) == (image_number - 1))
-	{
-		sprite_index = spr_pizzano_sjump;
-		vsp = -10;
-	}
 	if (scr_solid(x, y + vsp) && !place_meeting(x, y + vsp, obj_boxofpizza) && !place_meeting(x, y + vsp, obj_metalblock) && !place_meeting(x, y + vsp, obj_destructibles))
 	{
 		scr_sound(sound_maximumspeedland);
-		sprite_index = spr_player_superjumpland;
+		sprite_index = spr_superjumpland;
 		with (obj_camera)
 		{
 			shake_mag = 10;
@@ -64,11 +54,11 @@ function scr_player_Sjump()
 		flash = true;
 		vsp = -5;
 		image_index = 0;
-		sprite_index = spr_player_dashpad;
+		sprite_index = spr_plrdashpad;
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 	}
-	if (key_slap2 && !grounded && vsp < -10 && character == "N")
+	if (key_attack2 && !grounded && vsp < -10 && character == "N")
 	{
 		flash = true;
 		charged = false;

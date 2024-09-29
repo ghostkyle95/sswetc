@@ -17,7 +17,7 @@ function scr_player_Sjumpland()
 	hsp = 0;
 	if (animation_end())
 	{
-		sprite_index = spr_player_machfreefall;
+		sprite_index = spr_machfreefall;
 		state = states.jump;
 		jumpAnim = false;
 	}

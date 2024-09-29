@@ -7,12 +7,12 @@ function scr_hurtplayer(_player_index = obj_player)
 			if ((state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes) && !cutscene)
 			{
 			}
-			else if (sprite_index == spr_player_supertaunt1 || sprite_index == spr_player_supertaunt2 || sprite_index == spr_player_supertaunt3)
+			else if (sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3)
 			{
 			}
 			else if (state == states.minecart)
 			{
-				sprite_index = spr_player_mach3hitwall;
+				sprite_index = spr_mach3hitwall;
 				state = states.bump;
 				hsp = 2.5 * xscale;
 				vsp = -3;

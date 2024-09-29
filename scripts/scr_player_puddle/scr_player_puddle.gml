@@ -5,15 +5,15 @@ function scr_player_puddle()
 	{
 		instance_create(x, y, obj_bangeffect);
 		xscale = -xscale;
-		sprite_index = spr_player_outofcontrolfall;
+		sprite_index = spr_outofcontrolfall;
 	}
-	if (sprite_index == spr_player_slipnslidestart || sprite_index == spr_player_outofcontrolfall)
+	if (sprite_index == spr_slipnslidestart || sprite_index == spr_outofcontrolfall)
 	{
 		if ((grounded && vsp > -1) && !place_meeting(x + 1, y, obj_destructibles) && !place_meeting(x, y + 1, obj_metalblock))
 		{
-			if (sprite_index == spr_player_slipnslidestart)
+			if (sprite_index == spr_slipnslidestart)
 			{
-				sprite_index = spr_player_outofcontrolfall;
+				sprite_index = spr_outofcontrolfall;
 				image_index = 0;
 				image_speed = 0.35;
 				vsp = -7;
@@ -22,24 +22,24 @@ function scr_player_puddle()
 			}
 			else
 			{
-				sprite_index = spr_player_slipnslideend;
+				sprite_index = spr_slipnslideend;
 				image_index = 0;
 				image_speed = 0.35;
 			}
 		}
 	}
-	else if (sprite_index == spr_player_slipnslideend)
+	else if (sprite_index == spr_slipnslideend)
 	{
 		image_speed = 0.35;
 		movespeed -= 0.5;
 		if (movespeed <= 0)
 			state = states.normal;
 		if (!grounded)
-			sprite_index = spr_player_outofcontrolfall;
+			sprite_index = spr_outofcontrolfall;
 	}
-	if (animation_end() && (sprite_index == spr_player_slipnslidestart || sprite_index == spr_player_slipnslideend))
+	if (animation_end() && (sprite_index == spr_slipnslidestart || sprite_index == spr_slipnslideend))
 		image_speed = 0;
-	else if (sprite_index == spr_player_outofcontrolfall)
+	else if (sprite_index == spr_outofcontrolfall)
 		image_speed = clamp(movespeed / 15, 0.3, 1) * 0.6;
 	else
 		image_speed = 0.35;

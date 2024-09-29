@@ -39,7 +39,7 @@ function scr_rocketfist_pizzano()
 		{
 			vsp = -6;
 			movespeed = -6;
-			sprite_index = spr_player_mach3hitwall;
+			sprite_index = spr_mach3hitwall;
 			state = states.bump;
 		}
 		if (!grounded && hsp != 0 && sprite_index != spr_pizzano_sjumpside)
