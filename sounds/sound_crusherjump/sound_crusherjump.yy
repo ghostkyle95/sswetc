@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.555828,
+  "duration": 4.383923,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",
   },
   "preload": true,
   "sampleRate": 44100,
-  "soundFile": "sound_crusherjump",
+  "soundFile": "sound_crusherjump.wav",
   "type": 0,
   "volume": 0.55,
 }

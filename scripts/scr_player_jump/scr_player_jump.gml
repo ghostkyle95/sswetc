@@ -44,6 +44,7 @@ function scr_player_jump()
 		state = states.freefallprep;
 		sprite_index = spr_player_bodyslamstartOLD;
 		vsp = -12;
+		scr_sound(sound_crusherjump)
 	}
 	if (ladderbuffer > 0)
 		ladderbuffer--;
