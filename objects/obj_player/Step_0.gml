@@ -138,7 +138,7 @@ if (global.combofreeze <= 0)
 	global.combotime = approach(global.combotime, 0, 0.25);
 if ((global.combo % 3) == 0 && playComboVariable != global.combo && global.combotime > 0 && global.combo > 0)
 {
-	scr_queue_tvanim(spr_pizzytv_combo, 250);
+	scr_queue_tvanim(obj_tv.combotvspr, 250);
 	playComboVariable = global.combo;
 }
 global.combofreeze--;
@@ -146,7 +146,7 @@ global.combofreeze = clamp(global.combofreeze, 0, 75);
 if (global.combotime <= 0 && global.combo != 0)
 {
 	if (global.combo > 5)
-		scr_queue_tvanim(spr_pizzytvhappy, 200);
+		scr_queue_tvanim(obj_tv.collecttvspr, 200);
 	global.combo = 0;
 	playComboVariable = -4;
 }

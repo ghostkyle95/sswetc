@@ -135,33 +135,40 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			tvsprite = orbtvspr;
 			break;
 		default:
-			if (!obj_player.angry)
+			if !global.panic
 			{
-				ChannelState = 7;
-				if (tvsprite != idletvspr && !(tvsprite == tvchange1 || tvsprite == tvchange2))
+				if (!obj_player.angry)
 				{
-					tvcount = choose(500, 450, 400, 550);
-					tvsprite = idletvspr;
-					image_index = 0;
+					ChannelState = 7;
+					if (tvsprite != idletvspr && !(tvsprite == tvchange1 || tvsprite == tvchange2))
+					{
+						tvcount = choose(500, 450, 400, 550);
+						tvsprite = idletvspr;
+						image_index = 0;
+					}
+					if (tvsprite == idletvspr && tvcount < 1)
+					{
+						tvsprite = choose(tvchange1, tvchange2, tvchange2, tvchange1);
+						image_index = 0;
+					}
+					if ((tvsprite == tvchange1 || tvsprite == tvchange2) && animation_end())
+					{
+						tvcount = choose(500, 450, 400, 550);
+						tvsprite = idletvspr;
+						image_index = 0;
+					}
+					if (tvsprite == idletvspr)
+						tvcount--;
 				}
-				if (tvsprite == idletvspr && tvcount < 1)
+				else
 				{
-					tvsprite = choose(tvchange1, tvchange2, tvchange2, tvchange1);
-					image_index = 0;
+					ChannelState = 8;
+					tvsprite = angrytvspr;
 				}
-				if ((tvsprite == tvchange1 || tvsprite == tvchange2) && animation_end())
-				{
-					tvcount = choose(500, 450, 400, 550);
-					tvsprite = idletvspr;
-					image_index = 0;
-				}
-				if (tvsprite == idletvspr)
-					tvcount--;
 			}
 			else
 			{
-				ChannelState = 8;
-				tvsprite = angrytvspr;
+				tvsprite = panictvspr;
 			}
 			break;
 	}

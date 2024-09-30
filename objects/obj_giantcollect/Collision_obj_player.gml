@@ -4,7 +4,7 @@ if (global.collectsound == 10)
 	scr_sound(sound_pizzacoin);
 }
 global.collectsound = 0;
-scr_queue_tvanim(spr_pizzytvhappy, 200);
+scr_queue_tvanim(obj_tv.collecttvspr, 200);
 global.collect += 1000;
 global.pizzameter += 5;
 create_small_number(x, y, "1000");

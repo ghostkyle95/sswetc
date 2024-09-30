@@ -13,6 +13,6 @@ if (obj_player.grounded)
 		obj_player.state = states.keyget;
 		obj_player.image_index = 0;
 		global.keyget = true;
-		scr_queue_tvanim(spr_pizzytvhappy, 200);
+		scr_queue_tvanim(obj_tv.collecttvspr, 200);
 	}
 }

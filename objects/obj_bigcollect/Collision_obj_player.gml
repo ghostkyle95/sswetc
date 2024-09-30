@@ -3,7 +3,7 @@ if (global.collectsound == 10)
 global.collectsound = 0;
 global.collect += 100;
 global.pizzameter += 5;
-scr_queue_tvanim(spr_pizzytvhappy, 50);
+scr_queue_tvanim(obj_tv.collecttvspr, 50);
 create_small_number(x, y, "100");
 global.combofreeze = 30;
 global.combotime += 5;

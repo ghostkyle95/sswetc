@@ -99,6 +99,7 @@
     {"name":"Coneboy","order":1,"path":"folders/Scripts/State Scripts/Coneboy.yy",},
     {"name":"Confecti","order":2,"path":"folders/Scripts/State Scripts/Confecti.yy",},
     {"name":"Gumbob","order":4,"path":"folders/Scripts/State Scripts/Gumbob.yy",},
+    {"name":"Noise","order":112,"path":"folders/Scripts/State Scripts/Noise.yy",},
     {"name":"Pizzano","order":3,"path":"folders/Scripts/State Scripts/Pizzano.yy",},
     {"name":"Unused","order":697,"path":"folders/Scripts/Unused.yy",},
     {"name":"Sequences","order":10,"path":"folders/Sequences.yy",},
@@ -238,7 +239,6 @@
     {"name":"TV Thingamajigs","order":42,"path":"folders/Sprites/Unused/TV Thingamajigs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Noise","order":112,"path":"folders/Scripts/State Scripts/Noise.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_talisman","order":33,"path":"objects/obj_talisman/obj_talisman.yy",},

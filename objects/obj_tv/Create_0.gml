@@ -43,7 +43,7 @@ playerstate = obj_player.state;
 supermario = 0;
 tvlength = 0;
 global.newhudtvanim = ds_queue_create();
-alarm[1] = 1;
+//alarm[1] = 1;
 DrawY = 0;
 function scr_combotext(_combo = global.combo)
 {
