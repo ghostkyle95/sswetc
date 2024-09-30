@@ -470,7 +470,7 @@ function scr_playerstate()
 			_stateFunction = scr_player_mini;
 			break;
 		case states.machcancel:
-			_stateFunction = scr_playerN_machcancel();
+			_stateFunction = scr_playerN_machcancel;
 			break;
 	}
 	stateName = "states.undefined";

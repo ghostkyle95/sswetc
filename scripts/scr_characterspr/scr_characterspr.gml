@@ -179,6 +179,13 @@ function scr_characterspr()
 		spr_parry1 = spr_player_parry1;
 		spr_parry2 = spr_player_parry2;
 		spr_parry3 = spr_player_parry3;
+		
+		spr_rampjump = spr_player_rampjump;
+		spr_wallsplat = spr_player_wallsplat;
+		spr_grind = spr_player_grind;
+		spr_longjumpstart = spr_player_longjumpstart;
+		spr_longjumpend = spr_player_longjumpend;
+		spr_suplexbump = spr_player_grabbump;
 	}
 	if (character == "N")
 	{
@@ -350,6 +357,13 @@ function scr_characterspr()
 		spr_parry1 = spr_player_parry1;
 		spr_parry2 = spr_player_parry2;
 		spr_parry3 = spr_player_parry3;
+		
+		spr_rampjump = spr_player_rampjump;
+		spr_wallsplat = spr_player_wallsplat;
+		spr_grind = spr_player_grind;
+		spr_longjumpstart = spr_playerN_longjump;
+		spr_longjumpend = spr_playerN_longjumpend;
+		spr_suplexbump = spr_player_grabbump;
 	}
 	if (character == "PTN")
 	{
@@ -530,6 +544,13 @@ function scr_characterspr()
 		spr_parry1 = spr_playerN_parry1;
 		spr_parry2 = spr_playerN_parry2;
 		spr_parry3 = spr_playerN_parry3;
+		
+		spr_rampjump = spr_playerN_rampjump;
+		spr_wallsplat = spr_playerN_wallsplat;
+		spr_grind = spr_playerN_grind;
+		spr_longjumpstart = spr_playerN_longjump;
+		spr_longjumpend = spr_playerN_longjumpend;
+		spr_suplexbump = spr_playerN_suplexbump;
 	}
 	if (character == "G")
 	{

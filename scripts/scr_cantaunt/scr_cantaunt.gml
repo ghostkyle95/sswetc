@@ -8,7 +8,7 @@ function scr_cantaunt(){
 			tauntstoredsprite = sprite_index;
 			tauntstoredstate = state;
 			state = states.backbreaker;
-			if (supertauntcharged)
+			if (supertauntcharged && key_up)
 			{
 				image_index = 0;
 				sprite_index = choose(spr_supertaunt1, spr_supertaunt2, spr_supertaunt3);

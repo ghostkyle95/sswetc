@@ -57,7 +57,7 @@ function scr_player_handstandjump()
 			if (key_jump && grounded)
 			{
 				//movespeed = 10;
-				sprite_index = spr_mach2jump;
+				sprite_index = spr_longjumpstart;
 				instance_create(x, y, obj_jumpdust);
 				state = states.mach2;
 				vsp = -9;
@@ -66,11 +66,9 @@ function scr_player_handstandjump()
 			}
 			if (grounded && (scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles))
 			{
-				grav = 0.5;
 				movespeed = 0;
-				state = states.bump;
-				hsp = -2.5 * xscale;
-				vsp = -3;
+				state = states.jump;
+                vsp = -4;
 				mach2 = 0;
 				image_index = 0;
 				machslideAnim = true;
@@ -79,6 +77,7 @@ function scr_player_handstandjump()
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);
 				scr_sound(sound_bump);
+				sprite_index = spr_suplexbump
 			}
 			if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))))
 			{

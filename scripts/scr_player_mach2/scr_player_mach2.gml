@@ -121,18 +121,24 @@ function scr_player_mach2()
 	if (grounded && !scr_slope() && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope))
 	{
 		movespeed = 0;
-		state = states.normal;
+		state = states.bump;
+		sprite_index = spr_wallsplat
+		image_index = 0
 	}
 	if (!instance_exists(obj_dashcloud) && grounded)
 	{
 		with (instance_create(x, y, obj_dashcloud))
 			sprite_index = spr_dashcloud2;
 	}
-	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
+	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && sprite_index != spr_longjumpstart && sprite_index != spr_longjumpend)
 		sprite_index = spr_secondjump1;
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_secondjump1)
+	if (animation_end() && sprite_index == spr_secondjump1)
 		sprite_index = spr_secondjump2;
-	if grounded && floor(image_index) == image_number - 1 && (sprite_index == spr_rollgetup || sprite_index == spr_mach1)
+	if grounded && animation_end() && (sprite_index == spr_rollgetup || sprite_index == spr_mach1)
+		sprite_index = spr_mach;
+	if animation_end() && sprite_index == spr_longjumpstart
+		sprite_index = spr_longjumpend
+	if grounded && (sprite_index == spr_longjumpstart || sprite_index == spr_longjumpend)
 		sprite_index = spr_mach;
 	scr_cantaunt()
 	if (sprite_index == spr_rollgetup)
@@ -152,7 +158,7 @@ function scr_player_mach2()
 		state = states.Sjump;
 		sprite_index = spr_pizzano_sjumpprep;
 	}*/
-	if ((character == "P" || character == "PTN") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
+	if ((character == "P" || character == "PTN") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
