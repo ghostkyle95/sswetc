@@ -23,6 +23,7 @@ function scr_player_climbwall()
 	sprite_index = spr_climbwall;
 	if (wallspeed <= 0 || !key_attack)
 	{
+		vsp = 0
 		state = states.jump;
 		sprite_index = spr_fall;
 	}

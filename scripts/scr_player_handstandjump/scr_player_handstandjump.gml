@@ -68,11 +68,12 @@ function scr_player_handstandjump()
 			{
 				movespeed = 0;
 				state = states.jump;
-                vsp = -4;
+                vsp = -6;
 				mach2 = 0;
 				image_index = 0;
 				machslideAnim = true;
 				machhitAnim = false;
+				jumpAnim = false;
 				instance_create(x + (10 * xscale), y + 10, obj_bumpeffect);
 				if (audio_is_playing(sound_suplex1))
 					audio_stop_sound(sound_suplex1);

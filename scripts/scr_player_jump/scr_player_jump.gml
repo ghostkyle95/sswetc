@@ -117,7 +117,7 @@ function scr_player_jump()
 			if (floor(image_index) == (image_number - 1))
 				jumpAnim = false;
 		}
-		if (!jumpAnim)
+		if (!jumpAnim) && (sprite_index != spr_suplexbump)
 		{
 			if (sprite_index == spr_airdash1)
 				sprite_index = spr_airdash2;
@@ -170,7 +170,7 @@ function scr_player_jump()
 		else
 			vsp = -21;
 	}
-	if ((character == "P" || character == "PTN") && (!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane))
+	if ((character == "P" || character == "PTN") && (!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane) && sprite_index != spr_suplexbump)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
