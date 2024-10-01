@@ -26,6 +26,39 @@ if (room != scootercutsceneidk && room != rm_credits && room != devroom && room 
 		var _yyoffset = ((i % 2) == 0) ? -4 : 0;
 		draw_text(_xx + shakeX, 29 + obj_stylebar.hudbounce + _yyoffset + DrawY + shakeY, string_char_at(_string, i + 1));
 	}
+	
+	// rank bubble
+	enum RANKS { D, C, B, A, S };
+	var _score = global.collect, _rframe = RANKS.D,
+	_rw = sprite_get_width(spr_rankbubble), _rh = sprite_get_height(spr_rankbubble),
+	_rxo = sprite_get_xoffset(spr_rankbubble), _ryo = sprite_get_yoffset(spr_rankbubble),
+	_rx = 217 + _rxo, _ry = 22 + _ryo + DrawY;
+	
+	if (_score >= global.srank) _rframe = RANKS.S;
+	else if (_score >= global.arank) _rframe = RANKS.A;
+	else if (_score >= global.brank) _rframe = RANKS.B;
+	else if (_score >= global.crank) _rframe = RANKS.C;
+	
+	if (oldrank != _rframe) {
+		if (_score > 0) ranksize = 2.5;
+		oldrank = _rframe;
+	}
+	ranksize = approach(ranksize, 1, 0.1);
+	
+	var _rlocal = global.crank, _rminus = 0;
+	switch (_rframe) {
+		case (RANKS.A): _rlocal = global.srank; _rminus = global.arank; break;
+		case (RANKS.B): _rlocal = global.arank; _rminus = global.brank; break;
+		case (RANKS.C): _rlocal = global.brank; _rminus = global.crank; break;
+	}
+	var _rfill = (_score - _rminus) / ( _rlocal - _rminus), 
+	_t = _rh * _rfill, _top = _rh - _t;
+	
+	draw_sprite_ext(spr_rankbubble, _rframe, _rx, _ry, ranksize, ranksize, 0, c_white, 1);
+	if (_rframe < RANKS.S)
+		draw_sprite_part_ext(spr_rankfill, _rframe, 0, _top, _rw, _rh - _top, 
+		_rx - (_rxo * ranksize), (_ry + (_top * ranksize)) - (_ryo * ranksize), ranksize,
+		ranksize, c_white, 1);
 }
 draw_set_font(global.font);
 draw_set_halign(fa_center);
