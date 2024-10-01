@@ -2,7 +2,7 @@ if (object_index != obj_charcherry)
 {
 	scr_sound(sound_slaphit);
 	instance_create(x + (obj_player.xscale * 40), y, obj_punchdust);
-	if (obj_player.character == "P" || obj_player.character == "PTN")
+	if (obj_player.character == CHARACTERS.PIZZELLE || obj_player.character == CHARACTERS.NOISE)
 	{
 		if (!global.cane)
 		{
@@ -31,7 +31,7 @@ if (object_index != obj_charcherry)
 			obj_player.state = states.finishingblow;
 		}
 	}
-	if (obj_player.character == "N")
+	if (obj_player.character == CHARACTERS.PIZZANO)
 	{
 		state = baddiestates.stun;
 		hp -= 1;

@@ -1,6 +1,6 @@
 function scr_tvsprites()
 {
-	if (obj_player.character == "P")
+	if (obj_player.character == CHARACTERS.PIZZELLE)
 	{
 		idletvspr = spr_pizzytv;
 		tvchange1 = spr_pizzytv2;
@@ -18,7 +18,7 @@ function scr_tvsprites()
 		combotvspr = spr_pizzytv_combo;
 		panictvspr = spr_pizzytv_escape1;
 	}
-	if (obj_player.character == "N")
+	if (obj_player.character == CHARACTERS.PIZZANO)
 	{
 		idletvspr = spr_pizzanotv;
 		tvchange1 = spr_pizzanotv2;

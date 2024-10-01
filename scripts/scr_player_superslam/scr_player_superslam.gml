@@ -91,7 +91,7 @@ function scr_player_superslam()
 	{
 		vsp = -9;
 		state = states.jump;
-		if (character == "P")
+		if (character == CHARACTERS.PIZZELLE)
 			sprite_index = spr_machfreefall;
 	}
 	if (move != 0)

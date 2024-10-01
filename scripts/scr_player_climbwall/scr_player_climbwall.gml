@@ -1,6 +1,6 @@
 function scr_player_climbwall()
 {
-    if (character == "PTN")
+    if (character == CHARACTERS.NOISE)
 	{
 		sprite_index = spr_playerN_wallbounce
 		state = states.machcancel

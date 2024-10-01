@@ -2,9 +2,9 @@ function scr_player_handstandjump()
 {
 	switch (character)
 	{
-		case "P":
-		case "PTN":
-		case "N":
+		case CHARACTERS.PIZZELLE:
+		case CHARACTERS.NOISE:
+		case CHARACTERS.PIZZANO:
 			move = key_left + key_right;
 			landAnim = false;
 			mach2 = 35;

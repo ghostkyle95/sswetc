@@ -176,7 +176,7 @@ function scr_enemy_grabbed()
 	}
 	if (obj_player.state == states.superslam)
 	{
-		if (obj_player.character == "P" || obj_player.character == "PTN")
+		if (obj_player.character == CHARACTERS.PIZZELLE || obj_player.character == CHARACTERS.NOISE)
 		{
 			x = obj_player.x - (obj_player.xscale * 2);
 			y = obj_player.y - 70;

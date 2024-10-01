@@ -1,5 +1,5 @@
 draw_set_font(global.smallfont);
-if (obj_player.character == "P")
+if (obj_player.character == CHARACTERS.PIZZELLE)
 {
 	switch (obj_player.paletteselect)
 	{
@@ -44,7 +44,7 @@ if (obj_player.character == "P")
 			break;
 	}
 }
-else if (obj_player.character == "N")
+else if (obj_player.character == CHARACTERS.PIZZANO)
 {
 	switch (obj_player.paletteselect)
 	{
@@ -92,7 +92,7 @@ else if (obj_player.character == "N")
 			break;
 	}
 }
-else if (obj_player.character == "G")
+else if (obj_player.character == CHARACTERS.GUMBOB)
 {
 	switch (obj_player.paletteselect)
 	{
@@ -122,7 +122,7 @@ else if (obj_player.character == "G")
 			break;
 	}
 }
-else if (obj_player.character == "PTN")
+else if (obj_player.character == CHARACTERS.NOISE)
 {
 	switch (obj_player.paletteselect)
 	{

@@ -74,7 +74,7 @@ function scr_player_machroll()
 		sprite_index = spr_machroll;
 	else if (sprite_index != spr_dive)
 	{
-		if character != "PTN"
+		if character != CHARACTERS.NOISE
 		{
 			sprite_index = spr_dive;
 			vsp = 10;
@@ -94,7 +94,7 @@ function scr_player_machroll()
 	}
 	if (key_jump2 && !grounded)
 	{
-		if character != "PTN"
+		if character != CHARACTERS.NOISE
 		{
 			image_index = 0;
 			state = states.freefallprep;

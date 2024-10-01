@@ -2,9 +2,9 @@ function scr_player_mach3()
 {
 	switch (character)
 	{
-		case "P":
-		case "PTN":
-		case "N":
+		case CHARACTERS.PIZZELLE:
+		case CHARACTERS.NOISE:
+		case CHARACTERS.PIZZANO:
 			if (grounded)
 				Sjumpcan_doublejump = true;
 			if (windingAnim < 2000)
@@ -163,7 +163,7 @@ function scr_player_mach3()
 			if (sprite_index == spr_plrdashpad)
 				image_speed = 0.3;
 		scr_cantaunt()
-			if ((character == "P" || character == "PTN") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
+			if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
 				scr_sound(sound_suplex1);
 				instance_create(x, y, obj_slaphitbox);
@@ -174,7 +174,7 @@ function scr_player_mach3()
 				sprite_index = spr_suplexdash;
 				state = states.handstandjump;
 			}
-	if ((character == "N") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
+	if ((character == CHARACTERS.PIZZANO) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -185,7 +185,7 @@ function scr_player_mach3()
 		sprite_index = choose(spr_kungfu1, spr_kungfu2);
 		state = states.pizzanoshoulderbash;
 	}
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != "N")
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO)
 	{
 		image_index = 0;
 		state = states.freefallprep;

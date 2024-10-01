@@ -72,7 +72,7 @@ function scr_player_mach2()
 		sprite_index = spr_playerN_sidewayspinend
     if (grounded && (sprite_index == spr_playerN_sidewayspin || sprite_index == spr_playerN_sidewayspinend))
         sprite_index = spr_mach
-	/*if (movespeed >= 10 && grounded && character == "N")
+	/*if (movespeed >= 10 && grounded && character == CHARACTERS.PIZZANO)
 	{
 		if (!charged)
 		{
@@ -145,12 +145,12 @@ function scr_player_mach2()
 		image_speed = 0.4;
 	else
 		image_speed = 0.65;
-	/*if (character == "N" && key_down2)
+	/*if (character == CHARACTERS.PIZZANO && key_down2)
 	{
 		sprite_index = spr_pizzano_crouchslide;
 		state = states.machroll;
 	}
-	if (character == "N" && key_up && key_slap2 && charged)
+	if (character == CHARACTERS.PIZZANO && key_up && key_slap2 && charged)
 	{
 		flash = true;
 		alarm[0] = 240;
@@ -158,7 +158,7 @@ function scr_player_mach2()
 		state = states.Sjump;
 		sprite_index = spr_pizzano_sjumpprep;
 	}*/
-	if ((character == "P" || character == "PTN") && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
+	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -169,7 +169,7 @@ function scr_player_mach2()
 		sprite_index = spr_suplexdash;
 		state = states.handstandjump;
 	}
-	if ((character == "N") && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
+	if ((character == CHARACTERS.PIZZANO) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
 	{
 		scr_sound(sound_suplex1);
 		instance_create(x, y, obj_slaphitbox);
@@ -180,7 +180,7 @@ function scr_player_mach2()
 		sprite_index = choose(spr_kungfu1, spr_kungfu2);
 		state = states.pizzanoshoulderbash;
 	}
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != "N")
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO)
 	{
 		image_index = 0;
 		state = states.freefallprep;

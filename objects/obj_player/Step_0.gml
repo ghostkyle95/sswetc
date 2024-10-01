@@ -1,7 +1,7 @@
 scr_getinput();
 scr_characterspr();
 scr_playerstate();
-if (character == "PTN" && grounded && vsp > 0)
+if (character == CHARACTERS.NOISE && grounded && vsp > 0)
 {
 	noisewalljump = 0
 }
@@ -79,7 +79,7 @@ if (!instance_exists(baddiegrabbedID) && (state == states.grab || (state == stat
 	state = states.normal;
 if (!(state == states.grab || state == states.charge || state == states.superslam || state == states.finishingblow))
 	baddiegrabbedID = -4;
-if (character == "P")
+if (character == CHARACTERS.PIZZELLE)
 {
 	if (anger == 0)
 		angry = false;

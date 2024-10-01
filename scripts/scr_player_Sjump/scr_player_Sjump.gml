@@ -44,7 +44,7 @@ function scr_player_Sjump()
 		movespeed = 0;
 	}
 	image_speed = 0.5;
-	if (key_attack2 && !grounded && vsp < -10 && character == "P")
+	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZELLE)
 	{
 		if (move != 0)
 			xscale = move;
@@ -58,7 +58,7 @@ function scr_player_Sjump()
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 	}
-	if (key_attack2 && !grounded && vsp < -10 && character == "PTN")
+	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.NOISE)
 	{
 		if (move != 0)
 			xscale = move
@@ -72,7 +72,7 @@ function scr_player_Sjump()
 			image_xscale = other.xscale
 		image_index = 0
 	}
-	if (key_attack2 && !grounded && vsp < -10 && character == "N" && sprite_index != spr_superjumpland)
+	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && sprite_index != spr_superjumpland)
 	{
 		flash = true;
 		charged = false;

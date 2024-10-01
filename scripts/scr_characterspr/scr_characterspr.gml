@@ -1,6 +1,7 @@
+enum CHARACTERS { PIZZELLE, PIZZANO, NOISE, GUMBOB };
 function scr_characterspr()
 {
-	if (character == "P")
+	if (character == CHARACTERS.PIZZELLE)
 	{
 		spr_idle = spr_player_idle;
 		spr_move = spr_player_walk;
@@ -187,7 +188,7 @@ function scr_characterspr()
 		spr_longjumpend = spr_player_longjumpend;
 		spr_suplexbump = spr_player_grabbump;
 	}
-	if (character == "N")
+	if (character == CHARACTERS.PIZZANO)
 	{
 		spr_idle = spr_pizzano_idle;
 		spr_move = spr_pizzano_walk;
@@ -365,7 +366,7 @@ function scr_characterspr()
 		spr_longjumpend = spr_playerN_longjumpend;
 		spr_suplexbump = spr_player_grabbump;
 	}
-	if (character == "PTN")
+	if (character == CHARACTERS.NOISE)
 	{
 		spr_idle = spr_playerN_idle;
 		spr_move = spr_playerN_move;
@@ -552,7 +553,7 @@ function scr_characterspr()
 		spr_longjumpend = spr_playerN_longjumpend;
 		spr_suplexbump = spr_playerN_suplexbump;
 	}
-	if (character == "G")
+	if (character == CHARACTERS.GUMBOB)
 	{
 		spr_idle = spr_gumbob_idle;
 		spr_move = spr_gumbob_walk;

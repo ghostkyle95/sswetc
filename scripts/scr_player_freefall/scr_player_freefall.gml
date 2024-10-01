@@ -103,7 +103,7 @@ function scr_player_freefall()
 			image_xscale = other.xscale;
 		freefallsmash = false;
 	}
-	if key_slap2 && sprite_index == spr_crusherfall && character == "PTN"
+	if key_slap2 && sprite_index == spr_crusherfall && character == CHARACTERS.NOISE
 	{
 		if (move != 0)
 			xscale = move

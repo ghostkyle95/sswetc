@@ -37,7 +37,7 @@ if (!global.panic)
 			pausedmusic = mu_hub;
 		}
 	}
-	if (string_letters(roomname) == "entryway" && (obj_player.character == "P" || obj_player.character == "PTN"))
+	if (string_letters(roomname) == "entryway" && (obj_player.character == CHARACTERS.PIZZELLE || obj_player.character == CHARACTERS.NOISE))
 	{
 		if (!audio_is_playing(mu_waffle))
 		{
@@ -47,7 +47,7 @@ if (!global.panic)
 			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
 		}
 	}
-	if (string_letters(roomname) == "entryway" && obj_player.character == "N")
+	if (string_letters(roomname) == "entryway" && obj_player.character == CHARACTERS.PIZZANO)
 	{
 		if (!audio_is_playing(mu_pizzanothemetune))
 		{

@@ -1,1 +1,1 @@
-targetDoor = "P"
+targetDoor = "P";
