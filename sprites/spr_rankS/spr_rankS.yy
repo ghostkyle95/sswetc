@@ -34,8 +34,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Rank Room",
-    "path": "folders/Sprites/Room Specific/Rank Room.yy",
+    "name": "Pizzelle",
+    "path": "folders/Sprites/Room Specific/Rank Room/Pizzelle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -56,7 +56,7 @@
     "lockOrigin": false,
     "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
     "playback": 1,
-    "playbackSpeed": 2.0,
+    "playbackSpeed": 1.0,
     "playbackSpeedType": 1,
     "showBackdrop": true,
     "showBackdropImage": false,
