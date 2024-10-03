@@ -9,7 +9,7 @@ function scr_player_shoulder()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if image_index >= (image_number - 1)
+	if (floor(image_index) == (image_number - 1))
 		state = states.normal;
 	sprite_index = spr_player_shoulder;
 	image_speed = 0.35;

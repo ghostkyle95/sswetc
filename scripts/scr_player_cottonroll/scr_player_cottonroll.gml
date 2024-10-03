@@ -7,7 +7,7 @@ function scr_player_cottonroll()
 		movespeed = 0;
 	}
 	hsp = xscale * movespeed;
-	if (sprite_index == spr_cotton_run && image_index >= (image_number - 1))
+	if (sprite_index == spr_cotton_run && floor(image_index) == (image_number - 1))
 	{
 		sprite_index = spr_cotton_maxrun;
 		flash = true;

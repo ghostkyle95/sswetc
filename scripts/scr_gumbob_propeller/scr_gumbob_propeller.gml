@@ -16,7 +16,7 @@ function scr_gumbob_propeller()
 	else
 		movespeed = 0;
 	movespeed = 4;
-	if (image_index >= (image_number - 1) && sprite_index == spr_gumbob_propeller_start)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_gumbob_propeller_start)
 		sprite_index = spr_gumbob_propeller_fly;
 	if (sprite_index == spr_gumbob_propeller_start)
 		vsp = 0;

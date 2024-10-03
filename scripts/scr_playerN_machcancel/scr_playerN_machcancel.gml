@@ -21,7 +21,7 @@ function scr_playerN_machcancel(){
         var xx = movespeed
         if (xx == 0)
             xx = xscale
-        if (grounded && vsp >= 0 && place_meeting((x + xx), y, obj_solid))
+        if (grounded && vsp > 0 && place_meeting((x + xx), y, obj_solid))
         {
             mask_index = spr_crouchmask
             if ((!(place_meeting((x + xx), y, obj_solid))) || place_meeting((x + xx), y, obj_destructibles))

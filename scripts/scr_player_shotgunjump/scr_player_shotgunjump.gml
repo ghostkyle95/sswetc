@@ -21,12 +21,12 @@ function scr_player_shotgunjump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (sprite_index == spr_player_shotgunjump2 && image_index >= (image_number - 1))
+	if (sprite_index == spr_player_shotgunjump2 && floor(image_index) == (image_number - 1))
 	{
 		mach2 = 50;
 		state = states.mach2;
 	}
-	if (grounded && input_buffer_jump < 5 && !key_down && vsp >= 0)
+	if (grounded && input_buffer_jump < 5 && !key_down && vsp > 0)
 	{
 		stompAnim = false;
 		vsp = -9;

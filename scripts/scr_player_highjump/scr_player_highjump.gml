@@ -19,7 +19,7 @@ function scr_player_highjump()
 	landAnim = true;
 	if (!key_jump2 && !jumpstop && vsp < 0)
 	{
-		vsp *= 0.5;
+		vsp /= 2;
 		jumpstop = true;
 	}
 	if (ladderbuffer > 0)
@@ -29,7 +29,7 @@ function scr_player_highjump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (grounded && vsp >= 0)
+	if (grounded && vsp > 0)
 	{
 		if (key_attack)
 			landAnim = false;
@@ -44,7 +44,7 @@ function scr_player_highjump()
 		if (!audio_is_playing(sfx_land))
 			audio_play_sound(sfx_land, 1, false);
 	}
-	if (grounded && input_buffer_jump < 8 && !key_attack && !key_down && vsp >= 0)
+	if (grounded && input_buffer_jump < 8 && !key_attack && !key_down && vsp > 0)
 	{
 		vsp = -9;
 		state = states.jump;

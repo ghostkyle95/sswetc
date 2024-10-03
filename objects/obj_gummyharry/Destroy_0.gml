@@ -1,8 +1,6 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
 	camera_shake(20, 40);
-	with obj_siren
-		sprite_index = spr_siren_active;
 	repeat (2)
 	{
 		instance_create(x, y, obj_bangeffect);

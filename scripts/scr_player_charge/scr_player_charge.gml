@@ -22,7 +22,7 @@ function scr_player_charge()
 	crouchslideAnim = true;
 	if (!key_jump2 && !jumpstop && vsp < 0.5)
 	{
-		vsp *= 0.5;
+		vsp /= 2;
 		jumpstop = true;
 	}
 	if (movespeed <= 0)
@@ -35,7 +35,7 @@ function scr_player_charge()
 		hsp = 0;
 		movespeed = 0;
 	}
-	if (grounded && vsp >= 0)
+	if (grounded && vsp > 0)
 		jumpstop = false;
 	if (input_buffer_jump < 8 && grounded)
 	{

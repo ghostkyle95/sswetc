@@ -12,7 +12,7 @@ function scr_player_crouchjump()
 	movespeed = 4;
 	if (!key_jump2 && !jumpstop && jumpAnim)
 	{
-		vsp *= 0.5;
+		vsp /= 2;
 		jumpstop = true;
 	}
 	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
@@ -50,7 +50,7 @@ function scr_player_crouchjump()
 	if (jumpAnim)
 	{
 		sprite_index = spr_crouchjump;
-		if image_index >= (image_number - 1)
+		if (floor(image_index) == (image_number - 1))
 			jumpAnim = false;
 	}
 	if (!jumpAnim)

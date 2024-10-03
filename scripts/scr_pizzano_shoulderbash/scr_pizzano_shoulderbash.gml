@@ -36,14 +36,14 @@ function scr_pizzano_shoulderbash()
 		if (audio_is_playing(sound_suplex1))
 			audio_stop_sound(sound_suplex1);
 	}	
-	if image_index >= (image_number - 1)
+	if (floor(image_index) == (image_number - 1))
 	{
 		//instakillmove = 0
 		state = states.normal;
 		grav = 0.5;
 		flash = false;
 	}
-	if (key_attack && image_index >= (image_number - 1) && sprite_index != spr_bump)
+	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump)
 	{
 		//instakillmove = 0
 		movespeed = 10;

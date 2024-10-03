@@ -6,7 +6,6 @@ Camera_xorigin = 0;
 Camera_yorigin = 0;
 panicshake = 0;
 panicshakeacc = 0;
-lock = false;
 DrawY = 0;
 image_speed = 0.35;
 alarm[1] = 60;

@@ -115,7 +115,7 @@ function scr_player_mach1()
 				wallspeed = movespeed;
 				state = states.climbwall;
 			}
-			if (grounded && (image_index >= (image_number - 1) && sprite_index == spr_rollgetup))
+			if (grounded && (floor(image_index) == (image_number - 1) && sprite_index == spr_rollgetup))
 				sprite_index = spr_mach1;
 			break;
 	}

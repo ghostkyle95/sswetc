@@ -96,7 +96,7 @@ function scr_player_grab()
 	}
 	if (key_jump)
 		input_buffer_jump = 0;
-	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp >= 0 && sprite_index != spr_swingding)
+	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && sprite_index != spr_swingding)
 	{
 		scr_sound(sound_jump);
 		sprite_index = spr_haulingjump;
@@ -108,16 +108,16 @@ function scr_player_grab()
 		sprite_index = spr_haulingwalk;
 	else if (grounded && move == 0)
 		sprite_index = spr_haulingidle;
-	if (sprite_index == spr_haulingstart && image_index >= (image_number - 1))
+	if (sprite_index == spr_haulingstart && floor(image_index) == (image_number - 1))
 		sprite_index = spr_haulingidle;
-	if ((sprite_index == spr_haulingjump && image_index >= (image_number - 1)) || (!grounded && (sprite_index == spr_haulingwalk || sprite_index == spr_haulingidle)))
+	if ((sprite_index == spr_haulingjump && floor(image_index) == (image_number - 1)) || (!grounded && (sprite_index == spr_haulingwalk || sprite_index == spr_haulingidle)))
 		sprite_index = spr_haulingfall;
-	if (grounded && vsp >= 0 && (sprite_index == spr_haulingfall || sprite_index == spr_haulingjump))
+	if (grounded && vsp > 0 && (sprite_index == spr_haulingfall || sprite_index == spr_haulingjump))
 	{
 		sprite_index = spr_haulingland;
 		movespeed = 2;
 	}
-	if (sprite_index == spr_haulingland && image_index >= (image_number - 1))
+	if (sprite_index == spr_haulingland && floor(image_index) == (image_number - 1))
 		sprite_index = spr_haulingidle;
 	if (move != 0 && move != lastmove && swingdingbuffer < 300)
 	{

@@ -52,7 +52,7 @@ function scr_player_Sjumpprep()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if (image_index >= (image_number - 1) && sprite_index == spr_superjumpprep)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_superjumpprep)
 		sprite_index = spr_superjumppreplight;
 	if (!key_up && (grounded || Sjumpcan_doublejump) && (sprite_index == spr_superjumppreplight || sprite_index == spr_superjumpleft || sprite_index == spr_superjumpright) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{

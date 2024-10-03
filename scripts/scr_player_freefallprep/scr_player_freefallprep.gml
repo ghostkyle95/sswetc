@@ -48,14 +48,14 @@ function scr_player_freefallprep()
 			xscale = move;
 	}
 	image_speed = 0.5;
-	if (image_index >= (image_number - 1) && sprite_index == spr_bodyslamstart)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_bodyslamstart)
 	{
 		vsp += 14;
 		state = states.freefall;
 		freefallsmash = false;
 		sprite_index = spr_bodyslamfall;
 	}
-	if (image_index >= (image_number - 1) && sprite_index == spr_crusherstart)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_crusherstart)
 	{
 		vsp += 14;
 		state = states.freefall;

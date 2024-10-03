@@ -29,7 +29,7 @@ switch (global.stylethreshold)
 		obj_camera.heatpal = 2;
 		break;
 	case 3:
-		image_speed = 0.35;
+		image_speed = 0.3;
 		obj_camera.heatpal = 3;
 		break;
 	case 4:

@@ -29,7 +29,7 @@ function scr_player_superslam()
 		move = 0;
 		hsp = 0;
 	}
-	if ((sprite_index == spr_piledriver || sprite_index == spr_piledriverstart) && (grounded && !place_meeting(x, y + 1, obj_destructibles) && vsp >= 0))
+	if ((sprite_index == spr_piledriver || sprite_index == spr_piledriverstart) && (grounded && !place_meeting(x, y + 1, obj_destructibles) && vsp > 0))
 	{
 		sprite_index = spr_piledriverland;
 		scr_sound(sound_maximumspeedland);
@@ -87,7 +87,7 @@ function scr_player_superslam()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if (sprite_index == spr_piledriverland && image_index >= (image_number - 1))
+	if (sprite_index == spr_piledriverland && floor(image_index) == (image_number - 1))
 	{
 		vsp = -9;
 		state = states.jump;

@@ -57,7 +57,7 @@ function scr_player_crouch()
 				sprite_index = spr_couchstart;
 			else
 				sprite_index = spr_shotgun_goduck;
-			if image_index >= (image_number - 1)
+			if (floor(image_index) == (image_number - 1))
 				crouchAnim = false;
 		}
 	}
@@ -67,5 +67,5 @@ function scr_player_crouch()
 		crouchAnim = false;
 	}
 	//scr_cantaunt()
-	image_speed = 0.35;
+	image_speed = 0.3;
 }

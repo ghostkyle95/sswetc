@@ -5,12 +5,12 @@ function scr_enemy_idle()
 		instance_create(x, y, obj_landcloud);
 		image_index = 0;
 	}
-	if (image_index >= (image_number - 1) && roaming && (grounded || (grounded && !place_meeting(x, y, obj_platform))))
+	if (floor(image_index) == (image_number - 1) && roaming && (grounded || (grounded && !place_meeting(x, y, obj_platform))))
 	{
 		state = baddiestates.walk;
 		image_index = 0;
 	}
-	if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp >= 0)
+	if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0)
 		hsp = 0;
 	if (!(grounded || (grounded && !place_meeting(x, y, obj_platform))) && hsp < 0)
 		hsp += 0.1;
@@ -21,12 +21,12 @@ function scr_enemy_idle()
 		instance_create(x, y, obj_landcloud);
 		image_index = 0;
 	}
-	if (image_index >= (image_number - 1) && roaming && (grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))))
+	if (floor(image_index) == (image_number - 1) && roaming && (grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))))
 	{
 		state = baddiestates.walk;
 		image_index = 0;
 	}
-	if ((grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))) && vsp >= 0)
+	if ((grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))) && vsp > 0)
 		hsp = 0;
 	if (!(grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))) && hsp < 0)
 		hsp += 0.1;

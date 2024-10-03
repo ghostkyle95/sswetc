@@ -60,11 +60,6 @@ function scr_roomnames(_room = room)
         case entrywaysecret_3:
             room_name = "Fine China";
             break;
-		case entryway_lap:
-			if global.laps < 2
-				room_name = string_concat("Portal For None");
-			else if global.lap
-				room_name = string_concat("Portal For ", string(global.laps));
         case entryway_1:
             room_name = "Welcome to Sugary Spire";
             break;

@@ -4,7 +4,7 @@ function scr_player_machslide()
 		sprite_index = spr_crouchslide;
 	if (sprite_index == spr_crouchslide && movespeed <= 0)
 		state = states.normal;
-	if (sprite_index == spr_machslidestart && image_index >= (image_number - 1))
+	if (sprite_index == spr_machslidestart && floor(image_index) == (image_number - 1))
 		sprite_index = spr_machslide;
 	hsp = movespeed * xscale
 	movespeed = approach(movespeed, 0, 0.5);
@@ -18,7 +18,7 @@ function scr_player_machslide()
 		movespeed = 0;
 		state = states.normal;
 	}
-	if (image_index >= (image_number - 1) && sprite_index == spr_machslideboost)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost && mach2 != 0)
 	{
 		movespeed = 8.30;
 		momemtum = true;
@@ -28,7 +28,7 @@ function scr_player_machslide()
 		xscale *= -1;
 		instance_create(x, y, obj_jumpdust);
 	}
-	if (image_index >= (image_number - 1) && sprite_index == spr_machslideboost3)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost3 && mach2 != 0)
 	{
 		movespeed = 12;
 		sprite_index = spr_mach4;

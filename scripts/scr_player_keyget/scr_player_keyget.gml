@@ -14,7 +14,7 @@ function scr_player_keyget()
 	crouchAnim = true;
 	machhitAnim = false;
 	sprite_index = spr_keyget;
-	if image_index >= (image_number - 1)
+	if (floor(image_index) == (image_number - 1))
 	{
 		global.keyget = false;
 		state = states.normal;

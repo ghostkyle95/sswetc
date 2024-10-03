@@ -9,10 +9,10 @@ function scr_player_cheesepep()
 		input_buffer_jump = 0;
 	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
-		vsp *= 0.5;
+		vsp /= 2;
 		jumpstop = true;
 	}
-	if (grounded && vsp >= 0)
+	if (grounded && vsp > 0)
 		jumpstop = false;
 	if (sprite_index == spr_cheesepep_walk || sprite_index == spr_cheesepep_jump || sprite_index == spr_cheesepep_fall || sprite_index == spr_cheesepep_idle)
 	{
@@ -60,13 +60,13 @@ function scr_player_cheesepep()
 		sprite_index = spr_cheesepep_walk;
 	else if (grounded && move == 0 && sprite_index == spr_cheesepep_walk)
 		sprite_index = spr_cheesepep_idle;
-	if (input_buffer_jump < 8 && vsp >= 0 && grounded && (sprite_index == spr_cheesepep_idle || sprite_index == spr_cheesepep_walk))
+	if (input_buffer_jump < 8 && vsp > 0 && grounded && (sprite_index == spr_cheesepep_idle || sprite_index == spr_cheesepep_walk))
 	{
 		scr_sound(sound_maximumspeedstop);
 		image_index = 0;
 		sprite_index = spr_cheesepep_jumpstart;
 	}
-	if (image_index >= (image_number - 1) && sprite_index == spr_cheesepep_jumpstart)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_cheesepep_jumpstart)
 	{
 		vsp = -11;
 		if (key_right)
@@ -75,7 +75,7 @@ function scr_player_cheesepep()
 			hsp = -4;
 		sprite_index = spr_cheesepep_jump;
 	}
-	if ((image_index >= (image_number - 1) && sprite_index == spr_cheesepep_jump) || (!grounded && sprite_index != spr_cheesepep_jump) || (vsp >= 0 && sprite_index == spr_cheesepep_jump))
+	if ((floor(image_index) == (image_number - 1) && sprite_index == spr_cheesepep_jump) || (!grounded && sprite_index != spr_cheesepep_jump) || (vsp > 0 && sprite_index == spr_cheesepep_jump))
 		sprite_index = spr_cheesepep_fall;
 	if (sprite_index == spr_cheesepep_fall && grounded)
 	{
@@ -86,7 +86,7 @@ function scr_player_cheesepep()
 		instance_create(x, y, obj_landcloud);
 		sprite_index = spr_cheesepep_land;
 	}
-	if (image_index >= (image_number - 1) && sprite_index == spr_cheesepep_land)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_cheesepep_land)
 		sprite_index = spr_cheesepep_idle;
 	if (move != 0)
 		xscale = move;
@@ -110,7 +110,7 @@ function scr_player_cheesepep()
 	}
 	else
 		image_speed = 0.35;
-	if (image_index >= (image_number - 1) && sprite_index == spr_cheesepep_intro)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_cheesepep_intro)
 		sprite_index = spr_cheesepep_idle;
 	if (!instance_exists(obj_cloudeffect) && !place_meeting(x, y, obj_water2) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
 		instance_create(x, y + 43, obj_cloudeffect);

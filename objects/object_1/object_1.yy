@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Unused But Referenced",
-    "path": "folders/Objects/Unused But Referenced.yy",
+    "name": "Unused",
+    "path": "folders/Objects/Unused.yy",
   },
   "parentObjectId": null,
   "persistent": false,

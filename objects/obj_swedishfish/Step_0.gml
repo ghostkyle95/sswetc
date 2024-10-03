@@ -36,7 +36,7 @@ if (!hitboxcreate && state == baddiestates.charge && sprite_index == spr_swed_ch
 		depth = -1;
 	}
 }
-if (sprite_index == spr_swed_chargestart && image_index >= (image_number - 1))
+if (sprite_index == spr_swed_chargestart && floor(image_index) == (image_number - 1))
 {
 	sprite_index = spr_swed_charge;
 	movespeed = 10;

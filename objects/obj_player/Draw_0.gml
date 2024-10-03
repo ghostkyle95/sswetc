@@ -9,6 +9,7 @@ if (flash)
 }
 if (flash && alarm[11] <= 0)
 	alarm[11] = 5;
+shader_reset();
 if (global.debugmode)
 {
 	draw_set_font(font_dev);
