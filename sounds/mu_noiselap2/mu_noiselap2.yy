@@ -7,8 +7,8 @@
     "path": "audiogroups/audiogroup_default",
   },
   "bitDepth": 1,
-  "bitRate": 512,
-  "compression": 0,
+  "bitRate": 128,
+  "compression": 2,
   "conversionMode": 0,
   "duration": 141.24625,
   "parent": {
@@ -16,8 +16,8 @@
     "path": "folders/Sounds/Music.yy",
   },
   "preload": false,
-  "sampleRate": 48000,
+  "sampleRate": 44100,
   "soundFile": "mu_noiselap2.wav",
-  "type": 2,
+  "type": 1,
   "volume": 1.0,
 }

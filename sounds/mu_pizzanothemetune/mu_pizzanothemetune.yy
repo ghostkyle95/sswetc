@@ -7,8 +7,8 @@
     "path": "audiogroups/audiogroup_default",
   },
   "bitDepth": 1,
-  "bitRate": 512,
-  "compression": 0,
+  "bitRate": 128,
+  "compression": 2,
   "conversionMode": 0,
   "duration": 172.43428,
   "parent": {
@@ -16,8 +16,8 @@
     "path": "folders/Sounds/Music.yy",
   },
   "preload": true,
-  "sampleRate": 48000,
+  "sampleRate": 44100,
   "soundFile": "mu_pizzanothemetune.mp3",
-  "type": 2,
+  "type": 0,
   "volume": 0.55,
 }

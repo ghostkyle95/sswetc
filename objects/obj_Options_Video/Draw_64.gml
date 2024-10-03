@@ -11,5 +11,8 @@ draw_option(710, 250, "1280X720", optionsaved_resolution == 2);
 draw_option(480, 300, "SMOOTH CAM", optionselected == video_selected.smoothcam);
 draw_option(380, 350, "ON", optionsaved_smoothcam);
 draw_option(580, 350, "OFF", !optionsaved_smoothcam);
+draw_option(480, 400, "SCREEN TILT", optionselected == video_selected.screentilt);
+draw_option(380, 450, "ON", optionsaved_screentilt);
+draw_option(580, 450, "OFF", !optionsaved_screentilt);
 draw_set_font(global.smallfont);
 draw_text(480, 512, subtitle);

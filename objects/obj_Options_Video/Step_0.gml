@@ -8,6 +8,7 @@ if (canmove)
 		optionsaved_fullscreen = global.fullscreen;
 		optionsaved_resolution = global.selectedResolution;
 		optionsaved_smoothcam = global.smoothcam;
+		optionsaved_screentilt = global.screentilt;
 		optionsaved_hitstun = global.hitstunEnabled;
 	}
 	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 4)
@@ -17,6 +18,7 @@ if (canmove)
 		optionsaved_fullscreen = global.fullscreen;
 		optionsaved_resolution = global.selectedResolution;
 		optionsaved_smoothcam = global.smoothcam;
+		optionsaved_screentilt = global.screentilt;
 		optionsaved_hitstun = global.hitstunEnabled;
 	}
 	switch (optionselected)
@@ -83,6 +85,20 @@ if (canmove)
 				ini_write_real("Settings", "smthcam", optionsaved_smoothcam);
 				ini_close();
 				global.smoothcam = optionsaved_smoothcam;
+			}
+			break;
+		case video_selected.screentilt:
+			subtitle = "TOGGLE ESCAPE SCREEN TILT EFFECTS";
+			CursorY = 400;
+			optionsaved_screentilt += (key_right2 + key_left2);
+			optionsaved_screentilt = wrap(optionsaved_screentilt, 0, 1);
+			if (key_jump)
+			{
+				scr_sound(sound_enemythrow);
+				ini_open("optionData.ini");
+				ini_write_real("Settings", "scrntilt", optionsaved_screentilt);
+				ini_close();
+				global.screentilt = optionsaved_screentilt;
 			}
 			break;
 	}

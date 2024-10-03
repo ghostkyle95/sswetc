@@ -7,9 +7,7 @@ function scr_player_handstandjump()
 		grav = 0;
 	momemtum = true;
 	dir = xscale;
-	if movespeed < 8
-		movespeed = 8;
-	else if movespeed < 10
+	if movespeed < 10
 		movespeed += 0.5;
 	if (move != xscale && move != 0)
 	{
@@ -42,7 +40,7 @@ function scr_player_handstandjump()
 		sprite_index = spr_crouchslip;
 		crouchslipbuffer = 25;
 		machhitAnim = false;
-		state = states.machroll;
+		state = states.crouchslide;
 		if (audio_is_playing(sound_suplex1))
 			audio_stop_sound(sound_suplex1);
 	}
@@ -87,5 +85,17 @@ function scr_player_handstandjump()
 			movespeed = 10;
 		state = states.mach2;
 		sprite_index = spr_mach;
+	}
+	if (!global.starrmode)
+	{
+		if (key_slap2 && !key_down)
+		{
+			sprite_index = spr_machtumble;
+			image_index = 0;
+			image_speed = 0.2;
+			state = states.machtumble;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+		}
 	}
 }
