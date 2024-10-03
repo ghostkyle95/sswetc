@@ -1,44 +1,57 @@
 function scr_playersounds()
 {
-	if (!audio_is_playing(sfx_railgrind) && state == states.minecart && grounded)
-		scr_sound(sfx_railgrind);
-	else if (state != states.minecart || !grounded)
+	if state == states.minecart && grounded
+	{
+		if !audio_is_playing(sfx_railgrind)
+			scr_sound(sfx_railgrind);
+	}
+	else
 		audio_stop_sound(sfx_railgrind);
-	if (sprite_index == spr_mach1 && (!audio_is_playing(sound_dash1) && grounded))
-		scr_sound(sound_dash1);
-	else if (sprite_index != spr_mach1 || (!grounded || move == -xscale))
-		audio_stop_sound(sound_dash1);
-	if (sprite_index == spr_mach && state = states.mach2 && !audio_is_playing(sound_dash2))
-		scr_sound(sound_dash2);
-	else if (sprite_index != spr_mach)
-		audio_stop_sound(sound_dash2);
-	if (((state == states.mach3 && sprite_index != spr_crazyrun) || sprite_index == spr_machslideboost3) && !audio_is_playing(sound_maxspeed))
-		scr_sound(sound_maxspeed);
-	else if ((state != states.mach3 && sprite_index != spr_machslideboost3) || sprite_index == spr_crazyrun)
-		audio_stop_sound(sound_maxspeed);
-	if (sprite_index == spr_crazyrun && !audio_is_playing(sound_dash3))
-		scr_sound(sound_dash3);
-	else if (sprite_index != spr_crazyrun)
-		audio_stop_sound(sound_dash3);
+		
 	if (sprite_index == spr_mach2jump)
 	{
 		if (!audio_is_playing(sfx_flip))
 			scr_sound(sfx_flip);
 	}
-	if (sprite_index == spr_climbwall)
+	else
+		audio_stop_sound(sfx_flip);
+		
+	// what the SLOP?!?!?!	
+	
+	var arr =
+	[
+		sfx_mach1,
+		sfx_mach2,
+		sfx_mach3,
+		sfx_mach4,
+	]
+	if (state == states.mach2 && grounded && vsp >= 0 || state == states.climbwall || state == states.mach3) && sprite_index != spr_player_rollgetup
 	{
-		if (!audio_is_playing(sound_dash2))
-			scr_sound(sound_dash2);
+		var machsnd = sfx_mach1;
+		if state == states.mach2 && sprite_index != spr_mach1 || state == states.climbwall
+			machsnd = sfx_mach2;
+		else if state == states.mach3 && sprite_index != spr_crazyrun
+			machsnd = sfx_mach3;
+		else if sprite_index == spr_crazyrun
+			machsnd = sfx_mach4;
+		for (var i = 0; i < array_length(arr); i++)
+		{
+			if machsnd != arr[i]
+				audio_stop_sound(arr[i]);
+			else if !audio_is_playing(machsnd)
+				scr_sound(machsnd);
+		}
+	}
+	else
+	{
+		for (var i = 0; i < array_length(arr); i++)
+			audio_stop_sound(arr[i]);
 	}
 	if (sprite_index == spr_superjumppreplight)
 	{
 		if (!audio_is_playing(sound_superjumpcharge2))
 			scr_sound(sound_superjumpcharge2);
 	}
-	if (audio_is_playing(sfx_flip) && sprite_index != spr_mach2jump)
-		audio_stop_sound(sfx_flip);
-	if (audio_is_playing(sound_dash2) && sprite_index != spr_climbwall)
-		audio_stop_sound(sound_dash2);
 	if (audio_is_playing(sound_superjumpcharge2) && sprite_index != spr_superjumppreplight)
 		audio_stop_sound(sound_superjumpcharge2);
 }

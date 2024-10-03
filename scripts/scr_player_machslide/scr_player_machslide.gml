@@ -20,24 +20,33 @@ function scr_player_machslide()
 	}
 	if (image_index >= (image_number - 1) && sprite_index == spr_machslideboost)
 	{
-		movespeed = 8.30;
-		momemtum = true;
-		state = states.mach2;
-		sprite_index = spr_mach;
-		image_index = 0;
-		xscale *= -1;
-		instance_create(x, y, obj_jumpdust);
+		if grounded
+		{
+			movespeed = 8.30;
+			momemtum = true;
+			state = states.mach2;
+			sprite_index = spr_mach;
+			image_index = 0;
+			xscale *= -1;
+			instance_create(x, y, obj_jumpdust);
+		}
+		else
+			image_index = image_number - 4;
 	}
 	if (image_index >= (image_number - 1) && sprite_index == spr_machslideboost3)
 	{
-		movespeed = 12;
-		sprite_index = spr_mach4;
-		scr_sound(sound_dash2);
-		momemtum = true;
-		state = states.mach3;
-		image_index = 0;
-		xscale *= -1;
-		instance_create(x, y, obj_jumpdust);
+		if grounded
+		{
+			movespeed = 12;
+			sprite_index = spr_mach4;
+			momemtum = true;
+			state = states.mach3;
+			image_index = 0;
+			xscale *= -1;
+			instance_create(x, y, obj_jumpdust);
+		}
+		else
+			image_index = image_number - 4;
 	}
 	if !instance_exists(obj_dashcloud) && grounded
 	{

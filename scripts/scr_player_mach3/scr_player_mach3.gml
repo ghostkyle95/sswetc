@@ -14,34 +14,34 @@ function scr_player_mach3()
 	momemtum = true;
 	move = key_right + key_left;
 	move2 = key_right2 + key_left2;
-	if (movespeed < 24 && move == xscale)
+	if (movespeed < 20 && move == xscale && grounded)
 	{
-		movespeed += 0.05;
-		if (!instance_exists(obj_crazyruneffect))
-			instance_create(x, y, obj_crazyruneffect);
+		if movespeed < 16
+			movespeed += 0.025;
+		else
+			movespeed += 0.1;
 	}
-	else if ((movespeed > 12 && move != xscale) && Dashpad_buffer <= 0)
-		movespeed -= 0.05;
+		
 	crouchslideAnim = true;
 	if (!key_jump2 && !jumpstop && vsp < 0.5)
 	{
 		vsp *= 0.5;
-		jumpstop = true	;
+		jumpstop = true;
 	}
 	if (grounded && vsp >= 0)
 		jumpstop = false;
-	if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && key_attack)
+	if (input_buffer_jump < 8 && grounded && move != -xscale && key_attack)
 	{
 		scr_sound(sound_jump);
 		image_index = 0;
 		sprite_index = spr_mach3jump;
-		vsp = -9;
+		vsp = -11;
 	}
 	if (sprite_index == spr_mach3jump && image_index >= (image_number - 1))
 		sprite_index = spr_mach4;
 	if (image_index >= (image_number - 1) && (sprite_index == spr_rollgetup || sprite_index == spr_plrdashpad))
 		sprite_index = spr_mach4;
-	if ((movespeed > 20 && sprite_index != spr_crazyrun) && sprite_index != spr_dive && sprite_index != spr_rollgetup)
+	if ((movespeed >= 16 && sprite_index != spr_crazyrun) && sprite_index != spr_dive && sprite_index != spr_rollgetup)
 	{
 		flash = true;
 		sprite_index = spr_crazyrun;
@@ -52,7 +52,7 @@ function scr_player_mach3()
 		input_buffer_jump = 10000000000;
 	else if (key_jump)
 		input_buffer_jump = 0;
-	if (key_up && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
+	if (key_up && sprite_index != spr_plrdashpad && sprite_index != spr_dive && grounded)
 	{
 		scr_sound(sound_superjumpcharge1);
 		sprite_index = spr_superjumpprep;
@@ -75,7 +75,6 @@ function scr_player_mach3()
 		flash = false;
 		state = states.machslide;
 		image_index = 0;
-		mach2 = 100;
 	}
 	if (key_down && !place_meeting(x, y, obj_dashpad) && !grounded && sprite_index != spr_dive)
 	{
@@ -148,7 +147,7 @@ function scr_player_mach3()
 		image_speed = 0.4;
 	else if sprite_index == spr_crazyrun
 		image_speed = 0.75;
-	else if (sprite_index == spr_rollgetup || sprite_index == spr_plrdashpad)
+	else
 		image_speed = 0.4;
 	scr_cantaunt()
 	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)

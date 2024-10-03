@@ -1,5 +1,7 @@
 scr_initinput();
 scr_getinput();
+punch_afterimage = 0;
+steppybuffer = 12;
 crouchslipbuffer = 0;
 global.lap = false;
 global.laps = 0;

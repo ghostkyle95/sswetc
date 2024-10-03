@@ -7,8 +7,8 @@
     "path": "audiogroups/audiogroup_default",
   },
   "bitDepth": 1,
-  "bitRate": 128,
-  "compression": 2,
+  "bitRate": 512,
+  "compression": 0,
   "conversionMode": 0,
   "duration": 133.565,
   "parent": {
@@ -16,8 +16,8 @@
     "path": "folders/Sounds/Music.yy",
   },
   "preload": true,
-  "sampleRate": 44100,
+  "sampleRate": 48000,
   "soundFile": "mu_swamp.wav",
-  "type": 0,
+  "type": 2,
   "volume": 0.8,
 }

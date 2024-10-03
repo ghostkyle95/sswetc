@@ -126,13 +126,6 @@ if (suplexmove && grounded)
 }
 if (obj_player.state != states.handstandjump)
 	grav = 0.5;
-if (sprite_index == spr_player_idlevomit && image_index > 28 && image_index < 43)
-	instance_create(x + random_range(-5, 5), y + 46, obj_vomit);
-if (sprite_index == spr_player_idlevomitblood && image_index > 28 && image_index < 43)
-{
-	with (instance_create(x + random_range(-5, 5), y + 46, obj_vomit))
-		sprite_index = spr_vomit2;
-}
 if (angry && !instance_exists(obj_angrycloud) && obj_player.state == states.normal)
 	instance_create(x, y, obj_angrycloud);
 global.combotime = clamp(global.combotime, 0, 60);
@@ -204,8 +197,8 @@ if (state != states.jump)
 if (state != states.jump)
 	stompAnim = false;
 if (toomuchalarm1 > 0)
-	toomuchalarm1 -= 1;
-if (toomuchalarm1 <= 0 && (state == states.mach3 || state == states.hookshot || state == states.mach2 || state == states.charge || (state == states.machslide && mach2 >= 100) || state == states.machroll || state == states.handstandjump || state == states.cottondrill || state == states.cottonroll || state == states.minecart || (state == states.rocketfistpizzano && sprite_index != spr_pizzano_sjumpprepside) || state == states.pizzanoshoulderbash || (state == states.chainsaw && mach2 >= 100)))
+	toomuchalarm1--
+else if (state == states.mach3 || state == states.hookshot || state == states.mach2 || state == states.charge || state == states.machroll || state == states.handstandjump || state == states.cottondrill || state == states.cottonroll || state == states.minecart || (state == states.rocketfistpizzano && sprite_index != spr_pizzano_sjumpprepside) || state == states.pizzanoshoulderbash || (state == states.chainsaw && mach2 >= 100))
 {
 	with (instance_create(x, y, obj_mach3effect))
 	{

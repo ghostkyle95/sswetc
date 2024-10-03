@@ -53,7 +53,6 @@ if (ds_list_find_index(global.baddieroom, id) == -1 || important)
 				break;
 		}
 		global.combotime = 60;
-		global.style += 4;
 		global.combofreeze = 30;
 	}
 	ds_list_add(global.baddieroom, id);

@@ -17,8 +17,10 @@ function scr_player_climbwall()
 		windingAnim++;
 	suplexmove = false;
 	vsp = -wallspeed;
-	if wallspeed < 24 
-		wallspeed += 0.025
+	if wallspeed < 6
+		wallspeed = 6;
+	else if wallspeed < 20
+		wallspeed += 0.15
 	crouchslideAnim = true;
 	sprite_index = spr_climbwall;
 	if (wallspeed <= 0 || !key_attack)
@@ -31,18 +33,18 @@ function scr_player_climbwall()
 	{
 		instance_create(x, y, obj_jumpdust);
 		vsp = 0;
-		if (mach2 < 100)
+		if (wallspeed >= 6 && wallspeed < 12)
+		{
 			state = states.mach2;
-		else if (mach2 >= 100)
+			movespeed = wallspeed;
+		}
+		else if wallspeed >= 12
 		{
 			state = states.mach3;
 			sprite_index = spr_mach4;
+			movespeed = wallspeed;
 		}
-		else
-		{
-			state = states.jump;
-			vsp = -wallspeed;
-		}
+		hsp = wallspeed * xscale;
 	}
 	if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles) && !scr_slope_ext(x + sign(hsp), y) && !scr_slope_ext(x - sign(hsp), y))
 	{
@@ -59,26 +61,22 @@ function scr_player_climbwall()
 	}
 	if (key_jump && key_attack)
 	{
-		if (mach2 >= 100)
+		xscale *= -1;
+		if (wallspeed >= 6 && wallspeed < 12)
 		{
-			mach2 = 100;
-			instance_create(x, y, obj_jumpdust);
-			vsp = -9;
-			sprite_index = spr_mach4;
-			state = states.mach3;
-			if (global.starrmode)
-				state = states.mach2;
-			xscale *= -1;
-		}
-		else
-		{
-			sprite_index = spr_mach2jump;
-			mach2 = 35;
-			instance_create(x, y, obj_jumpdust);
-			vsp = -9;
 			state = states.mach2;
-			xscale *= -1;
+			sprite_index = spr_mach2jump;
+			movespeed = wallspeed;
 		}
+		else if wallspeed >= 12
+		{
+			state = states.mach3;
+			sprite_index = spr_plrdashpad;
+			movespeed = wallspeed;
+		}
+		vsp = -11;
+		jumpstop = true;
+		hsp = wallspeed * xscale;
 	}
 	image_speed = 0.6;
 	if (!instance_exists(obj_cloudeffect))

@@ -1,43 +1,56 @@
 function scr_player_freefall()
 {
-	hsp = 0;
 	landAnim = true;
+	if vsp >= 2
+	{
+		if steppybuffer > 0
+			steppybuffer--;
+		else
+		{
+			instance_create(x + irandom_range(-25, 25), y + irandom_range(-10, 35), obj_cloudeffect)
+			steppybuffer = 8;
+		}
+		if vsp > 17
+		{
+			if punch_afterimage > 0
+				punch_afterimage--;
+			else
+			{
+				punch_afterimage = 5;
+				with (instance_create(x, y, obj_mach3effect))
+				{
+					playerid = other.object_index;
+					image_index = other.image_index - 1;
+					image_xscale = other.xscale;
+					sprite_index = other.sprite_index;
+				}
+			}
+		}
+		vsp += 0.5;
+	}
+
 	move = key_left + key_right;
-	if (!grounded)
+	if !grounded
 	{
 		hsp = move * movespeed;
-		if vsp < 50
-			vsp += 0.5
-		if (move != xscale && momemtum && movespeed != 0)
-			movespeed -= 0.05;
-		if (movespeed == 0)
-			momemtum = false;
-		if ((move == 0 && !momemtum) || scr_solid(x + hsp, y))
+		if move != dir && move != 0
 		{
+			dir = move;
 			movespeed = 0;
-			mach2 = 0;
 		}
-		if (move != 0 && movespeed < 7)
+		if move != 0 && movespeed < 7
 			movespeed += 0.25;
-		if (movespeed > 7)
+		else if move != 0
 			movespeed -= 0.05;
-		if ((scr_solid(x + 1, y) && move == 1) || (scr_solid(x - 1, y) && move == -1))
-			movespeed = 0;
-		if (dir != xscale)
-		{
-			mach2 = 0;
-			dir = xscale;
-			movespeed = 0;
-		}
-		if (move == -xscale)
-		{
-			mach2 = 0;
-			movespeed = 0;
-			momemtum = false;
-		}
-		if (move != 0)
+		if move != 0
 			xscale = move;
+		if move == 0 || scr_solid(x + move, y)
+			movespeed = 0;
 	}
+	if vsp > 0
+		freefallsmash++;
+	else if vsp < 0
+		freefallsmash = -14;
 	if (global.cane)
 		sprite_index = spr_caneslam;
 	if ((grounded && !input_buffer_jump < 8) && !place_meeting(x, y + 1, obj_destructibles))
@@ -83,26 +96,9 @@ function scr_player_freefall()
 				sprite_index = spr_crusherland;
 		}
 	}
-	if (place_meeting(x, y + 1, obj_destructibles))
-		vsp = 20;
 	image_speed = 0.35;
-	freefallsmash++;
-	if (freefallsmash > 10 && !instance_exists(obj_groundpoundeffect))
-		instance_create_depth(x, y, -6, obj_groundpoundeffect);
-	if (key_attack2 && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
-	{
-		if (move != 0)
-			xscale = move;
-		movespeed = 10;
-		machhitAnim = false;
-		state = states.mach2;
-		flash = true;
-		vsp = -7;
-		sprite_index = spr_mach2jump;
-		with (instance_create(x, y, obj_jumpdust))
-			image_xscale = other.xscale;
-		freefallsmash = false;
-	}
+	if (freefallsmash >= 10 && !instance_exists(obj_groundpoundeffect))
+		instance_create(x, y, obj_groundpoundeffect);
 	if key_slap2 && sprite_index == spr_crusherfall && character == CHARACTERS.NOISE
 	{
 		if (move != 0)

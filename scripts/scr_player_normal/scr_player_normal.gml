@@ -18,6 +18,7 @@ function scr_player_normal()
 	{
 		if (move == 0)
 		{
+			steppybuffer = 12;
 			if idle < 300
 				idle++;
 			else if image_index >= (image_number - 1)
@@ -54,6 +55,8 @@ function scr_player_normal()
 								sprite_index = spr_escapeidle;
 							else if (instance_exists(obj_coneball) && sprite_index == spr_escapeidle)
 								sprite_index = spr_timesupidle;
+							else if angry
+								sprite_index = spr_3hpidle;
 							else
 								sprite_index = spr_idle;
 
@@ -76,8 +79,9 @@ function scr_player_normal()
 				}
 			}
 		}
-		if (move != 0)
+		else
 		{
+			xscale = move;
 			machslideAnim = false;
 			idle = 0;
 			facehurt = false;
@@ -87,8 +91,18 @@ function scr_player_normal()
 				sprite_index = spr_canewalk;
 			else
 				sprite_index = spr_move;
+				
+			if steppybuffer > 0
+				steppybuffer--;
+			else
+			{
+				steppybuffer = 12;
+				scr_sound(choose(sound_step, sound_step2));
+				instance_create(x, y + 43, obj_cloudeffect);
+			}
+				
 		}
-		xscale = move;
+		
 	}
 	if (landAnim)
 	{

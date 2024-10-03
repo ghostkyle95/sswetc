@@ -15,7 +15,6 @@ function scr_playerreset()
 	global.playseconds = 0;
 	global.panic = false;
 	global.style = 0;
-	global.stylethreshold = 0;
 	global.minesProgress = false;
 	obj_tv.image_index = 0;
 	obj_tv.tvsprite = spr_tvturnon;
