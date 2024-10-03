@@ -94,7 +94,7 @@ function scr_player_cotton()
 	}
 	if (sprite_index == spr_cotton_fall && key_jump)
 	{
-		vsp = -11;
+		vsp = -10;
 		grav = 0.1;
 		image_index = 0;
 		sprite_index = spr_cotton_doublejump;
