@@ -28,8 +28,8 @@ function rank_checker(_rank = global.rank)
 	var value = 0;
 	switch (_rank)
 	{
-		case "p":
-			value = 5;
+		case "e":
+			value = 6;
 			break;
 		case "s":
 			value = 4;

@@ -25,13 +25,9 @@ if (global.panic)
 				scr_sound(mu_rankc);
 			if (global.rank == "d")
 				scr_sound(mu_rankd);
-			if (global.rank == "p")
-				scr_sound(mu_ranks);
+			if (global.rank == "e")
+				scr_sound(mu_rankd);
 			audio_stop_sound(mu_escape);
-			audio_stop_sound(mu_lap2);
-			audio_stop_sound(mu_pizzanoescape);
-			audio_stop_sound(mu_noiseescape);
-			audio_stop_sound(mu_noiselap2);
 			ini_open("saveData.ini");
 			if (room == mines_1)
 			{

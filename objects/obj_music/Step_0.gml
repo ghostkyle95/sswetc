@@ -1,11 +1,11 @@
 pausedmusic = global.music;
 if (global.panic && !obj_pause.pause && room != timesuproom)
 {
-	if (!audio_is_playing(global.panicmus))
+	if (!audio_is_playing(mu_escape))
 	{
 		audio_stop_all_music();
-		scr_music(global.panicmus);
-		pausedmusic = global.panicmus;
+		scr_music(mu_escape);
+		pausedmusic = mu_escape;
 	}
 }
 else if (!global.panic && room == timesuproom)

@@ -5,7 +5,7 @@ if (levelrank == "none")
 	visible = false;
 else
 	visible = true;
-if (levelrank == "p")
+if (levelrank == "e")
 	image_index = 0;
 if (levelrank == "s")
 	image_index = 1;
