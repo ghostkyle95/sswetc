@@ -4,9 +4,9 @@ function scr_player_bump()
 	mach2 = 0;
 	start_running = true;
 	alarm[4] = 14;
-	if ((grounded && vsp > 0))
+	if ((grounded && vsp >= 0))
 		hsp = 0;
-	if (floor(image_index) == (image_number - 1))
+	if image_index >= (image_number - 1)
 		state = states.normal;
 	if ((sprite_index != spr_catched && (sprite_index != spr_tumbleend && sprite_index != spr_mach3hitwall && sprite_index != spr_wallsplat && sprite_index != spr_suplexbump)))
 		sprite_index = spr_bump;

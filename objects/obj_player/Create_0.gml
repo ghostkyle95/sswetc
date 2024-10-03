@@ -1,5 +1,8 @@
 scr_initinput();
 scr_getinput();
+crouchslipbuffer = 0;
+global.lap = false;
+global.laps = 0;
 Sjumpcan_doublejump = true;
 firetrailbuffer = 0;
 playComboVariable = -4;

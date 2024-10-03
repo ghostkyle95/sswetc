@@ -6,10 +6,10 @@ function scr_player_grabbing()
 	hsp = move * movespeed;
 	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
-		vsp /= 2;
+		vsp *= 0.5;
 		jumpstop = true;
 	}
-	if (grounded && vsp > 0)
+	if (grounded && vsp >= 0)
 		jumpstop = false;
 	if (((scr_solid(x + 1, y) && xscale == 1) || (scr_solid(x - 1, y) && xscale == -1)) && !scr_solid(x + sign(hsp), y))
 		movespeed = 0;
@@ -56,7 +56,7 @@ function scr_player_grabbing()
 	}
 	if (sprite_index == spr_player_grabbingjump && floor(image_index) == 2)
 		sprite_index = spr_player_grabbingfall;
-	if (!grounded && vsp > 0)
+	if (!grounded && vsp >= 0)
 		sprite_index = spr_player_grabbingfall;
 	if (move != 0)
 	{

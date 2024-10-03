@@ -1,9 +1,12 @@
 scr_getinput();
 scr_characterspr();
 scr_playerstate();
-if (character == CHARACTERS.NOISE && grounded && vsp > 0)
-{
+if character == CHARACTERS.NOISE && grounded && vsp >= 0
 	noisewalljump = 0
+if !global.panic
+{
+	global.lap = false;
+	global.laps = 0;
 }
 if (state != states.comingoutdoor)
 	image_blend = make_color_hsv(0, 0, 255);
@@ -52,14 +55,13 @@ if (state != states.gameover && y > (room_height + 64) && !place_meeting(x, y, o
 		var _checkpoint = instance_nearest(x, y, obj_checkpoint);
 		x = _checkpoint.x;
 		y = _checkpoint.y;
-		instance_create(_checkpoint.x, _checkpoint.y, obj_poofeffect);
 	}
 	else
 	{
 		x = roomstartx;
 		y = roomstarty;
-		instance_create(roomstartx, roomstarty, obj_poofeffect);
 	}
+	instance_create(x, y, obj_poofeffect);
 	if (instance_exists(obj_train))
 	{
 		with (obj_train)
@@ -81,13 +83,13 @@ if (!(state == states.grab || state == states.charge || state == states.supersla
 	baddiegrabbedID = -4;
 if (character == CHARACTERS.PIZZELLE)
 {
-	if (anger == 0)
-		angry = false;
 	if (anger > 0)
 	{
 		angry = true;
-		anger -= 1;
+		anger--;
 	}
+	else
+		angry = false;
 }
 if (angry && sprite_index == spr_idle)
 	sprite_index = spr_3hpidle;
@@ -276,7 +278,7 @@ if (global.starrmode)
 }
 if (state == states.door || place_meeting(x, y, obj_hallway) || state == states.victory)
 	global.roomsave = false;
-if (state == states.finishingblow && !floor(image_index) == (image_number - 1))
+if (state == states.finishingblow && !image_index >= (image_number - 1))
 {
 	with (instance_place(x, y, obj_baddie))
 		vsp = 0;
@@ -294,7 +296,7 @@ else if (!place_meeting(x, y, obj_molasseswater))
 	grav = 0.5;
 if (Dashpad_buffer > 0)
 	Dashpad_buffer = max(Dashpad_buffer - 1, 0);
-if (sprite_index == spr_machpunch1 && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_machpunch1 && image_index >= (image_number - 1))
 	sprite_index = spr_mach;
-if (sprite_index == spr_machpunch2 && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_machpunch2 && image_index >= (image_number - 1))
 	sprite_index = spr_mach;

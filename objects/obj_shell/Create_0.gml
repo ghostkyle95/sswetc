@@ -1,5 +1,21 @@
 // feather disable all
 // feather ignore all
+
+#macro debug GM_build_type == "run"
+DEBUG = debug;
+if !DEBUG
+{
+	var n = parameter_count();
+	if n > 2
+		DEBUG = true;
+	for (var i = 0; i < n; i++)
+	{
+		var s = parameter_string(i);
+		if (s == "-debug" || s == "debug")
+			DEBUG = true;
+	}
+}
+
 isOpen = false;
 isAutocompleteOpen = false;
 

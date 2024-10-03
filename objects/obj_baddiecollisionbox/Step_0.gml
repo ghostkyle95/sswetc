@@ -24,13 +24,13 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					vsp = -11;
 				}
 			}
-			if (instance_exists(other.baddieID) && y < other.baddieID.y && !attacking && state == states.jump && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
+			if (instance_exists(other.baddieID) && y < other.baddieID.y && !attacking && state == states.jump && vsp >= 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
 			{
 				scr_sound(sound_enemyslap);
 				suplexmove = false;
 				if (other.baddieID.object_index == obj_pizzaball)
 					global.golfhit += 1;
-				if (vsp > 0)
+				if (vsp >= 0)
 				{
 					other.baddieID.squashed = true;
 					other.baddieID.squashval = 0;
@@ -78,7 +78,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					stunned = 500;
 				}
 			}
-			if (instance_exists(other.baddieID) && !instakillmove && other.baddieID.vsp > 0 && state != states.hurt && state != states.superslam && state != states.finishingblow && state != states.handstandjump && state != states.pizzanoshoulderbash)
+			if (instance_exists(other.baddieID) && !instakillmove && other.baddieID.vsp >= 0 && state != states.hurt && state != states.superslam && state != states.finishingblow && state != states.handstandjump && state != states.pizzanoshoulderbash)
 			{
 				if (other.baddieID.stuntouch <= 0)
 				{

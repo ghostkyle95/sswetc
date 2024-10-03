@@ -16,7 +16,7 @@ function scr_player_facestomp()
 	if (!key_down)
 		state = states.jump;
 	landAnim = true;
-	if (vsp > 0)
+	if (vsp >= 0)
 		superslam++;
 	else
 		superslam = 0;
@@ -25,7 +25,7 @@ function scr_player_facestomp()
 		state = states.freefall;
 		superslam = 0;
 	}
-	if (grounded && (!place_meeting(x, y + 1, obj_destructibles) || place_meeting(x, y + 1, obj_metalblock)) && vsp > 0)
+	if (grounded && (!place_meeting(x, y + 1, obj_destructibles) || place_meeting(x, y + 1, obj_metalblock)) && vsp >= 0)
 	{
 		scr_sound(sfx_facestomp);
 		state = states.freefallland;
@@ -50,7 +50,7 @@ function scr_player_facestomp()
 	if (move != 0)
 		xscale = move;
 	image_speed = 0.35;
-	if (grounded && input_buffer_jump < 8 && vsp > 0)
+	if (grounded && input_buffer_jump < 8 && vsp >= 0)
 	{
 		sprite_index = spr_player_hanstandjump;
 		stompAnim = false;

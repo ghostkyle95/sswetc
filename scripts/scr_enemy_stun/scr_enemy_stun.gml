@@ -3,7 +3,7 @@ function scr_enemy_stun()
 	stunned--;
 	sprite_index = stunfallspr;
 	image_speed = 0.35;
-	if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp > 0)
+	if ((grounded || (grounded && !place_meeting(x, y, obj_platform))) && vsp >= 0)
 	{
 		hsp = 0;
 		if (thrown && hp <= 0 && object_index != obj_noisecrusher)
@@ -33,7 +33,7 @@ function scr_enemy_stun()
 		if (hp > 0)
 			thrown = false;
 	}
-	if ((grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))) && vsp > 0)
+	if ((grounded || (grounded && !place_meeting(x, y, obj_cottonplatform))) && vsp >= 0)
 	{
 		hsp = 0;
 		if (thrown && hp <= 0 && object_index != obj_noisecrusher)

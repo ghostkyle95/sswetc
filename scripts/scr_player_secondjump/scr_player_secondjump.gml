@@ -19,7 +19,7 @@ function scr_player_secondjump()
 	landAnim = true;
 	if (!key_jump2 && !jumpstop && vsp < 0)
 	{
-		vsp /= 2;
+		vsp *= 0.5;
 		jumpstop = true;
 	}
 	if (ladderbuffer > 0)
@@ -29,7 +29,7 @@ function scr_player_secondjump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (grounded && input_buffer_highjump < 8 && !key_attack && !key_down && vsp > 0)
+	if (grounded && input_buffer_highjump < 8 && !key_attack && !key_down && vsp >= 0)
 	{
 		instance_create(x, y, obj_highjumpcloud1);
 		vsp = -14;
@@ -44,7 +44,7 @@ function scr_player_secondjump()
 		if (!audio_is_playing(sfx_jump))
 			audio_play_sound(sfx_jump, 1, false);
 	}
-	if (grounded && vsp > 0)
+	if (grounded && vsp >= 0)
 	{
 		if (key_attack)
 			landAnim = false;
@@ -65,7 +65,7 @@ function scr_player_secondjump()
 	if (jumpAnim)
 	{
 		sprite_index = spr_secondjump1;
-		if (floor(image_index) == (image_number - 1))
+		if image_index >= (image_number - 1)
 			jumpAnim = false;
 	}
 	if (!jumpAnim)

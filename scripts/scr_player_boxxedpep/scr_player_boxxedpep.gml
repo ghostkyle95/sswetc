@@ -9,10 +9,10 @@ function scr_player_boxxedpep()
 		input_buffer_jump = 0;
 	if (!key_jump2 && !jumpstop && vsp < 0.5 && !stompAnim)
 	{
-		vsp /= 2;
+		vsp *= 0.5;
 		jumpstop = true;
 	}
-	if (grounded && vsp > 0)
+	if (grounded && vsp >= 0)
 		jumpstop = false;
 	if (dir != xscale)
 	{
@@ -33,7 +33,7 @@ function scr_player_boxxedpep()
 		movespeed = 0;
 	if (scr_solid(x + sign(hsp), y) && xscale == -1 && move == -1 && !place_meeting(x - 1, y, obj_slope))
 		movespeed = 0;
-	if (grounded && input_buffer_jump < 8 && vsp > 0 && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
+	if (grounded && input_buffer_jump < 8 && vsp >= 0 && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
 		scr_sound(sound_maximumspeedstop);
 		instance_create(x, y, obj_highjumpcloud2);
@@ -50,7 +50,7 @@ function scr_player_boxxedpep()
 		movespeed = 0;
 	if (movespeed > 8)
 		movespeed -= 0.1;
-	if (sprite_index == spr_boxxedpep_intro && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_boxxedpep_intro && image_index >= (image_number - 1))
 		sprite_index = spr_boxxedpep_idle;
 	if (sprite_index != spr_boxxedpep_intro)
 	{

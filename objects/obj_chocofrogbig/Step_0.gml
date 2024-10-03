@@ -5,7 +5,7 @@ with (instance_nearest(x, y, obj_player))
 		with (other.id)
 			instance_destroy();
 	}
-	if (((place_meeting(x, y + vsp, other.id) && vsp > 0) || place_meeting(x, y + 1, other.id)) && state == states.cottondrill)
+	if (((place_meeting(x, y + vsp, other.id) && vsp >= 0) || place_meeting(x, y + 1, other.id)) && state == states.cottondrill)
 	{
 		with (other.id)
 			instance_destroy();

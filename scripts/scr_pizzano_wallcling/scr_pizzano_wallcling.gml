@@ -6,7 +6,7 @@ function scr_pizzano_wallcling()
 	else
 		vsp = 3;
 	image_speed = 0.35;
-	if (sprite_index == spr_pizzano_mach4 && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_pizzano_mach4 && image_index >= (image_number - 1))
 		sprite_index = spr_pizzano_wallslide;
 	if (key_jump && !grounded)
 	{

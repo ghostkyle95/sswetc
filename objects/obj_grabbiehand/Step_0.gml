@@ -1,4 +1,4 @@
-if (floor(image_index) == (image_number - 1) && sprite_index == spr_grabbiehand_hifive)
+if (image_index >= (image_number - 1) && sprite_index == spr_grabbiehand_hifive)
 {
 	sprite_index = spr_grabbiehand_idle;
 	thumbingup = false;
@@ -43,7 +43,7 @@ if ((x <= (dropspotx + 5) && x >= (dropspotx - 5)) && ((y <= (dropspoty + 5) && 
 	sprite_index = spr_grabbiehand_release;
 	released = true;
 }
-if (sprite_index == spr_grabbiehand_release && (floor(image_index) == (image_number - 1) && (released && grabbing)))
+if (sprite_index == spr_grabbiehand_release && (image_index >= (image_number - 1) && (released && grabbing)))
 	sprite_index = spr_grabbiehand_idle;
 if (sprite_index == spr_grabbiehand_idle && (released && grabbing))
 {

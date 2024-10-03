@@ -5,7 +5,7 @@ function scr_rocketfist_pizzano()
 		vsp = 0;
 		hsp = 0;
 		move = 0;
-		if (sprite_index == spr_superjumpprepside && floor(image_index) == (image_number - 1))
+		if (sprite_index == spr_superjumpprepside && image_index >= (image_number - 1))
 		{
 			image_index = 0;
 			if (grounded)

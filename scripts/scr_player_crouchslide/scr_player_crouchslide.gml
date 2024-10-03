@@ -1,28 +1,17 @@
 function scr_player_crouchslide()
 {
-	movespeed = 12
-	if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
-		hsp = xscale * movespeed;
-	else if (place_meeting(x, y + 1, obj_railh))
-		hsp = (xscale * movespeed) - 5;
-	else if (place_meeting(x, y + 1, obj_railh2))
-		hsp = (xscale * movespeed) + 5;
-	/*if (movespeed >= 0 && !scr_slope() && grounded)
-		movespeed -= 0.2;*/
+	hsp = xscale * movespeed;
 	mask_index = spr_crouchmask;
-	if (!key_down && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
+	if crouchslipbuffer > 0
+		crouchslipbuffer--;
+	else if !key_down && !scr_solid(x, y - 32) && !scr_solid(x, y - 16)
 	{
-		switch (character)
-		{
-			default:
-				sprite_index = spr_rollgetup;
-				image_index = 0;
-				//mach2 = 35;
-				state = states.mach3;
-				/*if (movespeed < 10)
-					movespeed = 10;*/
-				break;
-		}
+		if movespeed >= 12
+			state = states.mach3;
+		else
+			state = states.mach2;
+		sprite_index = spr_rollgetup;
+		image_index = 0;
 	}
 	if (movespeed <= 0 && (!scr_slope() || scr_solid(x + xscale, y, true)) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
@@ -47,29 +36,6 @@ function scr_player_crouchslide()
 		machhitAnim = false;
 		instance_create(x + (xscale * 10), y + (xscale * 10), obj_bumpeffect);
 	}
-	var _xscale = xscale;
-	/*if (place_meeting(x, y + 1, obj_slope))
-	{
-		with (instance_place(x, y + 1, obj_slope))
-		{
-			var slope_acceleration = abs(image_yscale) / abs(image_xscale);
-			if (_xscale == sign(image_xscale))
-			{
-				if (other.movespeed > 0)
-					other.movespeed -= (0.25 * slope_acceleration);
-				else
-				{
-					other.movespeed = 0;
-					other.xscale = -sign(image_xscale);
-				}
-			}
-			else if (_xscale == -sign(image_xscale))
-			{
-				if (other.movespeed < 18)
-					other.movespeed += (0.25 * slope_acceleration);
-			}
-		}
-	}*/
 	if (!instance_exists(obj_slidecloud) && grounded && movespeed > 5)
 		instance_create(x, y, obj_slidecloud);
 	image_speed = 0.35;
