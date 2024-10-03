@@ -147,15 +147,6 @@ function scr_collide_destructibles()
 		{
 			if (place_meeting(x - obj_player.hsp, y, obj_player))
 			{
-				with (obj_player)
-				{
-					hsp = -xscale * 4;
-					vsp = -4;
-					mach2 = 0;
-					image_index = 0;
-					sprite_index = choose(spr_blockbreak1, spr_blockbreak2, spr_blockbreak3, spr_blockbreak4, spr_blockbreak5, spr_blockbreak6, spr_blockbreak7);
-					state = states.tackle;
-				}
 				DestroyedBy = other.id;
 				event_user(0);
 			}
