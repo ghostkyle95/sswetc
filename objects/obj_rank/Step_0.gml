@@ -1,15 +1,18 @@
 scr_getinput();
 if (floor(image_index) == (image_number - 1))
 	image_speed = 0;
-if (global.rank == "s")
-	sprite_index = obj_player.spr_srank;
-if (global.rank == "a")
-	sprite_index = obj_player.spr_arank;
-if (global.rank == "b")
-	sprite_index = obj_player.spr_brank;
-if (global.rank == "c")
-	sprite_index = obj_player.spr_crank;
-if (global.rank == "d")
-	sprite_index = obj_player.spr_drank;
-if (global.rank == "p")
-	sprite_index = obj_player.spr_prank;
+if (obj_player.character == CHARACTERS.PIZZELLE)
+{
+	if (global.rank == "s")
+		sprite_index = spr_rankS;
+	if (global.rank == "a")
+		sprite_index = spr_rankA;
+	if (global.rank == "b")
+		sprite_index = spr_rankB;
+	if (global.rank == "c")
+		sprite_index = spr_rankC;
+	if (global.rank == "d")
+		sprite_index = spr_rankD;
+	if (global.rank == "e")
+		sprite_index = spr_rankS;
+}

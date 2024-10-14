@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_rankS",
-    "path": "sprites/spr_rankS/spr_rankS.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
