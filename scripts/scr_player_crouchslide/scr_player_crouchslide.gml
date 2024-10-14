@@ -10,7 +10,7 @@ function scr_player_crouchslide()
 	/*if (movespeed >= 0 && !scr_slope() && grounded)
 		movespeed -= 0.2;*/
 	mask_index = spr_crouchmask;
-	if (!key_down && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
+	if (!key_down && grounded && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
 	{
 		switch (character)
 		{
@@ -23,6 +23,12 @@ function scr_player_crouchslide()
 					movespeed = 10;*/
 				break;
 		}
+	}
+	if (!grounded)
+	{
+		sprite_index = spr_dive;
+		vsp = 10;
+		state = states.machroll
 	}
 	if (movespeed <= 0 && (!scr_slope() || scr_solid(x + xscale, y, true)) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
