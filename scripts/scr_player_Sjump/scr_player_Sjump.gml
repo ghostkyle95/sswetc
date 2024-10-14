@@ -48,13 +48,12 @@ function scr_player_Sjump()
 	{
 		if (move != 0)
 			xscale = move;
-		movespeed = 12;
-		machhitAnim = false;
-		state = states.mach3;
+		state = states.sjumpcancelprep;
 		flash = true;
-		vsp = -5;
+		vsp = 0;
+		hsp = 0;
 		image_index = 0;
-		sprite_index = spr_plrdashpad;
+		sprite_index = spr_Sjumpcancelprep;
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 	}

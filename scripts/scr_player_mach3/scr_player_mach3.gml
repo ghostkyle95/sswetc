@@ -95,6 +95,8 @@ function scr_player_mach3()
 			}
 			if (sprite_index == spr_dive && grounded)
 				sprite_index = spr_mach4;
+			if (sprite_index == spr_Sjumpcancel && grounded)
+				sprite_index = spr_mach4;
 			if (!key_down && sprite_index == spr_dive && !grounded)
 			{
 				vsp = 10;

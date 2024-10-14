@@ -1,6 +1,9 @@
 if (vsp < 12)
 	vsp += grav;
-image_speed = 0;
+if sprite_index != spr_bigdebris
+	image_speed = 0;
+else
+	image_speed = 0.35;
 x += hsp;
 y += floor(vsp);
 depth = -999;

@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_blockdebris",
-    "path": "sprites/spr_blockdebris/spr_blockdebris.yy",
+    "name": "spr_bigdebris",
+    "path": "sprites/spr_bigdebris/spr_bigdebris.yy",
   },
   "spriteMaskId": null,
   "visible": true,

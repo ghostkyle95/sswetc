@@ -114,7 +114,8 @@ enum states {
 	pizzanoshoulderbash, // 112
 	pizzanowallcling, // 113
     mini, // 114
-    machcancel // 115
+    machcancel, // 115
+	sjumpcancelprep // 116
     
 };
 
@@ -471,6 +472,9 @@ function scr_playerstate()
 			break;
 		case states.machcancel:
 			_stateFunction = scr_playerN_machcancel;
+			break;
+		case states.sjumpcancelprep:
+			_stateFunction = scr_player_Sjumpcancel;
 			break;
 	}
 	stateName = "states.undefined";
