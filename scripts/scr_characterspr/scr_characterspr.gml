@@ -188,12 +188,14 @@ function scr_characterspr()
 		spr_longjumpend = spr_player_longjumpend;
 		spr_suplexbump = spr_player_grabbump;
 		
-		spr_shoulderbash = spr_player_shoulderbash
-		spr_machslideboostfall = spr_player_machslideboostfall
-		spr_fastroll = spr_player_machroll3
+		spr_shoulderbash = spr_player_shoulderbash;
+		spr_machslideboostfall = spr_player_machslideboostfall;
+		spr_fastroll = spr_player_machroll3;
 		
-		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep
-		spr_Sjumpcancel = spr_player_Sjumpcancel
+		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep;
+		spr_Sjumpcancel = spr_player_Sjumpcancel;
+		
+		spr_machslideboost3fall = spr_playerN_mach3boostfall;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -383,9 +385,14 @@ function scr_characterspr()
 		spr_longjumpend = spr_playerN_longjumpend;
 		spr_suplexbump = spr_player_grabbump;
 		
-		spr_shoulderbash = spr_player_shoulderbash
-		spr_machslideboostfall = spr_player_machslideboostfall
-		spr_fastroll = spr_pizzano_crouchslide
+		spr_shoulderbash = spr_player_shoulderbash;
+		spr_machslideboostfall = spr_player_machslideboostfall;
+		spr_fastroll = spr_pizzano_crouchslide;
+		
+		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep;
+		spr_Sjumpcancel = spr_player_Sjumpcancel;
+		
+		spr_machslideboost3fall = spr_playerN_mach3boostfall;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -584,9 +591,14 @@ function scr_characterspr()
 		spr_longjumpend = spr_playerN_longjumpend;
 		spr_suplexbump = spr_playerN_suplexbump;
 		
-		spr_shoulderbash = spr_playerN_tackle
-		spr_machslideboostfall = spr_playerN_machslideboostfall
-		spr_fastroll = spr_playerN_fastroll
+		spr_shoulderbash = spr_playerN_tackle;
+		spr_machslideboostfall = spr_playerN_machslideboostfall;
+		spr_fastroll = spr_playerN_fastroll;
+		
+		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep;
+		spr_Sjumpcancel = spr_player_Sjumpcancel;
+		
+		spr_machslideboost3fall = spr_playerN_mach3boostfall;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
