@@ -1,6 +1,6 @@
 function scr_enemy_walk()
 {
-	var _movespeed = grounded ? (movespeed + (clamp(global.stylethreshold, 0, 3.25) * sign(movespeed))) : 0;
+	var _movespeed = grounded ? (movespeed) : 0;
 	if (grounded || ((grounded && !place_meeting(x, y, obj_platform)) || !place_meeting(x, y, obj_cottonplatform)))
 	{
 		if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
@@ -12,7 +12,7 @@ function scr_enemy_walk()
 		else
 			hsp = 0;
 	}
-	image_speed = 0.35 + (global.stylethreshold * 0.05);
+	image_speed = 0.35;
 	if (!roaming)
 	{
 		if (grounded || ((grounded && !place_meeting(x, y, obj_platform)) || !place_meeting(x, y, obj_cottonplatform)))
