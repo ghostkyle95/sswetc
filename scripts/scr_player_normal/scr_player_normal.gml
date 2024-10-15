@@ -14,14 +14,6 @@ function scr_player_normal()
 		hsp = (move * movespeed) - 5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (move * movespeed) + 5;
-	if key_up and key_jump
-	{
-		scr_sound(sound_superjumpcharge1);
-		sprite_index = spr_superjumpprep;
-		state = states.Sjumpprep;
-		hsp = 0;
-		image_index = 0;
-	}
 	if (!machslideAnim && !landAnim && !shotgunAnim)
 	{
 		if (move == 0)

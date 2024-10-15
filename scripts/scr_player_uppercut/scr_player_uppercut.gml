@@ -17,15 +17,15 @@ function scr_player_uppercut()
 	if (move != 0)
 	{
 		xscale = move;
-		if (movespeed < 4)
+		/*if (movespeed < 4)
 			movespeed += 0.4;
 		if (movespeed > 4)
-			movespeed = 4;
+			movespeed = 4;*/
 	}
 	if (move == 0)
 	{
-		if (movespeed > 0)
-			movespeed -= 0.3;
+		/*if (movespeed > 0)
+			movespeed -= 0.3;*/
 	}
 	if (!instance_exists(obj_dashcloud) && grounded)
 	{
