@@ -102,7 +102,7 @@ function scr_doise_rocket()
 			alarm[0] = 240;
 			image_index = 0;
 			state = states.Sjump;
-			sprite_index = spr_superjumppreplight;
+			sprite_index = spr_superjump;
 		}
 	}
 	image_speed = 0.35;

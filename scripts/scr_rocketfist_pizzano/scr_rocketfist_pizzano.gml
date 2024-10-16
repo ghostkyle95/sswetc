@@ -74,7 +74,7 @@ function scr_rocketfist_pizzano()
 			alarm[0] = 240;
 			image_index = 0;
 			state = states.Sjump;
-			sprite_index = spr_superjumppreplight;
+			sprite_index = spr_superjump;
 		}
 		if (key_down && grounded)
 			sprite_index = spr_crouchslide;
