@@ -23,9 +23,24 @@ function scr_player_crouchslide()
 	{
 		if (!grounded)
 		{
-			sprite_index = spr_dive;
-			vsp = 10;
-			state = states.machroll
+			if character != CHARACTERS.NOISE
+			{
+				sprite_index = spr_dive;
+				vsp = 10;
+				state = states.machroll
+			}
+			else
+			{	
+				sprite_index = spr_playerN_divebomb
+				state = states.machcancel
+				savedmove = xscale
+				vsp = 20
+				movespeed = hsp
+				input_buffer_slap = 0
+				input_buffer_jump = 0
+				image_index = 0
+				return;
+			}
 		}
 		else
 			sprite_index = spr_crouchslip

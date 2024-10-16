@@ -145,8 +145,6 @@ global.combofreeze--;
 global.combofreeze = clamp(global.combofreeze, 0, 75);
 if (global.combotime <= 0 && global.combo != 0)
 {
-	if (global.combo > 5)
-		scr_queue_tvanim(obj_tv.collecttvspr, 200);
 	global.combo = 0;
 	playComboVariable = -4;
 }

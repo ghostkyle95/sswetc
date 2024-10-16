@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 29,
+  "width": 25,
 }

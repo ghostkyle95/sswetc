@@ -125,8 +125,10 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 		case states.climbwall:
 		case states.mach3:
 			ChannelState = 5;
-			if (obj_player.state == states.mach3)
-				tvsprite = maxspeedtvspr;
+			if (obj_player.state == states.mach3 && obj_player.sprite_index != obj_player.spr_crazyrun)
+				tvsprite = mach3tvspr;
+			else if (obj_player.sprite_index == obj_player.spr_crazyrun)
+				tvsprite = crazyruntvspr
 			else
 				tvsprite = machtvspr;
 			break;

@@ -59,17 +59,33 @@ function scr_player_Sjump()
 	}
 	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.NOISE)
 	{
-		if (move != 0)
-			xscale = move
-		machpunchAnim = false;
-		machhitAnim = false;
-		vsp = -5
-		state = states.mach2
-		movespeed = 12
-		sprite_index = spr_playerN_sidewayspin
-		with (instance_create(x, y, obj_crazyrunothereffect))
-			image_xscale = other.xscale
-		image_index = 0
+		if !doisemode
+		{
+			if (move != 0)
+				xscale = move
+			machpunchAnim = false;
+			machhitAnim = false;
+			vsp = -5
+			state = states.mach2
+			movespeed = 12
+			sprite_index = spr_playerN_sidewayspin
+			with (instance_create(x, y, obj_crazyrunothereffect))
+				image_xscale = other.xscale
+			image_index = 0
+		}
+		else
+		{
+			flash = true;
+			charged = false;
+			sprite_index = spr_superjumpprepside;
+			image_index = 0;
+			movespeed = 0;
+			vsp = 0;
+			mach2 = 0;
+			state = states.jetpackdoise;
+			if move != 0
+				xscale = move;
+		}
 	}
 	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && sprite_index != spr_superjumpland)
 	{

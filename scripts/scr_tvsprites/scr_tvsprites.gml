@@ -11,9 +11,10 @@ function scr_tvsprites()
 		bombtvspr = spr_pizzytvbomb;
 		firetvspr = spr_pizzytvfire;
 		angrytvspr = spr_pizzytvangry;
-		machtvspr = spr_pizzytvmach;
 		orbtvspr = spr_pizzytv_croaked;
-		maxspeedtvspr = spr_pizzytvmachmax;
+		machtvspr = spr_pizzytvmach2;
+		mach3tvspr = spr_pizzytvmach3;
+		crazyruntvspr = spr_pizzytvmach3;
 		collecttvspr = spr_pizzytvhappy;
 		combotvspr = spr_pizzytv_combo;
 		panictvspr = spr_pizzytv_escape1;
@@ -23,5 +24,8 @@ function scr_tvsprites()
 		idletvspr = spr_pizzanotv;
 		tvchange1 = spr_pizzanotv2;
 		tvchange2 = spr_pizzanotv2;
+		collecttvspr = spr_pizzanotvcollect;
+		combotvspr = spr_pizzanotvcombo;
+		mach3tvspr = spr_pizzanotv_mach3;
 	}
 }

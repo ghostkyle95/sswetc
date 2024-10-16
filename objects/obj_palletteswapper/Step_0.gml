@@ -124,53 +124,68 @@ else if (obj_player.character == CHARACTERS.GUMBOB)
 }
 else if (obj_player.character == CHARACTERS.NOISE)
 {
-	switch (obj_player.paletteselect)
+	if obj_player.doisemode == false
 	{
-		case 0:
-			palettename = "HOW DID YOU GET THIS";
-			break;
-		case 1:
-			palettename = "DEFAULT";
-			break;
-		case 2:
-			palettename = "BOISE";
-			break;
-		case 3:
-			palettename = "ROISE";
-			break;
-		case 4:
-			palettename = "POISE";
-			break;
-		case 5:
-			palettename = "REVERSE";
-			break;
-		case 6:
-			palettename = "CRITIC";
-			break;
-		case 7:
-			palettename = "OUTLAW";
-			break;
-		case 8:
-			palettename = "ANTI-DOISE";
-			break;
-		case 9:
-			palettename = "FLESH EATER";
-			break;
-		case 10:
-			palettename = "SUPER NOISE";
-			break;
-		case 11:
-			palettename = "FAMILIAR PORCUPINE";
-			break;
-		case 12:
-			palettename = "FEMININE SIDE";
-			break;
-		case 13:
-			palettename = "THE DOISE";
-			break;
-		case 14:
-			palettename = "FOREST";
-			break;
+		switch (obj_player.paletteselect)
+		{
+			case 0:
+				palettename = "HOW DID YOU GET THIS";
+				break;
+			case 1:
+				palettename = "DEFAULT";
+				break;
+			case 2:
+				palettename = "BOISE";
+				break;
+			case 3:
+				palettename = "ROISE";
+				break;
+			case 4:
+				palettename = "POISE";
+				break;
+			case 5:
+				palettename = "REVERSE";
+				break;
+			case 6:
+				palettename = "CRITIC";
+				break;
+			case 7:
+				palettename = "OUTLAW";
+				break;
+			case 8:
+				palettename = "ANTI-DOISE";
+				break;
+			case 9:
+				palettename = "FLESH EATER";
+				break;
+			case 10:
+				palettename = "SUPER NOISE";
+				break;
+			case 11:
+				palettename = "FAMILIAR PORCUPINE";
+				break;
+			case 12:
+				palettename = "FEMININE SIDE";
+				break;
+			case 13:
+				palettename = "THE DOISE";
+				break;
+			case 14:
+				palettename = "FOREST";
+				break;
+		}
+	}
+	else
+	{
+		switch (obj_player.paletteselect)
+		{
+			case 0:
+				palettename = "HOW DID YOU GET THIS";
+				break;
+			case 1:
+				palettename = "DEFAULT";
+				break;
+		}
 	}
 }
 if (drawing)

@@ -26,8 +26,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "TV Sprites",
-    "path": "folders/Sprites/UI Related/TV/TV Sprites.yy",
+    "name": "Pizzelle",
+    "path": "folders/Sprites/UI Related/TV/TV Sprites/Pizzelle.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

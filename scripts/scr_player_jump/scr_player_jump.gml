@@ -53,6 +53,19 @@ function scr_player_jump()
 		vsp = grav;
 		jumpstop = true;
 	}
+	if (charged and sprite_index = spr_jetpackjump and key_attack and doisemode = true)
+	{
+		flash = true;
+		charged = false;
+		sprite_index = spr_superjumpprepside;
+		image_index = 0;
+		movespeed = 0;
+		vsp = 0;
+		mach2 = 0;
+		state = states.jetpackdoise;
+		if move != 0
+			xscale = move;
+	}
 	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && !(sprite_index == spr_facestomp || sprite_index == spr_freefall))
 	{
 		scr_sound(sound_jump);

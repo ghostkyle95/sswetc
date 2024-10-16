@@ -197,6 +197,10 @@ function scr_characterspr()
 		
 		spr_machslideboost3fall = spr_playerN_mach3boostfall;
 		
+		spr_jetpackjump = spr_playerN_noisebombspinjump;
+		spr_jetpackturn = spr_playerN_jetpackturn;
+		spr_airhitwall = spr_pizzano_airhitwall;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -391,8 +395,12 @@ function scr_characterspr()
 		
 		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep;
 		spr_Sjumpcancel = spr_player_Sjumpcancel;
+		spr_jetpackturn = spr_playerN_jetpackturn;
 		
 		spr_machslideboost3fall = spr_playerN_mach3boostfall;
+		
+		spr_jetpackjump = spr_playerN_noisebombspinjump;
+		spr_airhitwall = spr_pizzano_airhitwall;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -404,7 +412,7 @@ function scr_characterspr()
 		global.panicmus = mu_pizzanoescape;
 		global.lap2mus = mu_lap2;
 	}
-	if (character == CHARACTERS.NOISE)
+	if (character == CHARACTERS.NOISE and doisemode == false)
 	{
 		spr_idle = spr_playerN_idle;
 		spr_move = spr_playerN_move;
@@ -575,9 +583,9 @@ function scr_characterspr()
 		spr_kungfu1 = spr_pizzano_kungfu1;
 		spr_kungfu2 = spr_pizzano_kungfu2;
 		spr_faucetpull = spr_player_faucetpull;
-		spr_superjumpprepside = spr_pizzano_sjumpprepside;
-		spr_superjumpside = spr_pizzano_sjumpside;
-		spr_rocketfistground = spr_pizzano_mach3;
+		spr_superjumpprepside = spr_playerN_jetpackstart;
+		spr_superjumpside = spr_playerN_jetpackboost;
+		spr_rocketfistground = spr_playerN_jetpackslide;
 		
 		spr_bossintro = spr_playerN_bossintro;
 		spr_parry1 = spr_playerN_parry1;
@@ -599,6 +607,219 @@ function scr_characterspr()
 		spr_Sjumpcancel = spr_player_Sjumpcancel;
 		
 		spr_machslideboost3fall = spr_playerN_mach3boostfall;
+		
+		spr_jetpackjump = spr_playerN_noisebombspinjump;
+		spr_jetpackturn = spr_playerN_jetpackturn;
+		spr_airhitwall = spr_pizzano_airhitwall;
+		
+		spr_srank = spr_rankNS;
+		spr_arank = spr_rankNA;
+		spr_brank = spr_rankNB;
+		spr_crank = spr_rankNC;
+		spr_drank = spr_rankND;
+		spr_prank = spr_rankNP;
+		
+		global.panicmus = mu_noiseescape;
+		global.lap2mus = mu_noiselap2;
+	}
+	if (character == CHARACTERS.NOISE and doisemode == true)
+	{
+		spr_idle = spr_playerN_idle;
+		spr_move = spr_playerN_move;
+		spr_crawl = spr_playerN_crawl;
+		spr_hurt = spr_playerN_hurt;
+		spr_jump = spr_playerN_jump;
+		spr_jump2 = spr_playerN_jump;
+		spr_fall = spr_playerN_fall;
+		spr_fall2 = spr_playerN_fall;
+		spr_crouch = spr_playerN_crouch;
+		spr_crouchjump = spr_playerN_crouchjump;
+		spr_crouchfall = spr_playerN_crouchfall;
+		spr_couchstart = spr_playerN_crouchstart;
+		spr_bump = spr_playerN_bump;
+		spr_land = spr_playerN_land;
+		spr_land2 = spr_playerN_land2;
+		spr_lookdoor = spr_playerN_lookdoor;
+		spr_walkfront = spr_playerN_walkfront;
+		spr_victory = spr_playerN_entergate;
+		spr_Ladder = spr_playerN_ladder;
+		spr_laddermove = spr_playerN_laddermove;
+		spr_ladderdown = spr_playerN_ladderdown;
+		spr_keyget = spr_playerN_keyget;
+		spr_crouchslip = spr_playerN_crouchslip;
+		spr_mach1 = spr_playerN_mach1;
+		spr_mach = spr_playerN_mach;
+		spr_secondjump1 = spr_playerN_secondjump1;
+		spr_secondjump2 = spr_playerN_secondjump2;
+		spr_machslidestart = spr_playerN_machslidestart;
+		spr_machslide = spr_playerN_machslide;
+		spr_machslideend = spr_playerN_machslideend;
+		spr_machslideboost = spr_playerN_machslideboost;
+		spr_land2 = spr_playerN_land2;
+		spr_punch = spr_player_punch;
+		spr_backkick = spr_player_backkick;
+		spr_shoulder = spr_player_shoulder;
+		spr_uppunch = spr_player_uppunch;
+		spr_stomp = spr_playerN_stomp;
+		spr_stompprep = spr_playerN_stompprep;
+		spr_crouchslide = spr_playerN_crouchslip;
+		spr_crouch = spr_playerN_crouch;
+		spr_bump = spr_playerN_bump;
+		spr_victory = spr_playerN_entergate;
+		spr_hurt = spr_playerN_hurt;
+		spr_climbwall = spr_playerN_climbwall;
+		spr_grab = spr_playerN_haulingidle;
+		spr_mach2jump = spr_playerN_mach2jump;
+		spr_Timesup = spr_playerN_timesup;
+		spr_deathstart = spr_player_deathstart;
+		spr_deathend = spr_playerN_deathend;
+		spr_machpunch1 = spr_playerN_machpunch1;
+		spr_machpunch2 = spr_playerN_machpunch2;
+		spr_hurtjump = spr_playerN_hurt;
+		spr_entergate = spr_playerN_entergate;
+		spr_gottreasure = spr_playerN_gottreasure;
+		spr_bossintro = spr_playerN_bossintro;
+		spr_hurtidle = spr_player_hurtidle;
+		spr_hurtwalk = spr_player_hurtwalk;
+		spr_suplexmash1 = spr_playerN_finishingblow1;
+		spr_suplexmash2 = spr_playerN_finishingblow2;
+		spr_suplexmash3 = spr_playerN_finishingblow3;
+		spr_suplexmash4 = spr_playerN_finishingblow4;
+		spr_tackle = spr_playerN_tackle;
+		spr_airdash1 = spr_playerN_airdash1;
+		spr_airdash2 = spr_playerN_airdash2;
+		spr_keyget = spr_playerN_keyget;
+		spr_idle1 = spr_playerN_idleballoon;
+		spr_idle2 = spr_playerN_idlesmoke;
+		spr_idle3 = spr_playerN_idlemask;
+		spr_suplexdash = spr_playerN_suplexgrab;
+		spr_piledriver = spr_playerN_piledriver;
+		spr_piledriverland = spr_playerN_piledriverland;
+		spr_charge = spr_player_charge;
+		spr_palette = spr_pald;
+		spr_caneidle = spr_player_caneidle;
+		spr_caneslam = spr_player_caneslam;
+		spr_canewalk = spr_player_canewalk;
+		spr_canesuplex = spr_player_canesuplex;
+		spr_canehit = spr_player_canehit;
+		spr_uppizzabox = spr_playerN_uppizzabox;
+		spr_downpizzabox = spr_playerN_downpizzabox;
+		spr_tumblestart = spr_playerN_tumblestart;
+		spr_tumble = spr_playerN_tumble;
+		spr_tumbleend = spr_playerN_tumbleend;
+		spr_machroll = spr_playerN_machroll;
+		spr_dive = spr_playerN_dive;
+		spr_cottonidle = spr_cotton_idle;
+		spr_escapeidle = spr_playerN_panicidle;
+		spr_timesupidle = spr_playerN_hurtidle;
+		
+		spr_taunt = spr_playerN_taunt;
+		spr_winding = spr_playerN_winding;
+		spr_piledriverstart = spr_playerN_piledriver;
+		spr_superjumpprep = spr_playerN_Sjumpstart;
+		spr_superjumpleft = spr_playerN_Sjumpmoveleft;
+		spr_superjumpright = spr_playerN_Sjumpmoveright;
+		spr_superjump = spr_playerN_Sjump;
+		spr_superjumpland = spr_playerN_Sjumpland;
+		spr_superjumppreplight = spr_playerN_Sjumpprep;
+		spr_mach3hitwall = spr_playerN_mach3hitwall;
+		spr_mach4 = spr_playerN_mach3;
+		spr_machtumble = spr_playerN_spin;
+		spr_machfreefall = spr_playerN_fall;
+		spr_crouchslide = spr_playerN_crouchslip;
+		spr_supertaunt1 = spr_playerN_supertaunt1;
+		spr_supertaunt2 = spr_playerN_supertaunt2;
+		spr_supertaunt3 = spr_playerN_supertaunt3;
+		spr_ceilingcrash = spr_playerN_Sjumpland;
+		spr_rollgetup = spr_playerN_rollgetup;
+		spr_bodyslamstart = spr_playerN_bodyslamstart;
+		spr_bodyslamland = spr_playerN_bodyslamland;
+		spr_bodyslamfall = spr_playerN_bodyslam;
+		spr_crusherstart = spr_playerN_noisecrusherstart;
+		spr_crusherland = spr_playerN_noisecrusherland;
+		spr_crusherfall = spr_playerN_noisecrusherfall;
+		spr_suplexdashCancel = spr_playerN_suplexcancel;
+		spr_facestomp = spr_playerN_machfreefall1;
+		spr_freefall = spr_playerN_machfreefall1;
+		spr_freefall2 = spr_playerN_machfreefall2;
+		spr_candyidle = spr_player_candyidle;
+		spr_candybegin = spr_player_candybegin;
+		spr_candyup = spr_player_candyup;
+		spr_candytransitionup = spr_player_candytransitionup;
+		spr_uppercutbegin = spr_playerN_breakdanceuppercut;
+		spr_uppercutend = spr_playerN_breakdanceuppercutend;
+		spr_freefallland = spr_playerN_bodyslamland;
+		spr_mach3jump = spr_playerN_mach3jump;
+		spr_plrdashpad = spr_playerN_dashpad;
+		spr_crazyrun = spr_playerN_crazyrun;
+		spr_machslideboost3 = spr_playerN_mach3boost;
+		spr_3hpidle = spr_playerN_angryidle;
+		spr_3hpwalk = spr_playerN_angrymove;
+		spr_facehurtup = spr_playerN_facehurtup;
+		spr_facehurt = spr_playerN_facehurt;
+		spr_slipnslide = spr_playerN_rockethitwall;
+		spr_slipnslideend = spr_playerN_slipbanan2;
+		spr_slipnslidestart = spr_playerN_slipbanan1;
+		spr_minecartjump = spr_player_minecartjump;
+		spr_plrminecart = spr_player_minecart;
+		spr_minecartfall = spr_player_minecartfall;
+		spr_minecartfast = spr_player_minecartfast;
+		spr_minecartland = spr_player_minecartland;
+		spr_minecartfastland = spr_player_minecartfastland;
+		spr_hurtroll = spr_player_hurtroll;
+		spr_outofcontrolfall = spr_playerN_rockethitwall;
+		spr_enterkey = spr_playerN_entergate;
+		spr_swingding = spr_playerN_swingding;
+		spr_swingdingend = spr_playerN_swingdingend;
+		spr_haulingstart = spr_playerN_haulingstart;
+		spr_haulingidle = spr_playerN_haulingidle;
+		spr_haulingwalk = spr_playerN_haulingmove;
+		spr_haulingjump = spr_playerN_haulingjump;
+		spr_haulingfall = spr_playerN_haulingfall;
+		spr_haulingland = spr_playerN_haulingland;
+		spr_uppercutfinishingblow = spr_playerN_uppercut;
+		spr_blockbreak1 = spr_playerN_suplexmash1;
+		spr_blockbreak2 = spr_playerN_suplexmash2;
+		spr_blockbreak3 = spr_playerN_suplexmash3;
+		spr_blockbreak4 = spr_playerN_suplexmash4;
+		spr_blockbreak5 = spr_playerN_suplexmash1;
+		spr_blockbreak6 = spr_playerN_suplexmash2;
+		spr_blockbreak7 = spr_playerN_suplexmash3;
+		spr_squished = spr_playerN_squished;
+		spr_firebutt = spr_playerN_fireass;
+		spr_firebuttend = spr_playerN_fireassground;
+		spr_catched = spr_playerN_catched;
+		spr_donutget = spr_player_donutget;
+		spr_kungfu1 = spr_pizzano_kungfu1;
+		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_faucetpull = spr_player_faucetpull;
+		spr_superjumpprepside = spr_playerN_jetpackstart;
+		spr_superjumpside = spr_playerN_jetpackboost;
+		spr_rocketfistground = spr_playerN_jetpackslide;
+		
+		spr_bossintro = spr_playerN_bossintro;
+		spr_parry1 = spr_playerN_parry1;
+		spr_parry2 = spr_playerN_parry2;
+		spr_parry3 = spr_playerN_parry3;
+		
+		spr_rampjump = spr_playerN_rampjump;
+		spr_wallsplat = spr_playerN_wallsplat;
+		spr_grind = spr_playerN_grind;
+		spr_longjumpstart = spr_playerN_longjump;
+		spr_longjumpend = spr_playerN_longjumpend;
+		spr_suplexbump = spr_playerN_suplexbump;
+		
+		spr_shoulderbash = spr_playerN_tackle;
+		spr_machslideboostfall = spr_playerN_machslideboostfall;
+		spr_fastroll = spr_playerN_fastroll;
+		
+		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep;
+		spr_Sjumpcancel = spr_player_Sjumpcancel;
+		
+		spr_machslideboost3fall = spr_playerN_mach3boostfall;
+		
+		spr_jetpackjump = spr_playerN_noisebombspinjump;
+		spr_jetpackturn = spr_playerN_jetpackturn;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;

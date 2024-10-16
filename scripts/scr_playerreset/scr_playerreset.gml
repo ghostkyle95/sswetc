@@ -166,6 +166,7 @@ function scr_playerreset()
 		timeuntilhpback = 300;
 		anger = 0;
 		angry = false;
+		charged = false;
 	}
 	with (obj_tv)
 	{

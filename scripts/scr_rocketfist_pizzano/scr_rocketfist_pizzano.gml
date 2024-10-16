@@ -38,12 +38,35 @@ function scr_rocketfist_pizzano()
 			vsp = 5;
 		if (scr_solid(x + xscale, y, true) && !place_meeting(x + xscale, y, obj_destructibles))
 		{
+			scr_sound(sound_maximumspeedland);
+			with (obj_camera)
+			{
+				shake_mag = 20;
+				shake_mag_acc = 40 / room_speed;
+			}
+			image_speed = 0.35;
+			with (obj_baddie)
+			{
+				if (point_in_camera(x, y, view_camera[0]) && grounded)
+				{
+					stun = true;
+					alarm[0] = 200;
+					ministun = false;
+					vsp = -5;
+					hsp = 0;
+				}
+			}
+			hsp = -6 * xscale;
 			vsp = -6;
 			movespeed = -6;
-			sprite_index = spr_mach3hitwall;
+			image_speed = 0.35;
+			if !grounded
+				sprite_index = spr_airhitwall;
+			else
+				sprite_index = spr_mach3hitwall;
 			state = states.bump;
 		}
-		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside)
+		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_mach3hitwall && sprite_index != spr_airhitwall)
 			sprite_index = spr_superjumpside;
 		if (key_slap2 && key_up && charged)
 		{

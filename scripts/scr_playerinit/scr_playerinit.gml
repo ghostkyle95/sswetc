@@ -115,8 +115,8 @@ enum states {
 	pizzanowallcling, // 113
     mini, // 114
     machcancel, // 115
-	sjumpcancelprep // 116
-    
+	sjumpcancelprep, // 116
+    jetpackdoise // 117
 };
 
 
@@ -476,6 +476,9 @@ function scr_playerstate()
 		case states.sjumpcancelprep:
 			_stateFunction = scr_player_Sjumpcancel;
 			break;
+		case states.jetpackdoise:
+			_stateFunction = scr_doise_rocket;
+			break
 	}
 	stateName = "states.undefined";
 	if (!is_undefined(_stateFunction))
