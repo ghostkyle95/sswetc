@@ -212,7 +212,7 @@ if (toomuchalarm1 <= 0 && (state == states.mach3 || state == states.hookshot || 
 	}
 	toomuchalarm1 = 6;
 }
-if (state != states.bump && state != states.crouch && state != states.boxxedpep && state != states.pistol && state != states.tumble && sprite_index != spr_player_crouchshoot && state != states.Sjumpprep && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchslide && state != states.crouchjump && sprite_index != spr_pizzano_crouchslide)
+if (state != states.bump && state != states.crouch && state != states.boxxedpep && state != states.pistol && state != states.tumble && sprite_index != spr_player_crouchshoot && state != states.Sjumpprep && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchslide && state != states.crouchjump && sprite_index != spr_pizzano_crouchslide && sprite_index != spr_playerN_jetpackslide)
 	mask_index = spr_player_mask;
 else
 	mask_index = spr_crouchmask;
