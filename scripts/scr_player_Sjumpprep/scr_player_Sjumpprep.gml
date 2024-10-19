@@ -60,8 +60,9 @@ function scr_player_Sjumpprep()
 		instance_create(x, y, obj_explosioneffect);
 		sprite_index = spr_superjump;
 		state = states.Sjump;
+		sjumpspeed = 12;
 		vsp = -12;
-		movespeed = 12;
+		movespeed = 5;
 		Sjumpcan_doublejump = false;
 	}
 	image_speed = 0.35;

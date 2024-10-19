@@ -20,7 +20,10 @@ function scr_doise_rocket()
 	{
 		hsp = movespeed * xscale
 		movespeed = approach(movespeed, 0, 0.5);
-		vsp = 0;
+		
+		if sprite_index == spr_jetpackturn
+			vsp = 0;
+			
 		if (floor(image_index) == (image_number - 1) && !grounded)
 		{
 			movespeed = 12;
@@ -105,7 +108,7 @@ function scr_doise_rocket()
 		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_jetpackjump  && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
 			sprite_index = spr_superjumpside;
 			
-		if (key_down && grounded && hsp != 0 && sprite_index != spr_rocketfistground && sprite_index != spr_jetpackjump && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
+		if (grounded && hsp != 0 && sprite_index != spr_rocketfistground && sprite_index != spr_jetpackjump && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
 			sprite_index = spr_rocketfistground;
 			
 		if (key_slap2 && key_up)
@@ -114,6 +117,7 @@ function scr_doise_rocket()
 			alarm[0] = 240;
 			image_index = 0;
 			state = states.Sjump;
+			sjumpspeed = 12;
 			sprite_index = spr_superjump;
 		}
 	}

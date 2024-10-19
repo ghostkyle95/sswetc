@@ -185,6 +185,9 @@ else if (obj_player.character == CHARACTERS.NOISE)
 			case 1:
 				palettename = "DEFAULT";
 				break;
+			case 2:
+				palettename = "BARBEQUE";
+				break;
 		}
 	}
 }

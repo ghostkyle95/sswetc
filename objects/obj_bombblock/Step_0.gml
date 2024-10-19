@@ -4,7 +4,7 @@ if (place_meeting(x, y + 1, obj_player) || place_meeting(x, y - 1, obj_player) |
 	{
 		with (obj_player)
 		{
-			sprite_index = spr_bombpep_runabouttoexplode;
+			sprite_index = spr_bomb_runabouttoexplode;
 			bombpeptimer = 0;
 		}
 	}

@@ -43,6 +43,7 @@ function scr_playersounds()
 	if (sprite_index == spr_playerN_wallbounce && !audio_is_playing(sfx_wallbounceloop) && !audio_is_playing(sfx_wallbouncestart) && !audio_is_playing(sfx_wallbounceland))
 		scr_sound(sfx_wallbounceloop);
 	else if (sprite_index != spr_playerN_wallbounce)
+		audio_stop_sound(sfx_wallbouncestart);
 		audio_stop_sound(sfx_wallbounceloop);
 		
 	if (sprite_index == spr_playerN_divebombfall && !audio_is_playing(sfx_tornadofast))
@@ -54,4 +55,7 @@ function scr_playersounds()
 		scr_sound(sfx_torndadoslow);
 	else if (sprite_index != spr_playerN_divebomb)
 		audio_stop_sound(sfx_torndadoslow);
+		
+	if (sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && audio_is_playing(sfx_airspinstart))
+		audio_stop_sound(sfx_airspinstart);
 }

@@ -30,7 +30,7 @@
   "origin": 0,
   "parent": {
     "name": "Switch",
-    "path": "folders/Sprites/Unused/Switch.yy",
+    "path": "folders/Sprites/Gameplay/Switch.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

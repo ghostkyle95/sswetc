@@ -1,6 +1,5 @@
 function scr_player_Sjump()
 {
-	hsp = 0;
 	Sjumpcan_doublejump = false;
 	mach2 = 0;
 	jumpAnim = true;
@@ -16,8 +15,18 @@ function scr_player_Sjump()
 		xscale = move;
 	if (sprite_index == spr_superjump)
 	{
-		vsp = -movespeed;
-		movespeed = approach(movespeed, 18, 1);
+		sjumpspeed = approach(sjumpspeed, 18, 1)
+		vsp = -sjumpspeed
+		if (character = CHARACTERS.NOISE)
+		{
+			hsp = move * movespeed;
+			movespeed = 5;
+		}
+		else
+		{
+			hsp = 0;
+			movespeed = 0;
+		}
 	}
 	if (scr_solid(x, y + vsp) && !place_meeting(x, y + vsp, obj_boxofpizza) && !place_meeting(x, y + vsp, obj_metalblock) && !place_meeting(x, y + vsp, obj_destructibles))
 	{
@@ -42,6 +51,7 @@ function scr_player_Sjump()
 		state = states.Sjumpland;
 		machhitAnim = false;
 		movespeed = 0;
+		sjumpspeed = 0;
 	}
 	image_speed = 0.5;
 	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZELLE)
@@ -54,6 +64,7 @@ function scr_player_Sjump()
 		hsp = 0;
 		image_index = 0;
 		sprite_index = spr_Sjumpcancelprep;
+		sjumpspeed = 0;
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 	}
@@ -72,6 +83,7 @@ function scr_player_Sjump()
 			with (instance_create(x, y, obj_crazyrunothereffect))
 				image_xscale = other.xscale
 			image_index = 0
+			sjumpspeed = 0;
 		}
 		else
 		{
@@ -85,6 +97,7 @@ function scr_player_Sjump()
 			state = states.jetpackdoise;
 			if move != 0
 				xscale = move;
+			sjumpspeed = 0;
 		}
 	}
 	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && sprite_index != spr_superjumpland)

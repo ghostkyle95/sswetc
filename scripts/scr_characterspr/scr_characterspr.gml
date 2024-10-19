@@ -203,6 +203,11 @@ function scr_characterspr()
 		
 		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
 		
+		spr_bomb_intro = spr_bombpep_intro;
+		spr_bomb_run = spr_bombpep_run;
+		spr_bomb_runabouttoexplode = spr_bombpep_runabouttoexplode;
+		spr_bomb_end = spr_bombpep_end;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -421,6 +426,11 @@ function scr_characterspr()
 		spr_airhitwall = spr_pizzano_airhitwall;
 		
 		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
+		
+		spr_bomb_intro = spr_bombpep_intro;
+		spr_bomb_run = spr_bombpep_run;
+		spr_bomb_runabouttoexplode = spr_bombpep_runabouttoexplode;
+		spr_bomb_end = spr_bombpep_end;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -650,6 +660,11 @@ function scr_characterspr()
 		
 		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
 		
+		spr_bomb_intro = spr_playerN_bombstart;
+		spr_bomb_run = spr_playerN_bomb;
+		spr_bomb_runabouttoexplode = spr_playerN_bombabouttoexplode;
+		spr_bomb_end = spr_playerN_bombend;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -663,7 +678,7 @@ function scr_characterspr()
 		sfx_step = sound_step;
 		sfx_land = sound_land;
 		sfx_jump = sfx_noisejump;
-		sfx_mach1 = sfx_noisemach2;
+		sfx_mach1 = sfx_noisemach1;
 		sfx_mach2 = sfx_noisemach2;
 		sfx_mach3 = sfx_noisemach3;
 		sfx_mach4 = sfx_noisemach4;
@@ -878,6 +893,11 @@ function scr_characterspr()
 		
 		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
 		
+		spr_bomb_intro = spr_playerN_bombstart;
+		spr_bomb_run = spr_playerN_bomb;
+		spr_bomb_runabouttoexplode = spr_playerN_bombabouttoexplode;
+		spr_bomb_end = spr_playerN_bombend;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -891,11 +911,11 @@ function scr_characterspr()
 		sfx_step = sound_step;
 		sfx_land = sound_land;
 		sfx_jump = sfx_noisejump;
-		sfx_mach1 = sfx_noisemach2;
+		sfx_mach1 = sfx_noisemach1;
 		sfx_mach2 = sfx_noisemach2;
 		sfx_mach3 = sfx_noisemach3;
 		sfx_mach4 = sfx_noisemach4;
-		sfx_machturn = sound_maximumspeedstop;
+		sfx_machturn = sfx_noisemachslide;
 		sfx_firebutt = sound_fireass;
 		sfx_parry = sound_parry;
 		sfx_sjumpstart = sfx_noisesjumpstart;

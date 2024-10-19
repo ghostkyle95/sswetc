@@ -1,5 +1,6 @@
 scr_initinput();
 scr_getinput();
+sjumpspeed = 0;
 Sjumpcan_doublejump = true;
 firetrailbuffer = 0;
 playComboVariable = -4;
@@ -69,6 +70,7 @@ global.toppintotal = 1;
 global.hit = 0;
 global.combofreeze = 0;
 global.baddieroom = ds_list_create();
+global.spaceblockswitch = true;
 key_particles = false;
 barrel = false;
 bounce = false;

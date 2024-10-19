@@ -34,6 +34,7 @@ function scr_playerreset()
 	global.chocofollow = false;
 	global.wormfollow = false;
 	global.candyfollow = false;
+    global.spaceblockswitch = true;
 	with (obj_camera)
 	{
 		DrawY = 0;
@@ -58,6 +59,7 @@ function scr_playerreset()
 	with (obj_player)
 	{
 		targetDoor = "A";
+		sjumpspeed = 0;
 		firetrailbuffer = 0;
 		state = states.comingoutdoor;
 		image_index = 0;
