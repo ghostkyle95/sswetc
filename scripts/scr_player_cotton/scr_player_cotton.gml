@@ -90,7 +90,7 @@ function scr_player_cotton()
 		image_index = 0;
 		sprite_index = spr_cotton_land;
 		instance_create(x, y, obj_landcloud);
-		scr_sound(sound_land);
+		scr_sound(sfx_land);
 	}
 	if (sprite_index == spr_cotton_fall && key_jump)
 	{
@@ -113,7 +113,7 @@ function scr_player_cotton()
 		state = states.cottondrill;
 		sprite_index = spr_cotton_drill;
 		image_index = 0;
-		scr_sound(sound_suplex1);
+		scr_sound(sfx_grabdash);
 		flash = true;
 		drill = false;
 		with (instance_create(x, y, obj_afterimageoutward))

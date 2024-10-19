@@ -37,7 +37,7 @@ if (!global.panic)
 			pausedmusic = mu_hub;
 		}
 	}
-	if (string_letters(roomname) == "entryway" && (obj_player.character == CHARACTERS.PIZZELLE || obj_player.character == CHARACTERS.NOISE))
+	if (string_letters(roomname) == "entryway" && (obj_player.character == CHARACTERS.PIZZELLE))
 	{
 		if (!audio_is_playing(mu_waffle))
 		{
@@ -54,6 +54,26 @@ if (!global.panic)
 			audio_stop_all_music();
 			scr_music(mu_pizzanothemetune);
 			pausedmusic = mu_pizzanothemetune;
+			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
+		}
+	}
+	if (string_letters(roomname) == "entryway" && obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == false)
+	{
+		if (!audio_is_playing(mu_noiseentrance))
+		{
+			audio_stop_all_music();
+			scr_music(mu_noiseentrance);
+			pausedmusic = mu_noiseentrance;
+			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
+		}
+	}
+	if (string_letters(roomname) == "entryway" && obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == true)
+	{
+		if (!audio_is_playing(mu_noiseentrance))
+		{
+			audio_stop_all_music();
+			scr_music(mu_noiseentrance);
+			pausedmusic = mu_noiseentrance;
 			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
 		}
 	}

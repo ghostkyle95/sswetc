@@ -28,7 +28,7 @@ function scr_player_cottondrill()
 		grounded = false;
 		vsp = -5;
 		grav = 0.2;
-		scr_sound(sound_suplex1);
+		scr_sound(sfx_grabdash);
 		groundedcot = false;
 	}
 	if (key_jump)
@@ -44,6 +44,6 @@ function scr_player_cottondrill()
 			image_xscale = other.xscale;
 			sprite_index = spr_cottonpoof;
 		}
-		scr_sound(sound_jump);
+		scr_sound(sfx_jump);
 	}
 }

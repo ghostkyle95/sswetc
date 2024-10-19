@@ -1,5 +1,3 @@
-if (!audio_is_playing(sound_parry))
-	scr_sound(sound_parry);
 with (obj_baddie)
 {
 	if (distance_to_object(other.id) < 64 && (object_index != obj_charcherry || (object_index == obj_charcherry && state == baddiestates.charcherry)))
@@ -12,4 +10,6 @@ with (obj_player)
 	image_index = 0;
 	movespeed = -8;
 	flash = true;
+	if (!audio_is_playing(sfx_parry))
+		scr_sound(sfx_parry);
 }

@@ -86,7 +86,7 @@ function scr_player_mach1()
 			image_speed = 0.45;
 			if (key_jump && grounded && key_attack)
 			{
-				scr_sound(sound_jump);
+				scr_sound(sfx_jump);
 				sprite_index = spr_airdash1;
 				dir = xscale;
 				momemtum = true;
@@ -101,7 +101,7 @@ function scr_player_mach1()
 			scr_cantaunt()
 			if (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
-				scr_sound(sound_suplex1);
+				scr_sound(sfx_grabdash);
 				instance_create(x, y, obj_slaphitbox);
 				suplexmove = true;
 				vsp = 0;

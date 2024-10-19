@@ -35,7 +35,7 @@ function scr_player_boxxedpep()
 		movespeed = 0;
 	if (grounded && input_buffer_jump < 8 && vsp > 0 && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
-		scr_sound(sound_maximumspeedstop);
+		scr_sound(sfx_machturn);
 		instance_create(x, y, obj_highjumpcloud2);
 		vsp = -11;
 	}

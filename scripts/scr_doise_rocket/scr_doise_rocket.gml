@@ -16,12 +16,12 @@ function scr_doise_rocket()
 			flash = true;
 		}
 	}
-	if (sprite_index == spr_jetpackturn)
+	if (sprite_index == spr_jetpackturn || sprite_index == spr_groundedjetpackturn)
 	{
 		hsp = movespeed * xscale
 		movespeed = approach(movespeed, 0, 0.5);
 		vsp = 0;
-		if (floor(image_index) == (image_number - 1))
+		if (floor(image_index) == (image_number - 1) && !grounded)
 		{
 			movespeed = 12;
 			sprite_index = spr_superjumpside;
@@ -30,8 +30,17 @@ function scr_doise_rocket()
 			xscale *= -1;
 			instance_create(x, y, obj_jumpdust);
 		}
+		else if (floor(image_index) == (image_number - 1) && grounded)
+		{
+			movespeed = 12;
+			sprite_index = spr_rocketfistground;
+			momemtum = true;
+			image_index = 0;
+			xscale *= -1;
+			instance_create(x, y, obj_jumpdust);
+		}
 	}
-	if (sprite_index != spr_superjumpprepside && sprite_index != spr_jetpackturn && sprite_index != spr_jetpackjump)
+	if (sprite_index != spr_superjumpprepside && sprite_index != spr_jetpackturn && sprite_index != spr_jetpackjump && sprite_index != spr_groundedjetpackturn)
 	{
 		if (!key_up && !key_down)
 			vsp = 0;
@@ -53,9 +62,12 @@ function scr_doise_rocket()
 		}
 		if ((move == -xscale) && Dashpad_buffer <= 0)
 		{
-			scr_sound(sound_maximumspeedstop);
+			scr_sound(sfx_machturn);
 			image_index = 0;
-			sprite_index = spr_jetpackturn;
+			if grounded == false
+				sprite_index = spr_jetpackturn;
+			else
+				sprite_index = spr_groundedjetpackturn;
 			flash = false;
 			mach2 = 100;
 		}
@@ -90,10 +102,10 @@ function scr_doise_rocket()
 			sprite_index = spr_mach3hitwall;
 			state = states.bump;
 		}
-		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_jetpackjump  && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall)
+		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_jetpackjump  && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
 			sprite_index = spr_superjumpside;
 			
-		if (key_down && grounded && hsp != 0)
+		if (key_down && grounded && hsp != 0 && sprite_index != spr_rocketfistground && sprite_index != spr_jetpackjump && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
 			sprite_index = spr_rocketfistground;
 			
 		if (key_slap2 && key_up)

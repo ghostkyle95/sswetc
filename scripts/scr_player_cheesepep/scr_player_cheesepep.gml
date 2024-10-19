@@ -62,7 +62,7 @@ function scr_player_cheesepep()
 		sprite_index = spr_cheesepep_idle;
 	if (input_buffer_jump < 8 && vsp > 0 && grounded && (sprite_index == spr_cheesepep_idle || sprite_index == spr_cheesepep_walk))
 	{
-		scr_sound(sound_maximumspeedstop);
+		scr_sound(sfx_machturn);
 		image_index = 0;
 		sprite_index = spr_cheesepep_jumpstart;
 	}

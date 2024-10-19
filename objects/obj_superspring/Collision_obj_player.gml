@@ -2,7 +2,7 @@ with (obj_player)
 {
 	if (state != states.Sjump)
 	{
-		scr_sound(sound_superjumprelease);
+		scr_sound(sfx_sjump);
 		sprite_index = spr_superjump;
 		state = states.Sjump;
 		vsp = -12;

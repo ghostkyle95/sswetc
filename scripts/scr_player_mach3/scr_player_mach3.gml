@@ -37,7 +37,7 @@ function scr_player_mach3()
 				jumpstop = false;
 			if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && key_attack)
 			{
-				scr_sound(sound_jump);
+				scr_sound(sfx_jump);
 				image_index = 0;
 				sprite_index = spr_mach3jump;
 				vsp = -9;
@@ -75,7 +75,7 @@ function scr_player_mach3()
 			}
 			if ((move == -xscale && grounded) && Dashpad_buffer <= 0)
 			{
-				scr_sound(sound_maximumspeedstop);
+				scr_sound(sfx_machturn);
 				sprite_index = spr_machslideboost3;
 				flash = false;
 				state = states.machslide;
@@ -167,7 +167,7 @@ function scr_player_mach3()
 		scr_cantaunt()
 			if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
-				scr_sound(sound_suplex1);
+				scr_sound(sfx_grabdash);
 				instance_create(x, y, obj_slaphitbox);
 				suplexmove = true;
 				vsp = 0;
@@ -178,7 +178,7 @@ function scr_player_mach3()
 			}
 	if ((character == CHARACTERS.PIZZANO) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
 	{
-		scr_sound(sound_suplex1);
+		scr_sound(sfx_grabdash);
 		instance_create(x, y, obj_slaphitbox);
 		suplexmove = true;
 		vsp = 0;

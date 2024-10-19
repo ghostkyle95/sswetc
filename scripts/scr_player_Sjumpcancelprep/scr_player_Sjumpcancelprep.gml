@@ -3,7 +3,7 @@
 function scr_player_Sjumpcancel(){
 	hsp = 0
 	vsp = 0
-	if sprite_index == spr_Sjumpcancelprep and animation_end()
+	if sprite_index == spr_Sjumpcancelprep && animation_end()
 	{
 		if (move != 0)
 			xscale = move;

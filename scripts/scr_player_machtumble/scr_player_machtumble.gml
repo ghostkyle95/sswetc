@@ -46,8 +46,8 @@ function scr_player_machtumble()
 		sprite_index = spr_crouchslip;
 		machhitAnim = false;
 		state = states.crouchslide;
-		if (audio_is_playing(sound_suplex1))
-			audio_stop_sound(sound_suplex1);
+		if (audio_is_playing(sfx_grabdash))
+			audio_stop_sound(sfx_grabdash);
 	}
 	if (animation_end())
 	{

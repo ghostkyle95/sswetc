@@ -1,6 +1,7 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
 	camera_shake(20, 40);
+	scr_sound(sfx_pillarimpact)
 	repeat (2)
 	{
 		instance_create(x, y, obj_bangeffect);

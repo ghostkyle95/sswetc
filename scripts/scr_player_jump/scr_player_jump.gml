@@ -53,7 +53,7 @@ function scr_player_jump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (charged and sprite_index = spr_jetpackjump and key_attack and doisemode = true)
+	if (charged && sprite_index = spr_jetpackjump && key_attack && doisemode = true)
 	{
 		flash = true;
 		charged = false;
@@ -68,7 +68,7 @@ function scr_player_jump()
 	}
 	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && !(sprite_index == spr_facestomp || sprite_index == spr_freefall))
 	{
-		scr_sound(sound_jump);
+		scr_sound(sfx_jump);
 		sprite_index = spr_jump;
 		if (shotgunAnim)
 			sprite_index = spr_shotgun_jump;
@@ -103,7 +103,7 @@ function scr_player_jump()
 		image_index = 0;
 		freefallstart = 0;
 		instance_create_depth(x, y, 0, obj_landcloud);
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		doublejumped = false;
 	}
 	if (key_jump)
@@ -177,7 +177,7 @@ function scr_player_jump()
 		sprite_index = spr_uppercutbegin;
 		image_index = 0;
 		scr_sound(sound_rollgetup);
-		scr_sound(sound_suplex1);
+		scr_sound(sfx_grabdash);
 		if character != CHARACTERS.NOISE
 			vsp = -15;
 		else
@@ -185,7 +185,7 @@ function scr_player_jump()
 	}
 	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && (!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane) && sprite_index != spr_suplexbump)
 	{
-		scr_sound(sound_suplex1);
+		scr_sound(sfx_grabdash);
 		instance_create(x, y, obj_slaphitbox);
 		suplexmove = true;
 		vsp = 0;
@@ -196,7 +196,7 @@ function scr_player_jump()
 	}
 	if ((character == CHARACTERS.PIZZANO) && (!key_down && key_slap2 && !suplexmove && !shotgunAnim && !global.cane))
 	{
-		scr_sound(sound_suplex1);
+		scr_sound(sfx_grabdash);
 		instance_create(x, y, obj_slaphitbox);
 		suplexmove = true;
 		vsp = 0;
@@ -247,7 +247,7 @@ function scr_player_jump()
 		}
 		if (!key_down && key_slap2 && !suplexmove && !shotgunAnim)
 		{
-			scr_sound(sound_suplex1);
+			scr_sound(sfx_grabdash);
 			instance_create(x, y, obj_slaphitbox);
 			suplexmove = true;
 			vsp = 0;

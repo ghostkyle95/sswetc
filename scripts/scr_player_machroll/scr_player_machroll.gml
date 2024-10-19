@@ -66,7 +66,7 @@ function scr_player_machroll()
 		image_index = 0;
 		instance_create(x - 10, y + 10, obj_bumpeffect);
 	}
-	if grounded and sprite_index == spr_dive
+	if grounded && sprite_index == spr_dive
 	{
 		sprite_index = machroll
 	}
@@ -81,7 +81,7 @@ function scr_player_machroll()
 		state = states.mach2
 		sprite_index = spr_rollgetup;
 	}
-	else if (sprite_index != spr_dive and !grounded)
+	else if (sprite_index != spr_dive && !grounded)
 	{
 		if character != CHARACTERS.NOISE
 		{

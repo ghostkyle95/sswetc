@@ -17,10 +17,10 @@ function scr_player_uppercut()
 	if (move != 0)
 	{
 		xscale = move;
-		/*if (movespeed < 4)
+		if (movespeed < 4)
 			movespeed += 0.4;
-		if (movespeed > 4)
-			movespeed = 4;*/
+		if (movespeed > 20)
+			movespeed = 20;
 	}
 	if (move == 0)
 	{
@@ -34,7 +34,7 @@ function scr_player_uppercut()
 	}
 	if (grounded && vsp > 0)
 	{
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		landAnim = true;
 		input_buffer_secondjump = false;
 		state = false;

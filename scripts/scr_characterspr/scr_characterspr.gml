@@ -201,6 +201,8 @@ function scr_characterspr()
 		spr_jetpackturn = spr_playerN_jetpackturn;
 		spr_airhitwall = spr_pizzano_airhitwall;
 		
+		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -210,6 +212,22 @@ function scr_characterspr()
 		
 		global.panicmus = mu_escape;
 		global.lap2mus = mu_lap2;
+		
+		sfx_step = sound_step;
+		sfx_land = sound_land;
+		sfx_jump = sound_jump;
+		sfx_mach1 = sfx_pizzy_mach1;
+		sfx_mach2 = sfx_pizzy_mach2;
+		sfx_mach3 = sfx_pizzy_mach3;
+		sfx_mach4 = sfx_pizzy_mach4;
+		sfx_machturn = sound_maximumspeedstop;
+		sfx_firebutt = sound_fireass;
+		sfx_parry = sound_parry;
+		sfx_sjumpstart = sound_superjumpcharge1;
+		sfx_sjumphold = sound_superjumpcharge2;
+		sfx_sjump = sound_superjumprelease;
+		sfx_grabdash = sound_suplex1;
+		sfx_machbreak = sound_break;
 	}
 	if (character == CHARACTERS.PIZZANO)
 	{
@@ -395,12 +413,14 @@ function scr_characterspr()
 		
 		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep;
 		spr_Sjumpcancel = spr_player_Sjumpcancel;
-		spr_jetpackturn = spr_playerN_jetpackturn;
 		
 		spr_machslideboost3fall = spr_playerN_mach3boostfall;
 		
 		spr_jetpackjump = spr_playerN_noisebombspinjump;
+		spr_jetpackturn = spr_playerN_jetpackturn;
 		spr_airhitwall = spr_pizzano_airhitwall;
+		
+		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -411,8 +431,24 @@ function scr_characterspr()
 		
 		global.panicmus = mu_pizzanoescape;
 		global.lap2mus = mu_lap2;
+		
+		sfx_step = sound_step;
+		sfx_land = sound_land;
+		sfx_jump = sound_jump;
+		sfx_mach1 = sound_dash1;
+		sfx_mach2 = sound_dash2;
+		sfx_mach3 = sound_maxspeed;
+		sfx_mach4 = sound_dash3;
+		sfx_machturn = sound_maximumspeedstop;
+		sfx_firebutt = sound_fireass;
+		sfx_parry = sound_parry;
+		sfx_sjumpstart = sound_superjumpcharge1;
+		sfx_sjumphold = sound_superjumpcharge2;
+		sfx_sjump = sound_superjumprelease;
+		sfx_grabdash = sound_suplex1;
+		sfx_machbreak = sound_break;
 	}
-	if (character == CHARACTERS.NOISE and doisemode == false)
+	if (character == CHARACTERS.NOISE && doisemode == false)
 	{
 		spr_idle = spr_playerN_idle;
 		spr_move = spr_playerN_move;
@@ -612,6 +648,8 @@ function scr_characterspr()
 		spr_jetpackturn = spr_playerN_jetpackturn;
 		spr_airhitwall = spr_pizzano_airhitwall;
 		
+		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -621,8 +659,24 @@ function scr_characterspr()
 		
 		global.panicmus = mu_noiseescape;
 		global.lap2mus = mu_noiselap2;
+		
+		sfx_step = sound_step;
+		sfx_land = sound_land;
+		sfx_jump = sfx_noisejump;
+		sfx_mach1 = sfx_noisemach2;
+		sfx_mach2 = sfx_noisemach2;
+		sfx_mach3 = sfx_noisemach3;
+		sfx_mach4 = sfx_noisemach4;
+		sfx_machturn = sfx_noisemachslide;
+		sfx_firebutt = sound_fireass;
+		sfx_parry = sound_parry;
+		sfx_sjumpstart = sfx_noisesjumpstart;
+		sfx_sjumphold = sfx_noisesjumploop;
+		sfx_sjump = sfx_noisesjumprelease;
+		sfx_grabdash = sound_suplex1;
+		sfx_machbreak = sfx_noisemachstop;
 	}
-	if (character == CHARACTERS.NOISE and doisemode == true)
+	if (character == CHARACTERS.NOISE && doisemode == true)
 	{
 		spr_idle = spr_playerN_idle;
 		spr_move = spr_playerN_move;
@@ -820,6 +874,9 @@ function scr_characterspr()
 		
 		spr_jetpackjump = spr_playerN_noisebombspinjump;
 		spr_jetpackturn = spr_playerN_jetpackturn;
+		spr_airhitwall = spr_pizzano_airhitwall;
+		
+		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
@@ -830,6 +887,22 @@ function scr_characterspr()
 		
 		global.panicmus = mu_noiseescape;
 		global.lap2mus = mu_noiselap2;
+		
+		sfx_step = sound_step;
+		sfx_land = sound_land;
+		sfx_jump = sfx_noisejump;
+		sfx_mach1 = sfx_noisemach2;
+		sfx_mach2 = sfx_noisemach2;
+		sfx_mach3 = sfx_noisemach3;
+		sfx_mach4 = sfx_noisemach4;
+		sfx_machturn = sound_maximumspeedstop;
+		sfx_firebutt = sound_fireass;
+		sfx_parry = sound_parry;
+		sfx_sjumpstart = sfx_noisesjumpstart;
+		sfx_sjumphold = sfx_noisesjumploop;
+		sfx_sjump = sfx_noisesjumprelease;
+		sfx_grabdash = sound_suplex1;
+		sfx_machbreak = sfx_noisemachstop;
 	}
 	if (character == CHARACTERS.GUMBOB)
 	{
@@ -921,8 +994,5 @@ function scr_characterspr()
 		spr_machroll = spr_player_machroll;
 		spr_dive = spr_player_dive;
 		spr_cottonidle = spr_gumbob_cotton_idle;
-		
-		global.panicmus = mu_escape;
-		global.lap2mus = mu_lap2;
 	}
 }

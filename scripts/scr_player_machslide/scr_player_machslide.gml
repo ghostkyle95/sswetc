@@ -34,7 +34,6 @@ function scr_player_machslide()
 	{
 		movespeed = 12;
 		sprite_index = spr_mach4;
-		scr_sound(sound_dash2);
 		momemtum = true;
 		state = states.mach3;
 		image_index = 0;
@@ -43,7 +42,7 @@ function scr_player_machslide()
 	}
 	else if (!grounded) && animation_end() && sprite_index == spr_machslideboost3
 		sprite_index = spr_machslideboost3fall
-	if (grounded and sprite_index == spr_machslideboostfall)
+	if (grounded && sprite_index == spr_machslideboostfall)
 	{
 		movespeed = 8.30;
 		momemtum = true;
@@ -53,11 +52,10 @@ function scr_player_machslide()
 		xscale *= -1;
 		instance_create(x, y, obj_jumpdust);
 	}
-	if (grounded and sprite_index == spr_machslideboost3fall)
+	if (grounded && sprite_index == spr_machslideboost3fall)
 	{
 		movespeed = 12;
 		sprite_index = spr_mach4;
-		scr_sound(sound_dash2);
 		momemtum = true;
 		state = states.mach3;
 		image_index = 0;

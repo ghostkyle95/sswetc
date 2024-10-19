@@ -78,6 +78,7 @@ function scr_playerN_machcancel(){
         if (move != 0)
             xscale = move
         sprite_index = spr_playerN_wallbounce
+		scr_sound(sfx_wallbounceland)
     }
     if (grounded && key_attack && vsp >= 0 && sprite_index == spr_playerN_wallbounce)
     {
@@ -86,7 +87,7 @@ function scr_playerN_machcancel(){
         else if (savedmove != 0)
             xscale = savedmove
         jumpstop = true
-        sprite_index = spr_playerN_mach3
+        sprite_index = spr_mach4
         state = states.mach3
         movespeed = 12
         flash = true
@@ -128,6 +129,7 @@ function scr_noise_machcancel_grab() //gml_Script_scr_noise_machcancel_grab
             if (move != 0)
                 xscale = move
             //input_buffer_slap = 0
+			scr_sound(sfx_airspinstart)
             key_slap = false
             key_slap2 = false
             jumpstop = true

@@ -5,34 +5,53 @@ function scr_playersounds()
 	else if (state != states.minecart || !grounded)
 		audio_stop_sound(sfx_railgrind);
 		
-	if (sprite_index == spr_mach1 && (!audio_is_playing(sound_dash1) && grounded))
-		scr_sound(sound_dash1);
+	if (sprite_index == spr_mach1 && (!audio_is_playing(sfx_mach1) && grounded))
+		scr_sound(sfx_mach1);
 	else if (sprite_index != spr_mach1 || (!grounded || move == -xscale))
-		audio_stop_sound(sound_dash1);
+		audio_stop_sound(sfx_mach1);
 		
-	if ((sprite_index == spr_mach || sprite_index == spr_climbwall) && state = states.mach2 && !audio_is_playing(sound_dash2))
-		scr_sound(sound_dash2);
+	if ((sprite_index == spr_mach || sprite_index == spr_climbwall) && state = states.mach2 && !audio_is_playing(sfx_mach2))
+		scr_sound(sfx_mach2);
 	else if (sprite_index != spr_mach) && (sprite_index != spr_climbwall)
-		audio_stop_sound(sound_dash2);
+		audio_stop_sound(sfx_mach2);
 		
-	if (((state == states.mach3 && sprite_index != spr_crazyrun) || sprite_index == spr_machslideboost3) && !audio_is_playing(sound_maxspeed))
-		scr_sound(sound_maxspeed);
+	if (((state == states.mach3 && sprite_index != spr_crazyrun) || sprite_index == spr_machslideboost3) && !audio_is_playing(sfx_mach3))
+		scr_sound(sfx_mach3);
 	else if ((state != states.mach3 && sprite_index != spr_machslideboost3) || sprite_index == spr_crazyrun)
-		audio_stop_sound(sound_maxspeed);
+		audio_stop_sound(sfx_mach3);
 		
-	if (sprite_index == spr_crazyrun && !audio_is_playing(sound_dash3))
-		scr_sound(sound_dash3);
+	if (sprite_index == spr_crazyrun && !audio_is_playing(sfx_mach4))
+		scr_sound(sfx_mach4);
 	else if (sprite_index != spr_crazyrun)
-		audio_stop_sound(sound_dash3);
+		audio_stop_sound(sfx_mach4);
 		
 	if (sprite_index == spr_mach2jump) && !audio_is_playing(sfx_flip)
 		scr_sound(sfx_flip);
-	if (sprite_index == spr_superjumppreplight) && !audio_is_playing(sound_superjumpcharge2)
-		scr_sound(sound_superjumpcharge2);
-	
 	if (audio_is_playing(sfx_flip) && sprite_index != spr_mach2jump)
 		audio_stop_sound(sfx_flip);
 		
-	if (audio_is_playing(sound_superjumpcharge2) && sprite_index != spr_superjumppreplight)
-		audio_stop_sound(sound_superjumpcharge2);
+	if (sprite_index == spr_superjumppreplight) && !audio_is_playing(sfx_sjumphold) && !audio_is_playing(sfx_sjumpstart)
+		scr_sound(sfx_sjumphold);
+	if (audio_is_playing(sfx_sjumphold) && sprite_index != spr_superjumppreplight)
+		audio_stop_sound(sfx_sjumphold);
+		
+	if (sprite_index == spr_playerN_sidewayspinend && !audio_is_playing(sfx_airspin) && !audio_is_playing(sfx_airspinstart))
+		scr_sound(sfx_airspin);
+	else if (sprite_index != spr_playerN_sidewayspinend)
+		audio_stop_sound(sfx_airspin);
+		
+	if (sprite_index == spr_playerN_wallbounce && !audio_is_playing(sfx_wallbounceloop) && !audio_is_playing(sfx_wallbouncestart) && !audio_is_playing(sfx_wallbounceland))
+		scr_sound(sfx_wallbounceloop);
+	else if (sprite_index != spr_playerN_wallbounce)
+		audio_stop_sound(sfx_wallbounceloop);
+		
+	if (sprite_index == spr_playerN_divebombfall && !audio_is_playing(sfx_tornadofast))
+		scr_sound(sfx_tornadofast);
+	else if (sprite_index != spr_playerN_divebombfall)
+		audio_stop_sound(sfx_tornadofast);
+		
+	if (sprite_index == spr_playerN_divebomb && !audio_is_playing(sfx_torndadoslow))
+		scr_sound(sfx_torndadoslow);
+	else if (sprite_index != spr_playerN_divebomb)
+		audio_stop_sound(sfx_torndadoslow);
 }

@@ -2,6 +2,7 @@ function scr_player_climbwall()
 {
     if (character == CHARACTERS.NOISE)
 	{
+		scr_sound(sfx_wallbouncestart)
 		sprite_index = spr_playerN_wallbounce
 		state = states.machcancel
 		savedmove = xscale

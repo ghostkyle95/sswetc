@@ -24,7 +24,7 @@ function scr_player_cheeseball()
 	if (input_buffer_jump < 8 && grounded)
 	{
 		instance_create(x, y, obj_highjumpcloud2);
-		scr_sound(sound_jump);
+		scr_sound(sfx_jump);
 		vsp = -5;
 	}
 }
