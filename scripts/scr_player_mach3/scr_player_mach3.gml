@@ -67,7 +67,7 @@ function scr_player_mach3()
 			}
 			if ((!key_attack && grounded && sprite_index != spr_plrdashpad) && Dashpad_buffer <= 0)
 			{
-				scr_sound(sound_break);
+				scr_sound(sfx_machbreak);
 				sprite_index = spr_machslidestart;
 				state = states.machslide;
 				image_index = 0;

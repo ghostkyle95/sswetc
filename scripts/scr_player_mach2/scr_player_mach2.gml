@@ -87,7 +87,7 @@ function scr_player_mach2()
 		if (!key_attack && grounded)
 		{
 			alarm[0] = 240;
-			scr_sound(sound_break);
+			scr_sound(sfx_machbreak);
 			sprite_index = spr_machslidestart;
 			state = states.machslide;
 			image_index = 0;
