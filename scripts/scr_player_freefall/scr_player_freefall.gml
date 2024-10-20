@@ -42,11 +42,21 @@ function scr_player_freefall()
 		sprite_index = spr_caneslam;
 	if ((grounded && !input_buffer_jump < 8) && !place_meeting(x, y + 1, obj_destructibles))
 	{
-		if (scr_slope() && !place_meeting(x, y, obj_dashpad) && key_down && freefallsmash > 10)
+		if (scr_slope() && !place_meeting(x, y, obj_dashpad))
 		{
 			flash = false;
-			state = states.machroll;
-			movespeed = 12;
+			if (freefallsmash > 10)
+			{
+				state = states.mach3;
+				sprite_index = spr_mach4
+				movespeed = 12
+			}
+			else
+			{
+				state = states.mach2;
+				sprite_index = spr_mach
+				movespeed = 8
+			}
 			if (place_meeting(x, y + 1, obj_slope))
 			{
 				with (instance_place(x, y + 1, obj_slope))
@@ -89,7 +99,7 @@ function scr_player_freefall()
 	freefallsmash++;
 	if (freefallsmash > 10 && !instance_exists(obj_groundpoundeffect))
 		instance_create_depth(x, y, -6, obj_groundpoundeffect);
-	if (key_attack2 && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
+	/*if (key_attack2 && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
 	{
 		if (move != 0)
 			xscale = move;
@@ -102,7 +112,8 @@ function scr_player_freefall()
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 		freefallsmash = false;
-	}
+	}*/
+	// temp disabled
 	if key_slap2 && sprite_index == spr_crusherfall && character == CHARACTERS.NOISE
 	{
 		if (move != 0)
