@@ -55,8 +55,8 @@ function scr_player_freefall()
 			else
 			{
 				state = states.mach2;
-				sprite_index = spr_mach
-				movespeed = 8
+				sprite_index = spr_mach;
+				movespeed = 8;
 			}
 			if (place_meeting(x, y + 1, obj_slope))
 			{
