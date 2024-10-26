@@ -12,7 +12,6 @@ if (fadealpha > 1 && !fadein)
 		obj_pause.pause = true;
 		instance_deactivate_all(true);
 		instance_activate_object(obj_pause);
-		instance_activate_object(obj_rpc);
 	}
 	fadein = true;
 }
