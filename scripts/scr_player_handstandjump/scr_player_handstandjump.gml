@@ -102,6 +102,8 @@ function scr_player_handstandjump()
 			image_index = 0;
 			image_speed = 0.2;
 			state = states.machtumble;
+			if !grounded
+				vsp = -5;
 			with (instance_create(x, y, obj_jumpdust))
 				image_xscale = other.xscale;
 		}

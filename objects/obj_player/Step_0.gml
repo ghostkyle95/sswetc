@@ -237,11 +237,6 @@ if (state != states.backbreaker)
 		supertauntbuffer = 500;
 		supertauntcharged = true;
 	}
-	/*if ((supertauntbuffer <= 0 && supertauntcharged) || global.combo < 3)
-	{
-		supertauntbuffer = 0;
-		supertauntcharged = false;
-	}*/
 	if (supertauntcharged && room != rank_room)
 	{
 		if (!instance_exists(supertaunteffect))
