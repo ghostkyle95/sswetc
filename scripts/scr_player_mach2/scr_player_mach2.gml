@@ -130,7 +130,7 @@ function scr_player_mach2()
 		with (instance_create(x, y, obj_dashcloud))
 			sprite_index = spr_dashcloud2;
 	}
-	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && sprite_index != spr_longjumpstart && sprite_index != spr_longjumpend)
+	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && sprite_index != spr_longjumpstart && sprite_index != spr_longjumpend && sprite_index != spr_walljumpstart && sprite_index != spr_walljump)
 		sprite_index = spr_secondjump1;
 	if (animation_end() && sprite_index == spr_secondjump1)
 		sprite_index = spr_secondjump2;
@@ -139,6 +139,8 @@ function scr_player_mach2()
 	if animation_end() && sprite_index == spr_longjumpstart
 		sprite_index = spr_longjumpend
 	if grounded && (sprite_index == spr_longjumpstart || sprite_index == spr_longjumpend)
+		sprite_index = spr_mach;
+	if grounded && (sprite_index == spr_walljumpstart || sprite_index == spr_walljump)
 		sprite_index = spr_mach;
 	scr_cantaunt()
 	if (sprite_index == spr_rollgetup)

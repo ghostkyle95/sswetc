@@ -6,8 +6,9 @@ function scr_player_freefall()
 	if (!grounded)
 	{
 		hsp = move * movespeed;
-		if vsp < 50
-			vsp += 0.5
+		/*if vsp < 50
+			vsp += 0.5*/
+		vsp = approach(vsp, 50, 0.5)
 		if (move != xscale && momemtum && movespeed != 0)
 			movespeed -= 0.05;
 		if (movespeed == 0)

@@ -12,10 +12,7 @@ function scr_player_handstandjump()
 			grav = 0;
 			momemtum = true;
 			dir = xscale;
-			if (image_index < 2)
-				movespeed = 12;
-			if (image_index > 7)
-				movespeed -= 1;
+			movespeed = 12;
 			if (move != xscale && move != 0)
 			{
 				state = states.jump;
@@ -51,7 +48,7 @@ function scr_player_handstandjump()
 					image_index = 1;
 					state = states.freefallprep;
 					sprite_index = spr_bodyslamstart;
-					vsp = -5;
+					vsp = -3;
 				}
 			}
 			if (key_jump && grounded)

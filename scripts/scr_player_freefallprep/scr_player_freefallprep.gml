@@ -14,6 +14,10 @@ function scr_player_freefallprep()
 	crouchslideAnim = true;
 	crouchAnim = true;
 	move = key_left + key_right;
+	if sprite_index == spr_bodyslamstart
+		vsp = approach(vsp, -8, -0.5)
+	else if sprite_index == spr_crusherstart
+		vsp = approach(vsp, -20, -0.5)
 	if (!grounded)
 	{
 		hsp = move * movespeed;
@@ -50,14 +54,14 @@ function scr_player_freefallprep()
 	image_speed = 0.5;
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_bodyslamstart)
 	{
-		vsp += 14;
+		//vsp += 14;
 		state = states.freefall;
 		freefallsmash = false;
 		sprite_index = spr_bodyslamfall;
 	}
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_crusherstart)
 	{
-		vsp += 14;
+		//vsp += 14;
 		state = states.freefall;
 		freefallsmash = false;
 		sprite_index = spr_crusherfall;

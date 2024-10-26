@@ -68,9 +68,9 @@ draw_set_halign(fa_center);
 draw_set_color(c_white);
 if (global.panic) {
 	var _clr = (global.minutes >= 1 ? c_white : c_red),
-	_cln = (global.seconds >= 10 ? ":0" : ":");
+	_cln = (global.seconds >= 10 ? ":" : ":0");
 	
 	draw_set_color(_clr);
 	draw_text(random_range(1, -1) + 480, random_range(1, -1) + 65, 
-	$"{global.minutes} {_cln} {global.seconds}");
+	$"{global.minutes}{_cln}{global.seconds}");
 }

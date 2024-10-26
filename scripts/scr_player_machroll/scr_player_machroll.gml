@@ -108,7 +108,7 @@ function scr_player_machroll()
 			image_index = 0;
 			state = states.freefallprep;
 			sprite_index = spr_bodyslamstart;
-			vsp = -5;
+			vsp = -3;
 		}
 		else
 		{

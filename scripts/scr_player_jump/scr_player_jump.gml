@@ -145,12 +145,6 @@ function scr_player_jump()
 		if (sprite_index == spr_stompprep && floor(image_index) == (image_number - 1))
 			sprite_index = spr_stomp;
 	}
-	if (key_attack && sprite_index != spr_airdash2 && sprite_index != spr_airdash1 && fallinganimation < 40 && sprite_index != spr_playerN_glide && character == CHARACTERS.PIZZELLE)
-	{
-		stompAnim = false;
-		sprite_index = spr_airdash1;
-		image_index = 0;
-	}
 	if (key_slap2 && shotgunAnim && global.ammo > 0)
 	{
 		global.ammo -= 1;
@@ -232,7 +226,7 @@ function scr_player_jump()
 		image_index = 0;
 		state = states.freefallprep;
 		sprite_index = spr_bodyslamstart;
-		vsp = -5;
+		vsp = -3;
 	}
 	if (global.cane)
 	{

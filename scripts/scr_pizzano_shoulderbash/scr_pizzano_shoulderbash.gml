@@ -22,7 +22,7 @@ function scr_pizzano_shoulderbash()
 			image_index = 1;
 			state = states.freefallprep;
 			sprite_index = spr_bodyslamstart;
-			vsp = -5;
+			vsp = -3;
 		}
 	}
 	if (key_jump && grounded)

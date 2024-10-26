@@ -73,7 +73,7 @@ function scr_player_climbwall()
 		}
 		else
 		{
-			sprite_index = spr_mach2jump;
+			sprite_index = spr_walljumpstart;
 			mach2 = 35;
 			instance_create(x, y, obj_jumpdust);
 			vsp = -9;

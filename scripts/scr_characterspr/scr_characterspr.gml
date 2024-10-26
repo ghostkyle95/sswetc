@@ -208,6 +208,9 @@ function scr_characterspr()
 		spr_bomb_runabouttoexplode = spr_bombpep_runabouttoexplode;
 		spr_bomb_end = spr_bombpep_end;
 		
+		spr_walljumpstart = spr_player_mach2jump;
+		spr_walljump = spr_player_mach2jump;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -426,6 +429,9 @@ function scr_characterspr()
 		spr_airhitwall = spr_pizzano_airhitwall;
 		
 		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
+		
+		spr_walljumpstart = spr_player_mach2jump;
+		spr_walljump = spr_player_mach2jump;
 		
 		spr_bomb_intro = spr_bombpep_intro;
 		spr_bomb_run = spr_bombpep_run;
@@ -665,6 +671,9 @@ function scr_characterspr()
 		spr_bomb_runabouttoexplode = spr_playerN_bombabouttoexplode;
 		spr_bomb_end = spr_playerN_bombend;
 		
+		spr_walljumpstart = spr_playerN_walljumpstart;
+		spr_walljump = spr_playerN_walljumpend;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -897,6 +906,9 @@ function scr_characterspr()
 		spr_bomb_run = spr_playerN_bomb;
 		spr_bomb_runabouttoexplode = spr_playerN_bombabouttoexplode;
 		spr_bomb_end = spr_playerN_bombend;
+		
+		spr_walljumpstart = spr_playerN_walljumpstart;
+		spr_walljump = spr_playerN_walljumpend;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;

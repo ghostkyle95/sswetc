@@ -125,25 +125,49 @@ function scr_noise_machcancel_grab() //gml_Script_scr_noise_machcancel_grab
     {
         if (move != 0)
         {
-            //input_buffer_shoot = 0
-            if (move != 0)
-                xscale = move
-            //input_buffer_slap = 0
-			scr_sound(sfx_airspinstart)
-            key_slap = false
-            key_slap2 = false
-            jumpstop = true
-			machpunchAnim = false;
-            if (vsp > -5)
-                vsp = -5
-            state = states.mach2
-            movespeed = 12
-            sprite_index = spr_playerN_sidewayspin
-            with (instance_create(x, y, obj_crazyrunothereffect))
-                image_xscale = other.xscale
-            image_index = 0
-            //particle_set_scale((5 << 0), xscale, 1)
-            //create_particle(x, y, (5 << 0), 0)
+			if doisemode == false
+			{
+				//input_buffer_shoot = 0
+				if (move != 0)
+				    xscale = move
+				//input_buffer_slap = 0
+				scr_sound(sfx_airspinstart)
+				key_slap = false
+				key_slap2 = false
+				jumpstop = true
+				machpunchAnim = false;
+				if (vsp > -5)
+				    vsp = -5
+				state = states.mach2
+				movespeed = 12
+				sprite_index = spr_playerN_sidewayspin
+				with (instance_create(x, y, obj_crazyrunothereffect))
+				    image_xscale = other.xscale
+				image_index = 0
+				//particle_set_scale((5 << 0), xscale, 1)
+				//create_particle(x, y, (5 << 0), 0)
+			}
+			else
+			{
+				//input_buffer_shoot = 0
+				if (move != 0)
+				    xscale = move
+				//input_buffer_slap = 0
+				key_slap = false
+				key_slap2 = false
+				jumpstop = true
+				machpunchAnim = false;
+				if (vsp > -5)
+				    vsp = -5
+				state = states.mach3
+				movespeed = 12
+				sprite_index = spr_walljumpstart
+				with (instance_create(x, y, obj_crazyrunothereffect))
+				    image_xscale = other.xscale
+				image_index = 0
+				//particle_set_scale((5 << 0), xscale, 1)
+				//create_particle(x, y, (5 << 0), 0)
+			}
         }
         else
         {
