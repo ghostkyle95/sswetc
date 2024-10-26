@@ -94,3 +94,15 @@ function string_get_split(_string, _split)
 		splits[slot] = str2;
 	return splits;
 }
+
+function is_level() {
+	var _lvlarr = [ "entryway", "steamy", "molasses", "mines" ], 
+	_rmname = room_get_name(room);
+	
+	for (var _i = 0; _i < array_length(_lvlarr); _i++;) {
+		if (string_count(_lvlarr[_i], _rmname ) > 0)
+			return true;
+	};
+	
+	return false;
+};
