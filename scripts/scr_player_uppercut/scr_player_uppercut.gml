@@ -22,11 +22,6 @@ function scr_player_uppercut()
 		if (movespeed > 20)
 			movespeed = 20;
 	}
-	if (move == 0)
-	{
-		/*if (movespeed > 0)
-			movespeed -= 0.3;*/
-	}
 	if (!instance_exists(obj_dashcloud) && grounded)
 	{
 		with (instance_create_depth(x, y, 0, obj_dashcloud))
@@ -35,14 +30,29 @@ function scr_player_uppercut()
 	if (grounded && vsp > 0)
 	{
 		scr_sound(sfx_step);
-		landAnim = true;
-		input_buffer_secondjump = false;
-		state = false;
-		jumpAnim = true;
-		jumpstop = false;
-		image_index = 0;
-		freefallstart = false;
-		instance_create_depth(x, y, 0, obj_landcloud);
+		if (movespeed >= 12 && key_attack)
+		{
+			sprite_index = spr_mach4
+			state = states.mach3;
+			instance_create_depth(x, y, 0, obj_landcloud);
+		}
+		else if (movespeed < 12 && key_attack)
+		{
+			sprite_index = spr_mach
+			state = states.mach2;
+			instance_create_depth(x, y, 0, obj_landcloud);
+		}
+		else if (!key_attack)
+		{
+			state = false;
+			landAnim = true;
+			input_buffer_secondjump = false;
+			jumpAnim = true;
+			jumpstop = false;
+			image_index = 0;
+			freefallstart = false;
+			instance_create_depth(x, y, 0, obj_landcloud);
+		}
 	}
 	if (attack_afterimagetimer > 0)
 		attack_afterimagetimer--;

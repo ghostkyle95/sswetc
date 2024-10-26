@@ -49,6 +49,13 @@ function scr_player_machtumble()
 		if (audio_is_playing(sfx_grabdash))
 			audio_stop_sound(sfx_grabdash);
 	}
+	if (key_jump)
+	{
+		vsp = -10;
+		movespeed = 12;
+		state = states.mach3;
+		sprite_index = spr_outofcontrolfall;	
+	}
 	if (animation_end())
 	{
 		if (key_attack)

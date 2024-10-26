@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && baddieID.thrown != 1 && other.baddieID.thrown && baddieID.state != baddiestates.grabbed)
+if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID.thrown != 1 && other.baddieID.thrown && baddieID.state != baddiestates.grabbed)
 {
 	scr_sound(sound_punch);
 	instance_destroy(other.baddieID);

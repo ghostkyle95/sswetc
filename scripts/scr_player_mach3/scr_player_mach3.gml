@@ -61,13 +61,28 @@ function scr_player_mach3()
 				input_buffer_jump = 10000000000;
 			else if (key_jump)
 				input_buffer_jump = 0;
-			if (key_up && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
+			if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
 			{
 				scr_sound(sfx_sjumpstart);
 				sprite_index = spr_superjumpprep;
 				state = states.Sjumpprep;
 				hsp = 0;
 				image_index = 0;
+			}
+			if (key_slap2 && key_up)
+			{
+				grounded = false;
+				state = states.uppercut;
+				suplexmove = true;
+				sprite_index = spr_uppercutbegin;
+				image_index = 0;
+				scr_sound(sfx_jump);
+				scr_sound(sound_rollgetup);
+				scr_sound(sfx_grabdash);
+				if character != CHARACTERS.NOISE
+					vsp = -15;
+				else
+					vsp = -21;
 			}
 			if ((!key_attack && grounded && sprite_index != spr_plrdashpad) && Dashpad_buffer <= 0)
 			{
@@ -99,7 +114,9 @@ function scr_player_mach3()
 			}
 			if (sprite_index == spr_dive && grounded)
 				sprite_index = spr_mach4;
-			if (sprite_index == spr_Sjumpcancel && grounded)
+			if (sprite_index == spr_Sjumpcancel && grounded) 
+				sprite_index = spr_mach4;
+			if (sprite_index == spr_outofcontrolfall && grounded) 
 				sprite_index = spr_mach4;
 			if (!key_down && sprite_index == spr_dive && !grounded)
 			{
@@ -169,7 +186,7 @@ function scr_player_mach3()
 			if (sprite_index == spr_plrdashpad)
 				image_speed = 0.3;
 			scr_cantaunt()
-			if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
+			if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true)
 			{
 				scr_sound(sfx_grabdash);
 				instance_create(x, y, obj_slaphitbox);
@@ -180,7 +197,7 @@ function scr_player_mach3()
 				sprite_index = spr_suplexdash;
 				state = states.handstandjump;
 			}
-		if ((character == CHARACTERS.PIZZANO) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
+		if ((character == CHARACTERS.PIZZANO) && (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true))
 		{
 			scr_sound(sfx_grabdash);
 			instance_create(x, y, obj_slaphitbox);
