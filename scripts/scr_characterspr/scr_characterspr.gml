@@ -224,10 +224,14 @@ function scr_characterspr()
 		sfx_step = sound_step;
 		sfx_land = sound_land;
 		sfx_jump = sound_jump;
-		sfx_mach1 = sfx_pizzy_mach1;
+		/*sfx_mach1 = sfx_pizzy_mach1;
 		sfx_mach2 = sfx_pizzy_mach2;
 		sfx_mach3 = sfx_pizzy_mach3;
-		sfx_mach4 = sfx_pizzy_mach4;
+		sfx_mach4 = sfx_pizzy_mach4;*/
+		sfx_mach1 = sound_dash1;
+		sfx_mach2 = sound_dash2;
+		sfx_mach3 = sound_maxspeed;
+		sfx_mach4 = sound_dash3;
 		sfx_machturn = sound_maximumspeedstop;
 		sfx_firebutt = sound_fireass;
 		sfx_parry = sound_parry;

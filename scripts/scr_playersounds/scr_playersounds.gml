@@ -10,7 +10,7 @@ function scr_playersounds()
 	else if (sprite_index != spr_mach1 || (!grounded || move == -xscale))
 		audio_stop_sound(sfx_mach1);
 		
-	if ((sprite_index == spr_mach || sprite_index == spr_climbwall) && state = states.mach2 && !audio_is_playing(sfx_mach2))
+	if ((sprite_index == spr_mach && state = states.mach2 || sprite_index == spr_climbwall) && !audio_is_playing(sfx_mach2))
 		scr_sound(sfx_mach2);
 	else if (sprite_index != spr_mach) && (sprite_index != spr_climbwall)
 		audio_stop_sound(sfx_mach2);

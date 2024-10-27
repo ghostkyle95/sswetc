@@ -125,8 +125,18 @@ function scr_player_mach3()
 			}
 			if (((!grounded && !place_meeting(x + hsp, y, obj_metalblock)) && scr_solid(x + hsp, y, true) && !place_meeting(x + hsp, y, obj_destructibles) && !scr_slope_ext(x + sign(hsp), y)) || (grounded && (scr_solid(x + sign(hsp), y - 2, true) && !scr_slope_ext(x + sign(hsp), y - 1)) && (!place_meeting(x + hsp, y, obj_metalblock) && !place_meeting(x + hsp, y, obj_destructibles)) && scr_slope()))
 			{
-				wallspeed = clamp(movespeed, 12, 24);
-				state = states.climbwall;
+				if (sprite_index != spr_outofcontrolfall)
+				{
+					wallspeed = clamp(movespeed, 12, 24);
+					state = states.climbwall;
+				}
+				else
+				{
+					scr_sound(sound_bump)
+					xscale *= -1
+					vsp = -5
+					instance_create(x, y, obj_bangeffect);
+				}
 			}
 			else if (grounded && scr_solid(x + sign(hsp), y) && (!scr_slope() && scr_solid(x + sign(hsp), y - 2)) && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 			{
