@@ -828,8 +828,8 @@ function scr_characterspr()
 		spr_candybegin = spr_player_candybegin;
 		spr_candyup = spr_player_candyup;
 		spr_candytransitionup = spr_player_candytransitionup;
-		spr_uppercutbegin = spr_playerN_breakdanceuppercut;
-		spr_uppercutend = spr_playerN_breakdanceuppercutend;
+		spr_uppercutbegin = spr_playerN_doublejump;
+		spr_uppercutend = spr_playerN_doublejumpfall;
 		spr_freefallland = spr_playerN_bodyslamland;
 		spr_mach3jump = spr_playerN_mach3jump;
 		spr_plrdashpad = spr_playerN_dashpad;

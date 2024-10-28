@@ -28,4 +28,11 @@ function scr_tvsprites()
 		combotvspr = spr_pizzanotvcombo;
 		mach3tvspr = spr_pizzanotv_mach3;
 	}
+	if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == false)
+	{
+		idletvspr = spr_noisetv;
+		tvchange1 = spr_noisetv2;
+		tvchange2 = spr_noisetv3;
+		mach3tvspr = spr_noisetv_mach3;
+	}
 }
