@@ -306,8 +306,6 @@ function scr_player_normal()
 			image_index = 0;
 			sprite_index = spr_canesuplex;
 			state = states.handstandjump;
-			if (character == "DEEZNUTS")
-				vsp = -5;
 		}
 	}
 	if (key_shoot2 && key_up && breakdanceammo > 0)

@@ -13,12 +13,18 @@ function scr_player_freefallland()
 	facehurt = true;
 	start_running = true;
 	alarm[4] = 14;
-	vsp = 0;
 	hsp = 0;
+	if !(floor(image_index) == (image_number - 1))
+		vsp = 0;
 	if (floor(image_index) == (image_number - 1))
 	{
-		state = states.normal;
-		sprite_index = spr_idle;
+		/*state = states.normal;
+		sprite_index = spr_idle;*/
+		sprite_index = spr_machfreefall;
+		vsp = -8;
+		state = states.jump;
+		jumpAnim = false;
+		jumpstop = true;
 		freefallsmash = false;
 	}
 	image_speed = 0.35;

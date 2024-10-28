@@ -12,7 +12,8 @@ function scr_player_handstandjump()
 			grav = 0;
 			momemtum = true;
 			dir = xscale;
-			movespeed = 12;
+			if (movespeed < 12)
+				movespeed = 12;
 			if (move != xscale && move != 0)
 			{
 				state = states.jump;
@@ -102,6 +103,7 @@ function scr_player_handstandjump()
 			image_index = 0;
 			image_speed = 0.2;
 			state = states.machtumble;
+			movespeed += 3
 			if !grounded
 				vsp = -5;
 			with (instance_create(x, y, obj_jumpdust))

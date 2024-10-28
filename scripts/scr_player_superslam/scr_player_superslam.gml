@@ -91,8 +91,7 @@ function scr_player_superslam()
 	{
 		vsp = -9;
 		state = states.jump;
-		if (character == CHARACTERS.PIZZELLE)
-			sprite_index = spr_machfreefall;
+		sprite_index = spr_machfreefall;
 	}
 	if (move != 0)
 	{
@@ -105,7 +104,5 @@ function scr_player_superslam()
 		movespeed = 0;
 	if (movespeed > 6)
 		movespeed -= 0.1;
-	if (character == "DEEZNUTS" && move != 0)
-		xscale = move;
 	image_speed = 0.35;
 }

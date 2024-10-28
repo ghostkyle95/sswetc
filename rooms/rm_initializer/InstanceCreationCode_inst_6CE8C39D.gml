@@ -1,2 +1,2 @@
-if !IS_DEBUG
-	instance_destroy();
+/*if !IS_DEBUG
+	instance_destroy();*/

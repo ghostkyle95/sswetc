@@ -117,16 +117,36 @@ function scr_player_freefall()
 	// temp disabled
 	if key_slap2 && sprite_index == spr_crusherfall && character == CHARACTERS.NOISE
 	{
-		if (move != 0)
-			xscale = move
-		machpunchAnim = false;
-		machhitAnim = false;
-		vsp = -5
-		state = states.mach2
-		movespeed = 12
-		sprite_index = spr_playerN_sidewayspin
-		with (instance_create(x, y, obj_crazyrunothereffect))
-			image_xscale = other.xscale
-		image_index = 0
+		if (doisemode == false)
+		{
+			if (move != 0)
+				xscale = move
+			machpunchAnim = false;
+			machhitAnim = false;
+			vsp = -5
+			state = states.mach2
+			movespeed = 12
+			sprite_index = spr_playerN_sidewayspin
+			with (instance_create(x, y, obj_crazyrunothereffect))
+				image_xscale = other.xscale
+			image_index = 0
+		}
+		else
+		{
+			if (move != 0)
+			    xscale = move
+			key_slap = false
+			key_slap2 = false
+			jumpstop = true
+			machpunchAnim = false;
+			if (vsp > -5)
+			    vsp = -5
+			state = states.mach3
+			movespeed = 12
+			sprite_index = spr_walljumpstart
+			with (instance_create(x, y, obj_crazyrunothereffect))
+			    image_xscale = other.xscale
+			image_index = 0
+		}
 	}
 }
