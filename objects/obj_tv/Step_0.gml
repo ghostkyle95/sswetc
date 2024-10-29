@@ -72,7 +72,7 @@ else if (global.collect > global.crank && !shownrankc)
 	alarm[0] = 200;
 	shownrankc = true;
 }
-if (global.hurtcounter >= global.hurtmilestone)
+if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0)
 {
 	alarm[0] = 150;
 	if (obj_player.character == CHARACTERS.PIZZELLE)

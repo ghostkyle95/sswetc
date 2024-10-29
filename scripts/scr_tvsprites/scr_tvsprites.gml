@@ -41,5 +41,7 @@ function scr_tvsprites()
 		angrytvspr = spr_noisetv_combo;
 		panictvspr = spr_noisetv_panic;
 		hurttvspr = spr_noisetv_hurt;
+		firetvspr = spr_noisetv_fire
+		bombtvspr = spr_noisetv_bomb;
 	}
 }
