@@ -260,13 +260,6 @@ if (state != states.crouch)
 	crouchjumptimer = 0;
 if (gumbobpropellercooldown > 0)
 	gumbobpropellercooldown--;
-if (global.starrmode)
-{
-	if (global.starrmode && state == states.mach3)
-		movespeed = 12;
-	else if (state == states.mach3 && movespeed > 12)
-		movespeed = 12;
-}
 if (state == states.door || place_meeting(x, y, obj_hallway) || state == states.victory)
 	global.roomsave = false;
 if (state == states.finishingblow && !floor(image_index) == (image_number - 1))

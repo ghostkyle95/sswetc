@@ -141,7 +141,7 @@ function scr_collide_destructibles()
 			}
 		}
 	}
-	if (state == states.handstandjump)
+	if (state == states.handstandjump || state == states.machcancel)
 	{
 		with (obj_bigdestructibles)
 		{

@@ -7,7 +7,7 @@ function scr_player_handstandjump()
 		case CHARACTERS.PIZZANO:
 			move = key_left + key_right;
 			landAnim = false;
-			mach2 = 35;
+			//mach2 = 35;
 			hsp = xscale * movespeed;
 			grav = 0;
 			momemtum = true;
@@ -90,24 +90,23 @@ function scr_player_handstandjump()
 	}
 	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump)
 	{
-		movespeed = 10;
-		mach2 = 20;
+		//movespeed = 10;
+		//mach2 = 20;
+		if movespeed < 8
+			movespeed = 8
 		state = states.mach2;
 		sprite_index = spr_mach;
 	}
-	if (!global.starrmode)
+	if (key_slap2 && !key_down)
 	{
-		if (key_slap2 && !key_down)
-		{
-			sprite_index = spr_machtumble;
-			image_index = 0;
-			image_speed = 0.2;
-			state = states.machtumble;
-			movespeed += 3
-			if !grounded
-				vsp = -5;
-			with (instance_create(x, y, obj_jumpdust))
-				image_xscale = other.xscale;
-		}
+		sprite_index = spr_machtumble;
+		image_index = 0;
+		image_speed = 0.2;
+		state = states.machtumble;
+		movespeed += 3
+		if !grounded
+			vsp = -5;
+		with (instance_create(x, y, obj_jumpdust))
+			image_xscale = other.xscale;
 	}
 }

@@ -67,8 +67,6 @@ function scr_player_climbwall()
 			vsp = -9;
 			sprite_index = spr_mach4;
 			state = states.mach3;
-			if (global.starrmode)
-				state = states.mach2;
 			xscale *= -1;
 		}
 		else

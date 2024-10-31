@@ -1636,6 +1636,7 @@
     {"name":"spr_gumslime_mask","order":6,"path":"sprites/spr_gumslime_mask/spr_gumslime_mask.yy",},
     {"name":"spr_knight_idle","order":1,"path":"sprites/spr_knight_idle/spr_knight_idle.yy",},
     {"name":"spr_knight_walk","order":5,"path":"sprites/spr_knight_walk/spr_knight_walk.yy",},
+    {"name":"spr_bigbreakhard2","order":11,"path":"sprites/spr_bigbreakhard2/spr_bigbreakhard2.yy",},
     {"name":"spr_knight_stun","order":3,"path":"sprites/spr_knight_stun/spr_knight_stun.yy",},
     {"name":"spr_playerN_haulingland","order":139,"path":"sprites/spr_playerN_haulingland/spr_playerN_haulingland.yy",},
     {"name":"spr_swed_chargestart","order":2,"path":"sprites/spr_swed_chargestart/spr_swed_chargestart.yy",},

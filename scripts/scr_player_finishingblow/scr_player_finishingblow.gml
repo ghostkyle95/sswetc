@@ -1,7 +1,12 @@
 function scr_player_finishingblow()
 {
-	hsp = -xscale * movespeed;
-	movespeed = approach(movespeed, 0, 0.25);
+    hsp = movespeed
+    move = key_right + key_left
+	if (move != 0)
+        movespeed = approach(movespeed, (move * 8), 1)
+    else
+        movespeed = approach(movespeed, 0, 0.5)
+	//movespeed = approach(movespeed, 0, 0.25);
 	if (floor(image_index) >= (image_number - 1))
 	{
 		state = states.normal;
@@ -9,7 +14,7 @@ function scr_player_finishingblow()
 	}
 	if ((floor(image_index) >= 6 && !instance_exists(obj_swordhitbox)) && sprite_index != spr_swingdingend)
 	{
-		movespeed = 5;
+		//movespeed = 5;
 		scr_sound(sound_punch);
 		scr_sound(sound_killingblow);
 		instance_create(x, y, obj_swordhitbox);
@@ -59,5 +64,5 @@ function scr_player_finishingblow()
 	}
 	image_speed = 0.35;
 	landAnim = false;
-	vsp = 0;
+	//vsp = 0;
 }
