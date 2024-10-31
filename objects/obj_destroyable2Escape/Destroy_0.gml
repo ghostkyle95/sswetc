@@ -23,9 +23,6 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		create_small_number(x + 16, y, "10");
 		global.combofreeze = 30;
 		global.combotime += 1;
-		with (instance_create(x, y, obj_collecteffect))
-		{
-			sprite_index = other.sprite_index;
-			choosed = true;
-		}
+	repeat (3)
+		instance_create(x + random_range(-5, 5), y + random_range(-5, 5), obj_collecteffect);
 }
