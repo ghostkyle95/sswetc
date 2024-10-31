@@ -1,5 +1,6 @@
 function scr_player_finishingblow()
 {
+	static attack_afterimagetimer = 6;
     hsp = movespeed
     move = key_right + key_left
 	if (move != 0)
@@ -15,6 +16,7 @@ function scr_player_finishingblow()
 	if ((floor(image_index) >= 6 && !instance_exists(obj_swordhitbox)) && sprite_index != spr_swingdingend)
 	{
 		//movespeed = 5;
+		vsp = -5;
 		scr_sound(sound_punch);
 		scr_sound(sound_killingblow);
 		instance_create(x, y, obj_swordhitbox);
@@ -64,5 +66,13 @@ function scr_player_finishingblow()
 	}
 	image_speed = 0.35;
 	landAnim = false;
+	if (attack_afterimagetimer > 0)
+		attack_afterimagetimer--;
+	if (attack_afterimagetimer <= 0)
+	{
+		with (instance_create(x, y, obj_attack_aftereffect))
+			playerid = other.id;
+		attack_afterimagetimer = 6;
+	}
 	//vsp = 0;
 }

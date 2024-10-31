@@ -44,6 +44,25 @@ function scr_collide_destructibles()
 			}
 		}
 	}
+	if (state == states.machcancel)
+	{
+		if (place_meeting(x + hsp, y + vsp, obj_destructibles))
+		{
+			with (instance_place(x + hsp, y + vsp, obj_destructibles))
+			{
+				DestroyedBy = other.id;
+				event_user(0);
+			}
+		}
+		if (place_meeting(x + hsp, y + vsp, obj_bigdestructibles))
+		{
+			with (instance_place(x + hsp, y + vsp, obj_bigdestructibles))
+			{
+				DestroyedBy = other.id;
+				event_user(0);
+			}
+		}
+	}
 	if (state == states.cottondrill)
 	{
 		if (place_meeting(x, y + vsp, obj_destructibles))
@@ -141,7 +160,7 @@ function scr_collide_destructibles()
 			}
 		}
 	}
-	if (state == states.handstandjump || state == states.machcancel)
+	if (state == states.handstandjump)
 	{
 		with (obj_bigdestructibles)
 		{
