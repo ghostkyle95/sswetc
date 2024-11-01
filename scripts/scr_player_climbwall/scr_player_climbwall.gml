@@ -60,23 +60,38 @@ function scr_player_climbwall()
 	}
 	if (key_jump && key_attack)
 	{
-		if (mach2 >= 100)
+		if (character == CHARACTERS.PIZZELLE)
 		{
 			mach2 = 100;
 			instance_create(x, y, obj_jumpdust);
 			vsp = -9;
-			sprite_index = spr_mach4;
-			state = states.mach3;
+			sprite_index = spr_player_wallkickstart;
+			state = states.wallkick;
 			xscale *= -1;
+			movespeed = (9 * xscale)
 		}
 		else
 		{
-			sprite_index = spr_walljumpstart;
-			mach2 = 35;
-			instance_create(x, y, obj_jumpdust);
-			vsp = -9;
-			state = states.mach2;
-			xscale *= -1;
+			if (mach2 >= 100)
+			{
+				{
+					mach2 = 100;
+					instance_create(x, y, obj_jumpdust);
+					vsp = -9;
+					sprite_index = spr_mach4;
+					state = states.mach3;
+					xscale *= -1;
+				}
+		}
+			else
+			{
+				sprite_index = spr_walljumpstart;
+				mach2 = 35;
+				instance_create(x, y, obj_jumpdust);
+				vsp = -9;
+				state = states.mach2;
+				xscale *= -1;
+			}
 		}
 	}
 	image_speed = 0.6;

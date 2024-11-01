@@ -100,7 +100,7 @@ function scr_player_freefall()
 	freefallsmash++;
 	if (freefallsmash > 10 && !instance_exists(obj_groundpoundeffect))
 		instance_create_depth(x, y, -6, obj_groundpoundeffect);
-	/*if (key_attack2 && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
+	if (key_attack2 && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
 	{
 		if (move != 0)
 			xscale = move;
@@ -113,8 +113,7 @@ function scr_player_freefall()
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 		freefallsmash = false;
-	}*/
-	// temp disabled
+	}
 	if key_slap2 && sprite_index == spr_crusherfall && character == CHARACTERS.NOISE
 	{
 		if (doisemode == false)

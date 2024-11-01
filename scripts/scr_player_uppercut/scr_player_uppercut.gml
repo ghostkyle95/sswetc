@@ -22,6 +22,20 @@ function scr_player_uppercut()
 		if (movespeed > 20)
 			movespeed = 20;
 	}
+	if (key_attack2 && !grounded)
+	{
+		if (move != 0)
+			xscale = move;
+		movespeed = 10;
+		machhitAnim = false;
+		state = states.mach2;
+		flash = true;
+		vsp = -7;
+		sprite_index = spr_walljumpstart;
+		with (instance_create(x, y, obj_jumpdust))
+			image_xscale = other.xscale;
+		freefallsmash = false;
+	}
 	if (!instance_exists(obj_dashcloud) && grounded)
 	{
 		with (instance_create_depth(x, y, 0, obj_dashcloud))

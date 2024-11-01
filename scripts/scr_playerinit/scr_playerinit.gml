@@ -116,7 +116,8 @@ enum states {
     mini, // 114
     machcancel, // 115
 	sjumpcancelprep, // 116
-    jetpackdoise // 117
+    jetpackdoise, // 117
+	wallkick // 118
 };
 
 
@@ -478,6 +479,9 @@ function scr_playerstate()
 			break;
 		case states.jetpackdoise:
 			_stateFunction = scr_doise_rocket;
+			break
+		case states.wallkick:
+			_stateFunction = scr_player_wallkick;
 			break
 	}
 	stateName = "states.undefined";
