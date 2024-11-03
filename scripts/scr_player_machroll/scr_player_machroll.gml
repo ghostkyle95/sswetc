@@ -20,56 +20,20 @@ function scr_player_machroll()
 		sprite_index = machroll;
 	if (scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
-		scr_sound(sound_maximumspeedland);
-		with (obj_camera)
-		{
-			shake_mag = 20;
-			shake_mag_acc = 40 / room_speed;
-		}
-		hsp = 0;
-		image_speed = 0.35;
-		with (obj_baddie)
-		{
-			if (point_in_camera(x, y, view_camera[0]) && grounded)
-			{
-				stun = true;
-				alarm[0] = 200;
-				ministun = false;
-				vsp = -5;
-				hsp = 0;
-				image_xscale *= -1;
-			}
-		}
-		combo = 0;
+		movespeed = 0;
 		state = states.bump;
-		hsp = -2.5;
-		vsp = -3;
-		mach2 = 0;
-		image_index = 0;
-		instance_create(x + 10, y + 10, obj_bumpeffect);
+		sprite_index = spr_wallsplat
+		image_index = 0
 	}
 	if (scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
-		scr_sound(sound_maximumspeedland);
-		with (obj_camera)
-		{
-			shake_mag = 20;
-			shake_mag_acc = 40 / room_speed;
-		}
-		hsp = 0;
-		image_speed = 0.35;
-		combo = 0;
+		movespeed = 0;
 		state = states.bump;
-		hsp = 2.5;
-		vsp = -3;
-		mach2 = 0;
-		image_index = 0;
-		instance_create(x - 10, y + 10, obj_bumpeffect);
+		sprite_index = spr_wallsplat
+		image_index = 0
 	}
-	if grounded && sprite_index == spr_dive
-	{
+	if (grounded && sprite_index == spr_dive)
 		sprite_index = machroll
-	}
 	if (!instance_exists(obj_cloudeffect) && grounded)
 		instance_create(x, y + 43, obj_cloudeffect);
 	image_speed = 0.8;

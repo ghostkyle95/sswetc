@@ -6,6 +6,8 @@ function scr_player_bump()
 	alarm[4] = 14;
 	if ((grounded && vsp > 0))
 		hsp = 0;
+	if (sprite_index == spr_wallsplat)
+		vsp = 0;
 	if ((sprite_index != spr_catched && (sprite_index != spr_tumbleend && sprite_index != spr_airhitwall && sprite_index != spr_mach3hitwall && sprite_index != spr_wallsplat && sprite_index != spr_suplexbump)))
 		sprite_index = spr_bump;
 	if (sprite_index == spr_mach3hitwall || sprite_index == spr_airhitwall) && animation_end() && (!grounded)
