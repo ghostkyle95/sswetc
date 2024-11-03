@@ -15,9 +15,11 @@ function scr_player_bump()
 		image_index = image_number - 1
 		image_speed = 0
 	}
-	if image_speed = 0 && grounded
+	if (image_speed = 0 && grounded && sprite_index != spr_wallsplat)
 		state = states.normal;
-	if (animation_end() && grounded)
+	if (animation_end() && grounded && sprite_index != spr_wallsplat)
+		state = states.normal;
+	if (animation_end() && sprite_index == spr_wallsplat)
 		state = states.normal;
 	if (audio_is_playing(sound_tumble))
 		audio_stop_sound(sound_tumble);

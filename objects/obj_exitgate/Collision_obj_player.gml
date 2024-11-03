@@ -6,7 +6,12 @@ if (global.panic)
 		{
 			targetDoor = "none";
 			if (global.collect >= global.srank)
-				global.rank = "s";
+			{
+				if (global.secretsfound == 3 && global.combodropped == false && global.combo != 0)
+					global.rank = "p";
+				else
+					global.rank = "s";
+			}
 			else if (global.collect > global.arank)
 				global.rank = "a";
 			else if (global.collect > global.brank)
@@ -15,6 +20,9 @@ if (global.panic)
 				global.rank = "c";
 			else
 				global.rank = "d";
+				
+			if (global.rank == "p")
+				scr_sound(mu_ranks);
 			if (global.rank == "s")
 				scr_sound(mu_ranks);
 			if (global.rank == "a")
@@ -25,8 +33,6 @@ if (global.panic)
 				scr_sound(mu_rankc);
 			if (global.rank == "d")
 				scr_sound(mu_rankd);
-			if (global.rank == "p")
-				scr_sound(mu_ranks);
 			audio_stop_sound(mu_escape);
 			audio_stop_sound(mu_lap2);
 			audio_stop_sound(mu_pizzanoescape);
@@ -37,21 +43,29 @@ if (global.panic)
 			{
 				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "mines", "none")))
 					ini_write_string("Ranks", "mines", global.rank);
+				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "mines", "none")))
+					ini_write_string("SecretsFound", "mines", global.secretsfound);
 			}
 			if (room == molasses_1)
 			{
 				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "molasses", "none")))
 					ini_write_string("Ranks", "molasses", global.rank);
+				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "molasses", "none")))
+					ini_write_string("SecretsFound", "molasses", global.secretsfound);
 			}
 			if (room == steamy_1)
 			{
 				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "steamy", "none")))
 					ini_write_string("Ranks", "steamy", global.rank);
+				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "steamy", "none")))
+					ini_write_string("SecretsFound", "steamy", global.secretsfound);
 			}
 			if (room == entryway_1)
 			{
 				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "entryway", "none")))
 					ini_write_string("Ranks", "entryway", global.rank);
+				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "entryway", "none")))
+					ini_write_string("SecretsFound", "entryway", global.secretsfound);
 			}
 			ini_close();
 			obj_tv.tvsprite = spr_tvoff;

@@ -1,5 +1,7 @@
 scr_initinput();
 scr_getinput();
+global.combodropped = false;
+global.secretsfound = 0;
 sjumpspeed = 0;
 Sjumpcan_doublejump = true;
 firetrailbuffer = 0;

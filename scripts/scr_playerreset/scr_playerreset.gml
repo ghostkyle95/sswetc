@@ -6,6 +6,8 @@ function scr_playerreset()
 		instance_destroy(obj_fadeout);
 	if (instance_exists(obj_cutsceneManager))
 		instance_destroy(obj_cutsceneManager);
+	global.combodropped = false;
+	global.secretsfound = 0;
 	global.cutsceneManager = -4;
 	global.seconds = 59;
 	global.treat = false;

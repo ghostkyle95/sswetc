@@ -91,7 +91,10 @@ function scr_player_superslam()
 	{
 		vsp = -9;
 		state = states.jump;
-		sprite_index = spr_machfreefall;
+		sprite_index = spr_jump;
+		jumpAnim = false;
+		jumpstop = true;
+		freefallsmash = false;
 	}
 	if (move != 0)
 	{
