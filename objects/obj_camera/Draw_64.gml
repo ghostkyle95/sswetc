@@ -38,7 +38,7 @@ _rx = 217 + _rxo, _ry = 22 + _ryo + DrawY;
 	
 if (_score >= global.srank)
 {
-	if (global.secretsfound == 3 && global.combodropped == false && global.combo != 0)
+	if (global.secretsfound == 3 && global.combodropped == false && global.combo != 0 && global.lap == true)
 		_rframe = RANKS.P;
 	else
 		_rframe = RANKS.S;

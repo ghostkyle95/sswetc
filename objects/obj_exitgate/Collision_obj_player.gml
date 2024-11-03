@@ -7,7 +7,7 @@ if (global.panic)
 			targetDoor = "none";
 			if (global.collect >= global.srank)
 			{
-				if (global.secretsfound == 3 && global.combodropped == false && global.combo != 0)
+				if (global.secretsfound == 3 && global.combodropped == false && global.combo != 0 && global.lap == true)
 					global.rank = "p";
 				else
 					global.rank = "s";

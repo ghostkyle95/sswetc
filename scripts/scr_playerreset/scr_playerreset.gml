@@ -9,6 +9,8 @@ function scr_playerreset()
 	global.combodropped = false;
 	global.secretsfound = 0;
 	global.cutsceneManager = -4;
+	global.laps = 0;
+	global.lap = false;
 	global.seconds = 59;
 	global.treat = false;
 	global.minutes = 1;

@@ -122,8 +122,8 @@ function scr_player_mach2()
 	{
 		movespeed = 0;
 		state = states.bump;
-		sprite_index = spr_wallsplat
-		image_index = 0
+		sprite_index = spr_wallsplat;
+		image_index = 0;
 	}
 	if (!instance_exists(obj_dashcloud) && grounded)
 	{

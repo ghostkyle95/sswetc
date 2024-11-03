@@ -60,13 +60,8 @@ function scr_player_crouchslide()
 	{
 		movespeed = 0;
 		state = states.bump;
-		hsp = xscale * -2.5;
-		vsp = -3;
-		mach2 = 0;
+		sprite_index = spr_wallsplat;
 		image_index = 0;
-		machslideAnim = true;
-		machhitAnim = false;
-		instance_create(x + (xscale * 10), y + (xscale * 10), obj_bumpeffect);
 	}
 	if (!instance_exists(obj_slidecloud) && grounded && movespeed > 5)
 		instance_create(x, y, obj_slidecloud);
