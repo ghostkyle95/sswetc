@@ -299,6 +299,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"laptesting","folderPath":"folders/Rooms/Misc./laptesting.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"LapPortal","folderPath":"folders/Objects/Gameplay/LapPortal.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Pizza Portal","folderPath":"folders/Sprites/Gameplay/Pizza Portal.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Sprites/Gameplay/Pizza Portal/Player.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,

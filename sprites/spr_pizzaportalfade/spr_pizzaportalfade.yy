@@ -36,8 +36,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "SugarySpire",
-    "path": "SugarySpire.yyp",
+    "name": "Pizza Portal",
+    "path": "folders/Sprites/Gameplay/Pizza Portal.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
