@@ -36,8 +36,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Pizza Portal",
-    "path": "folders/Sprites/Gameplay/Pizza Portal.yy",
+    "name": "Player",
+    "path": "folders/Sprites/Gameplay/Pizza Portal/Player.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
