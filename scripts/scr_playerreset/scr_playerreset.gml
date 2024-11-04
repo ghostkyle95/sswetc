@@ -65,6 +65,8 @@ function scr_playerreset()
 	}
 	with (obj_player)
 	{
+		ramp_buffer = 0;
+		grabclimbbuffer = 0;
 		targetDoor = "A";
 		sjumpspeed = 0;
 		firetrailbuffer = 0;

@@ -22,8 +22,8 @@ function scr_escapetimes(_room = room)
 			seconds = 50;
 			break;
 		default:
-			minutes = 0;
-			seconds = 10;
+			minutes = 5;
+			seconds = 30;
 			break;
 	}
 	time_array[0] = minutes;

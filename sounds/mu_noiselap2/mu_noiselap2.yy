@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mu_noiselap2.wav",
   "type": 1,
-  "volume": 1.0,
+  "volume": 0.6,
 }

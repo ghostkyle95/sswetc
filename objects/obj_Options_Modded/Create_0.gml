@@ -11,7 +11,6 @@ global.selectedResolution = ini_read_real("Settings", "resolution", 1);
 global.smoothcam = ini_read_real("Settings", "smthcam", 1);
 global.hitstunEnabled = ini_read_real("Settings", "hitstun", 1);
 global.screentilt = ini_read_real("Settings", "scrntilt", 1);
-global.playerrotate = ini_read_real("Settings", "playrot", 1);
 ini_close();
 optionsaved_resolution = global.selectedResolution;
 optionsaved_smoothcam = global.smoothcam;

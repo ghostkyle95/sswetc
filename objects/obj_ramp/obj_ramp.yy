@@ -1,9 +1,9 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_grindrail",
+  "name": "obj_ramp",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -11,12 +11,15 @@
     "name": "Movement",
     "path": "folders/Objects/Gameplay/Movement.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_slope",
+    "path": "objects/obj_slope/obj_slope.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,
   "physicsFriction": 0.2,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsKinematic": false,
   "physicsLinearDamping": 0.1,
   "physicsObject": false,
@@ -28,12 +31,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Minecartrail",
-    "path": "sprites/spr_Minecartrail/spr_Minecartrail.yy",
+    "name": "spr_ramp",
+    "path": "sprites/spr_ramp/spr_ramp.yy",
   },
   "spriteMaskId": {
-    "name": "spr_wall",
-    "path": "sprites/spr_wall/spr_wall.yy",
+    "name": "spr_rampslope",
+    "path": "sprites/spr_rampslope/spr_rampslope.yy",
   },
-  "visible": false,
+  "visible": true,
 }

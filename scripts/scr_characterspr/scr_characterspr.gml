@@ -614,7 +614,7 @@ function scr_characterspr()
 		spr_minecartfastland = spr_player_minecartfastland;
 		spr_hurtroll = spr_player_hurtroll;
 		spr_outofcontrolfall = spr_playerN_rockethitwall;
-		spr_enterkey = spr_playerN_entergate;
+		spr_enterkey = spr_playerN_victory;
 		spr_swingding = spr_playerN_swingding;
 		spr_swingdingend = spr_playerN_swingdingend;
 		spr_haulingstart = spr_playerN_haulingstart;
@@ -850,7 +850,7 @@ function scr_characterspr()
 		spr_minecartfastland = spr_player_minecartfastland;
 		spr_hurtroll = spr_player_hurtroll;
 		spr_outofcontrolfall = spr_playerN_rockethitwall;
-		spr_enterkey = spr_playerN_entergate;
+		spr_enterkey = spr_playerN_victory;
 		spr_swingding = spr_playerN_swingding;
 		spr_swingdingend = spr_playerN_swingdingend;
 		spr_haulingstart = spr_playerN_haulingstart;

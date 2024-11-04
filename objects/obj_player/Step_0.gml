@@ -15,32 +15,6 @@ if (firetrailbuffer <= 0)
 		instance_create(x, y, obj_flamecloud);
 	firetrailbuffer = 100;
 }
-if (global.playerrotate)
-{
-	if (grounded && vsp >= 0 && !(state == states.climbwall || state == states.tumble || state == states.grab || state == states.freefallland || state == states.shotgun || state == states.finishingblow || state == states.minecart))
-	{
-		if (abs(hsp) >= 8)
-		{
-			var targetangle = scr_slopeangle();
-			var RotationStep = (((abs(hsp) / 16) + (abs(hsp) / 32)) - 2) * -1;
-		}
-		else
-		{
-			targetangle = 360;
-			RotationStep = ((abs(hsp) / 16) - 2) * -1;
-		}
-		draw_angle = darctan2(dsin(targetangle) + (dsin(draw_angle) * RotationStep), dcos(targetangle) + (dcos(draw_angle) * RotationStep));
-	}
-	else
-	{
-		if (draw_angle <= 0)
-			draw_angle += 360;
-		if (draw_angle < 180)
-			draw_angle = max(draw_angle - 2.8125, 0);
-		else
-			draw_angle = min(draw_angle + 2.8125, 360);
-	}
-}
 if (room == realtitlescreen || room == scootercutsceneidk)
 	state = states.titlescreen;
 if (grounded)

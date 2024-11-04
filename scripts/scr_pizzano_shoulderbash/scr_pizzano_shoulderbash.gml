@@ -72,6 +72,7 @@ function scr_pizzano_shoulderbash()
 	{
 		//instakillmove = 0
 		wallspeed = movespeed;
+		grabclimbbuffer = 10;
 		state = states.climbwall;
 	}
 }

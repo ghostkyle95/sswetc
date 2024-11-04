@@ -20,7 +20,7 @@ function scr_player_Sjump()
 		if (character = CHARACTERS.NOISE)
 		{
 			hsp = move * movespeed;
-			movespeed = 5;
+			movespeed = 2;
 		}
 		else
 		{

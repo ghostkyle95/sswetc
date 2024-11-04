@@ -1,11 +1,23 @@
 pausedmusic = global.music;
 if (global.panic && !obj_pause.pause && room != timesuproom)
 {
-	if (!audio_is_playing(global.panicmus))
+	if (global.lap)
 	{
-		audio_stop_all_music();
-		scr_music(global.panicmus);
-		pausedmusic = global.panicmus;
+		if (!audio_is_playing(global.lap2mus))
+		{
+			audio_stop_all_music();
+			scr_music(global.lap2mus);
+			pausedmusic = global.lap2mus;
+		}
+	}
+	else
+	{
+		if (!audio_is_playing(global.panicmus))
+		{
+			audio_stop_all_music();
+			scr_music(global.panicmus);
+			pausedmusic = global.panicmus;
+		}
 	}
 }
 else if (!global.panic && room == timesuproom)

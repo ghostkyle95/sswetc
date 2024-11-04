@@ -26,11 +26,6 @@ switch (menu)
 			draw_text(480, 333, "OFF");
 		else
 			draw_text(480, 333, "ON");
-		draw_text(480, 383, "PLAYER ROTATION");
-		if (!global.playerrotate)
-			draw_text(480, 428, "OFF");
-		else
-			draw_text(480, 428, "ON");
 		break;
 	case "AUDIO":
 		break;

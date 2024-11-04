@@ -16,13 +16,15 @@ function scr_player_climbwall()
 	
 	if (windingAnim < 200)
 		windingAnim++;
+    if (grabclimbbuffer > 0)
+		grabclimbbuffer--
 	suplexmove = false;
 	vsp = -wallspeed;
 	if wallspeed < 24 
 		wallspeed += 0.025
 	crouchslideAnim = true;
 	sprite_index = spr_climbwall;
-	if (wallspeed <= 0 || !key_attack)
+	if ((wallspeed <= 0 || !key_attack) && grabclimbbuffer == 0)
 	{
 		vsp = 0
 		state = states.jump;

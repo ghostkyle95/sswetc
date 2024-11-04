@@ -174,12 +174,14 @@ function scr_player_mach3()
 				{
 					wallspeed = movespeed;
 					machhitAnim = false;
+					grabclimbbuffer = 10;
 					state = states.climbwall;
 				}
 				else if (scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x - 1, y, obj_destructibles))
 				{
 					wallspeed = movespeed;
 					machhitAnim = false;
+					grabclimbbuffer = 10;
 					state = states.climbwall;
 				}
 			}

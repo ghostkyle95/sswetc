@@ -98,6 +98,7 @@ function toggle_collision_function()
         global.showcollisionarray[i++] = obj_doorD;
         global.showcollisionarray[i++] = obj_doorE;
         global.showcollisionarray[i++] = obj_doorP;
+        global.showcollisionarray[i++] = obj_grindrail;
 	}
 	var array = global.showcollisionarray;
 	var length = array_length(array);
@@ -150,6 +151,7 @@ function sh_room_goto()
 		return "Can't find room " + string(argument0[1]);
 	if (asset_get_type(argument0[1]) == 3)
 	{
+		obj_camera.chargecamera = 0;
 		obj_player.targetRoom = arg1;
 		obj_player.targetDoor = arg2;
 		instance_create(0, 0, obj_fadeout);

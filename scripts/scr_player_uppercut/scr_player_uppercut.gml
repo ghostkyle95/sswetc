@@ -22,7 +22,7 @@ function scr_player_uppercut()
 		if (movespeed > 20)
 			movespeed = 20;
 	}
-	if (key_attack2 && !grounded)
+	if (key_slap2 && !grounded)
 	{
 		if (move != 0)
 			xscale = move;

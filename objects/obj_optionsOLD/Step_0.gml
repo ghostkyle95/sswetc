@@ -86,10 +86,6 @@ switch (menu)
 						global.screentilt = false;
 					break;
 				case 3:
-					if (!global.playerrotate)
-						global.playerrotate = true;
-					else
-						global.playerrotate = false;
 					break;
 				case 4:
 					menu = "HOME";
@@ -98,7 +94,6 @@ switch (menu)
 					ini_write_real("Settings", "fullscrn", global.fullscreen);
 					ini_write_real("Settings", "smthcam", global.smoothcam);
 					ini_write_real("Settings", "scrntilt", global.screentilt);
-					ini_write_real("Settings", "playrot", global.playerrotate);
 					ini_close();
 					break;
 			}
