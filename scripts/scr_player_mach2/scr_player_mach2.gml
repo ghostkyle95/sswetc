@@ -113,13 +113,13 @@ function scr_player_mach2()
 		flash = false;
 		state = states.machroll;
 	}
-	if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))))
+	if (((!grounded && scr_solid(x + hsp, y, true) && !place_meeting(x + hsp, y, obj_destructibles)   || (grounded && scr_solid(x + hsp, y - 32, true) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope)))))
 	{
 		wallspeed = movespeed;
 		grabclimbbuffer = 10;
 		state = states.climbwall;
 	}
-	if (grounded && !scr_slope() && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope))
+	if (grounded && !scr_slope() && scr_solid(x + hsp, y, true) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
 		movespeed = 0;
 		state = states.bump;

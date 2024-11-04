@@ -11,7 +11,7 @@ function scr_player_chainsawpogo()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_slope))
+	if (scr_solid(x + 1, y) && xscale == 1)
 	{
 		machhitAnim = false;
 		state = states.chainsawbump;
@@ -24,7 +24,7 @@ function scr_player_chainsawpogo()
 		if (!audio_is_playing(sfx_bump))
 			audio_play_sound(sfx_bump, 1, false);
 	}
-	else if (scr_solid(x - 1, y) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_slope))
+	else if (scr_solid(x - 1, y) && xscale == -1)
 	{
 		machhitAnim = false;
 		state = states.chainsawbump;

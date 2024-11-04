@@ -1,7 +1,7 @@
 function scr_player_freefallprep()
 {
 	hsp = 0;
-	if (((scr_solid(x + 1, y) && move == 1) || (scr_solid(x - 1, y) && move == -1)) && !place_meeting(x + sign(hsp), y, obj_slope))
+	if (((scr_solid(x + 1, y) && move == 1) || (scr_solid(x - 1, y) && move == -1)))  
 		movespeed = 0;
 	start_running = true;
 	alarm[4] = 14;
