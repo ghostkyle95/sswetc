@@ -16,7 +16,7 @@ function scr_enemy_charge()
 			movespeed = 8;
 		else
 			movespeed = 0;
-		if (place_meeting(x + sign(hsp), y, obj_solid)) 
+		if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_slope))
 			image_xscale *= -1;
 	}
 }
