@@ -38,7 +38,7 @@ if (global.panic)
                     targetDoor = "LAP"
                     targetRoom = other.targetRoom
                 }
-				if (global.laps == 2)
+				if (global.laps > 2)
 				{
 					if (global.minutes != 0 && global.seconds != 0)
 					{

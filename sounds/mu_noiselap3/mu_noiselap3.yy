@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mu_noiselap3.ogg",
   "type": 1,
-  "volume": 0.5,
+  "volume": 0.6,
 }

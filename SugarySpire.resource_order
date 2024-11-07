@@ -1758,6 +1758,7 @@
     {"name":"spr_doorC","order":3,"path":"sprites/spr_doorC/spr_doorC.yy",},
     {"name":"spr_flingfrog_handsidle","order":1,"path":"sprites/spr_flingfrog_handsidle/spr_flingfrog_handsidle.yy",},
     {"name":"spr_collect3","order":2,"path":"sprites/spr_collect3/spr_collect3.yy",},
+    {"name":"mu_pizzanolap2","order":34,"path":"sounds/mu_pizzanolap2/mu_pizzanolap2.yy",},
     {"name":"spr_platform","order":1,"path":"sprites/spr_platform/spr_platform.yy",},
     {"name":"spr_molassesbgpara2","order":25,"path":"sprites/spr_molassesbgpara2/spr_molassesbgpara2.yy",},
     {"name":"spr_minipillarwoke","order":1,"path":"sprites/spr_minipillarwoke/spr_minipillarwoke.yy",},

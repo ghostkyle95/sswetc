@@ -453,7 +453,7 @@ function scr_characterspr()
 		
 		global.entrancemus = mu_pizzanoorchestralplay;
 		global.panicmus = mu_pizzanoescape;
-		global.lap2mus = mu_lap2;
+		global.lap2mus = mu_pizzanolap2;
 		global.lap3mus = mu_lap3;
 		
 		sfx_step = sound_step;
