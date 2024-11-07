@@ -55,5 +55,19 @@ else if (string_letters(roomname) == "mines" || string_letters(roomname) == "min
 		fadein = true;
 	}
 }
+if (string_letters(roomname) == "noisetv" || string_letters(roomname) == "noisetvsecret")
+{
+	instance_activate_all();
+	scr_playerreset();
+	room = noisetv_1;
+	pause = false;
+	with (obj_player)
+		targetDoor = "A";
+	with (instance_create(x, y, obj_fadeout))
+	{
+		fadealpha = 1;
+		fadein = true;
+	}
+}
 else
 	scr_sound(sound_enemythrow);

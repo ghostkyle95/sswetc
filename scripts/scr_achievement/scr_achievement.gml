@@ -5,6 +5,7 @@ function scr_hatScript()
 	var steamy = ini_read_string("Ranks", "steamy", "none");
 	var molasses = ini_read_string("Ranks", "molasses", "none");
 	var mines = ini_read_string("Ranks", "mines", "none");
+	var noisetv = ini_read_string("Ranks", "noisetv", "none");
 	ini_close();
 	ini_open("optionData.ini");
 	if (!ini_read_real("HatsUnlock", "Entryway", false) && entryway == "s")

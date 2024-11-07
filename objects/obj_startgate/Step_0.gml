@@ -10,6 +10,14 @@ if (distance_to_object(obj_player) < 50)
 				alarm[0] = 2;
 			}
 			break;
+		case "noisetv":
+			with (obj_tv)
+			{
+				message = "NOISE TV STUDIOS";
+				showtext = true;
+				alarm[0] = 2;
+			}
+			break;
 		case "entryway":
 			with (obj_tv)
 			{

@@ -67,6 +67,13 @@ if (global.panic)
 				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "entryway", "none")))
 					ini_write_string("SecretsFound", "entryway", global.secretsfound);
 			}
+			if (room == noisetv_1)
+			{
+				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "noisetv", "none")))
+					ini_write_string("Ranks", "noisetv", global.rank);
+				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "noisetv", "none")))
+					ini_write_string("SecretsFound", "noisetv", global.secretsfound);
+			}
 			ini_close();
 			obj_tv.tvsprite = spr_tvoff;
 			if (!instance_exists(obj_endlevelfade))

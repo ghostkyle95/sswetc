@@ -10,10 +10,11 @@ if (collectvanish && collectboxid.activated)
 }
 if (global.collectsound < 10)
 	global.collectsound += 1;
+if (!global.panic)
+	image_alpha = 0.5;
 if (OldPanic != global.panic && global.panic && !place_meeting(xstart, ystart, obj_player))
 {
-	x = xstart;
-	y = ystart;
+	image_alpha = 1;
 	OldPanic = global.panic;
 	instance_create(x, y, obj_poofeffectsmall);
 }
