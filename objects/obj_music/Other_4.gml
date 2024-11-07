@@ -37,43 +37,13 @@ if (!global.panic)
 			pausedmusic = mu_hub;
 		}
 	}
-	if (string_letters(roomname) == "entryway" && (obj_player.character == CHARACTERS.PIZZELLE))
+	if (string_letters(roomname) == "entryway")
 	{
-		if (!audio_is_playing(mu_waffle))
+		if (!audio_is_playing(global.entrancemus))
 		{
 			audio_stop_all_music();
-			scr_music(mu_waffle);
-			pausedmusic = mu_waffle;
-			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
-		}
-	}
-	if (string_letters(roomname) == "entryway" && obj_player.character == CHARACTERS.PIZZANO)
-	{
-		if (!audio_is_playing(mu_pizzanothemetune))
-		{
-			audio_stop_all_music();
-			scr_music(mu_pizzanothemetune);
-			pausedmusic = mu_pizzanothemetune;
-			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
-		}
-	}
-	if (string_letters(roomname) == "entryway" && obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == false)
-	{
-		if (!audio_is_playing(mu_noiseentrance))
-		{
-			audio_stop_all_music();
-			scr_music(mu_noiseentrance);
-			pausedmusic = mu_noiseentrance;
-			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
-		}
-	}
-	if (string_letters(roomname) == "entryway" && obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == true)
-	{
-		if (!audio_is_playing(mu_noiseentrance))
-		{
-			audio_stop_all_music();
-			scr_music(mu_noiseentrance);
-			pausedmusic = mu_noiseentrance;
+			scr_music(global.entrancemus);
+			pausedmusic = global.entrancemus;
 			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
 		}
 	}

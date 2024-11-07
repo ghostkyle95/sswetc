@@ -60,6 +60,7 @@ function scr_rocketfist_pizzano()
 			vsp = -6;
 			movespeed = -6;
 			image_speed = 0.35;
+			image_index = 0;
 			if !grounded
 				sprite_index = spr_airhitwall;
 			else

@@ -102,6 +102,7 @@ function scr_doise_rocket()
 			vsp = -6;
 			movespeed = -6;
 			image_speed = 0.35
+			image_index = 0;
 			sprite_index = spr_mach3hitwall;
 			state = states.bump;
 		}

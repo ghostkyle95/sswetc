@@ -218,8 +218,10 @@ function scr_characterspr()
 		spr_drank = spr_rankD;
 		spr_prank = spr_rankP;
 		
+		global.entrancemus = mu_waffle;
 		global.panicmus = mu_escape;
 		global.lap2mus = mu_lap2;
+		global.lap3mus = mu_noiselap3;
 		
 		sfx_step = sound_step;
 		sfx_land = sound_land;
@@ -449,8 +451,10 @@ function scr_characterspr()
 		spr_drank = spr_rankD;
 		spr_prank = spr_rankP;
 		
+		global.entrancemus = mu_pizzanoorchestralplay;
 		global.panicmus = mu_pizzanoescape;
 		global.lap2mus = mu_lap2;
+		global.lap3mus = mu_noiselap3;
 		
 		sfx_step = sound_step;
 		sfx_land = sound_land;
@@ -685,8 +689,10 @@ function scr_characterspr()
 		spr_drank = spr_rankND;
 		spr_prank = spr_rankNP;
 		
+		global.entrancemus = mu_noiseentrance;
 		global.panicmus = mu_noiseescape;
 		global.lap2mus = mu_noiselap2;
+		global.lap3mus = mu_noiselap3;
 		
 		sfx_step = sound_step;
 		sfx_land = sound_land;
@@ -921,8 +927,10 @@ function scr_characterspr()
 		spr_drank = spr_rankND;
 		spr_prank = spr_rankNP;
 		
+		global.entrancemus = mu_noiseentrance;
 		global.panicmus = mu_noiseescape;
 		global.lap2mus = mu_noiselap2;
+		global.lap3mus = mu_noiselap3;
 		
 		sfx_step = sound_step;
 		sfx_land = sound_land;
