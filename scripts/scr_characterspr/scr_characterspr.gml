@@ -221,7 +221,7 @@ function scr_characterspr()
 		global.entrancemus = mu_waffle;
 		global.panicmus = mu_escape;
 		global.lap2mus = mu_lap2;
-		global.lap3mus = mu_noiselap3;
+		global.lap3mus = mu_lap3;
 		
 		sfx_step = sound_step;
 		sfx_land = sound_land;
@@ -454,7 +454,7 @@ function scr_characterspr()
 		global.entrancemus = mu_pizzanoorchestralplay;
 		global.panicmus = mu_pizzanoescape;
 		global.lap2mus = mu_lap2;
-		global.lap3mus = mu_noiselap3;
+		global.lap3mus = mu_lap3;
 		
 		sfx_step = sound_step;
 		sfx_land = sound_land;
