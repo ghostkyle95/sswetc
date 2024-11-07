@@ -12,10 +12,6 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 		draw_sprite_ext(spr_tvstatic, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 	pal_swap_reset();
 	draw_sprite_ext(invsprite, image_index, 700, 57 + DrawY, 1, 1, 0, c_white, 1);
-	draw_set_font(global.font);
-	draw_set_halign(fa_center);
-	draw_set_color(c_white);
-	draw_text(xi, yi, string_hash_to_newline(message));
 	draw_sprite_ext(spr_tvcomboshadow, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, combofade);
 	if (global.combotime > 0 && global.combo > 0)
 	{
@@ -61,3 +57,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 	else if (chooseOnecomboend)
 		draw_sprite_ext(comboendSprite, comboendImage, 832, 74, 1, 1, 0, c_white, combofade * alpha);
 }
+draw_set_font(global.font);
+draw_set_halign(fa_center);
+draw_set_color(c_white);
+draw_text(xi, yi, string_hash_to_newline(message));
