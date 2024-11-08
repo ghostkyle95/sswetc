@@ -1165,12 +1165,12 @@ function scr_characterspr()
 		spr_divebombfall = spr_playerSW_divebomb;
 		spr_divebombland = spr_playerSW_divebombland;
 		
-		spr_srank = spr_rankS;
-		spr_arank = spr_rankA;
-		spr_brank = spr_rankB;
-		spr_crank = spr_rankC;
-		spr_drank = spr_rankD;
-		spr_prank = spr_rankP;
+		spr_srank = spr_rankSWS;
+		spr_arank = spr_rankSWA;
+		spr_brank = spr_rankSWB;
+		spr_crank = spr_rankSWC;
+		spr_drank = spr_rankSWD;
+		spr_prank = spr_rankSWP;
 		
 		global.entrancemus = mu_waffle;
 		global.panicmus = mu_escape;

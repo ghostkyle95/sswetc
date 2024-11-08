@@ -6,19 +6,19 @@ function scr_escapetimes(_room = room)
 	switch (_room)
 	{
 		case steamy_12:
-			minutes = 4;
+			minutes = 6;
 			seconds = 0;
 			break;
 		case entryway_11:
-			minutes = 2;
-			seconds = 30;
+			minutes = 4;
+			seconds = 0;
 			break;
 		case molasses_9:
-			minutes = 5;
+			minutes = 7;
 			seconds = 0;
 			break;
 		case mines_11:
-			minutes = 4;
+			minutes = 6;
 			seconds = 50;
 			break;
 		default:
