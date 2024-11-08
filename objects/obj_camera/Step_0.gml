@@ -104,7 +104,10 @@ if (instance_exists(obj_player) && (obj_player.state != states.timesup && obj_pl
 if (global.panic && global.minutes == 0 && global.seconds == 0 && room != timesuproom)
 {
 	if (!instance_exists(obj_coneball))
-		instance_create(0, 0, obj_coneball);
+	{
+		scr_sound(sfx_coneballspawn);
+		instance_create(obj_player.x, obj_player.y, obj_coneball);
+	}
 }
 if (global.panic && global.screentilt)
 {

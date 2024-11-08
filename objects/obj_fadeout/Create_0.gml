@@ -3,3 +3,5 @@ fadein = false;
 gotonoplayer = false;
 depth = -998;
 global.roomsave = false;
+
+alreadypositionedconeball = false;

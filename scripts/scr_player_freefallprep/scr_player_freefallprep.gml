@@ -66,6 +66,13 @@ function scr_player_freefallprep()
 		freefallsmash = false;
 		sprite_index = spr_crusherfall;
 	}
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_divebombfall)
+	{
+		//vsp += 14;
+		state = states.freefall;
+		freefallsmash = false;
+		sprite_index = spr_divebombfall;
+	}
 	if key_slap2 && sprite_index == spr_crusherstart && character == CHARACTERS.NOISE
 	{
 		if (doisemode == false)

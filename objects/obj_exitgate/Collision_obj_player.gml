@@ -38,43 +38,7 @@ if (global.panic)
 			audio_stop_sound(mu_pizzanoescape);
 			audio_stop_sound(mu_noiseescape);
 			audio_stop_sound(mu_noiselap2);
-			ini_open("saveData.ini");
-			if (room == mines_1)
-			{
-				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "mines", "none")))
-					ini_write_string("Ranks", "mines", global.rank);
-				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "mines", "none")))
-					ini_write_string("SecretsFound", "mines", global.secretsfound);
-			}
-			if (room == molasses_1)
-			{
-				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "molasses", "none")))
-					ini_write_string("Ranks", "molasses", global.rank);
-				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "molasses", "none")))
-					ini_write_string("SecretsFound", "molasses", global.secretsfound);
-			}
-			if (room == steamy_1)
-			{
-				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "steamy", "none")))
-					ini_write_string("Ranks", "steamy", global.rank);
-				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "steamy", "none")))
-					ini_write_string("SecretsFound", "steamy", global.secretsfound);
-			}
-			if (room == entryway_1)
-			{
-				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "entryway", "none")))
-					ini_write_string("Ranks", "entryway", global.rank);
-				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "entryway", "none")))
-					ini_write_string("SecretsFound", "entryway", global.secretsfound);
-			}
-			if (room == noisetv_1)
-			{
-				if (rank_checker(global.rank) > rank_checker(ini_read_string("Ranks", "noisetv", "none")))
-					ini_write_string("Ranks", "noisetv", global.rank);
-				if (global.secretsfound > rank_checker(ini_read_string("SecretsFound", "noisetv", "none")))
-					ini_write_string("SecretsFound", "noisetv", global.secretsfound);
-			}
-			ini_close();
+			scr_writetosave()
 			obj_tv.tvsprite = spr_tvoff;
 			if (!instance_exists(obj_endlevelfade))
 			{

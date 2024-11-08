@@ -160,7 +160,7 @@ function scr_player_normal()
 		state = states.jump;
 		image_index = 0;
 	}
-	if (character == CHARACTERS.PIZZELLE || character == CHARACTERS.PIZZANO || character == CHARACTERS.NOISE)
+	if (character == CHARACTERS.PIZZELLE || character == CHARACTERS.PIZZANO || character == CHARACTERS.NOISE || character == CHARACTERS.SWAB)
 	{
 		if (key_attack && grounded && !place_meeting(x + xscale, y, obj_solid))
 		{
@@ -241,7 +241,7 @@ function scr_player_normal()
 	}
 	else
 		image_speed = 0.35;
-	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != CHARACTERS.GUMBOB && !key_attack)
+	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE || character == CHARACTERS.SWAB) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != CHARACTERS.GUMBOB && !key_attack)
 	{
 		scr_sound(sfx_grabdash);
 		instance_create(x, y, obj_slaphitbox);

@@ -181,6 +181,57 @@ function scr_enemy_grabbed()
 			x = obj_player.x - (obj_player.xscale * 2);
 			y = obj_player.y - 70;
 		}
+		else if obj_player.character == CHARACTERS.SWAB
+		{
+			if (floor(obj_player.image_index) == 0)
+			{
+				depth = 0
+				x = obj_player.x + obj_player.xscale * 10
+				y = obj_player.y
+			}
+			if (floor(obj_player.image_index) == 1)
+			{
+				depth = 0
+				x = obj_player.x + obj_player.xscale * 5
+				y = obj_player.y
+			}
+			if (floor(obj_player.image_index) == 2)
+			{
+				depth = 0
+				x = obj_player.x
+				y = obj_player.y
+			}
+			if (floor(obj_player.image_index) == 3)
+			{
+				depth = 0
+				x = obj_player.x + obj_player.xscale * -5
+				y = obj_player.y
+			}
+			if (floor(obj_player.image_index) == 4)
+			{
+				depth = 0
+				x = obj_player.x + obj_player.xscale * -10
+				y = obj_player.y
+			}
+			if (floor(obj_player.image_index) == 5)
+			{
+				depth = -8
+				x = obj_player.x + obj_player.xscale * -5
+				y = obj_player.y
+			}
+			if (floor(obj_player.image_index) == 6)
+			{
+				depth = -8
+				x = obj_player.x
+				y = obj_player.y
+			}
+			if (floor(obj_player.image_index) == 7)
+			{
+				depth = -8
+				x = obj_player.x + obj_player.xscale * 5
+				y = obj_player.y
+			}
+		}
 		else
 		{
 			depth = -7;

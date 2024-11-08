@@ -1,5 +1,6 @@
 if (distance_to_object(obj_player) < 50)
 {
+	drawtext = true;
 	switch (level)
 	{
 		default:
@@ -124,3 +125,5 @@ if (distance_to_object(obj_player) < 50)
 			break;
 	}
 }
+else
+drawtext = false;

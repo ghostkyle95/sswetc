@@ -67,10 +67,12 @@ function scr_doise_rocket()
 		{
 			scr_sound(sfx_machturn);
 			image_index = 0;
-			if grounded == false
+			// temp scrapped until we get a new grounded turn sprite...
+			
+			//if grounded == false
 				sprite_index = spr_jetpackturn;
-			else
-				sprite_index = spr_groundedjetpackturn;
+			//else
+				//sprite_index = spr_groundedjetpackturn;
 			flash = false;
 			mach2 = 100;
 		}

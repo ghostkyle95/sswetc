@@ -1,7 +1,8 @@
 function scr_pizzano_shoulderbash()
 {
 	hsp = xscale * movespeed;
-	movespeed = 12;
+	if movespeed < 12
+		movespeed = 12;
 	//instakillmove = 1
 	if (key_down)
 	{
@@ -46,8 +47,10 @@ function scr_pizzano_shoulderbash()
 	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump)
 	{
 		//instakillmove = 0
-		movespeed = 10;
-		mach2 = 20;
+		//movespeed = 10;
+		//mach2 = 20;
+		if movespeed < 8
+			movespeed = 8
 		state = states.mach2;
 		sprite_index = spr_mach;
 	}

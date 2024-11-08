@@ -188,7 +188,55 @@ else if (obj_player.character == CHARACTERS.NOISE)
 			case 2:
 				palettename = "BARBEQUE";
 				break;
+			case 3:
+				palettename = "DECEASED";
+				break;
 		}
+	}
+}
+else if (obj_player.character == CHARACTERS.SWAB)
+{
+	switch (obj_player.paletteselect)
+	{
+		case 0:
+			palettename = "HOW DID YOU GET THIS";
+			break;
+		case 1:
+			palettename = "DEFAULT";
+			break;
+		case 2:
+			palettename = "KETCHUP RED";
+			break;
+		case 3:
+			palettename = "GNARPISH GREEN";
+			break;
+		case 4:
+			palettename = "P-RANK PURPLE";
+			break;
+		case 5:
+			palettename = "MINTY FRESH";
+			break;
+		case 6:
+			palettename = "SPIKY WHITE";
+			break;
+		case 7:
+			palettename = "SHADOW BLACK";
+			break;
+		case 8:
+			palettename = "NJA BLUE";
+			break;
+		case 9:
+			palettename = "NOISY YELLOW";
+			break;
+		case 10:
+			palettename = "SANDY ORANGE";
+			break;
+		case 11:
+			palettename = "FEMININE PINK";
+			break;
+		case 12:
+			palettename = "AWESOME BLUE";
+			break;
 	}
 }
 if (drawing)

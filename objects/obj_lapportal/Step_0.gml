@@ -38,7 +38,9 @@ if (global.panic)
                     targetDoor = "LAP"
                     targetRoom = other.targetRoom
                 }
-				if (global.laps > 2)
+                global.lap = true
+                global.laps++
+				if (global.laps == 2)
 				{
 					if (global.minutes != 0 && global.seconds != 0)
 					{
@@ -46,8 +48,6 @@ if (global.panic)
 						global.seconds = 0;
 					}
 				}
-                global.laps++
-                global.lap = true
                 instance_create(0, 0, obj_fadeout)
             }
         }

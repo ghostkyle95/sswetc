@@ -30,3 +30,4 @@ if (instance_exists(obj_player))
 }
 if (fadein && fadealpha < 0)
 	instance_destroy();
+

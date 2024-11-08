@@ -161,7 +161,7 @@ function scr_player_mach2()
 		state = states.Sjump;
 		sprite_index = spr_pizzano_sjumpprep;
 	}*/
-	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE) && key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
+	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE || character == CHARACTERS.SWAB) && key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
 	{
 		scr_sound(sfx_grabdash);
 		instance_create(x, y, obj_slaphitbox);
@@ -198,7 +198,7 @@ function scr_player_mach2()
 		else
 			vsp = -21;
 	}
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO)
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
 	{
 		image_index = 0;
 		state = states.freefallprep;

@@ -28,5 +28,10 @@ box = false;
 vertical = false;
 roomstartx = x;
 roomstarty = y;
+with (obj_coneball)
+{
+	x = obj_player.x
+	y = obj_player.y
+}
 if ((!room_exists(targetRoom) && room == rm_missing) || targetRoom == rm_missing)
 	show_debug_message("Room \"" + string(targetRoom) + "\" does not exist. Sent Player to \"rm_missing\"");

@@ -12,6 +12,7 @@ if (string_letters(roomname) == "entryway" || string_letters(roomname) == "entry
 		fadealpha = 1;
 		fadein = true;
 	}
+	scr_removeallescapeobstacles()
 }
 else if (string_letters(roomname) == "steamy" || string_letters(roomname) == "steamysecret")
 {
@@ -26,6 +27,7 @@ else if (string_letters(roomname) == "steamy" || string_letters(roomname) == "st
 		fadealpha = 1;
 		fadein = true;
 	}
+	scr_removeallescapeobstacles()
 }
 else if (string_letters(roomname) == "molasses" || string_letters(roomname) == "molassesb" || string_letters(roomname) == "molassesc" || string_letters(roomname) == "molassesd" || string_letters(roomname) == "molassessecret")
 {
@@ -40,6 +42,7 @@ else if (string_letters(roomname) == "molasses" || string_letters(roomname) == "
 		fadealpha = 1;
 		fadein = true;
 	}
+	scr_removeallescapeobstacles()
 }
 else if (string_letters(roomname) == "mines" || string_letters(roomname) == "minesB" || string_letters(roomname) == "minessecret")
 {
@@ -54,6 +57,7 @@ else if (string_letters(roomname) == "mines" || string_letters(roomname) == "min
 		fadealpha = 1;
 		fadein = true;
 	}
+	scr_removeallescapeobstacles()
 }
 if (string_letters(roomname) == "noisetv" || string_letters(roomname) == "noisetvsecret")
 {
@@ -68,6 +72,7 @@ if (string_letters(roomname) == "noisetv" || string_letters(roomname) == "noiset
 		fadealpha = 1;
 		fadein = true;
 	}
+	scr_removeallescapeobstacles()
 }
 else
 	scr_sound(sound_enemythrow);

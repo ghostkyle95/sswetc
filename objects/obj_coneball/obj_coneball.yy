@@ -5,14 +5,16 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":5,"eventType":7,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Coneball",
-    "path": "folders/Objects/Gameplay/Coneball.yy",
+    "name": "Sounds",
+    "path": "folders/Sounds.yy",
   },
   "parentObjectId": null,
   "persistent": true,
@@ -31,12 +33,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_coneball",
-    "path": "sprites/spr_coneball/spr_coneball.yy",
+    "name": "spr_coneballnew",
+    "path": "sprites/spr_coneballnew/spr_coneballnew.yy",
   },
   "spriteMaskId": {
-    "name": "spr_coneball",
-    "path": "sprites/spr_coneball/spr_coneball.yy",
+    "name": "spr_player_mask",
+    "path": "sprites/spr_player_mask/spr_player_mask.yy",
   },
   "visible": true,
 }

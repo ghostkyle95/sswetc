@@ -92,6 +92,8 @@ function scr_player_freefall()
 				sprite_index = spr_bodyslamland;
 			else if sprite_index == spr_crusherfall
 				sprite_index = spr_crusherland;
+			else if sprite_index == spr_divebombfall
+				sprite_index = spr_divebombland;
 		}
 	}
 	if (place_meeting(x, y + 1, obj_destructibles))

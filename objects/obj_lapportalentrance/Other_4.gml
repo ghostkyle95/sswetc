@@ -10,6 +10,11 @@ with (obj_player)
         roomstartx = x
         roomstarty = y
         visible = false
+        with (obj_coneball)
+        {
+            x = other.x
+            y = other.y
+        }
     }
 }
 if (!p)

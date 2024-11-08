@@ -5,6 +5,7 @@ function scr_player_handstandjump()
 		case CHARACTERS.PIZZELLE:
 		case CHARACTERS.NOISE:
 		case CHARACTERS.PIZZANO:
+		case CHARACTERS.SWAB:
 			move = key_left + key_right;
 			landAnim = false;
 			//mach2 = 35;

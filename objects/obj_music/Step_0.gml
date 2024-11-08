@@ -12,7 +12,7 @@ if (global.panic && !obj_pause.pause && room != timesuproom)
 				pausedmusic = global.lap2mus;
 			}
 		}
-		else
+		else if (global.laps >= 2)
 		{
 			if (!audio_is_playing(global.lap3mus))
 			{

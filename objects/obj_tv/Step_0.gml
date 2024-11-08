@@ -72,7 +72,7 @@ else if (global.collect > global.crank && !shownrankc)
 	alarm[0] = 200;
 	shownrankc = true;
 }
-if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0)
+if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0 && global.hurtmilestone != 0)
 {
 	alarm[0] = 150;
 	if (obj_player.character == CHARACTERS.PIZZELLE)
@@ -83,6 +83,8 @@ if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0)
 		character = "THE NOISE";
 	else if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == true)
 		character = "THE DOISE";
+	else if (obj_player.character == CHARACTERS.SWAB)
+		character = "SWAB";
 	message = "YOU HAVE HURT " + string(character) + " " + string(global.hurtmilestone) + " TIMES...";
 	global.hurtmilestone += 3;
 }

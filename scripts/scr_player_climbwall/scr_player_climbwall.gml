@@ -84,7 +84,7 @@ function scr_player_climbwall()
 					state = states.mach3;
 					xscale *= -1;
 				}
-		}
+			}
 			else
 			{
 				sprite_index = spr_walljumpstart;

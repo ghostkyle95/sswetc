@@ -54,7 +54,7 @@ function scr_player_Sjump()
 		sjumpspeed = 0;
 	}
 	image_speed = 0.5;
-	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZELLE)
+	if (key_attack2 && !grounded && vsp < -10 && (character == CHARACTERS.PIZZELLE || character == CHARACTERS.SWAB))
 	{
 		if (move != 0)
 			xscale = move;
