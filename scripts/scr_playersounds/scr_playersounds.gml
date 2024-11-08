@@ -25,7 +25,7 @@ function scr_playersounds()
 	else if (sprite_index != spr_crazyrun)
 		audio_stop_sound(sfx_mach4);
 		
-	if (sprite_index == spr_mach2jump) && !audio_is_playing(sfx_flip)
+	if (sprite_index == spr_mach2jump) && !audio_is_playing(sfx_flip) && character != CHARACTERS.SWAB
 		scr_sound(sfx_flip);
 	if (audio_is_playing(sfx_flip) && sprite_index != spr_mach2jump)
 		audio_stop_sound(sfx_flip);
