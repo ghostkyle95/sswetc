@@ -88,7 +88,6 @@ function scr_characterspr()
 		spr_tumbleend = spr_player_tumbleend;
 		spr_machroll = spr_player_machroll;
 		spr_dive = spr_player_dive;
-		spr_cottonidle = spr_cotton_idle;
 		spr_escapeidle = spr_player_escapeidle;
 		spr_timesupidle = spr_player_timesupidle;
 		
@@ -214,6 +213,18 @@ function scr_characterspr()
 		spr_divebombstart = spr_player_bodyslamstartOLD;
 		spr_divebombfall = spr_player_bodyslamfallOLD;
 		spr_divebombland = spr_player_bodyslamlandOLD;
+		
+		spr_cotidle = spr_cotton_idle;
+		spr_cotwalk = spr_cotton_walk;
+		spr_cotjump = spr_cotton_jump;
+		spr_cotfall = spr_cotton_fall;
+		spr_cotdoublejump = spr_cotton_doublejump;
+		spr_cotdoublefall = spr_cotton_doublefall;
+		spr_cotattack = spr_cotton_attack;
+		spr_cotdrill = spr_cotton_drill;
+		spr_cotroll = spr_cotton_roll;
+		spr_cothitwall = spr_cotton_slam;
+		spr_cotland = spr_cotton_land;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -566,7 +577,6 @@ function scr_characterspr()
 		spr_tumbleend = spr_playerN_tumbleend;
 		spr_machroll = spr_playerN_machroll;
 		spr_dive = spr_playerN_dive;
-		spr_cottonidle = spr_cotton_idle;
 		spr_escapeidle = spr_playerN_panicidle;
 		spr_timesupidle = spr_playerN_hurtidle;
 		
@@ -693,6 +703,18 @@ function scr_characterspr()
 		spr_divebombfall = spr_player_bodyslamfallOLD;
 		spr_divebombland = spr_player_bodyslamlandOLD;
 		
+		spr_cotidle = spr_cotton_idle;
+		spr_cotwalk = spr_cotton_walk;
+		spr_cotjump = spr_cotton_jump;
+		spr_cotfall = spr_cotton_fall;
+		spr_cotdoublejump = spr_cotton_doublejump;
+		spr_cotdoublefall = spr_cotton_doublefall;
+		spr_cotattack = spr_cotton_attack;
+		spr_cotdrill = spr_cotton_drill;
+		spr_cotroll = spr_cotton_roll;
+		spr_cothitwall = spr_cotton_slam;
+		spr_cotland = spr_cotton_land;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -808,7 +830,6 @@ function scr_characterspr()
 		spr_tumbleend = spr_playerN_tumbleend;
 		spr_machroll = spr_playerN_machroll;
 		spr_dive = spr_playerN_dive;
-		spr_cottonidle = spr_cotton_idle;
 		spr_escapeidle = spr_playerN_panicidle;
 		spr_timesupidle = spr_playerN_hurtidle;
 		
@@ -935,6 +956,18 @@ function scr_characterspr()
 		spr_divebombfall = spr_player_bodyslamfallOLD;
 		spr_divebombland = spr_player_bodyslamlandOLD;
 		
+		spr_cotidle = spr_cotton_idle;
+		spr_cotwalk = spr_cotton_walk;
+		spr_cotjump = spr_cotton_jump;
+		spr_cotfall = spr_cotton_fall;
+		spr_cotdoublejump = spr_cotton_doublejump;
+		spr_cotdoublefall = spr_cotton_doublefall;
+		spr_cotattack = spr_cotton_attack;
+		spr_cotdrill = spr_cotton_drill;
+		spr_cotroll = spr_cotton_roll;
+		spr_cothitwall = spr_cotton_slam;
+		spr_cotland = spr_cotton_land;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1039,7 +1072,6 @@ function scr_characterspr()
 		spr_tumbleend = spr_player_tumbleend;
 		spr_machroll = spr_playerSW_machroll;
 		spr_dive = spr_playerSW_dive;
-		spr_cottonidle = spr_cotton_idle;
 		spr_escapeidle = spr_playerSW_panic;
 		spr_timesupidle = spr_playerSW_hurtidle;
 		
@@ -1166,6 +1198,18 @@ function scr_characterspr()
 		spr_divebombfall = spr_playerSW_divebomb;
 		spr_divebombland = spr_playerSW_divebombland;
 		
+		spr_cotidle = spr_playerSW_cotidle;
+		spr_cotwalk = spr_cotton_walk;
+		spr_cotjump = spr_cotton_jump;
+		spr_cotfall = spr_cotton_fall;
+		spr_cotdoublejump = spr_cotton_doublejump;
+		spr_cotdoublefall = spr_cotton_doublefall;
+		spr_cotattack = spr_cotton_attack;
+		spr_cotdrill = spr_cotton_drill;
+		spr_cotroll = spr_cotton_roll;
+		spr_cothitwall = spr_cotton_slam;
+		spr_cotland = spr_cotton_land;
+		
 		spr_srank = spr_rankSWS;
 		spr_arank = spr_rankSWA;
 		spr_brank = spr_rankSWB;
@@ -1287,6 +1331,7 @@ function scr_characterspr()
 		spr_player_taunt = spr_gumbob_taunt;
 		spr_machroll = spr_player_machroll;
 		spr_dive = spr_player_dive;
-		spr_cottonidle = spr_gumbob_cotton_idle;
+		
+		spr_cotidle = spr_gumbob_cotton_idle;
 	}
 }

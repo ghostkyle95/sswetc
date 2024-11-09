@@ -10,14 +10,14 @@ function scr_player_cottondrill()
 	if (move != 0)
 		xscale = move;
 	hsp = 0;
-	sprite_index = spr_cotton_drill;
+	sprite_index = spr_cotdrill;
 	if (grounded)
 	{
 		if (scr_slope() && !place_meeting(x, y, obj_dashpad))
 		{
 			state = states.cottonroll;
 			movespeed = 12;
-			sprite_index = spr_cotton_roll;
+			sprite_index = spr_cotroll;
 			if (place_meeting(x, y + 1, obj_slope))
 			{
 				with (instance_place(x, y + 1, obj_slope))
@@ -27,18 +27,18 @@ function scr_player_cottondrill()
 		else
 		{
 			state = states.cotton;
-			sprite_index = spr_cotton_land;
+			sprite_index = spr_cotland;
 			vsp = 0;
 			movespeed = 0;
 			image_index = 0;
 		}
 	}
-	if (key_slap2 && sprite_index != spr_cotton_attack && groundedcot)
+	if (key_slap2 && sprite_index != spr_cotattack && groundedcot)
 	{
 		state = states.cotton;
 		flash = true;
 		image_index = 0;
-		sprite_index = spr_cotton_attack;
+		sprite_index = spr_cotattack;
 		grounded = false;
 		vsp = -5;
 		grav = 0.2;
@@ -51,7 +51,7 @@ function scr_player_cottondrill()
 		vsp = -10;
 		grav = 0.1;
 		image_index = 0;
-		sprite_index = spr_cotton_doublejump;
+		sprite_index = spr_cotdoublejump;
 		instance_create(x, y, obj_highjumpcloud2);
 		with (instance_create(x, y, obj_highjumpcloud2))
 		{
