@@ -13,11 +13,25 @@ function scr_player_cottondrill()
 	sprite_index = spr_cotton_drill;
 	if (grounded)
 	{
-		state = states.cotton;
-		sprite_index = spr_cotton_land;
-		vsp = 0;
-		movespeed = 0;
-		image_index = 0;
+		if (scr_slope() && !place_meeting(x, y, obj_dashpad))
+		{
+			state = states.cottonroll;
+			movespeed = 12;
+			sprite_index = spr_cotton_roll;
+			if (place_meeting(x, y + 1, obj_slope))
+			{
+				with (instance_place(x, y + 1, obj_slope))
+					other.xscale = -sign(image_xscale);
+			}
+		}
+		else
+		{
+			state = states.cotton;
+			sprite_index = spr_cotton_land;
+			vsp = 0;
+			movespeed = 0;
+			image_index = 0;
+		}
 	}
 	if (key_slap2 && sprite_index != spr_cotton_attack && groundedcot)
 	{

@@ -45,7 +45,7 @@ function scr_characterspr()
 		spr_crouch = spr_player_crouch;
 		spr_bump = spr_player_bump;
 		spr_victory = spr_player_entergate;
-		spr_hurt = spr_player_hurt;
+		spr_hurt = spr_player_stun;
 		spr_climbwall = spr_player_climbwall;
 		spr_grab = spr_player_grab;
 		spr_mach2jump = spr_player_mach2jump;
@@ -54,7 +54,7 @@ function scr_characterspr()
 		spr_deathend = spr_player_deathend;
 		spr_machpunch1 = spr_player_machpunch1;
 		spr_machpunch2 = spr_player_machpunch2;
-		spr_hurtjump = spr_player_stun;
+		spr_hurtjump = spr_player_hurt;
 		spr_entergate = spr_player_entergate;
 		spr_gottreasure = spr_player_entergate;
 		spr_bossintro = spr_player_bossintro;
@@ -342,9 +342,9 @@ function scr_characterspr()
 		spr_machtumble = spr_player_machtumble;
 		spr_machfreefall = spr_player_machfreefall;
 		spr_crouchslide = spr_pizzano_crouchslide;
-		spr_supertaunt1 = spr_player_supertaunt1;
-		spr_supertaunt2 = spr_player_supertaunt2;
-		spr_supertaunt3 = spr_player_supertaunt3;
+		spr_supertaunt1 = spr_pizzano_supertaunt1;
+		spr_supertaunt2 = spr_pizzano_supertaunt1;
+		spr_supertaunt3 = spr_pizzano_supertaunt1;
 		spr_ceilingcrash = spr_player_ceilingcrash;
 		spr_rollgetup = spr_player_rollgetup;
 		spr_bodyslamstart = spr_player_bodyslamstart;

@@ -1,6 +1,6 @@
 with (instance_nearest(x, y, obj_player))
 {
-	if ((place_meeting(x + hsp, y, other.id) || place_meeting(x + xscale, y, other.id)) && state == states.cotton && sprite_index == spr_cotton_attack)
+	if ((place_meeting(x + hsp, y, other.id) || place_meeting(x + xscale, y, other.id)) && (state == states.cotton && sprite_index == spr_cotton_attack || state == states.cottonroll))
 	{
 		with (other.id)
 			instance_destroy();

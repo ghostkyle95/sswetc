@@ -1,39 +1,12 @@
 function scr_player_cottonroll()
 {
 	image_speed = 0.35;
-	if (dir != xscale)
-	{
-		dir = xscale;
-		movespeed = 0;
-	}
 	hsp = xscale * movespeed;
-	if (sprite_index == spr_cotton_run && floor(image_index) == (image_number - 1))
-	{
-		sprite_index = spr_cotton_maxrun;
-		flash = true;
-		movespeed = 13;
-	}
-	if (sprite_index != spr_cotton_maxrun)
+	if (movespeed < 12)
 		movespeed += 0.25;
-	if (!key_attack)
+	if ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y))
 	{
-		state = states.cotton;
-		sprite_index = spr_cotton_idle;
-		vsp = 0;
-		movespeed = 0;
-		image_index = 0;
-	}
-	if ((place_meeting(x + 1, y, obj_solid) || place_meeting(x - 1, y, obj_solid)) && !scr_slope())
-	{
-		if (sprite_index == spr_cotton_maxrun && grounded)
-		{
-			state = states.cotton;
-			sprite_index = spr_cotton_slam3;
-			vsp = -4;
-			image_index = 0;
-			movespeed = 0;
-		}
-		else if (sprite_index == spr_cotton_maxrun && !grounded)
+		if (sprite_index == spr_cotton_roll)
 		{
 			state = states.cotton;
 			sprite_index = spr_cotton_slam;
@@ -41,20 +14,18 @@ function scr_player_cottonroll()
 			image_index = 0;
 			movespeed = 0;
 		}
-		else if (sprite_index == spr_cotton_run)
-		{
-			state = states.cotton;
-			sprite_index = spr_cotton_idle;
-			vsp = 0;
-			movespeed = 0;
-			image_index = 0;
-		}
 	}
-	if (grounded && sprite_index == spr_cotton_maxrun && key_jump)
-		vsp = -10;
-	if (grounded && sprite_index == spr_cotton_run && key_jump)
-		vsp = -8;
-	if (key_down2 && !grounded && drill && sprite_index == spr_cotton_maxrun)
+	if (key_jump && sprite_index == spr_cotton_roll)
+	{
+		state = states.cotton;
+		vsp = -14;
+		grav = 0.025;
+		image_index = 0;
+		sprite_index = spr_cotton_jump;
+		instance_create(x, y, obj_highjumpcloud2);
+		scr_sound(sfx_cottonjump);
+	}
+	if (key_down2 && !grounded && drill && sprite_index == spr_cotton_roll)
 	{
 		vsp = 9;
 		state = states.cottondrill;
