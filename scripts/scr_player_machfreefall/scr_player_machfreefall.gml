@@ -15,28 +15,15 @@ function scr_player_machfreefall()
 	move = key_right + key_left;
 	crouchslideAnim = true;
 	sprite_index = spr_machfreefall;
-	if (scr_solid(x + 1, y) && image_xscale == 1)
+	if ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y))
 	{
 		machhitAnim = false;
 		state = states.bump;
-		hsp = -2.5;
+		hsp = -2.5 * xscale;
 		vsp = -2.5;
 		mach2 = 0;
 		image_index = 0;
 		instance_create(x + 10, y + 10, obj_bumpeffect);
-		audio_sound_gain(sfx_bump, 0.7, 0);
-		if (!audio_is_playing(sfx_bump))
-			audio_play_sound(sfx_bump, 1, false);
-	}
-	else if (scr_solid(x - 1, y) && image_xscale == -1)
-	{
-		machhitAnim = false;
-		state = states.bump;
-		hsp = 2.5;
-		vsp = -2.5;
-		mach2 = 0;
-		image_index = 0;
-		instance_create(x - 10, y + 10, obj_bumpeffect);
 		audio_sound_gain(sfx_bump, 0.7, 0);
 		if (!audio_is_playing(sfx_bump))
 			audio_play_sound(sfx_bump, 1, false);

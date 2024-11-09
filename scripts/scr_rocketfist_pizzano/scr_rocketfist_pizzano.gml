@@ -36,7 +36,7 @@ function scr_rocketfist_pizzano()
 			vsp = -5;
 		if (key_down)
 			vsp = 5;
-		if (scr_solid(x + xscale, y, true) && !place_meeting(x + xscale, y, obj_destructibles))
+		if (scr_solid(x + xscale, y, true) || scr_solid_slope(x + sign(hsp), y) && !place_meeting(x + xscale, y, obj_destructibles))
 		{
 			scr_sound(sound_maximumspeedland);
 			with (obj_camera)

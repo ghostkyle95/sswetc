@@ -113,13 +113,13 @@ function scr_player_mach2()
 		flash = false;
 		state = states.machroll;
 	}
-	if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))))
+	if (((!grounded) && (place_meeting((x + hsp), y, obj_solid) || scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) || (grounded && (place_meeting((x + sign(hsp)), (y - 16), obj_solid) || scr_solid_slope((x + sign(hsp)), (y - 16))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_metalblock))) && place_meeting(x, (y + 1), obj_slope)))
 	{
 		wallspeed = movespeed;
 		grabclimbbuffer = 10;
 		state = states.climbwall;
 	}
-	if (grounded && !scr_slope() && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope))
+	if (grounded && !scr_slope() && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope) || grounded && scr_solid_slope(x + sign(hsp), y))
 	{
 		movespeed = 0;
 		state = states.bump;
@@ -131,7 +131,7 @@ function scr_player_mach2()
 		with (instance_create(x, y, obj_dashcloud))
 			sprite_index = spr_dashcloud2;
 	}
-	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && sprite_index != spr_longjumpstart && sprite_index != spr_longjumpend && sprite_index != spr_walljumpstart && sprite_index != spr_walljump)
+	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && sprite_index != spr_longjumpstart && sprite_index != spr_longjumpend && sprite_index != spr_walljumpstart && sprite_index != spr_walljump && sprite_index != spr_climbwall)
 		sprite_index = spr_secondjump1;
 	if (animation_end() && sprite_index == spr_secondjump1)
 		sprite_index = spr_secondjump2;
@@ -143,6 +143,8 @@ function scr_player_mach2()
 		sprite_index = spr_mach;
 	if grounded && (sprite_index == spr_walljumpstart || sprite_index == spr_walljump)
 		sprite_index = spr_mach;
+	if animation_end() && sprite_index == spr_walljumpstart && !grounded
+		sprite_index = spr_walljump;
 	scr_cantaunt()
 	if (sprite_index == spr_rollgetup)
 		image_speed = 0.4;

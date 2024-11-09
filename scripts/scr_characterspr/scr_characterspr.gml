@@ -54,7 +54,7 @@ function scr_characterspr()
 		spr_deathend = spr_player_deathend;
 		spr_machpunch1 = spr_player_machpunch1;
 		spr_machpunch2 = spr_player_machpunch2;
-		spr_hurtjump = spr_player_hurt;
+		spr_hurtjump = spr_player_stun;
 		spr_entergate = spr_player_entergate;
 		spr_gottreasure = spr_player_entergate;
 		spr_bossintro = spr_player_bossintro;
@@ -532,7 +532,7 @@ function scr_characterspr()
 		spr_deathend = spr_playerN_deathend;
 		spr_machpunch1 = spr_playerN_machpunch1;
 		spr_machpunch2 = spr_playerN_machpunch2;
-		spr_hurtjump = spr_playerN_hurt;
+		spr_hurtjump = spr_playerN_hurtjump;
 		spr_entergate = spr_playerN_entergate;
 		spr_gottreasure = spr_playerN_gottreasure;
 		spr_bossintro = spr_playerN_bossintro;
@@ -774,7 +774,7 @@ function scr_characterspr()
 		spr_deathend = spr_playerN_deathend;
 		spr_machpunch1 = spr_playerN_machpunch1;
 		spr_machpunch2 = spr_playerN_machpunch2;
-		spr_hurtjump = spr_playerN_hurt;
+		spr_hurtjump = spr_playerN_hurtjump;
 		spr_entergate = spr_playerN_entergate;
 		spr_gottreasure = spr_playerN_gottreasure;
 		spr_bossintro = spr_playerN_bossintro;
@@ -969,6 +969,7 @@ function scr_characterspr()
 		spr_move = spr_playerSW_move;
 		spr_crawl = spr_playerSW_crouchmove;
 		spr_hurt = spr_playerSW_hurt;
+		spr_hurtjump = spr_playerSW_jumphurt;
 		spr_jump = spr_playerSW_jump;
 		spr_jump2 = spr_playerSW_jump;
 		spr_fall = spr_playerSW_fall;

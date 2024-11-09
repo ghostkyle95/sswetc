@@ -56,7 +56,7 @@ function scr_player_crouchslide()
 		start_running = true;
 		alarm[4] = 14;
 	}
-	if (scr_solid(x + xscale, y, true) && !place_meeting(x + sign(hsp), y, obj_destructibles))
+	if (!scr_slope() && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope) || grounded && scr_solid_slope(x + sign(hsp), y))
 	{
 		movespeed = 0;
 		state = states.bump;

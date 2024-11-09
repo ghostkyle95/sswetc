@@ -19,7 +19,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	
 	global.collect += 100;
 	global.combofreeze = 120;
-	global.combotime += 12;
+	global.combotime = 60;
 	create_small_number(x, y, "100");
 	if (audio_is_playing(sound_points))
 		audio_stop_sound(sound_points);

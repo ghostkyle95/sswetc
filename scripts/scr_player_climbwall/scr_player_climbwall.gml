@@ -24,13 +24,13 @@ function scr_player_climbwall()
 		wallspeed += 0.025
 	crouchslideAnim = true;
 	sprite_index = spr_climbwall;
-	if ((wallspeed <= 0 || !key_attack) && grabclimbbuffer == 0)
+	if (!key_attack && grabclimbbuffer == 0)
 	{
 		vsp = 0
 		state = states.jump;
 		sprite_index = spr_fall;
 	}
-	if (!scr_solid(x + xscale, y, true))
+	if (!scr_solid(x + xscale, y, true) && !scr_solid_slope(x + xscale, y))
 	{
 		instance_create(x, y, obj_jumpdust);
 		vsp = 0;

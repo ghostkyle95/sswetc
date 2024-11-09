@@ -1,7 +1,7 @@
 function scr_player_puddle()
 {
 	hsp = xscale * movespeed;
-	if (scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y + 1) && !place_meeting(x + xscale, y, obj_destructibles) && !place_meeting(x + xscale, y, obj_metalblock))
+	if ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y))
 	{
 		instance_create(x, y, obj_bangeffect);
 		xscale = -xscale;

@@ -26,23 +26,14 @@ function scr_player_slipnslide()
 		mach2 = 0;
 		image_index = 0;
 	}
-	if (scr_solid(x + 1, y) && xscale == 1)
+	if ((scr_solid(x + xscale, y) || scr_solid(x + sign(hsp), y)))
 	{
 		state = states.bump;
-		hsp = -2;
+		hsp = -2 * xscale;
 		vsp = -3;
 		mach2 = 0;
 		image_index = 0;
 		instance_create(x + 10, y + 10, obj_bumpeffect);
-	}
-	if (scr_solid(x - 1, y) && xscale == -1)
-	{
-		state = states.bump;
-		hsp = 2;
-		vsp = -3;
-		mach2 = 0;
-		image_index = 0;
-		instance_create(x - 10, y + 10, obj_bumpeffect);
 	}
 	sprite_index = spr_slipnslide;
 	image_speed = 0.35;
