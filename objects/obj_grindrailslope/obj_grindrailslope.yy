@@ -31,6 +31,9 @@
     "name": "spr_slope",
     "path": "sprites/spr_slope/spr_slope.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_wall",
+    "path": "sprites/spr_wall/spr_wall.yy",
+  },
   "visible": false,
 }
