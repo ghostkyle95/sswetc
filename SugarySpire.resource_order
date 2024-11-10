@@ -211,6 +211,7 @@
     {"name":"Cane","order":29,"path":"folders/Sprites/Player/Pizzelle/Cane.yy",},
     {"name":"Cotton","order":1,"path":"folders/Sprites/Player/Pizzelle/Cotton.yy",},
     {"name":"Swab","order":6,"path":"folders/Sprites/Player/Swab.yy",},
+    {"name":"Cotton","order":146,"path":"folders/Sprites/Player/Swab/Cotton.yy",},
     {"name":"Room Specific","order":4,"path":"folders/Sprites/Room Specific.yy",},
     {"name":"Dev Room","order":1,"path":"folders/Sprites/Room Specific/Dev Room.yy",},
     {"name":"Main Menu","order":5,"path":"folders/Sprites/Room Specific/Main Menu.yy",},
@@ -254,7 +255,6 @@
     {"name":"TV Thingamajigs","order":42,"path":"folders/Sprites/Unused/TV Thingamajigs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Cotton","order":146,"path":"folders/Sprites/Player/Swab/Cotton.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_talisman","order":33,"path":"objects/obj_talisman/obj_talisman.yy",},

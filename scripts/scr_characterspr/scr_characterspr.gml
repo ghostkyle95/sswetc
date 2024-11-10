@@ -1175,7 +1175,7 @@ function scr_characterspr()
 		spr_machslideboostfall = spr_playerSW_machslideboostfall;
 		spr_fastroll = spr_playerSW_machroll;
 		
-		spr_Sjumpcancelprep = spr_playerSW_Sjumpcancelstart2;
+		spr_Sjumpcancelprep = spr_playerSW_Sjumpcancelstart;
 		spr_Sjumpcancel = spr_playerSW_Sjumpcancel;
 		
 		spr_machslideboost3fall = spr_playerSW_machslideboost3fall;
