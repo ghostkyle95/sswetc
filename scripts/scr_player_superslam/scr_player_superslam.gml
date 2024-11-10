@@ -91,7 +91,7 @@ function scr_player_superslam()
 	{
 		vsp = -9;
 		state = states.jump;
-		sprite_index = spr_jump;
+		sprite_index = spr_piledriverjump;
 		jumpAnim = false;
 		jumpstop = true;
 		freefallsmash = false;

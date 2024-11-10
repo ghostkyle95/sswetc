@@ -226,6 +226,9 @@ function scr_characterspr()
 		spr_cothitwall = spr_cotton_slam;
 		spr_cotland = spr_cotton_land;
 		
+		spr_bodyslamjump = spr_playerSW_bodyslamjump;
+		spr_piledriverjump = spr_player_jump;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -461,6 +464,9 @@ function scr_characterspr()
 		spr_divebombstart = spr_player_bodyslamstartOLD;
 		spr_divebombfall = spr_player_bodyslamfallOLD;
 		spr_divebombland = spr_player_bodyslamlandOLD;
+		
+		spr_bodyslamjump = spr_playerSW_bodyslamjump;
+		spr_piledriverjump = spr_pizzano_jump;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -715,6 +721,9 @@ function scr_characterspr()
 		spr_cothitwall = spr_cotton_slam;
 		spr_cotland = spr_cotton_land;
 		
+		spr_bodyslamjump = spr_playerSW_bodyslamjump;
+		spr_piledriverjump = spr_playerN_suplexland;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -968,6 +977,9 @@ function scr_characterspr()
 		spr_cothitwall = spr_cotton_slam;
 		spr_cotland = spr_cotton_land;
 		
+		spr_bodyslamjump = spr_playerSW_bodyslamjump;
+		spr_piledriverjump = spr_playerN_suplexland;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1210,6 +1222,9 @@ function scr_characterspr()
 		spr_cothitwall = spr_cotton_slam;
 		spr_cotland = spr_cotton_land;
 		
+		spr_bodyslamjump = spr_playerSW_bodyslamjump;
+		spr_piledriverjump = spr_playerSW_jump;
+		
 		spr_srank = spr_rankSWS;
 		spr_arank = spr_rankSWA;
 		spr_brank = spr_rankSWB;
@@ -1246,92 +1261,17 @@ function scr_characterspr()
 	{
 		spr_idle = spr_gumbob_idle;
 		spr_move = spr_gumbob_walk;
-		spr_crawl = spr_player_crawl;
-		spr_idle = spr_gumbob_idle;
 		spr_hurt = spr_gumbob_hurt;
 		spr_jump = spr_gumbob_jump;
 		spr_jump2 = spr_gumbob_jump;
 		spr_fall = spr_gumbob_fall;
 		spr_fall2 = spr_gumbob_fall;
-		spr_crouch = spr_player_crouch;
-		spr_crouchjump = spr_player_crouchjump;
-		spr_crouchfall = spr_player_crouchfall;
-		spr_couchstart = spr_player_crouchstart;
-		spr_bump = spr_player_bump;
-		spr_land = spr_player_land;
-		spr_land2 = spr_player_land2;
-		spr_lookdoor = spr_player_lookdoor;
-		spr_walkfront = spr_player_walkfront;
-		spr_victory = spr_player_entergate;
-		spr_Ladder = spr_player_ladder;
-		spr_laddermove = spr_player_ladderup;
-		spr_ladderdown = spr_player_ladderdown;
-		spr_keyget = spr_player_keyget;
-		spr_crouchslip = spr_player_machslide;
-		spr_mach1 = spr_player_mach1;
-		spr_mach = spr_player_mach;
-		spr_secondjump1 = spr_player_secondjump1;
-		spr_secondjump2 = spr_player_secondjump2;
-		spr_machslidestart = spr_player_machslidestart;
-		spr_machslide = spr_player_machsliding;
-		spr_machslideend = spr_player_machslideend;
-		spr_machslideboost = spr_player_machslideboost;
-		spr_land2 = spr_player_land2;
-		spr_punch = spr_player_punch;
-		spr_backkick = spr_player_backkick;
-		spr_shoulder = spr_player_shoulder;
-		spr_uppunch = spr_player_uppunch;
-		spr_stomp = spr_player_stomp;
-		spr_stompprep = spr_player_stompprep;
-		spr_crouchslide = spr_player_machslide;
-		spr_crouch = spr_player_crouch;
-		spr_bump = spr_player_bump;
-		spr_victory = spr_player_entergate;
-		spr_hurt = spr_gumbob_hurt;
-		spr_climbwall = spr_player_climbwall;
-		spr_grab = spr_player_grab;
-		spr_mach2jump = spr_player_mach2jump;
-		spr_Timesup = spr_player_timeup;
-		spr_deathstart = spr_player_deathstart;
-		spr_deathend = spr_player_deathend;
-		spr_machpunch1 = spr_player_machpunch1;
-		spr_machpunch2 = spr_player_machpunch2;
 		spr_hurtjump = spr_gumbob_hurt;
-		spr_entergate = spr_player_entergate;
-		spr_gottreasure = spr_player_entergate;
-		spr_bossintro = spr_player_bossintro;
-		spr_hurtidle = spr_player_hurtidle;
-		spr_hurtwalk = spr_player_hurtwalk;
-		spr_suplexmash1 = spr_player_suplexmash1;
-		spr_suplexmash2 = spr_player_suplexmash2;
-		spr_suplexmash3 = spr_player_suplexmash3;
-		spr_suplexmash4 = spr_player_suplexmash4;
-		spr_tackle = spr_player_tackle;
-		spr_airdash1 = spr_player_airdash1;
-		spr_airdash2 = spr_player_airdash2;
-		spr_keyget = spr_player_keyget;
 		spr_idle1 = spr_gumbob_idle;
 		spr_idle2 = spr_gumbob_idle;
 		spr_idle3 = spr_gumbob_idle;
-		spr_suplexdash = spr_player_suplexdash;
-		spr_piledriver = spr_player_piledriver;
-		spr_piledriverland = spr_player_piledriverland;
-		spr_charge = spr_player_charge;
 		spr_palette = spr_palg;
-		spr_caneidle = spr_player_caneidle;
-		spr_caneslam = spr_player_caneslam;
-		spr_canewalk = spr_player_canewalk;
-		spr_canesuplex = spr_player_canesuplex;
-		spr_canehit = spr_player_canehit;
-		spr_uppizzabox = spr_player_uppizzabox;
-		spr_downpizzabox = spr_player_downpizzabox;
-		spr_tumblestart = spr_player_tumblestart;
-		spr_tumble = spr_player_tumble;
-		spr_tumbleend = spr_player_tumbleend;
 		spr_player_taunt = spr_gumbob_taunt;
-		spr_machroll = spr_player_machroll;
-		spr_dive = spr_player_dive;
-		
 		spr_cotidle = spr_gumbob_cotton_idle;
 	}
 }

@@ -138,6 +138,10 @@ function scr_player_jump()
 				sprite_index = spr_fall;
 			if (sprite_index == spr_jump)
 				sprite_index = spr_fall;
+			if (sprite_index == spr_bodyslamjump)
+				sprite_index = spr_fall;
+			if (sprite_index == spr_piledriverjump)
+				sprite_index = spr_fall;
 		}
 	}
 	if (stompAnim)

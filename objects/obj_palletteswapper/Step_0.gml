@@ -217,7 +217,7 @@ else if (obj_player.character == CHARACTERS.SWAB)
 			palettename = "MINTY FRESH";
 			break;
 		case 6:
-			palettename = "SPIKY WHITE";
+			palettename = "POLAR OPPOSITE";
 			break;
 		case 7:
 			palettename = "SHADOW BLACK";

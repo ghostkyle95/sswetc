@@ -11,13 +11,11 @@ function scr_player_Sjump()
 	crouchAnim = false;
 	machhitAnim = false;
 	move = key_left + key_right;
-	if (move != 0)
-		xscale = move;
 	if (sprite_index == spr_superjump)
 	{
 		sjumpspeed = approach(sjumpspeed, 18, 1)
 		vsp = -sjumpspeed
-		if (character = CHARACTERS.NOISE)
+		if (character == CHARACTERS.NOISE || character == CHARACTERS.SWAB)
 		{
 			hsp = move * movespeed;
 			movespeed = 2;

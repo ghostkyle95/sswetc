@@ -6,6 +6,6 @@ with (obj_player)
 		state = states.cotton;
 		instance_create(x, y, obj_poofeffect);
 		instance_create(x, y, obj_poofeffectcotton);
-		sprite_index = spr_cottonidle;
+		sprite_index = spr_cotidle;
 	}
 }

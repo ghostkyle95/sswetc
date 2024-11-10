@@ -18,12 +18,15 @@ function scr_player_freefallland()
 		vsp = 0;
 	if (floor(image_index) == (image_number - 1))
 	{
-		/*state = states.normal;
-		sprite_index = spr_idle;*/
 		sprite_index = spr_machfreefall;
 		vsp = -8;
+		if (key_jump2 && character == CHARACTERS.SWAB)
+		{
+			sprite_index = spr_bodyslamjump;
+			vsp = -16;
+		}
 		state = states.jump;
-		jumpAnim = false;
+		jumpAnim = true;
 		jumpstop = true;
 		freefallsmash = false;
 	}
