@@ -18,20 +18,6 @@ function scr_player_machroll()
 	move = key_right + key_left;
 	if (grounded)
 		sprite_index = machroll;
-	if ((scr_solid(x + 1, y, true) && !place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + 1, y)) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_destructibles))
-	{
-		movespeed = 0;
-		state = states.bump;
-		sprite_index = spr_wallsplat
-		image_index = 0
-	}
-	if ((scr_solid(x - 1, y, true) && !place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x - 1, y)) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_destructibles))
-	{
-		movespeed = 0;
-		state = states.bump;
-		sprite_index = spr_wallsplat
-		image_index = 0
-	}
 	if (grounded && sprite_index == spr_dive)
 		sprite_index = machroll
 	if (!instance_exists(obj_cloudeffect) && grounded)
@@ -87,5 +73,19 @@ function scr_player_machroll()
             image_index = 0
             return;
 		}
+	}
+	if ((scr_solid(x + 1, y, true) && !place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + 1, y)) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_destructibles))
+	{
+		movespeed = 0;
+		state = states.bump;
+		sprite_index = spr_wallsplat
+		image_index = 0
+	}
+	if ((scr_solid(x - 1, y, true) && !place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x - 1, y)) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_destructibles))
+	{
+		movespeed = 0;
+		state = states.bump;
+		sprite_index = spr_wallsplat
+		image_index = 0
 	}
 }
