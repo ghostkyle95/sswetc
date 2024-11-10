@@ -8,6 +8,8 @@ function scr_player_crouchslide()
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (xscale * movespeed) + 5;
 	mask_index = spr_crouchmask;
+	if sprite_index == spr_crouchslipstart && animation_end()
+		sprite_index = spr_crouchslip
 	if (!key_down && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
 	{
 		switch (character)
@@ -31,7 +33,7 @@ function scr_player_crouchslide()
 			}
 			else
 			{	
-				sprite_index = spr_playerN_divebomb
+				sprite_index = spr_tornado
 				state = states.machcancel
 				savedmove = xscale
 				vsp = 20

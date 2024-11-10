@@ -40,7 +40,7 @@ function scr_player_machroll()
 		}
 		else
 		{	
-            sprite_index = spr_playerN_divebomb
+            sprite_index = spr_tornado
             state = states.machcancel
             savedmove = xscale
             vsp = 20
@@ -62,7 +62,7 @@ function scr_player_machroll()
 		}
 		else
 		{
-            sprite_index = spr_playerN_divebomb
+            sprite_index = spr_tornado
             state = states.machcancel
             vsp = 20
             hsp = 0

@@ -77,7 +77,7 @@ function scr_player_Sjump()
 			vsp = -5
 			state = states.mach2
 			movespeed = 12
-			sprite_index = spr_playerN_sidewayspin
+			sprite_index = spr_sidewayspin
 			with (instance_create(x, y, obj_crazyrunothereffect))
 				image_xscale = other.xscale
 			image_index = 0

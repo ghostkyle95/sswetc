@@ -24,17 +24,34 @@ function scr_player_uppercut()
 	}
 	if (key_slap2 && !grounded)
 	{
-		if (move != 0)
-			xscale = move;
-		movespeed = 10;
-		machhitAnim = false;
-		state = states.mach2;
-		flash = true;
-		vsp = -7;
-		sprite_index = spr_walljumpstart;
-		with (instance_create(x, y, obj_jumpdust))
-			image_xscale = other.xscale;
-		freefallsmash = false;
+		if (character != CHARACTERS.SWAB)
+		{
+			if (move != 0)
+				xscale = move;
+			movespeed = 10;
+			machhitAnim = false;
+			state = states.mach2;
+			flash = true;
+			vsp = -7;
+			sprite_index = spr_walljumpstart;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+			freefallsmash = false;
+		}
+		else
+		{
+			if (move != 0)
+				xscale = move;
+			state = states.sjumpcancelprep;
+			flash = true;
+			vsp = 0;
+			hsp = 0;
+			image_index = 0;
+			sprite_index = spr_uppercutcancelstart;
+			sjumpspeed = 0;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+		}
 	}
 	if (!instance_exists(obj_dashcloud) && grounded)
 	{

@@ -3,7 +3,7 @@ function scr_player_climbwall()
     if (character == CHARACTERS.NOISE)
 	{
 		scr_sound(sfx_wallbouncestart)
-		sprite_index = spr_playerN_wallbounce
+		sprite_index = spr_wallbounce
 		state = states.machcancel
 		savedmove = xscale
 		vsp = (-((17 * (1 - noisewalljump * 0.15))))
@@ -24,6 +24,17 @@ function scr_player_climbwall()
 		wallspeed += 0.025
 	crouchslideAnim = true;
 	sprite_index = spr_climbwall;
+	if (character == CHARACTERS.SWAB)
+	{
+		if (wallspeed >= 12)
+		{
+			sprite_index = spr_mach3wallclimb
+			if (!instance_exists(obj_SWwallchargeeffect) && sprite_index == spr_mach3wallclimb)
+				instance_create(x, y, obj_SWwallchargeeffect);
+		}
+		else
+			sprite_index = spr_climbwall
+	}
 	if (!key_attack && grabclimbbuffer == 0)
 	{
 		vsp = 0

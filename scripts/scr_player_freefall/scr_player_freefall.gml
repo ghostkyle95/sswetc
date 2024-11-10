@@ -104,17 +104,34 @@ function scr_player_freefall()
 		instance_create_depth(x, y, -6, obj_groundpoundeffect);
 	if (key_slap2 && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
 	{
-		if (move != 0)
-			xscale = move;
-		movespeed = 10;
-		machhitAnim = false;
-		state = states.mach2;
-		flash = true;
-		vsp = -7;
-		sprite_index = spr_mach2jump;
-		with (instance_create(x, y, obj_jumpdust))
-			image_xscale = other.xscale;
-		freefallsmash = false;
+		if (character != CHARACTERS.SWAB)
+		{
+			if (move != 0)
+				xscale = move;
+			movespeed = 10;
+			machhitAnim = false;
+			state = states.mach2;
+			flash = true;
+			vsp = -7;
+			sprite_index = spr_walljumpstart;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+			freefallsmash = false;
+		}
+		else
+		{
+			if (move != 0)
+				xscale = move;
+			state = states.sjumpcancelprep;
+			flash = true;
+			vsp = 0;
+			hsp = 0;
+			image_index = 0;
+			sprite_index = spr_uppercutcancelstart;
+			sjumpspeed = 0;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+		}
 	}
 	if key_slap2 && sprite_index == spr_crusherfall && character == CHARACTERS.NOISE
 	{
@@ -127,7 +144,7 @@ function scr_player_freefall()
 			vsp = -5
 			state = states.mach2
 			movespeed = 12
-			sprite_index = spr_playerN_sidewayspin
+			sprite_index = spr_sidewayspin
 			with (instance_create(x, y, obj_crazyrunothereffect))
 				image_xscale = other.xscale
 			image_index = 0

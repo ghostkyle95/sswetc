@@ -60,7 +60,7 @@ function scr_player_mach2()
 	}
 	if (!grounded)
 		machpunchAnim = false;
-	if (movespeed >= 12 && grounded && sprite_index != spr_playerN_sidewayspin)
+	if (movespeed >= 12 && grounded && sprite_index != spr_sidewayspin)
 	{
 		machhitAnim = false;
 		state = states.mach3;
@@ -68,9 +68,9 @@ function scr_player_mach2()
 		sprite_index = spr_mach4;
 		instance_create(x, y, obj_jumpdust);
 	}
-	if animation_end() && sprite_index == spr_playerN_sidewayspin
-		sprite_index = spr_playerN_sidewayspinend
-    if (grounded && (sprite_index == spr_playerN_sidewayspin || sprite_index == spr_playerN_sidewayspinend))
+	if animation_end() && sprite_index == spr_sidewayspin
+		sprite_index = spr_sidewayspinend
+    if (grounded && (sprite_index == spr_sidewayspin || sprite_index == spr_sidewayspinend))
         sprite_index = spr_mach
 	/*if (movespeed >= 10 && grounded && character == CHARACTERS.PIZZANO)
 	{
@@ -131,7 +131,7 @@ function scr_player_mach2()
 		with (instance_create(x, y, obj_dashcloud))
 			sprite_index = spr_dashcloud2;
 	}
-	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && sprite_index != spr_longjumpstart && sprite_index != spr_longjumpend && sprite_index != spr_walljumpstart && sprite_index != spr_walljump && sprite_index != spr_climbwall)
+	if ((!grounded && sprite_index != spr_secondjump2 && sprite_index != spr_mach2jump) && sprite_index != spr_null && sprite_index != spr_bump && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend && sprite_index != spr_longjumpstart && sprite_index != spr_longjumpend && sprite_index != spr_walljumpstart && sprite_index != spr_walljump && sprite_index != spr_climbwall)
 		sprite_index = spr_secondjump1;
 	if (animation_end() && sprite_index == spr_secondjump1)
 		sprite_index = spr_secondjump2;
@@ -163,7 +163,7 @@ function scr_player_mach2()
 		state = states.Sjump;
 		sprite_index = spr_pizzano_sjumpprep;
 	}*/
-	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE || character == CHARACTERS.SWAB) && key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend)
+	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE || character == CHARACTERS.SWAB) && key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
 	{
 		scr_sound(sfx_grabdash);
 		instance_create(x, y, obj_slaphitbox);

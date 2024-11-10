@@ -131,7 +131,7 @@ function scr_player_cotton()
 		with (instance_create(x, y, obj_afterimageoutward))
 			vspeed = -7;
 	}
-	if (!grounded && sprite_index != spr_cotjump && sprite_index != spr_cotattack && sprite_index != spr_cotdoublejump && sprite_index != spr_cotdoublefall && sprite_index != spr_cot_drill && sprite_index != spr_cothitwall && sprite_index != spr_cotton_slam2 && sprite_index != spr_cotton_slam3)
+	if (!grounded && sprite_index != spr_cotjump && sprite_index != spr_cotattack && sprite_index != spr_cotdoublejump && sprite_index != spr_cotdoublefall && sprite_index != spr_cotdrill && sprite_index != spr_cothitwall && sprite_index != spr_cotton_slam2 && sprite_index != spr_cotton_slam3)
 		sprite_index = spr_cotfall;
 	if (grounded && !drill)
 		drill = true;

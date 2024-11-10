@@ -35,27 +35,27 @@ function scr_playersounds()
 	if (audio_is_playing(sfx_sjumphold) && sprite_index != spr_superjumppreplight)
 		audio_stop_sound(sfx_sjumphold);
 		
-	if (sprite_index == spr_playerN_sidewayspinend && !audio_is_playing(sfx_airspin) && !audio_is_playing(sfx_airspinstart))
+	if (sprite_index == spr_sidewayspinend && !audio_is_playing(sfx_airspin) && !audio_is_playing(sfx_airspinstart))
 		scr_sound(sfx_airspin);
-	else if (sprite_index != spr_playerN_sidewayspinend)
+	else if (sprite_index != spr_sidewayspinend)
 		audio_stop_sound(sfx_airspin);
 		
-	if (sprite_index == spr_playerN_wallbounce && !audio_is_playing(sfx_wallbounceloop) && !audio_is_playing(sfx_wallbouncestart) && !audio_is_playing(sfx_wallbounceland))
+	if (sprite_index == spr_wallbounce && !audio_is_playing(sfx_wallbounceloop) && !audio_is_playing(sfx_wallbouncestart) && !audio_is_playing(sfx_wallbounceland))
 		scr_sound(sfx_wallbounceloop);
-	else if (sprite_index != spr_playerN_wallbounce)
+	else if (sprite_index != spr_wallbounce)
 		audio_stop_sound(sfx_wallbouncestart);
 		audio_stop_sound(sfx_wallbounceloop);
 		
-	if (sprite_index == spr_playerN_divebombfall && !audio_is_playing(sfx_tornadofast))
+	if (sprite_index == spr_tornadofall && !audio_is_playing(sfx_tornadofast))
 		scr_sound(sfx_tornadofast);
-	else if (sprite_index != spr_playerN_divebombfall)
+	else if (sprite_index != spr_tornadofall)
 		audio_stop_sound(sfx_tornadofast);
 		
-	if (sprite_index == spr_playerN_divebomb && !audio_is_playing(sfx_torndadoslow))
+	if (sprite_index == spr_tornado && !audio_is_playing(sfx_torndadoslow))
 		scr_sound(sfx_torndadoslow);
-	else if (sprite_index != spr_playerN_divebomb)
+	else if (sprite_index != spr_tornado)
 		audio_stop_sound(sfx_torndadoslow);
 		
-	if (sprite_index != spr_playerN_sidewayspin && sprite_index != spr_playerN_sidewayspinend && audio_is_playing(sfx_airspinstart))
+	if (sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend && audio_is_playing(sfx_airspinstart))
 		audio_stop_sound(sfx_airspinstart);
 }

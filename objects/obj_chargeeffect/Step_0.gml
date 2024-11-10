@@ -1,4 +1,14 @@
 image_xscale = obj_player.xscale;
+if (obj_player.character == CHARACTERS.SWAB)
+{
+	sprite_index = spr_SWchargeeffect;
+	image_speed = 1;
+}
+else
+{
+	sprite_index = spr_chargeeffect;
+	image_speed = 0.5;
+}
 if (obj_player.state != states.mach3 && obj_player.state != states.minecart)
 	instance_destroy();
 if (obj_player.state != states.minecart)

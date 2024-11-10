@@ -229,6 +229,17 @@ function scr_characterspr()
 		spr_bodyslamjump = spr_playerSW_bodyslamjump;
 		spr_piledriverjump = spr_player_jump;
 		
+		spr_sidewayspin = spr_playerN_sidewayspin;
+		spr_sidewayspinend = spr_playerN_sidewayspinend;
+		spr_wallbounce = spr_playerN_wallbounce;
+		spr_tornado = spr_playerN_divebomb;
+		spr_tornadofall = spr_playerN_divebombfall;
+		spr_tornadoland = spr_playerN_divebombland;
+		spr_mach4start = spr_playerSW_mach4start;
+		spr_crouchslipstart = spr_playerSW_crouchslipstart;
+		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
+		spr_mach3wallclimb = spr_playerSW_mach3wall;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -467,6 +478,17 @@ function scr_characterspr()
 		
 		spr_bodyslamjump = spr_playerSW_bodyslamjump;
 		spr_piledriverjump = spr_pizzano_jump;
+		
+		spr_sidewayspin = spr_playerN_sidewayspin;
+		spr_sidewayspinend = spr_playerN_sidewayspinend;
+		spr_wallbounce = spr_playerN_wallbounce;
+		spr_tornado = spr_playerN_divebomb;
+		spr_tornadofall = spr_playerN_divebombfall;
+		spr_tornadoland = spr_playerN_divebombland;
+		spr_mach4start = spr_playerSW_mach4start;
+		spr_crouchslipstart = spr_playerSW_crouchslipstart;
+		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
+		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -724,6 +746,17 @@ function scr_characterspr()
 		spr_bodyslamjump = spr_playerSW_bodyslamjump;
 		spr_piledriverjump = spr_playerN_suplexland;
 		
+		spr_sidewayspin = spr_playerN_sidewayspin;
+		spr_sidewayspinend = spr_playerN_sidewayspinend;
+		spr_wallbounce = spr_playerN_wallbounce;
+		spr_tornado = spr_playerN_divebomb;
+		spr_tornadofall = spr_playerN_divebombfall;
+		spr_tornadoland = spr_playerN_divebombland;
+		spr_mach4start = spr_playerSW_mach4start;
+		spr_crouchslipstart = spr_playerSW_crouchslipstart;
+		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
+		spr_mach3wallclimb = spr_playerSW_mach3wall;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -980,6 +1013,17 @@ function scr_characterspr()
 		spr_bodyslamjump = spr_playerSW_bodyslamjump;
 		spr_piledriverjump = spr_playerN_suplexland;
 		
+		spr_sidewayspin = spr_playerN_sidewayspin;
+		spr_sidewayspinend = spr_playerN_sidewayspinend;
+		spr_wallbounce = spr_playerN_wallbounce;
+		spr_tornado = spr_playerN_divebomb;
+		spr_tornadofall = spr_playerN_divebombfall;
+		spr_tornadoland = spr_playerN_divebombland;
+		spr_mach4start = spr_playerSW_mach4start;
+		spr_crouchslipstart = spr_playerSW_crouchslipstart;
+		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
+		spr_mach3wallclimb = spr_playerSW_mach3wall;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1224,6 +1268,17 @@ function scr_characterspr()
 		
 		spr_bodyslamjump = spr_playerSW_bodyslamjump;
 		spr_piledriverjump = spr_playerSW_jump;
+		
+		spr_sidewayspin = spr_playerN_sidewayspin;
+		spr_sidewayspinend = spr_playerN_sidewayspinend;
+		spr_wallbounce = spr_playerN_wallbounce;
+		spr_tornado = spr_playerN_divebomb;
+		spr_tornadofall = spr_playerN_divebombfall;
+		spr_tornadoland = spr_playerN_divebombland;
+		spr_mach4start = spr_playerSW_mach4start;
+		spr_crouchslipstart = spr_playerSW_crouchslipstart;
+		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
+		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
 		spr_srank = spr_rankSWS;
 		spr_arank = spr_rankSWA;

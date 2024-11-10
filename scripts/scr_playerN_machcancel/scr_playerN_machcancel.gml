@@ -7,7 +7,7 @@ function scr_playerN_machcancel(){
     move = key_right + key_left
     if (move != 0)
         savedmove = move
-    if (sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall)
+    if (sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall)
     {
         if (move != 0)
         {
@@ -38,15 +38,15 @@ function scr_playerN_machcancel(){
             }
             mask_index = spr_player_mask
         }
-		if (grounded && sprite_index == spr_playerN_divebombfall)
+		if (grounded && sprite_index == spr_tornadofall)
 		{
 			image_index = 0
-			sprite_index = spr_playerN_divebombland
+			sprite_index = spr_tornadoland
 		}
-		if (animation_end() && sprite_index == spr_playerN_divebombland)
+		if (animation_end() && sprite_index == spr_tornadoland)
 		{
 			image_index = 0
-			sprite_index = spr_playerN_divebomb
+			sprite_index = spr_tornado
 		}
     }
     else if (move != 0)
@@ -55,16 +55,16 @@ function scr_playerN_machcancel(){
         movespeed = approach(movespeed, 0, 0.5)
    if scr_noise_machcancel_grab()
         return;
-    if (sprite_index != spr_playerN_divebombfall && (!grounded) && key_down)
+    if (sprite_index != spr_tornadofall && (!grounded) && key_down)
     {
-        sprite_index = spr_playerN_divebombfall
+        sprite_index = spr_tornadofall
         state = states.machcancel
         vsp = 20
         input_buffer_jump = 0
         image_index = 0
         return;
     }
-	/*if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope)))) && sprite_index == spr_playerN_wallbounce
+	/*if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope)))) && sprite_index == spr_wallbounce
 	{
 		if key_jump
 		{
@@ -72,15 +72,15 @@ function scr_playerN_machcancel(){
 			state = states.climbwall;
 		}
 	}*/
-    if (grounded && vsp >= 0 && sprite_index != spr_playerN_wallbounce && !key_down)
+    if (grounded && vsp >= 0 && sprite_index != spr_wallbounce && !key_down)
     {
         vsp = -7
         if (move != 0)
             xscale = move
-        sprite_index = spr_playerN_wallbounce
+        sprite_index = spr_wallbounce
 		scr_sound(sfx_wallbounceland)
     }
-    if (grounded && key_attack && vsp >= 0 && sprite_index == spr_playerN_wallbounce)
+    if (grounded && key_attack && vsp >= 0 && sprite_index == spr_wallbounce)
     {
         if (move != 0)
             xscale = move
@@ -95,12 +95,12 @@ function scr_playerN_machcancel(){
         with (instance_create(x, y, obj_crazyrunothereffect))
             image_xscale = other.xscale
     }
-    if (grounded && (!key_attack) && vsp >= 0 && sprite_index == spr_playerN_wallbounce)
+    if (grounded && (!key_attack) && vsp >= 0 && sprite_index == spr_wallbounce)
     {
         state = states.normal
         movespeed = abs(hsp)
     }
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB && !(sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall))
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB && !(sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall))
 	{
 		image_index = 0;
 		state = states.freefallprep;
@@ -108,7 +108,7 @@ function scr_playerN_machcancel(){
 		vsp = -16;
 		scr_sound(sound_crusherjump)
 	}
-    if (sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall)
+    if (sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall)
     {
         image_speed = abs(movespeed) / 40 + 0.4
     }
@@ -140,7 +140,7 @@ function scr_noise_machcancel_grab() //gml_Script_scr_noise_machcancel_grab
 				    vsp = -5
 				state = states.mach2
 				movespeed = 12
-				sprite_index = spr_playerN_sidewayspin
+				sprite_index = spr_sidewayspin
 				with (instance_create(x, y, obj_crazyrunothereffect))
 				    image_xscale = other.xscale
 				image_index = 0

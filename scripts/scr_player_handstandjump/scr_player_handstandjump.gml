@@ -38,7 +38,10 @@ function scr_player_handstandjump()
 				if (grounded)
 				{
 					grav = 0.5;
-					sprite_index = spr_crouchslip;
+					if (character == CHARACTERS.SWAB)
+						sprite_index = spr_crouchslipstart;
+					else
+						sprite_index = spr_crouchslip;
 					machhitAnim = false;
 					state = states.crouchslide;
 					if (audio_is_playing(sfx_grabdash))
