@@ -53,15 +53,12 @@ if (!instance_exists(baddiegrabbedID) && (state == states.grab || (state == stat
 	state = states.normal;
 if (!(state == states.grab || state == states.charge || state == states.superslam || state == states.finishingblow))
 	baddiegrabbedID = -4;
-if (character == CHARACTERS.PIZZELLE)
+if (anger == 0)
+	angry = false;
+if (anger > 0)
 {
-	if (anger == 0)
-		angry = false;
-	if (anger > 0)
-	{
-		angry = true;
-		anger -= 1;
-	}
+	angry = true;
+	anger -= 1;
 }
 if (angry && sprite_index == spr_idle)
 	sprite_index = spr_3hpidle;
@@ -77,20 +74,6 @@ if (sprite_index == spr_winding && state != states.normal)
 	windingAnim = 0;
 else
 	audio_stop_sound(sound_superjumpcharge2);
-if (state == states.cottonroll && sprite_index == spr_cotrun)
-{
-	if (!audio_is_playing(sound_customdash1))
-		scr_sound(sound_customdash1);
-}
-else
-	audio_stop_sound(sound_customdash1);
-if (state == states.cottonroll && sprite_index == spr_cotton_maxrun)
-{
-	if (!audio_is_playing(sound_customdash2))
-		scr_sound(sound_customdash2);
-}
-else
-	audio_stop_sound(sound_customdash2);
 if (suplexmove && grounded)
 {
 	suplexmove = false;
