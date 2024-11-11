@@ -22,6 +22,10 @@ function scr_player_uppercut()
 		if (movespeed > 20)
 			movespeed = 20;
 	}
+	else if (move == 0)
+	{
+		movespeed = approach(movespeed, 0, 0.4)
+	}
 	if (key_slap2 && !grounded)
 	{
 		if (character != CHARACTERS.SWAB)
