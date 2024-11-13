@@ -54,7 +54,7 @@ function scr_pizzano_shoulderbash()
 		state = states.mach2;
 		sprite_index = spr_mach;
 	}
-	if (grounded && ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y)))
+	if (grounded && ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 	{
 		//instakillmove = 0
 		grav = 0.5;

@@ -47,18 +47,7 @@ function scr_player_crouchslide()
 		else
 			sprite_index = spr_crouchslip
 	}
-	if (movespeed <= 0 && (!scr_slope() || scr_solid(x + xscale, y, true)) && !place_meeting(x + sign(hsp), y, obj_destructibles))
-	{
-		state = states.normal;
-		movespeed = 0;
-		mach2 = 0;
-		crouchslideAnim = true;
-		image_index = 0;
-		crouchAnim = true;
-		start_running = true;
-		alarm[4] = 14;
-	}
-	if (!scr_slope() && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope) || grounded && scr_solid_slope(x + sign(hsp), y))
+	if ((!scr_slope() && scr_solid(x + hsp, y) || !scr_slope() && scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
 		movespeed = 0;
 		state = states.bump;

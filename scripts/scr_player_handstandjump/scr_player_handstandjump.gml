@@ -66,7 +66,7 @@ function scr_player_handstandjump()
 				if (audio_is_playing(sfx_grabdash))
 					audio_stop_sound(sfx_grabdash);
 			}
-			if (grounded && ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y)))
+			if (grounded && ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 			{
 				movespeed = 0;
 				state = states.jump;
