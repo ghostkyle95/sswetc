@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (ds_list_find_index(global.escaperoom, id) == -1)
 {
 	with (instance_create(x + 32, y + 32, obj_debris))
 		sprite_index = spr_bigbreakEscape_Debris;
@@ -15,7 +15,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		audio_stop_sound(sound_destroyblock2);
 	}
 	scr_sound(choose(sound_destroyblock1, sound_destroyblock2));
-	ds_list_add(global.saveroom, id);
+	ds_list_add(global.escaperoom, id);
 	
 	global.collect += 100;
 	global.combofreeze = 120;

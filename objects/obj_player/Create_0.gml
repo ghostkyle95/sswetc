@@ -19,6 +19,7 @@ vertical = false;
 verticaloffset = 0;
 stateName = "";
 global.saveroom = ds_list_create();
+global.escaperoom = ds_list_create();
 global.timetrial = false;
 grav = 0.5;
 hsp = 0;

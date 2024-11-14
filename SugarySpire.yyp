@@ -1738,6 +1738,7 @@
     {"id":{"name":"obj_bombspawner","path":"objects/obj_bombspawner/obj_bombspawner.yy",},},
     {"id":{"name":"mu_lap3","path":"sounds/mu_lap3/mu_lap3.yy",},},
     {"id":{"name":"bg_wafersky","path":"sprites/bg_wafersky/bg_wafersky.yy",},},
+    {"id":{"name":"noisetv_2","path":"rooms/noisetv_2/noisetv_2.yy",},},
     {"id":{"name":"spr_barpop3","path":"sprites/spr_barpop3/spr_barpop3.yy",},},
     {"id":{"name":"spr_playerN_firemouthidle","path":"sprites/spr_playerN_firemouthidle/spr_playerN_firemouthidle.yy",},},
     {"id":{"name":"spr_playerN_clownwallclimb","path":"sprites/spr_playerN_clownwallclimb/spr_playerN_clownwallclimb.yy",},},
@@ -2793,6 +2794,7 @@
     {"roomId":{"name":"laptesting_1","path":"rooms/laptesting_1/laptesting_1.yy",},},
     {"roomId":{"name":"laptesting_2","path":"rooms/laptesting_2/laptesting_2.yy",},},
     {"roomId":{"name":"noisetv_1","path":"rooms/noisetv_1/noisetv_1.yy",},},
+    {"roomId":{"name":"noisetv_2","path":"rooms/noisetv_2/noisetv_2.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

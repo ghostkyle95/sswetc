@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (ds_list_find_index(global.escaperoom, id) == -1)
 {
 	var rep = 4 + ((sprite_width / 32) - 1);
 	repeat (rep)
@@ -12,5 +12,5 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		shake_mag_acc = 40 / room_speed;
 	}
 	scr_sound(sound_metaldestroy);
-	ds_list_add(global.saveroom, id);
+	ds_list_add(global.escaperoom, id);
 }

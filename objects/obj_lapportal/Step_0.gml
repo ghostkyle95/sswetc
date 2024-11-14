@@ -48,6 +48,7 @@ if (global.panic)
 						global.seconds = 0;
 					}
 				}
+				ds_list_clear(global.escaperoom);
                 instance_create(0, 0, obj_fadeout)
             }
         }

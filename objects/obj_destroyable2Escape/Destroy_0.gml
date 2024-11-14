@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (ds_list_find_index(global.escaperoom, id) == -1)
 {
 	repeat (2)
 	{
@@ -14,7 +14,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		audio_stop_sound(sound_destroyblock2);
 	}
 	scr_sound(choose(sound_destroyblock1, sound_destroyblock2));
-	ds_list_add(global.saveroom, id);
+	ds_list_add(global.escaperoom, id);
 	if (global.collectsound == 10)
 		scr_sound(sound_points);
 		global.collectsound = 0;

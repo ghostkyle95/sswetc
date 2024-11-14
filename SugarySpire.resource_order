@@ -1555,6 +1555,7 @@
     {"name":"obj_bombspawner","order":31,"path":"objects/obj_bombspawner/obj_bombspawner.yy",},
     {"name":"mu_lap3","order":33,"path":"sounds/mu_lap3/mu_lap3.yy",},
     {"name":"bg_wafersky","order":13,"path":"sprites/bg_wafersky/bg_wafersky.yy",},
+    {"name":"noisetv_2","order":1,"path":"rooms/noisetv_2/noisetv_2.yy",},
     {"name":"spr_barpop3","order":2,"path":"sprites/spr_barpop3/spr_barpop3.yy",},
     {"name":"spr_playerN_firemouthidle","order":113,"path":"sprites/spr_playerN_firemouthidle/spr_playerN_firemouthidle.yy",},
     {"name":"spr_playerN_clownwallclimb","order":67,"path":"sprites/spr_playerN_clownwallclimb/spr_playerN_clownwallclimb.yy",},

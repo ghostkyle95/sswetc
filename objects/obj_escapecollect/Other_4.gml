@@ -1,6 +1,6 @@
 with (instance_place(x, y, obj_collectablebox))
 {
-	if (ds_list_find_index(global.saveroom, id) == -1 && !activated)
+	if (ds_list_find_index(global.escaperoom, id) == -1 && !activated)
 	{
 		other.collectvanish = true;
 		other.collectboxid = id;
@@ -9,5 +9,5 @@ with (instance_place(x, y, obj_collectablebox))
 		in_the_void = true;
 	}
 }
-if (ds_list_find_index(global.saveroom, id) != -1)
+if (ds_list_find_index(global.escaperoom, id) != -1)
 	instance_destroy();

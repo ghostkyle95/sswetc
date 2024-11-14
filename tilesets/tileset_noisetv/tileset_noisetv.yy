@@ -4,9 +4,13 @@
   "name": "tileset_noisetv",
   "autoTileSets": [],
   "macroPageTiles": {
-    "SerialiseHeight": 0,
-    "SerialiseWidth": 0,
-    "TileSerialiseData": [],
+    "SerialiseHeight": 5,
+    "SerialiseWidth": 6,
+    "TileCompressedData": [
+      -30,
+      0,
+    ],
+    "TileDataFormat": 1,
   },
   "out_columns": 20,
   "out_tilehborder": 2,

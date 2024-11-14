@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (ds_list_find_index(global.escaperoom, id) == -1)
 {
 	var rep = 7 + ((sprite_width / 32) - 1);
 	repeat (rep)
@@ -12,5 +12,5 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		audio_stop_sound(sound_destroyblock2);
 	}
 	scr_sound(choose(sound_destroyblock1, sound_destroyblock2));
-	ds_list_add(global.saveroom, id);
+	ds_list_add(global.escaperoom, id);
 }
