@@ -48,6 +48,24 @@ if (global.panic)
 						global.seconds = 0;
 					}
 				}
+                for (var i = 0; i < ds_list_size(global.escaperoom); i++)
+                {
+                    var b = ds_list_find_value(global.escaperoom, i)
+                    var q = ds_list_find_index(global.baddieroom, b)
+                    var t = false
+                    if (q == -1)
+                    {
+                        q = ds_list_find_index(global.saveroom, b)
+                        t = true
+                    }
+                    if (q != -1)
+                    {
+                        if (!t)
+                            ds_list_delete(global.baddieroom, q)
+                        else
+                            ds_list_delete(global.saveroom, q)
+                    }
+                }
 				ds_list_clear(global.escaperoom);
                 instance_create(0, 0, obj_fadeout)
             }
