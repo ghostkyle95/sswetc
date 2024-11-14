@@ -30,7 +30,7 @@ function scr_playersounds()
 	if (audio_is_playing(sfx_flip) && sprite_index != spr_mach2jump)
 		audio_stop_sound(sfx_flip);
 		
-	if (sprite_index == spr_superjumppreplight) && !audio_is_playing(sfx_sjumphold)
+	if (sprite_index == spr_superjumppreplight) && (!audio_is_playing(sfx_sjumphold))
 		scr_sound(sfx_sjumphold);
 	if (audio_is_playing(sfx_sjumphold) && sprite_index != spr_superjumppreplight)
 		audio_stop_sound(sfx_sjumphold);

@@ -2252,6 +2252,7 @@
     {"id":{"name":"spr_cotton_land","path":"sprites/spr_cotton_land/spr_cotton_land.yy",},},
     {"id":{"name":"spr_playerN_mortjump","path":"sprites/spr_playerN_mortjump/spr_playerN_mortjump.yy",},},
     {"id":{"name":"spr_cotton_run","path":"sprites/spr_cotton_run/spr_cotton_run.yy",},},
+    {"id":{"name":"spr_pausebutton","path":"sprites/spr_pausebutton/spr_pausebutton.yy",},},
     {"id":{"name":"spr_cotton_maxrun","path":"sprites/spr_cotton_maxrun/spr_cotton_maxrun.yy",},},
     {"id":{"name":"ts_wafer","path":"tilesets/ts_wafer/ts_wafer.yy",},},
     {"id":{"name":"spr_playerN_knightarmor","path":"sprites/spr_playerN_knightarmor/spr_playerN_knightarmor.yy",},},

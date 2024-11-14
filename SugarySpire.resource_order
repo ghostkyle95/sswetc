@@ -2010,6 +2010,7 @@
     {"name":"spr_cotton_land","order":7,"path":"sprites/spr_cotton_land/spr_cotton_land.yy",},
     {"name":"spr_playerN_mortjump","order":224,"path":"sprites/spr_playerN_mortjump/spr_playerN_mortjump.yy",},
     {"name":"spr_cotton_run","order":10,"path":"sprites/spr_cotton_run/spr_cotton_run.yy",},
+    {"name":"spr_pausebutton","order":8,"path":"sprites/spr_pausebutton/spr_pausebutton.yy",},
     {"name":"spr_cotton_maxrun","order":8,"path":"sprites/spr_cotton_maxrun/spr_cotton_maxrun.yy",},
     {"name":"ts_wafer","order":24,"path":"tilesets/ts_wafer/ts_wafer.yy",},
     {"name":"spr_playerN_knightarmor","order":161,"path":"sprites/spr_playerN_knightarmor/spr_playerN_knightarmor.yy",},

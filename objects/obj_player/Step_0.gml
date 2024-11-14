@@ -72,8 +72,6 @@ else
 	audio_stop_sound(sound_tumble);
 if (sprite_index == spr_winding && state != states.normal)
 	windingAnim = 0;
-else
-	audio_stop_sound(sound_superjumpcharge2);
 if (suplexmove && grounded)
 {
 	suplexmove = false;
