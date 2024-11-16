@@ -218,7 +218,7 @@ function scr_player_mach3()
 			vsp = 0;
 			instance_create(x, y, obj_jumpdust);
 			image_index = 0;
-			sprite_index = choose(spr_kungfu1, spr_kungfu2);
+			sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3);
 			state = states.pizzanoshoulderbash;
 		}
 		if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)

@@ -182,7 +182,7 @@ function scr_player_mach2()
 		vsp = 0;
 		instance_create(x, y, obj_jumpdust);
 		image_index = 0;
-		sprite_index = choose(spr_kungfu1, spr_kungfu2);
+		sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3);
 		state = states.pizzanoshoulderbash;
 	}
 	if (key_slap2 && key_up)

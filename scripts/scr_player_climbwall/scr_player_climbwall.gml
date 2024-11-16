@@ -41,7 +41,7 @@ function scr_player_climbwall()
 		state = states.jump;
 		sprite_index = spr_fall;
 	}
-	if (!scr_solid(x + xscale, y, true) && !scr_solid_slope(x + xscale, y))
+	if (!scr_solid(x + xscale, y) && !scr_solid_slope(x + xscale, y))
 	{
 		instance_create(x, y, obj_jumpdust);
 		vsp = 0;

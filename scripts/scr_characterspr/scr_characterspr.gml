@@ -170,6 +170,7 @@ function scr_characterspr()
 		spr_donutget = spr_player_donutget;
 		spr_kungfu1 = spr_pizzano_kungfu1;
 		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_kungfu3 = spr_pizzano_kungfu3;
 		spr_faucetpull = spr_player_faucetpull;
 		spr_superjumpprepside = spr_pizzano_sjumpprepside;
 		spr_superjumpside = spr_pizzano_sjumpside;
@@ -285,7 +286,7 @@ function scr_characterspr()
 		spr_fall2 = spr_pizzano_fall;
 		spr_crouch = spr_pizzano_crouch;
 		spr_crouchjump = spr_player_crouchjump;
-		spr_crouchfall = spr_player_crouchfall;
+		spr_crouchfall = spr_pizzano_crouchfall;
 		spr_couchstart = spr_player_crouchstart;
 		spr_bump = spr_player_bump;
 		spr_land = spr_idle;
@@ -432,6 +433,7 @@ function scr_characterspr()
 		spr_donutget = spr_player_donutget;
 		spr_kungfu1 = spr_pizzano_kungfu1;
 		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_kungfu3 = spr_pizzano_kungfu3;
 		spr_faucetpull = spr_player_faucetpull;
 		spr_superjumpprepside = spr_pizzano_sjumpprepside;
 		spr_superjumpside = spr_pizzano_sjumpside;
@@ -687,6 +689,7 @@ function scr_characterspr()
 		spr_donutget = spr_player_donutget;
 		spr_kungfu1 = spr_pizzano_kungfu1;
 		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_kungfu3 = spr_pizzano_kungfu3;
 		spr_faucetpull = spr_player_faucetpull;
 		spr_superjumpprepside = spr_playerN_jetpackstart;
 		spr_superjumpside = spr_playerN_jetpackboost;
@@ -954,6 +957,7 @@ function scr_characterspr()
 		spr_donutget = spr_player_donutget;
 		spr_kungfu1 = spr_pizzano_kungfu1;
 		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_kungfu3 = spr_pizzano_kungfu3;
 		spr_faucetpull = spr_player_faucetpull;
 		spr_superjumpprepside = spr_playerN_jetpackstart;
 		spr_superjumpside = spr_playerN_jetpackboost;
@@ -1210,6 +1214,7 @@ function scr_characterspr()
 		spr_donutget = spr_player_donutget;
 		spr_kungfu1 = spr_pizzano_kungfu1;
 		spr_kungfu2 = spr_pizzano_kungfu2;
+		spr_kungfu3 = spr_pizzano_kungfu3;
 		spr_faucetpull = spr_player_faucetpull;
 		spr_superjumpprepside = spr_pizzano_sjumpprepside;
 		spr_superjumpside = spr_pizzano_sjumpside;
