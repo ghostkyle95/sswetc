@@ -13,7 +13,7 @@ if drawtext
 	if points != 0
 	{
 		draw_set_font(global.font);
-		draw_text(x, y - 150, string(points));
+		draw_text(x, y - 135, string(points));
 		draw_set_font(global.smallfont);
 		draw_text(x, y - 75, string(secretsfound) + " OUT OF 3 SECRETS FOUND");
 		if laps != 0 && laps != -4

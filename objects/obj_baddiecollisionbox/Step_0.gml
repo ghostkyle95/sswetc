@@ -78,7 +78,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					stunned = 500;
 				}
 			}
-			if (instance_exists(other.baddieID) && !instakillmove && other.baddieID.vsp > 0 && state != states.hurt && state != states.superslam && state != states.finishingblow && state != states.handstandjump && state != states.pizzanoshoulderbash)
+			/*if (instance_exists(other.baddieID) && !instakillmove && other.baddieID.vsp > 0 && state != states.hurt && state != states.superslam && state != states.finishingblow && state != states.handstandjump && state != states.pizzanoshoulderbash)
 			{
 				if (other.baddieID.stuntouch <= 0)
 				{
@@ -92,8 +92,8 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					other.baddieID.hsp = -other.baddieID.image_xscale * 2;
 					other.baddieID.vsp = -5;
 				}
-			}
-			if (instance_exists(other.baddieID) && state == states.mach1)
+			}*/
+			/*if (instance_exists(other.baddieID) && state == states.mach1)
 			{
 				if (other.baddieID.object_index == obj_pizzaball)
 					global.golfhit += 1;
@@ -128,8 +128,8 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					other.baddieID.thrown = 1;
 					vsp = -5;
 				}
-			}
-			if (instance_exists(other.baddieID) && (state == states.mach2 || state == states.rocketfistpizzano || state == states.pizzanoshoulderbash || state == states.jetpackdoise || sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall || sprite_index == spr_wallbounce ) && other.baddieID.grounded)
+			}*/
+			if (instance_exists(other.baddieID) && (state == states.mach2 || state == states.rocketfistpizzano || state == states.jetpackdoise || sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall || sprite_index == spr_wallbounce) && other.baddieID.grounded)
 			{
 				if (other.baddieID.object_index == obj_pizzaball)
 					global.golfhit += 1;

@@ -99,6 +99,7 @@ function toggle_collision_function()
         global.showcollisionarray[i++] = obj_doorE;
         global.showcollisionarray[i++] = obj_doorP;
         global.showcollisionarray[i++] = obj_grindrail;
+        global.showcollisionarray[i++] = obj_grindrailslope;
 	}
 	var array = global.showcollisionarray;
 	var length = array_length(array);
@@ -177,7 +178,7 @@ function meta_instance_create()
 	{
 		description: "create an object",
 		arguments: ["<x>", "<y>", "<object>"],
-		suggestions: [[], [], []],
+		suggestions: [[obj_player.x], [obj_player.y], []],
 		argumentDescriptions: ["the X coordinate to create the object at", "the Y coordinate to create the object at", "the object to create"]
 	};
 }

@@ -122,7 +122,7 @@ if (state == states.throwing || state == states.punch || state == states.backkic
 	grabbing = true;
 else
 	grabbing = false;
-if ((state == states.mach3 || state == states.machtumble || state == states.minecart || state == states.fireass || state == states.puddle || state == states.hookshot || state == states.skateboard || state == states.timesup || state == states.freefall || state == states.Sjump || state == states.machroll || state == states.shotgun || state == states.charge || (state == states.superslam && sprite_index == spr_piledriver) || (state == states.superslam && sprite_index == spr_piledriverstart) || state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.boxxedpep || state == states.cheesepep || state == states.cheeseball) || state == states.uppercut)
+if ((state == states.mach3 || state == states.machtumble || state == states.minecart || state == states.fireass || state == states.puddle || state == states.hookshot || state == states.skateboard || state == states.timesup || state == states.freefall || state == states.Sjump || state == states.machroll || state == states.shotgun || state == states.charge || (state == states.superslam && sprite_index == spr_piledriver) || (state == states.superslam && sprite_index == spr_piledriverstart) || state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes || state == states.boxxedpep || state == states.cheesepep || state == states.cheeseball) || state == states.uppercut || state == states.pizzanoshoulderbash)
 	instakillmove = true;
 else
 	instakillmove = false;

@@ -323,7 +323,7 @@ function scr_characterspr()
 		spr_mach2jump = spr_pizzano_twirl;
 		spr_Timesup = spr_pizzano_timesup;
 		spr_deathstart = spr_player_deathstart;
-		spr_deathend = spr_player_deathend;
+		spr_deathend = spr_pizzano_deathend;
 		spr_machpunch1 = spr_player_machpunch1;
 		spr_machpunch2 = spr_player_machpunch2;
 		spr_hurtjump = spr_pizzano_hurt;
