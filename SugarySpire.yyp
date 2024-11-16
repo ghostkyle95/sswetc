@@ -2427,6 +2427,7 @@
     {"id":{"name":"spr_chocolate_taunt","path":"sprites/spr_chocolate_taunt/spr_chocolate_taunt.yy",},},
     {"id":{"name":"spr_playerSW_longjumpend","path":"sprites/spr_playerSW_longjumpend/spr_playerSW_longjumpend.yy",},},
     {"id":{"name":"spr_ranksign","path":"sprites/spr_ranksign/spr_ranksign.yy",},},
+    {"id":{"name":"seq_shoulderbash","path":"sequences/seq_shoulderbash/seq_shoulderbash.yy",},},
     {"id":{"name":"spr_cottonpoof","path":"sprites/spr_cottonpoof/spr_cottonpoof.yy",},},
     {"id":{"name":"bg_mines2","path":"sprites/bg_mines2/bg_mines2.yy",},},
     {"id":{"name":"spr_playerN_minigundown","path":"sprites/spr_playerN_minigundown/spr_playerN_minigundown.yy",},},
