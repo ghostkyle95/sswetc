@@ -208,8 +208,8 @@ function scr_characterspr()
 		spr_bomb_runabouttoexplode = spr_bombpep_runabouttoexplode;
 		spr_bomb_end = spr_bombpep_end;
 		
-		spr_walljumpstart = spr_player_mach2jump;
-		spr_walljump = spr_player_mach2jump;
+		spr_walljumpstart = spr_player_wallkickcancelstart;
+		spr_walljump = spr_player_wallkickcancel;
 		
 		spr_divebombstart = spr_player_bodyslamstartOLD;
 		spr_divebombfall = spr_player_bodyslamfallOLD;

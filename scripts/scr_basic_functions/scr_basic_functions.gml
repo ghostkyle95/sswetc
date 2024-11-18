@@ -46,6 +46,9 @@ function rank_checker(_rank = global.rank)
 		case "d":
 			value = 0;
 			break;
+		case "none":
+			value = -1
+			break;
 	}
 	return value;
 }

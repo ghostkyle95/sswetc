@@ -1,5 +1,7 @@
 for (var i = 0; room_exists(i); i++)
 	global.roomlist[i] = room_get_name(i);
+for (var i = 0; object_exists(i); i++)
+	global.objectlist[i] = object_get_name(i);
 function sh_escape()
 {
 	var arg0 = string(argument0[1]);
@@ -178,7 +180,7 @@ function meta_instance_create()
 	{
 		description: "create an object",
 		arguments: ["<x>", "<y>", "<object>"],
-		suggestions: [[obj_player.x], [obj_player.y], []],
+		suggestions: [[string(obj_player.x)], [string(obj_player.y)], global.objectlist],
 		argumentDescriptions: ["the X coordinate to create the object at", "the Y coordinate to create the object at", "the object to create"]
 	};
 }

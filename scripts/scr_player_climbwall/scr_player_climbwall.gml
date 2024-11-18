@@ -91,7 +91,7 @@ function scr_player_climbwall()
 					mach2 = 100;
 					instance_create(x, y, obj_jumpdust);
 					vsp = -9;
-					sprite_index = spr_mach4;
+					sprite_index = spr_plrdashpad;
 					state = states.mach3;
 					xscale *= -1;
 				}
@@ -99,6 +99,7 @@ function scr_player_climbwall()
 			else
 			{
 				sprite_index = spr_walljumpstart;
+				image_index = 0;
 				mach2 = 35;
 				instance_create(x, y, obj_jumpdust);
 				vsp = -9;

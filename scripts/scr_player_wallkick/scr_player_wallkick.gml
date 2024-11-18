@@ -24,6 +24,7 @@ function scr_player_wallkick(){
 		flash = true;
 		vsp = -7;
 		sprite_index = spr_walljumpstart;
+		image_index = 0;
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 		freefallsmash = false;

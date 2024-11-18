@@ -32,12 +32,12 @@ function scr_player_uppercut()
 		{
 			if (move != 0)
 				xscale = move;
-			movespeed = 10;
+			movespeed = 12;
 			machhitAnim = false;
 			state = states.mach2;
 			flash = true;
 			vsp = -7;
-			sprite_index = spr_walljumpstart;
+			sprite_index = spr_mach2jump;
 			with (instance_create(x, y, obj_jumpdust))
 				image_xscale = other.xscale;
 			freefallsmash = false;

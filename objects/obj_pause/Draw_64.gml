@@ -22,10 +22,10 @@ if (pause)
 	draw_set_font(global.font);
 	draw_set_halign(fa_left);
 	draw_set_color(c_white);
-	draw_text(option1pos[0] + 100, option1pos[1] + 35, "RESUME");
-	draw_text(option2pos[0] + 100, option2pos[1] + 35, "RETRY");
-	draw_text(option3pos[0] + 100, option3pos[1] + 35, "EXIT");
-	draw_text(option4pos[0] + 100, option4pos[1] + 35, "OPTIONS");
+	draw_text(option1pos[0] + 100, option1pos[1] + 40, "RESUME");
+	draw_text(option2pos[0] + 100, option2pos[1] + 40, "RETRY");
+	draw_text(option3pos[0] + 100, option3pos[1] + 40, "EXIT");
+	draw_text(option4pos[0] + 100, option4pos[1] + 40, "OPTIONS");
 	
 	// confecti
 	if (global.mallowfollow)
