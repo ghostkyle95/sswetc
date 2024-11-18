@@ -172,7 +172,10 @@ function meta_room_goto()
 }
 function sh_instance_create()
 {
-	instance_create(argument0[1], argument0[2], asset_get_index(argument0[3]));
+	if argument0[1] == -4 && argument0[2] == -4
+		instance_create(obj_player.x, obj_player.y, asset_get_index(argument0[3]));
+	else
+		instance_create(argument0[1], argument0[2], asset_get_index(argument0[3]));
 }
 function meta_instance_create()
 {
@@ -180,7 +183,7 @@ function meta_instance_create()
 	{
 		description: "create an object",
 		arguments: ["<x>", "<y>", "<object>"],
-		suggestions: [[string(obj_player.x)], [string(obj_player.y)], global.objectlist],
+		suggestions: [[], [], global.objectlist],
 		argumentDescriptions: ["the X coordinate to create the object at", "the Y coordinate to create the object at", "the object to create"]
 	};
 }
