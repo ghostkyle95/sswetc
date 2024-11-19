@@ -2,7 +2,6 @@ function scr_player_grind()
 {
 	sprite_index = spr_grind;
 	image_speed = 0.35;
-	vsp = 0;
 	machhitAnim = false;
 	crouchslideAnim = true;
     hsp = xscale * movespeed

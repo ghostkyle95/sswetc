@@ -9,5 +9,6 @@ if ((other.y > other.yprevious || (other.xscale == sign(image_xscale) && other.y
 	{
 		other.movespeed = 10
         other.state = states.grind
+		other.sprite_index = other.spr_grind
 	}
 }

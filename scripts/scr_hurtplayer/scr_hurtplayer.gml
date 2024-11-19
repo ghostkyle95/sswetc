@@ -55,10 +55,11 @@ function scr_hurtplayer(_player_index = obj_player)
 				vsp = -15;
 				timeuntilhpback = 300;
 				var _oldcollect = global.collect;
-				if (global.collect > 100)
-					global.collect -= 100;
+				if (global.collect > 50)
+					global.collect -= 50;
 				else
 					global.collect = 0;
+				global.combotime -= 25
 				var _repeat = clamp(round((_oldcollect - global.collect) / 10), 0, 15);
 				if (global.collect >= 0)
 				{
