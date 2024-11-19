@@ -241,29 +241,29 @@ function scr_player_normal()
 	}
 	else
 		image_speed = 0.35;
-	if ((character == CHARACTERS.PIZZELLE || character == CHARACTERS.NOISE || character == CHARACTERS.SWAB) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true) && obj_player.character != CHARACTERS.GUMBOB && !key_attack)
+	if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
 	{
 		scr_sound(sfx_grabdash);
 		instance_create(x, y, obj_slaphitbox);
 		suplexmove = true;
 		vsp = 0;
 		instance_create(x, y, obj_jumpdust);
-		image_index = 0;
-		sprite_index = spr_suplexdash;
-		state = states.handstandjump;
+		
+		switch (character)
+		{
+			case CHARACTERS.PIZZELLE:
+			case CHARACTERS.NOISE:
+			case CHARACTERS.SWAB:
+				image_index = 0;
+				sprite_index = spr_suplexdash;
+				state = states.handstandjump;
+			case CHARACTERS.PIZZANO:
+				image_index = 0;
+				sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3);
+				state = states.pizzanoshoulderbash;
+		}
 	}
-	if ((character == CHARACTERS.PIZZANO) && (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true))
-	{
-		scr_sound(sfx_grabdash);
-		instance_create(x, y, obj_slaphitbox);
-		suplexmove = true;
-		vsp = 0;
-		instance_create(x, y, obj_jumpdust);
-		image_index = 0;
-		sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3);
-		state = states.pizzanoshoulderbash;
-	}
-			scr_cantaunt()
+	scr_cantaunt()
 	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
 		instance_create(x, y + 43, obj_cloudeffect);
 	if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (sprite_index == spr_player_downslopes || sprite_index == spr_player_upslopes))
