@@ -40,7 +40,7 @@ if (global.panic)
                 }
                 global.lap = true
                 global.laps++
-				if (global.laps == 2)
+				if (global.laps >= 2)
 				{
 					if (global.minutes != 0 && global.seconds != 0)
 					{

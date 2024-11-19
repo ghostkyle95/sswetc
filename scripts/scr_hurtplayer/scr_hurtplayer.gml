@@ -52,7 +52,7 @@ function scr_hurtplayer(_player_index = obj_player)
 				else
 					sprite_index = spr_hurt;
 				movespeed = 8;
-				vsp = -5;
+				vsp = -15;
 				timeuntilhpback = 300;
 				var _oldcollect = global.collect;
 				if (global.collect > 100)

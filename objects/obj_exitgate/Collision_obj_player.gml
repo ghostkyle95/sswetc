@@ -35,9 +35,12 @@ if (global.panic)
 				scr_sound(mu_rankd);
 			audio_stop_sound(mu_escape);
 			audio_stop_sound(mu_lap2);
+			audio_stop_sound(mu_lap3);
 			audio_stop_sound(mu_pizzanoescape);
+			audio_stop_sound(mu_pizzanolap2);
 			audio_stop_sound(mu_noiseescape);
 			audio_stop_sound(mu_noiselap2);
+			audio_stop_sound(mu_noiselap3);
 			scr_writetosave()
 			obj_tv.tvsprite = spr_tvoff;
 			if (!instance_exists(obj_endlevelfade))

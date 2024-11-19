@@ -1521,6 +1521,7 @@
     {"id":{"name":"spr_player_3hpidle","path":"sprites/spr_player_3hpidle/spr_player_3hpidle.yy",},},
     {"id":{"name":"spr_player_candyidle","path":"sprites/spr_player_candyidle/spr_player_candyidle.yy",},},
     {"id":{"name":"spr_player_machslidestart","path":"sprites/spr_player_machslidestart/spr_player_machslidestart.yy",},},
+    {"id":{"name":"entryway_lap","path":"rooms/entryway_lap/entryway_lap.yy",},},
     {"id":{"name":"ts_tutorialsigns_sprite","path":"sprites/ts_tutorialsigns_sprite/ts_tutorialsigns_sprite.yy",},},
     {"id":{"name":"spr_playerN_boxxedmove","path":"sprites/spr_playerN_boxxedmove/spr_playerN_boxxedmove.yy",},},
     {"id":{"name":"spr_playerN_boxxeddash","path":"sprites/spr_playerN_boxxeddash/spr_playerN_boxxeddash.yy",},},
@@ -2805,6 +2806,7 @@
     {"roomId":{"name":"noisetv_1","path":"rooms/noisetv_1/noisetv_1.yy",},},
     {"roomId":{"name":"noisetv_2","path":"rooms/noisetv_2/noisetv_2.yy",},},
     {"roomId":{"name":"noisetv_3","path":"rooms/noisetv_3/noisetv_3.yy",},},
+    {"roomId":{"name":"entryway_lap","path":"rooms/entryway_lap/entryway_lap.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

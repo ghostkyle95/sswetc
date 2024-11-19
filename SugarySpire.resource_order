@@ -1360,6 +1360,7 @@
     {"name":"spr_player_3hpidle","order":9,"path":"sprites/spr_player_3hpidle/spr_player_3hpidle.yy",},
     {"name":"spr_player_candyidle","order":1,"path":"sprites/spr_player_candyidle/spr_player_candyidle.yy",},
     {"name":"spr_player_machslidestart","order":95,"path":"sprites/spr_player_machslidestart/spr_player_machslidestart.yy",},
+    {"name":"entryway_lap","order":14,"path":"rooms/entryway_lap/entryway_lap.yy",},
     {"name":"ts_tutorialsigns_sprite","order":23,"path":"sprites/ts_tutorialsigns_sprite/ts_tutorialsigns_sprite.yy",},
     {"name":"spr_playerN_boxxedmove","order":40,"path":"sprites/spr_playerN_boxxedmove/spr_playerN_boxxedmove.yy",},
     {"name":"spr_playerN_boxxeddash","order":30,"path":"sprites/spr_playerN_boxxeddash/spr_playerN_boxxeddash.yy",},
