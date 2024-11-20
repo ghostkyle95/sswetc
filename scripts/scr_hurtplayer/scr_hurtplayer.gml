@@ -45,7 +45,7 @@ function scr_hurtplayer(_player_index = obj_player)
 				global.hurtcounter += 1;
 				state = states.hurt;
 				alarm[8] = 60;
-				alarm[7] = 120;
+				alarm[7] = 240;
 				hurted = true;
 				if (xscale == other.image_xscale)
 					sprite_index = spr_hurtjump;

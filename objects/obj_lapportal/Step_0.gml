@@ -25,6 +25,7 @@ if (global.panic)
         {
             hsp = 0
             vsp = 0
+			movespeed = 0
             visible = false
         }
         if (floor(image_index) == (image_number - 1))
@@ -40,13 +41,10 @@ if (global.panic)
                 }
                 global.lap = true
                 global.laps++
-				if (global.laps >= 2)
+				if (global.laps == 2)
 				{
-					if (global.minutes != 0 && global.seconds != 0)
-					{
-						global.minutes = 0;
-						global.seconds = 0;
-					}
+					global.minutes = 0;
+					global.seconds = 0;
 				}
                 for (var i = 0; i < ds_list_size(global.escaperoom); i++)
                 {
