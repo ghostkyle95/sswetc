@@ -119,7 +119,8 @@ enum states {
 	sjumpcancelprep, // 116
     jetpackdoise, // 117
 	wallkick, // 118
-	trickjump // 119
+	trickjump, // 119
+	doisebounce // 120
 };
 
 
@@ -487,6 +488,9 @@ function scr_playerstate()
 			break
 		case states.trickjump:
 			_stateFunction = scr_player_trickjump;
+			break
+		case states.doisebounce:
+			_stateFunction = scr_doise_bounce;
 			break
 	}
 	stateName = "states.undefined";

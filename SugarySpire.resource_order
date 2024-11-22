@@ -1390,6 +1390,7 @@
     {"name":"spr_player_uppercutend","order":149,"path":"sprites/spr_player_uppercutend/spr_player_uppercutend.yy",},
     {"name":"spr_playerN_rockethitwall","order":270,"path":"sprites/spr_playerN_rockethitwall/spr_playerN_rockethitwall.yy",},
     {"name":"bg_mines1para2","order":10,"path":"sprites/bg_mines1para2/bg_mines1para2.yy",},
+    {"name":"spr_doise_bounce","order":2,"path":"scripts/spr_doise_bounce/spr_doise_bounce.yy",},
     {"name":"spr_player_machslideboost3","order":93,"path":"sprites/spr_player_machslideboost3/spr_player_machslideboost3.yy",},
     {"name":"spr_player_bodyslamfall","order":20,"path":"sprites/spr_player_bodyslamfall/spr_player_bodyslamfall.yy",},
     {"name":"spr_giantcollect3","order":2,"path":"sprites/spr_giantcollect3/spr_giantcollect3.yy",},

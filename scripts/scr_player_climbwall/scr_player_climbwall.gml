@@ -2,15 +2,27 @@ function scr_player_climbwall()
 {
     if (character == CHARACTERS.NOISE)
 	{
-		scr_sound(sfx_wallbouncestart)
-		sprite_index = spr_wallbounce
-		state = states.machcancel
-		savedmove = xscale
-		vsp = (-((17 * (1 - noisewalljump * 0.15))))
-		noisewalljump++
-		hsp = 0
-		movespeed = 0
-		image_index = 0
+		switch (doisemode)
+		{
+			case false:
+				scr_sound(sfx_wallbouncestart)
+				sprite_index = spr_wallbounce
+				state = states.machcancel
+				savedmove = xscale
+				vsp = (-((17 * (1 - noisewalljump * 0.15))))
+				noisewalljump++
+				hsp = 0
+				movespeed = 0
+				image_index = 0
+			case true:
+				scr_sound(sfx_wallbouncestart)
+				sprite_index = spr_wallbounce
+				state = states.doisebounce
+				vsp = -17
+				hsp = 0
+				movespeed = 0
+				image_index = 0
+		}
 		return;
     }
 	

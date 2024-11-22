@@ -1037,7 +1037,7 @@ function scr_characterspr()
 		
 		spr_sidewayspin = spr_playerN_sidewayspin;
 		spr_sidewayspinend = spr_playerN_sidewayspinend;
-		spr_wallbounce = spr_playerN_wallbounce;
+		spr_wallbounce = spr_playerN_mach2jump;
 		spr_tornado = spr_playerN_divebomb;
 		spr_tornadofall = spr_playerN_divebombfall;
 		spr_tornadoland = spr_playerN_divebombland;
