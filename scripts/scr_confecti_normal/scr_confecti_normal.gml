@@ -4,7 +4,12 @@ function scr_confecti_normal()
 	if (sprite_index != spr_appear)
 	{
 		if (obj_player.hsp != 0)
-			sprite_index = spr_run;
+		{
+			if (!global.panic)
+				sprite_index = spr_run;
+			else
+				sprite_index = spr_panicrun;
+		}
 		else if (!global.panic)
 			sprite_index = spr_idle;
 		else

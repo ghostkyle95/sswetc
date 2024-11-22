@@ -49,8 +49,8 @@ function scr_player_freefall()
 			if (freefallsmash > 10)
 			{
 				state = states.mach3;
-				sprite_index = spr_mach4
-				movespeed = 12
+				sprite_index = spr_mach4;
+				movespeed = 12;
 			}
 			else
 			{

@@ -33,13 +33,19 @@ function scr_player_normal()
 				{
 					randomise();
 					idleanim = random_range(0, 100);
-					if (idleanim <= 33)
-						sprite_index = spr_idle1;
-					else if (idleanim > 33 && idleanim < 66)
-						sprite_index = spr_idle2;
-					else if (idleanim > 66)
-						sprite_index = spr_idle3;
-					image_index = 0;
+                    image_index = 0
+                    if (idleanim <= 16)
+                        sprite_index = spr_idle1
+                    else if (idleanim > 16 && idleanim <= 32)
+                        sprite_index = spr_idle2
+                    else if (idleanim > 32 && idleanim <= 48)
+                        sprite_index = spr_idle3
+                    else if (idleanim > 48 && idleanim <= 64)
+                        sprite_index = spr_idle4
+                    else if (idleanim > 64 && idleanim <= 80)
+                        sprite_index = spr_idle5
+                    else
+                        sprite_index = spr_idle6
 				}
 				if (idle < 300)
 				{
@@ -173,8 +179,6 @@ function scr_player_normal()
 			image_index = 0;
 		}
 	}
-	if (character == "C" && key_attack)
-		state = states.coneboyinhale3;
 	if (key_jump && grounded && !key_down)
 	{
 		scr_sound(sfx_jump);

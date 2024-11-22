@@ -51,7 +51,9 @@ function scr_player_mach3()
 				sprite_index = spr_walljump;
 			if grounded && (sprite_index == spr_walljumpstart || sprite_index == spr_walljump)
 				sprite_index = spr_mach4;
-			if ((movespeed > 20 && sprite_index != spr_crazyrun) && sprite_index != spr_dive && sprite_index != spr_rollgetup)
+			if animation_end() && sprite_index == spr_mach3hit
+				sprite_index = spr_mach4;
+			if ((movespeed > 20 && sprite_index != spr_crazyrun) && sprite_index != spr_dive && sprite_index != spr_rollgetup && sprite_index != spr_mach3hit)
 			{
 				flash = true;
 				sprite_index = spr_crazyrun;

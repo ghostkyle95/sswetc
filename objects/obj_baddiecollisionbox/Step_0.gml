@@ -16,6 +16,11 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 			{
 				instance_destroy(other.baddieID);
 				instance_destroy(other.id);
+                if (state == states.mach3 && sprite_index != spr_mach3hit)
+                {
+                    sprite_index = spr_mach3hit;
+                    image_index = 0;
+                }
 				global.hit += 1;
 				global.combotime = 60;
 				if (!grounded && state != states.freefall && key_jump2)
@@ -62,7 +67,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					}
 				}
 			}
-			if (instance_exists(other.baddieID) && ((state == states.cotton && sprite_index == spr_cotattack) || state == states.cottonroll))
+			if (instance_exists(other.baddieID) && ((state == states.cotton || state == states.cottonroll)))
 			{
 				with (other.baddieID)
 				{
@@ -72,10 +77,15 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					scr_sound(sound_slaphit);
 					hp = 0;
 					thrown = true;
-					hsp = obj_player.xscale * 20;
-					vsp = -6;
-					state = baddiestates.stun;
-					stunned = 500;
+					if (other.state == states.cottondrill || other.state == states.cottonroll)
+					{
+						hsp = obj_player.xscale * 20;
+						vsp = -6;
+						state = baddiestates.stun;
+						stunned = 500;
+					}
+					else
+						instance_destroy()
 				}
 			}
 			/*if (instance_exists(other.baddieID) && !instakillmove && other.baddieID.vsp > 0 && state != states.hurt && state != states.superslam && state != states.finishingblow && state != states.handstandjump && state != states.pizzanoshoulderbash)

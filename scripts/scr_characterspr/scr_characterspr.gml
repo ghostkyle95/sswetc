@@ -68,9 +68,12 @@ function scr_characterspr()
 		spr_airdash1 = spr_player_airdash1;
 		spr_airdash2 = spr_player_airdash2;
 		spr_keyget = spr_player_keyget;
-		spr_idle1 = spr_player_idle;
-		spr_idle2 = spr_player_idle;
-		spr_idle3 = spr_player_idle;
+		spr_idle1 = spr_player_idle1;
+		spr_idle2 = spr_player_idle2;
+		spr_idle3 = spr_player_idle1;
+		spr_idle4 = spr_player_idle2;
+		spr_idle5 = spr_player_idle1;
+		spr_idle6 = spr_player_idle2;
 		spr_suplexdash = spr_player_suplexdash;
 		spr_piledriver = spr_player_piledriver;
 		spr_piledriverland = spr_player_piledriverland;
@@ -241,6 +244,8 @@ function scr_characterspr()
 		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
+		spr_mach3hit = spr_player_machhit;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -289,8 +294,8 @@ function scr_characterspr()
 		spr_crouchfall = spr_pizzano_crouchfall;
 		spr_couchstart = spr_player_crouchstart;
 		spr_bump = spr_player_bump;
-		spr_land = spr_idle;
-		spr_land2 = spr_idle;
+		spr_land = spr_player_land;
+		spr_land2 = spr_player_land2;
 		spr_lookdoor = spr_player_lookdoor;
 		spr_walkfront = spr_pizzano_walkfront;
 		spr_victory = spr_player_entergate;
@@ -340,9 +345,12 @@ function scr_characterspr()
 		spr_airdash1 = spr_player_airdash1;
 		spr_airdash2 = spr_player_airdash2;
 		spr_keyget = spr_player_keyget;
-		spr_idle1 = spr_idle;
-		spr_idle2 = spr_idle;
-		spr_idle3 = spr_idle;
+		spr_idle1 = spr_player_idle;
+		spr_idle2 = spr_player_idle;
+		spr_idle3 = spr_player_idle;
+		spr_idle4 = spr_player_idle;
+		spr_idle5 = spr_player_idle;
+		spr_idle6 = spr_player_idle;
 		spr_suplexdash = spr_player_suplexdash;
 		spr_piledriver = spr_player_piledriver;
 		spr_piledriverland = spr_player_piledriverland;
@@ -492,6 +500,8 @@ function scr_characterspr()
 		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
+		spr_mach3hit = spr_player_machhit;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -590,6 +600,9 @@ function scr_characterspr()
 		spr_idle1 = spr_playerN_idleballoon;
 		spr_idle2 = spr_playerN_idlegun;
 		spr_idle3 = spr_playerN_idledance;
+		spr_idle4 = spr_playerN_idleface;
+		spr_idle5 = spr_playerN_idlemask;
+		spr_idle6 = spr_playerN_idlesmoke;
 		spr_suplexdash = spr_playerN_suplexgrab;
 		spr_piledriver = spr_playerN_piledriver;
 		spr_piledriverland = spr_playerN_piledriverland;
@@ -760,6 +773,8 @@ function scr_characterspr()
 		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
+		spr_mach3hit = spr_playerN_machpunch1;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -856,8 +871,11 @@ function scr_characterspr()
 		spr_airdash2 = spr_playerN_airdash2;
 		spr_keyget = spr_playerN_keyget;
 		spr_idle1 = spr_playerN_idleballoon;
-		spr_idle2 = spr_playerN_idlesmoke;
-		spr_idle3 = spr_playerN_idlemask;
+		spr_idle2 = spr_playerN_idlegun;
+		spr_idle3 = spr_playerN_idledance;
+		spr_idle4 = spr_playerN_idleface;
+		spr_idle5 = spr_playerN_idlemask;
+		spr_idle6 = spr_playerN_idlesmoke;
 		spr_suplexdash = spr_playerN_suplexgrab;
 		spr_piledriver = spr_playerN_piledriver;
 		spr_piledriverland = spr_playerN_piledriverland;
@@ -1028,6 +1046,8 @@ function scr_characterspr()
 		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
+		spr_mach3hit = spr_playerN_machpunch1;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1116,6 +1136,9 @@ function scr_characterspr()
 		spr_idle1 = spr_playerSW_handgesture1;
 		spr_idle2 = spr_playerSW_handgesture2;
 		spr_idle3 = spr_playerSW_handgesture3;
+		spr_idle4 = spr_playerSW_handgesture4;
+		spr_idle5 = spr_playerSW_idledance;
+		spr_idle6 = spr_playerSW_idlefrown;
 		spr_suplexdash = spr_playerSW_grab;
 		spr_piledriver = spr_playerSW_piledriver;
 		spr_piledriverland = spr_playerSW_piledriverland;
@@ -1284,6 +1307,8 @@ function scr_characterspr()
 		spr_crouchslipstart = spr_playerSW_crouchslipstart;
 		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
+		
+		spr_mach3hit = spr_playerSW_mach3hit;
 		
 		spr_srank = spr_rankSWS;
 		spr_arank = spr_rankSWA;

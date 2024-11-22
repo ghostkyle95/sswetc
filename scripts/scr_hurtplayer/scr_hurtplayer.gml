@@ -39,13 +39,16 @@ function scr_hurtplayer(_player_index = obj_player)
 			else if (state == states.cheesepep || state == states.cheesepepstick)
 			{
 			}
+			else if (state == states.cotton || state = states.cottondrill || state = states.cottonroll)
+			{
+			}
 			else if (state != states.hurt && state != states.backbreaker && !hurted && !cutscene && state != states.bump && state != states.tumble)
 			{
 				scr_sound(sound_touchspike);
 				global.hurtcounter += 1;
 				state = states.hurt;
 				alarm[8] = 60;
-				alarm[7] = 240;
+				alarm[7] = 120;
 				hurted = true;
 				if (xscale == other.image_xscale)
 					sprite_index = spr_hurtjump;

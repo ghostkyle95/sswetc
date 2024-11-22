@@ -146,25 +146,34 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 				if (!obj_player.angry)
 				{
 					ChannelState = 7;
-					if (tvsprite != idletvspr && !(tvsprite == tvchange1 || tvsprite == tvchange2))
+					if (string_pos("secret", room_get_name(room)) != 0)
 					{
 						tvcount = choose(500, 450, 400, 550);
-						tvsprite = idletvspr;
+						tvsprite = secrettvspr;
 						image_index = 0;
 					}
-					if (tvsprite == idletvspr && tvcount < 1)
+					else
 					{
-						tvsprite = choose(tvchange1, tvchange2, tvchange2, tvchange1);
-						image_index = 0;
+						if (tvsprite != idletvspr && !(tvsprite == tvchange1 || tvsprite == tvchange2))
+						{
+							tvcount = choose(500, 450, 400, 550);
+							tvsprite = idletvspr;
+							image_index = 0;
+						}
+						if (tvsprite == idletvspr && tvcount < 1)
+						{
+							tvsprite = choose(tvchange1, tvchange2, tvchange2, tvchange1);
+							image_index = 0;
+						}
+						if ((tvsprite == tvchange1 || tvsprite == tvchange2) && animation_end())
+						{
+							tvcount = choose(500, 450, 400, 550);
+							tvsprite = idletvspr;
+							image_index = 0;
+						}
+						if (tvsprite == idletvspr)
+							tvcount--;
 					}
-					if ((tvsprite == tvchange1 || tvsprite == tvchange2) && animation_end())
-					{
-						tvcount = choose(500, 450, 400, 550);
-						tvsprite = idletvspr;
-						image_index = 0;
-					}
-					if (tvsprite == idletvspr)
-						tvcount--;
 				}
 				else
 				{
