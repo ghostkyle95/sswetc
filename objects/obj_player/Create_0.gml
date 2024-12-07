@@ -1,5 +1,12 @@
 scr_initinput();
 scr_getinput();
+enum combotype
+{
+	democombo,
+	verticalcombo,
+	horizontalcombo
+}
+global.combohudtype = combotype.horizontalcombo;
 global.combodropped = false;
 global.secretsfound = 0;
 global.laps = 0;

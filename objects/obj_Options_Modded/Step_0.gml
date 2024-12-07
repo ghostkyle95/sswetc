@@ -11,7 +11,7 @@ if (canmove)
 		optionsaved_screentilt = global.screentilt;
 		optionsaved_hitstun = global.hitstunEnabled;*/
 	}
-	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 1)
+	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 2)
 	{
 		optionselected += 1;
 		scr_sound(sound_step);
@@ -41,6 +41,32 @@ if (canmove)
 			{
 				scr_sound(sound_enemythrow);
 				global.debugmode = optionsaved_debug;
+			}
+			break;
+		case modded_selected.combotype:
+			subtitle = "CHOOSE THE STYLE OF YOUR COMBO HUD";
+			CursorY = 200;
+			optionsaved_combotype += (key_right2 + key_left2);
+			optionsaved_combotype = wrap(optionsaved_combotype, 0, 2);
+			if (key_jump)
+			{
+				scr_sound(sound_enemythrow);
+				switch (optionsaved_combotype)
+				{
+					case 0:
+						global.combohudtype = combotype.democombo;
+						break;
+					case 1:
+						global.combohudtype = combotype.verticalcombo;
+						break;
+					case 2:
+						global.combohudtype = combotype.horizontalcombo;
+						break;
+				}
+				ini_open("optionData.ini");
+				ini_write_real("Settings", "combotype", optionsaved_combotype);
+				ini_close();
+				global.selectedCombo = optionsaved_combotype;
 			}
 			break;
 	}

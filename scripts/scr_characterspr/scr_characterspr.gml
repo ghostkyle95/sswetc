@@ -56,7 +56,7 @@ function scr_characterspr()
 		spr_machpunch2 = spr_player_machpunch2;
 		spr_hurtjump = spr_player_hurt;
 		spr_entergate = spr_player_entergate;
-		spr_gottreasure = spr_player_entergate;
+		spr_gottreasure = spr_player_treasureget;
 		spr_bossintro = spr_player_bossintro;
 		spr_hurtidle = spr_player_hurtidle;
 		spr_hurtwalk = spr_player_hurtwalk;
@@ -134,10 +134,10 @@ function scr_characterspr()
 		spr_plrdashpad = spr_player_dashpad;
 		spr_crazyrun = spr_player_crazyrun;
 		spr_machslideboost3 = spr_player_machslideboost3;
-		spr_3hpidle = spr_player_3hpidle;
-		spr_3hpwalk = spr_player_3hpwalk;
-		spr_facehurtup = spr_player_facehurtup;
-		spr_facehurt = spr_player_facehurt;
+		spr_3hpidle = spr_player_angryidle;
+		spr_3hpwalk = spr_player_angrywalk;
+		spr_facehurtup = spr_player_poundcancelafter;
+		spr_facehurt = spr_player_poundcancelafterloop;
 		spr_slipnslide = spr_player_slipnslide;
 		spr_slipnslideend = spr_player_slipnslideend;
 		spr_slipnslidestart = spr_player_slipnslidestart;
@@ -231,7 +231,7 @@ function scr_characterspr()
 		spr_cotland = spr_cotton_land;
 		
 		spr_bodyslamjump = spr_playerSW_bodyslamjump;
-		spr_piledriverjump = spr_player_jump;
+		spr_piledriverjump = spr_player_piledriverjump;
 		
 		spr_sidewayspin = spr_playerN_sidewayspin;
 		spr_sidewayspinend = spr_playerN_sidewayspinend;
@@ -245,6 +245,13 @@ function scr_characterspr()
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
 		spr_mach3hit = spr_player_machhit;
+		
+		spr_kungfu4 = spr_pizzano_kungfu4;
+		spr_kungfu5 = spr_pizzano_kungfu5;
+		spr_firecovered = spr_player_fire; 
+		spr_firecovereddash = spr_player_firedash;
+		spr_divebombfacehurtup = spr_player_facehurtup;
+		spr_divebombfacehurt = spr_player_facehurt;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -306,7 +313,7 @@ function scr_characterspr()
 		spr_crouchslip = spr_player_machslide;
 		spr_mach1 = spr_pizzano_mach1;
 		spr_mach = spr_pizzano_mach2;
-		spr_secondjump1 = spr_player_secondjump1;
+		spr_secondjump1 = spr_pizzano_secondjump1;
 		spr_secondjump2 = spr_pizzano_secondjump2;
 		spr_machslidestart = spr_player_machslidestart;
 		spr_machslide = spr_player_machsliding;
@@ -323,7 +330,7 @@ function scr_characterspr()
 		spr_crouch = spr_pizzano_crouch;
 		spr_bump = spr_player_bump;
 		spr_victory = spr_player_entergate;
-		spr_climbwall = spr_player_climbwall;
+		spr_climbwall = spr_pizzano_wallclimb;
 		spr_grab = spr_player_grab;
 		spr_mach2jump = spr_pizzano_twirl;
 		spr_Timesup = spr_pizzano_timesup;
@@ -333,7 +340,7 @@ function scr_characterspr()
 		spr_machpunch2 = spr_player_machpunch2;
 		spr_hurtjump = spr_pizzano_hurt;
 		spr_entergate = spr_player_entergate;
-		spr_gottreasure = spr_player_entergate;
+		spr_gottreasure = spr_pizzano_treasuregot;
 		spr_bossintro = spr_player_bossintro;
 		spr_hurtidle = spr_player_hurtidle;
 		spr_hurtwalk = spr_player_hurtwalk;
@@ -402,8 +409,8 @@ function scr_characterspr()
 		spr_plrdashpad = spr_player_dashpad;
 		spr_crazyrun = spr_pizzano_crazyrun;
 		spr_machslideboost3 = spr_player_machslideboost3;
-		spr_3hpidle = spr_player_3hpidle;
-		spr_3hpwalk = spr_player_3hpwalk;
+		spr_3hpidle = spr_player_angryidle;
+		spr_3hpwalk = spr_player_angrywalk;
 		spr_facehurtup = spr_player_facehurtup;
 		spr_facehurt = spr_player_facehurt;
 		spr_slipnslide = spr_player_slipnslide;
@@ -416,7 +423,7 @@ function scr_characterspr()
 		spr_minecartland = spr_player_minecartland;
 		spr_minecartfastland = spr_player_minecartfastland;
 		spr_hurtroll = spr_player_hurtroll;
-		spr_outofcontrolfall = spr_player_outofcontrolfall;
+		spr_outofcontrolfall = spr_pizzano_outofcontrolfall;
 		spr_enterkey = spr_player_enterkey;
 		spr_swingding = spr_player_swingding;
 		spr_swingdingend = spr_player_swingdingend;
@@ -448,12 +455,12 @@ function scr_characterspr()
 		spr_rocketfistground = spr_pizzano_mach3;
 		
 		spr_bossintro = spr_player_bossintro;
-		spr_parry1 = spr_player_parry1;
-		spr_parry2 = spr_player_parry2;
-		spr_parry3 = spr_player_parry3;
+		spr_parry1 = spr_pizzano_parry1;
+		spr_parry2 = spr_pizzano_parry1;
+		spr_parry3 = spr_pizzano_parry1;
 		
 		spr_rampjump = spr_player_rampjump;
-		spr_wallsplat = spr_player_wallsplat;
+		spr_wallsplat = spr_pizzano_wallsplat;
 		spr_grind = spr_player_grind;
 		spr_longjumpstart = spr_playerN_longjump;
 		spr_longjumpend = spr_playerN_longjumpend;
@@ -461,7 +468,7 @@ function scr_characterspr()
 		
 		spr_shoulderbash = spr_player_shoulderbash;
 		spr_machslideboostfall = spr_player_machslideboostfall;
-		spr_fastroll = spr_pizzano_crouchslide;
+		spr_fastroll = spr_pizzano_fastroll;
 		
 		spr_Sjumpcancelprep = spr_player_Sjumpcancelprep;
 		spr_Sjumpcancel = spr_player_Sjumpcancel;
@@ -474,8 +481,8 @@ function scr_characterspr()
 		
 		spr_groundedjetpackturn = spr_playerN_jetpackgroundedturn;
 		
-		spr_walljumpstart = spr_player_mach2jump;
-		spr_walljump = spr_player_mach2jump;
+		spr_walljumpstart = spr_pizzano_secondjump1;
+		spr_walljump = spr_pizzano_secondjump2;
 		
 		spr_bomb_intro = spr_bombpep_intro;
 		spr_bomb_run = spr_bombpep_run;
@@ -501,6 +508,14 @@ function scr_characterspr()
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
 		spr_mach3hit = spr_player_machhit;
+		
+		spr_kungfu4 = spr_pizzano_kungfu4;
+		spr_kungfu5 = spr_pizzano_kungfu5;
+		spr_firecovered = spr_player_fire; 
+		spr_firecovereddash = spr_player_firedash;
+		spr_divebombfacehurtup = spr_player_facehurtup;
+		spr_divebombfacehurt = spr_player_facehurt;
+		spr_dive = spr_pizzano_dive;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -775,6 +790,14 @@ function scr_characterspr()
 		
 		spr_mach3hit = spr_playerN_machpunch1;
 		
+		spr_kungfu4 = spr_pizzano_kungfu4;
+		spr_kungfu5 = spr_pizzano_kungfu5;
+		spr_firecovered = spr_player_fire; 
+		spr_firecovereddash = spr_player_firedash;
+		spr_dive = spr_playerN_dive;
+		spr_divebombfacehurtup = spr_player_facehurtup;
+		spr_divebombfacehurt = spr_player_facehurt;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1048,6 +1071,14 @@ function scr_characterspr()
 		
 		spr_mach3hit = spr_playerN_machpunch1;
 		
+		spr_kungfu4 = spr_pizzano_kungfu4;
+		spr_kungfu5 = spr_pizzano_kungfu5;
+		spr_firecovered = spr_player_fire; 
+		spr_firecovereddash = spr_player_firedash;
+		spr_dive = spr_player_dive;
+		spr_divebombfacehurtup = spr_player_facehurtup;
+		spr_divebombfacehurt = spr_player_facehurt;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1309,6 +1340,13 @@ function scr_characterspr()
 		spr_mach3wallclimb = spr_playerSW_mach3wall;
 		
 		spr_mach3hit = spr_playerSW_mach3hit;
+		
+		spr_kungfu4 = spr_pizzano_kungfu4;
+		spr_kungfu5 = spr_pizzano_kungfu5;
+		spr_firecovered = spr_player_fire; 
+		spr_firecovereddash = spr_player_firedash;
+		spr_divebombfacehurtup = spr_player_facehurtup;
+		spr_divebombfacehurt = spr_player_facehurt;
 		
 		spr_srank = spr_rankSWS;
 		spr_arank = spr_rankSWA;
