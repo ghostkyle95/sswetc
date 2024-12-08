@@ -14,6 +14,7 @@ function scr_player_climbwall()
 				hsp = 0
 				movespeed = 0
 				image_index = 0
+				break;
 			case true:
 				scr_sound(sfx_wallbouncestart)
 				sprite_index = spr_wallbounce
@@ -22,6 +23,7 @@ function scr_player_climbwall()
 				hsp = 0
 				movespeed = 0
 				image_index = 0
+				break;
 		}
 		return;
     }
@@ -47,7 +49,7 @@ function scr_player_climbwall()
 		else
 			sprite_index = spr_climbwall
 	}
-	if (!key_attack && grabclimbbuffer == 0)
+	if (!key_attack && grabclimbbuffer == 0 || wallspeed == 0)
 	{
 		vsp = 0
 		state = states.jump;

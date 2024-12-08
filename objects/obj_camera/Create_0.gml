@@ -48,3 +48,5 @@ cam_h = camera_get_view_height(view_camera[0]);
 
 oldrank = RANKS.D;
 ranksize = 1;
+savedcollect = 0;
+color_array = array_create(1, 0)

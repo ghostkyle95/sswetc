@@ -22,11 +22,22 @@ draw_set_halign(fa_center);
 draw_set_color(c_white);
 var _string = string(global.collect);
 var _string_length = string_length(_string);
+if savedcollect != global.collect
+{
+    color_array = array_create(_string_length, 0)
+    for (var _i = 0; _i < array_length(color_array); _i++)
+		color_array[_i] = choose(irandom_range(1,8))
+	savedcollect = global.collect;
+}
+
 for (var i = 0; i < _string_length; i++)
 {
 	var _xx = 140 + (-(string_width(_string) / 2) + ((string_width(_string) / _string_length) * i));
 	var _yyoffset = ((i % 2) == 0) ? -4 : 0;
+    var c = color_array[i]
+    pal_swap_set(spr_fontcollect_pal, c, 0)
 	draw_text(_xx + shakeX, 29 + obj_stylebar.hudbounce + _yyoffset + DrawY + shakeY, string_char_at(_string, i + 1));
+    pal_swap_reset()
 }
 	
 // rank bubble
