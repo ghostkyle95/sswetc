@@ -31,6 +31,7 @@ function scr_player_minecart()
 		instance_create(x + (32 * xscale), y, obj_chargeeffect);
 	if (scr_solid(x + xscale, y) && !place_meeting(x + xscale, y + 1, obj_minecartRail_Slope) && !place_meeting(x + xscale, y, obj_destructibles) && !place_meeting(x + xscale, y, obj_metalblock))
 	{
+		scr_sound(sfx_transfoend);
 		sprite_index = spr_mach3hitwall;
 		state = states.bump;
 		hsp = 2.5 * -xscale;
@@ -61,6 +62,7 @@ function scr_player_minecart()
 		movespeed -= 0.4;
 		if (movespeed <= 0)
 		{
+			scr_sound(sfx_transfoend);
 			with (instance_create(x, y, obj_dummycart))
 				image_xscale = other.xscale;
 			state = states.machslide;

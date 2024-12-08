@@ -4,7 +4,7 @@ if (sprite_index == spr_grabbiehand_fall)
 	{
 		if (state == states.chainsawbump)
 		{
-			scr_sound(sfx_losetransformation);
+			scr_sound(sfx_transfoend);
 			with (instance_create(x, y, obj_boxxeddebris))
 				image_index = 0;
 			with (instance_create(x, y, obj_boxxeddebris))
@@ -18,7 +18,7 @@ if (sprite_index == spr_grabbiehand_fall)
 		}
 		if (state == states.portal || state == states.secondjump)
 		{
-			scr_sound(sfx_losetransformation);
+			scr_sound(sfx_transfoend);
 			instance_create(x, y, obj_slimedebris);
 			instance_create(x, y, obj_slimedebris);
 			instance_create(x, y, obj_slimedebris);
@@ -40,7 +40,7 @@ if (sprite_index == spr_grabbiehand_fall)
 	other.y = y;
 	other.vsp = 0;
 	other.hsp = 0;
-	scr_sound(sfx_losetransformation);
+	scr_sound(sfx_transfoend);
 }
 if (sprite_index == spr_grabbiehand_catch)
 {
@@ -55,7 +55,7 @@ if (obj_player.state == states.grabbing)
 {
 	if (!thumbingup && ((x <= (xstarte + 5) && x >= (xstarte - 5)) && ((y <= (ystarte + 5) && y >= (ystarte - 5)) && !grabbing)))
 	{
-		scr_sound(sfx_losetransformation);
+		scr_sound(sfx_transfoend);
 		delay = 5;
 		image_xscale = -obj_player.xscale;
 		thumbingup = true;

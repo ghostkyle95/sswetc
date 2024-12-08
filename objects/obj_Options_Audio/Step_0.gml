@@ -4,7 +4,7 @@ if (canmove)
 	if ((key_up2 || keyboard_check_pressed(vk_up)) && optionselected > 0)
 	{
 		optionselected -= 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		optionsaved_masterVolume = global.masterVolume;
 		optionsaved_musicVolume = global.musicVolume;
 		optionsaved_soundVolume = global.soundVolume;
@@ -15,7 +15,7 @@ if (canmove)
 	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 3)
 	{
 		optionselected += 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		optionsaved_masterVolume = global.masterVolume;
 		optionsaved_musicVolume = global.musicVolume;
 		optionsaved_soundVolume = global.soundVolume;
@@ -30,7 +30,7 @@ if (canmove)
 			CursorY = -999;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				instance_destroy();
 			}
 			break;
@@ -42,7 +42,7 @@ if (canmove)
 			audio_master_gain(optionsaved_masterVolume);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
 				ini_write_real("Settings", "mastervol", optionsaved_masterVolume);
 				ini_close();
@@ -59,7 +59,7 @@ if (canmove)
 			audio_sound_gain(obj_Options_Main.PauseMusic, optionsaved_musicVolume, 0);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
 				ini_write_real("Settings", "musicvol", optionsaved_musicVolume);
 				ini_close();
@@ -74,10 +74,10 @@ if (canmove)
 			optionsaved_soundVolume += (key_right + key_left) / (key_attack ? 200 : 400);
 			optionsaved_soundVolume = clamp(optionsaved_soundVolume, 0, 1);
 			if ((key_right + key_left) != 0 && !audio_is_playing(sfx_enemykilled1))
-				audio_sound_gain(audio_play_sound(sound_step2, 1, false), optionsaved_soundVolume, 0);
+				audio_sound_gain(audio_play_sound(sfx_step2, 1, false), optionsaved_soundVolume, 0);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
 				ini_write_real("Settings", "soundvol", optionsaved_soundVolume);
 				ini_close();
@@ -87,7 +87,7 @@ if (canmove)
 	}
 	if (key_slap2 || key_start)
 	{
-		scr_sound(sound_enemythrow);
+		scr_sound(sfx_enemythrow);
 		instance_destroy();
 	}
 	obj_Options_Main.CursorY = CursorY;

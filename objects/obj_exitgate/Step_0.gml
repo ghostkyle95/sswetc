@@ -4,7 +4,7 @@ if (place_meeting(x, y, obj_player) && obj_player.state != states.comingoutdoor 
 {
 	ds_list_add(global.saveroom, id);
 	sprite_index = spr_exitgateclosing;
-	scr_sound(sfx_bodyslamland);
+	scr_sound(sfx_groundpoundland);
 	with (obj_camera)
 	{
 		shake_mag = 3;

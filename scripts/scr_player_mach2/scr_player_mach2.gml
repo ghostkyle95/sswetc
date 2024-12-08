@@ -165,7 +165,7 @@ function scr_player_mach2()
 	}*/
 	if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
 	{
-		scr_sound(sfx_grabdash);
+		scr_sound(sfx_plrgrabdash);
 		instance_create(x, y, obj_slaphitbox);
 		suplexmove = true;
 		vsp = 0;
@@ -193,10 +193,12 @@ function scr_player_mach2()
 		state = states.uppercut;
 		suplexmove = true;
 		sprite_index = spr_uppercutbegin;
+		scr_sound(sfx_uppercut);
+		scr_sound(sfx_uppercutbg);
 		image_index = 0;
 		scr_sound(sfx_plrjump);
-		scr_sound(sound_rollgetup);
-		scr_sound(sfx_grabdash);
+		scr_sound(sfx_rollgetup);
+		scr_sound(sfx_plrgrabdash);
 		if character != CHARACTERS.NOISE
 			vsp = -15;
 		else

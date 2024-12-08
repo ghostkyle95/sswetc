@@ -3,12 +3,12 @@ if (abletomove)
 {
 	if (-key_left2 && selected < 2)
 	{
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		selected++;
 	}
 	if (key_right2 && selected > 0)
 	{
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		selected--;
 	}
 	if (key_jump && selected == 0 && obj_file1.sprite_index != spr_file1confirm)

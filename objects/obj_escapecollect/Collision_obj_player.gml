@@ -1,7 +1,7 @@
 if (global.panic)
 {
 	if (global.collectsound == 10)
-		scr_sound(sfx_collect);
+		scr_sound(sfx_escapecollectsmall);
 	global.collectsound = 0;
 	global.collect += 10;
 	global.pizzameter += 1;

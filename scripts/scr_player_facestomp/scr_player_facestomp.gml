@@ -35,9 +35,9 @@ function scr_player_facestomp()
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);
 		freefallstart = 0;
-		audio_sound_gain(sound_land, 0.7, 0);
-		if (!audio_is_playing(sound_land))
-			audio_play_sound(sound_land, 1, false);
+		audio_sound_gain(sfx_land, 0.7, 0);
+		if (!audio_is_playing(sfx_land))
+			audio_play_sound(sfx_land, 1, false);
 	}
 	if (!facestompAnim)
 		sprite_index = spr_facestomp;

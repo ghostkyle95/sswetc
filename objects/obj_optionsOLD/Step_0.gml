@@ -44,22 +44,22 @@ switch (menu)
 		if (key_down2 && select < 2)
 		{
 			select++;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		else if (key_down2 && select == 2)
 		{
 			select = 0;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		if (key_up2 && select > 0)
 		{
 			select--;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		else if (key_up2 && select == 0)
 		{
 			select = 2;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		break;
 	case "VIDEO":
@@ -119,22 +119,22 @@ switch (menu)
 		if (key_down2 && select < 4)
 		{
 			select++;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		else if (key_down2 && select == 4)
 		{
 			select = 0;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		if (key_up2 && select > 0)
 		{
 			select--;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		else if (key_up2 && select == 0)
 		{
 			select = 3;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		switch (select)
 		{

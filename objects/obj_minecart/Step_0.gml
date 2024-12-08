@@ -2,6 +2,7 @@ scr_collide();
 if (place_meeting(x, y - 4, obj_player) && obj_player.state != states.minecart)
 {
 	obj_player.state = states.minecart;
+	scr_sound(sfx_transfobegin);
 	if (obj_player.xscale == image_xscale)
 		obj_player.movespeed = clamp(obj_player.movespeed, 3, 12);
 	else

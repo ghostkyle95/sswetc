@@ -12,6 +12,6 @@ with (instance_nearest(x, y, obj_sluggy))
 		movespeed = -8;
 		flash = true;
 		image_xscale = -sign(x - obj_player.x);
-		scr_sound(sound_parry);
+		scr_sound(sfx_parryenemy);
 	}
 }

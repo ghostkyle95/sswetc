@@ -9,8 +9,8 @@ function scr_enemy_kick()
 			baddieID = other.id;
 			image_xscale = other.image_xscale;
 		}
-		if (!audio_is_playing(sound_enemythrow))
-			scr_sound(sound_enemythrow);
+		if (!audio_is_playing(sfx_enemythrow))
+			scr_sound(sfx_enemythrow);
 	}
 	if (floor(image_index) == (image_number - 1))
 	{

@@ -1,6 +1,6 @@
 if (object_index != obj_charcherry)
 {
-	scr_sound(sound_slaphit);
+	scr_sound(sfx_slaphit);
 	instance_create(x + (obj_player.xscale * 40), y, obj_punchdust);
 	if (obj_player.character == CHARACTERS.PIZZELLE || obj_player.character == CHARACTERS.NOISE || obj_player.character == CHARACTERS.SWAB)
 	{

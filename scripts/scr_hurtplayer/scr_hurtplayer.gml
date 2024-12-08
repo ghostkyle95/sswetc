@@ -12,6 +12,7 @@ function scr_hurtplayer(_player_index = obj_player)
 			}
 			else if (state == states.minecart)
 			{
+				scr_sound(sfx_transfoend);
 				sprite_index = spr_mach3hitwall;
 				state = states.bump;
 				hsp = 2.5 * xscale;
@@ -42,6 +43,10 @@ function scr_hurtplayer(_player_index = obj_player)
 			else if (state != states.hurt && state != states.backbreaker && !hurted && !cutscene && state != states.bump && state != states.tumble)
 			{
 				scr_sound(sfx_hurt);
+				if character == CHARACTERS.NOISE
+					scr_sound(sfx_noisehurt);
+				if (state == states.cotton || state == states.cottondrill || state == states.cottonroll || state = states.minecart)
+					scr_sound(sfx_transfoend);
 				global.hurtcounter += 1;
 				state = states.hurt;
 				alarm[8] = 60;

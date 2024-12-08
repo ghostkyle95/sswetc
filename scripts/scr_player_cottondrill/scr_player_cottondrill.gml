@@ -42,7 +42,7 @@ function scr_player_cottondrill()
 		grounded = false;
 		vsp = -5;
 		grav = 0.2;
-		scr_sound(sfx_grabdash);
+		scr_sound(sfx_plrgrabdash);
 		groundedcot = false;
 	}
 	if (key_jump)

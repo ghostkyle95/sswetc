@@ -13,8 +13,8 @@ function scr_pizzano_shoulderbash()
 			sprite_index = spr_crouchslip;
 			machhitAnim = false;
 			state = states.crouchslide;
-			if (audio_is_playing(sfx_grabdash))
-				audio_stop_sound(sfx_grabdash);
+			if (audio_is_playing(sfx_plrgrabdash))
+				audio_stop_sound(sfx_plrgrabdash);
 		}
 		else
 		{
@@ -34,8 +34,8 @@ function scr_pizzano_shoulderbash()
 		instance_create(x, y, obj_jumpdust);
 		state = states.mach2;
 		vsp = -9;
-		if (audio_is_playing(sfx_grabdash))
-			audio_stop_sound(sfx_grabdash);
+		if (audio_is_playing(sfx_plrgrabdash))
+			audio_stop_sound(sfx_plrgrabdash);
 	}	
 	if (floor(image_index) == (image_number - 1))
 	{
@@ -67,8 +67,8 @@ function scr_pizzano_shoulderbash()
 		machslideAnim = true;
 		machhitAnim = false;
 		instance_create(x + (10 * xscale), y + 10, obj_bumpeffect);
-		if (audio_is_playing(sfx_grabdash))
-			audio_stop_sound(sfx_grabdash);
+		if (audio_is_playing(sfx_plrgrabdash))
+			audio_stop_sound(sfx_plrgrabdash);
 		scr_sound(sfx_bump);
 	}
 	if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || !grounded && scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))

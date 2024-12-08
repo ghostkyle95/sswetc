@@ -6,12 +6,12 @@ if (selected == 0)
 	if ((key_up2 || keyboard_check_pressed(vk_up)) && optionselected > 0)
 	{
 		optionselected -= 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 	}
 	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 4)
 	{
 		optionselected += 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 	}
 	switch (optionselected)
 	{
@@ -20,7 +20,7 @@ if (selected == 0)
 			CursorY = -999;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				instance_destroy();
 			}
 			break;
@@ -29,7 +29,7 @@ if (selected == 0)
 			CursorY = 100;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				selected = true;
 				instance_create(0, 0, obj_Options_Audio);
 			}
@@ -39,7 +39,7 @@ if (selected == 0)
 			CursorY = 200;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				selected = true;
 				instance_create(0, 0, obj_Options_Video);
 			}
@@ -49,7 +49,7 @@ if (selected == 0)
 			CursorY = 300;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				selected = true;
 				instance_create(0, 0, obj_Options_Input);
 			}
@@ -59,7 +59,7 @@ if (selected == 0)
 			CursorY = 400;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				selected = true;
 				instance_create(0, 0, obj_Options_Modded);
 			}
@@ -68,12 +68,12 @@ if (selected == 0)
 			subtitle = string_upper("Adjust Miscellaneous Settings");
 			CursorY = 500;
 			if (key_jump)
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 			break;
 	}
 	if (key_slap2 || key_start)
 	{
-		scr_sound(sound_enemythrow);
+		scr_sound(sfx_enemythrow);
 		instance_destroy();
 	}
 }

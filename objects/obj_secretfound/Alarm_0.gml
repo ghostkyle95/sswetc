@@ -5,5 +5,5 @@ with (obj_tv)
 	alarm[0] = 150;
 }
 global.secretsfound += 1
-scr_sound(sound_secretgot);
+scr_sound(sfx_secretfound);
 instance_destroy();

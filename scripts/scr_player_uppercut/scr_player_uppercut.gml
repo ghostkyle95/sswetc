@@ -52,6 +52,7 @@ function scr_player_uppercut()
 			hsp = 0;
 			image_index = 0;
 			sprite_index = spr_uppercutcancelstart;
+			scr_sound(sfx_superjumpcancel);
 			sjumpspeed = 0;
 			with (instance_create(x, y, obj_jumpdust))
 				image_xscale = other.xscale;
@@ -64,7 +65,7 @@ function scr_player_uppercut()
 	}
 	if (grounded && vsp > 0)
 	{
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		if (movespeed >= 12 && key_attack)
 		{
 			sprite_index = spr_mach4

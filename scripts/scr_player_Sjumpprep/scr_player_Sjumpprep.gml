@@ -56,7 +56,7 @@ function scr_player_Sjumpprep()
 		sprite_index = spr_superjumppreplight;
 	if (!key_up && (grounded || Sjumpcan_doublejump) && (sprite_index == spr_superjumppreplight || sprite_index == spr_superjumpleft || sprite_index == spr_superjumpright) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
-		scr_sound(sfx_sjump);
+		scr_sound(sfx_plrsjump);
 		instance_create(x, y, obj_explosioneffect);
 		sprite_index = spr_superjump;
 		state = states.Sjump;

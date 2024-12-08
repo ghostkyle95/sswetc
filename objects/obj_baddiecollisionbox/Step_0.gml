@@ -74,7 +74,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					cottoned = true;
 					alarm[2] = 1;
 					instance_create(x, y, obj_bangeffect);
-					scr_sound(sound_slaphit);
+					scr_sound(sfx_slaphit);
 					hp = 0;
 					thrown = true;
 					if (other.state == states.cottondrill || other.state == states.cottonroll)

@@ -30,7 +30,7 @@ function scr_player_cottonroll()
 		state = states.cottondrill;
 		sprite_index = spr_cotdrill;
 		image_index = 0;
-		scr_sound(sfx_grabdash);
+		scr_sound(sfx_plrgrabdash);
 		flash = true;
 		drill = false;
 		with (instance_create(x, y, obj_afterimageoutward))

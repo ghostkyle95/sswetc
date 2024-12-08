@@ -101,7 +101,7 @@ function scr_player_mach1()
 			scr_cantaunt()
 			if (key_slap2 && !key_down && !suplexmove && !shotgunAnim && global.cane != true)
 			{
-				scr_sound(sfx_grabdash);
+				scr_sound(sfx_plrgrabdash);
 				instance_create(x, y, obj_slaphitbox);
 				suplexmove = true;
 				vsp = 0;

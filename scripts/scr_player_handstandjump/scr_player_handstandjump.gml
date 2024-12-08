@@ -24,8 +24,8 @@ function scr_player_handstandjump()
 				momemtum = false;
 				mach2 = 0;
 				xscale *= -1;
-				if (audio_is_playing(sfx_grabdash))
-					audio_stop_sound(sfx_grabdash);
+				if (audio_is_playing(sfx_plrgrabdash))
+					audio_stop_sound(sfx_plrgrabdash);
 			}
 			if (floor(image_index) == (image_number - 1))
 			{
@@ -44,8 +44,8 @@ function scr_player_handstandjump()
 						sprite_index = spr_crouchslip;
 					machhitAnim = false;
 					state = states.crouchslide;
-					if (audio_is_playing(sfx_grabdash))
-						audio_stop_sound(sfx_grabdash);
+					if (audio_is_playing(sfx_plrgrabdash))
+						audio_stop_sound(sfx_plrgrabdash);
 				}
 				else
 				{
@@ -63,8 +63,8 @@ function scr_player_handstandjump()
 				instance_create(x, y, obj_jumpdust);
 				state = states.mach2;
 				vsp = -9;
-				if (audio_is_playing(sfx_grabdash))
-					audio_stop_sound(sfx_grabdash);
+				if (audio_is_playing(sfx_plrgrabdash))
+					audio_stop_sound(sfx_plrgrabdash);
 			}
 			if (grounded && ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 			{
@@ -77,8 +77,8 @@ function scr_player_handstandjump()
 				machhitAnim = false;
 				jumpAnim = false;
 				instance_create(x + (10 * xscale), y + 10, obj_bumpeffect);
-				if (audio_is_playing(sfx_grabdash))
-					audio_stop_sound(sfx_grabdash);
+				if (audio_is_playing(sfx_plrgrabdash))
+					audio_stop_sound(sfx_plrgrabdash);
 				scr_sound(sfx_bump);
 				sprite_index = spr_suplexbump
 			}

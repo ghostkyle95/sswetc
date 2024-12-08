@@ -30,10 +30,10 @@ function scr_playersounds()
 	if (audio_is_playing(sfx_flip) && sprite_index != spr_mach2jump)
 		audio_stop_sound(sfx_flip);
 		
-	if (sprite_index == spr_superjumppreplight) && (!audio_is_playing(sfx_sjumphold))
-		scr_sound(sfx_sjumphold);
-	if (audio_is_playing(sfx_sjumphold) && sprite_index != spr_superjumppreplight)
-		audio_stop_sound(sfx_sjumphold);
+	if (sprite_index == spr_superjumppreplight) && (!audio_is_playing(sfx_plrsjumphold))
+		scr_sound(sfx_plrsjumphold);
+	if (audio_is_playing(sfx_plrsjumphold) && sprite_index != spr_superjumppreplight)
+		audio_stop_sound(sfx_plrsjumphold);
 		
 	if (sprite_index == spr_sidewayspinend && !audio_is_playing(sfx_airspin) && !audio_is_playing(sfx_airspinstart))
 		scr_sound(sfx_airspin);
@@ -60,6 +60,11 @@ function scr_playersounds()
 		scr_sound(sfx_torndadoslow);
 	else if (sprite_index != spr_tornado)
 		audio_stop_sound(sfx_torndadoslow);
+		
+	if ((sprite_index == spr_bodyslamfall || sprite_index == spr_divebombfall) && !audio_is_playing(sfx_groundpoundloop))
+		scr_sound(sfx_groundpoundloop);
+	else if (sprite_index != spr_bodyslamfall && sprite_index != spr_divebombfall)
+		audio_stop_sound(sfx_groundpoundloop);
 		
 	if (sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend && audio_is_playing(sfx_airspinstart))
 		audio_stop_sound(sfx_airspinstart);

@@ -38,4 +38,4 @@ else if (room == hub_room1 || room == hub_public || room == outer_room1 || room 
 	scr_removeallescapeobstacles()
 }
 else
-	scr_sound(sound_enemythrow);
+	scr_sound(sfx_enemythrow);

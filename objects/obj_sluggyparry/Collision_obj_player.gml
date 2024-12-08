@@ -4,7 +4,7 @@ with (obj_player)
 	{
 		if (state == states.cheesepep || state == states.cheesepepstick)
 		{
-			scr_sound(sound_metaldestroy);
+			scr_sound(sfx_metaldestroy);
 			obj_player.grav = 0.5;
 			instance_create(x, y, obj_slimedebris);
 			instance_create(x, y, obj_slimedebris);

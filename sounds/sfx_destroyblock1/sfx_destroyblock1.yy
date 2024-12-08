@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.266939,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "Block Destroy",
+    "path": "folders/Sounds/SFX/Block Destroy.yy",
   },
   "preload": true,
   "sampleRate": 44100,

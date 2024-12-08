@@ -82,7 +82,7 @@ function scr_doise_rocket()
 			vsp = 5;
 		if ((scr_solid(x + xscale, y, true) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 		{
-			scr_sound(sfx_bodyslamland);
+			scr_sound(sfx_groundpoundland);
 			with (obj_camera)
 			{
 				shake_mag = 20;

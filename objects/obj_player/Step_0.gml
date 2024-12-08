@@ -65,11 +65,11 @@ if (angry && sprite_index == spr_idle)
 scr_playersounds();
 if (state == states.machroll)
 {
-	if (!audio_is_playing(sound_tumble))
-		scr_sound(sound_tumble);
+	if (!audio_is_playing(sfx_tumble))
+		scr_sound(sfx_tumble);
 }
 else
-	audio_stop_sound(sound_tumble);
+	audio_stop_sound(sfx_tumble);
 if (sprite_index == spr_winding && state != states.normal)
 	windingAnim = 0;
 if (suplexmove && grounded)

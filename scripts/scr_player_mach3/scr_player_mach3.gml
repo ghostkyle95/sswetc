@@ -66,7 +66,7 @@ function scr_player_mach3()
 				input_buffer_jump = 0;
 			if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
 			{
-				scr_sound(sfx_sjumpstart);
+				scr_sound(sfx_plrsjumpstart);
 				sprite_index = spr_superjumpprep;
 				state = states.Sjumpprep;
 				hsp = 0;
@@ -78,10 +78,12 @@ function scr_player_mach3()
 				state = states.uppercut;
 				suplexmove = true;
 				sprite_index = spr_uppercutbegin;
+				scr_sound(sfx_uppercut);
+				scr_sound(sfx_uppercutbg);
 				image_index = 0;
 				scr_sound(sfx_plrjump);
-				scr_sound(sound_rollgetup);
-				scr_sound(sfx_grabdash);
+				scr_sound(sfx_rollgetup);
+				scr_sound(sfx_plrgrabdash);
 				if character != CHARACTERS.NOISE
 					vsp = -15;
 				else
@@ -143,7 +145,7 @@ function scr_player_mach3()
 			}
 			else if (grounded && scr_solid(x + sign(hsp), y) && (!scr_slope() && scr_solid(x + sign(hsp), y - 2)) && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 			{
-				scr_sound(sfx_bodyslamland);
+				scr_sound(sfx_groundpoundland);
 				with (obj_camera)
 				{
 					shake_mag = 20;
@@ -203,7 +205,7 @@ function scr_player_mach3()
 			scr_cantaunt()
 	if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
 	{
-		scr_sound(sfx_grabdash);
+		scr_sound(sfx_plrgrabdash);
 		instance_create(x, y, obj_slaphitbox);
 		suplexmove = true;
 		vsp = 0;

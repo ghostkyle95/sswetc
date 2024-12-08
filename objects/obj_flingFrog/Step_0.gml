@@ -22,6 +22,7 @@ if (place_meeting(x, y, _player) && !scr_solid(x, y) && _player.vsp >= -3 && _pl
 		{
 			instance_create(x, y, obj_candifiedeffect1);
 			scr_sound(sfx_candybegin);
+			scr_sound(sfx_transfobegin);
 		}
 		state = states.fling;
 		hsp = 0;

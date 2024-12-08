@@ -18,12 +18,12 @@ if (pause)
 		if (key_down2 && selected < 3)
 		{
 			selected += 1;
-			scr_sound(sound_land);
+			scr_sound(sfx_land);
 		}
 		if (key_up2 && selected > 0)
 		{
 			selected -= 1;
-			scr_sound(sound_land);
+			scr_sound(sfx_land);
 		}
 		if (key_jump)
 		{

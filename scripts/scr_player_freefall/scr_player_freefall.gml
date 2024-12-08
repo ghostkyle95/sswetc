@@ -66,7 +66,7 @@ function scr_player_freefall()
 		}
 		else
 		{
-			scr_sound(sfx_bodyslamland);
+			scr_sound(sfx_groundpoundland);
 			image_index = 0;
 			state = states.freefallland;
 			jumpAnim = true;
@@ -128,6 +128,7 @@ function scr_player_freefall()
 			hsp = 0;
 			image_index = 0;
 			sprite_index = spr_uppercutcancelstart;
+			scr_sound(sfx_superjumpcancel);
 			sjumpspeed = 0;
 			with (instance_create(x, y, obj_jumpdust))
 				image_xscale = other.xscale;

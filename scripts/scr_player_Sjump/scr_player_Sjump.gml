@@ -28,7 +28,7 @@ function scr_player_Sjump()
 	}
 	if (scr_solid(x, y + vsp) && !place_meeting(x, y + vsp, obj_boxofpizza) && !place_meeting(x, y + vsp, obj_metalblock) && !place_meeting(x, y + vsp, obj_destructibles))
 	{
-		scr_sound(sfx_bodyslamland);
+		scr_sound(sfx_groundpoundland);
 		sprite_index = spr_superjumpland;
 		with (obj_camera)
 		{
@@ -54,6 +54,7 @@ function scr_player_Sjump()
 	image_speed = 0.5;
 	if (key_attack2 && !grounded && vsp < -10 && (character == CHARACTERS.PIZZELLE || character == CHARACTERS.SWAB))
 	{
+		scr_sound(sfx_superjumpcancel);
 		if (move != 0)
 			xscale = move;
 		state = states.sjumpcancelprep;
@@ -85,6 +86,7 @@ function scr_player_Sjump()
 		}
 		else
 		{
+			scr_sound(sfx_superjumpcancel);
 			flash = true;
 			charged = false;
 			sprite_index = spr_superjumpprepside;
@@ -100,6 +102,7 @@ function scr_player_Sjump()
 	}
 	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && sprite_index != spr_superjumpland)
 	{
+		scr_sound(sfx_superjumpcancel);
 		flash = true;
 		charged = false;
 		sprite_index = spr_superjumpprepside;

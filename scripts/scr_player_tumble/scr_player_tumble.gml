@@ -12,7 +12,7 @@ function scr_player_tumble()
 		sprite_index = spr_tumble;
 	if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
-		scr_sound(sound_tumbleend);
+		scr_sound(sfx_tumbleend);
 		hsp = 0;
 		movespeed = 0;
 		sprite_index = spr_tumbleend;
@@ -31,8 +31,8 @@ function scr_player_tumble()
 	if (input_buffer_jump < 8 && grounded && hsp != 0)
 		vsp = -9;
 	image_speed = 0.35;
-	if (!audio_is_playing(sound_tumble))
-		scr_sound(sound_tumble);
+	if (!audio_is_playing(sfx_tumble))
+		scr_sound(sfx_tumble);
 	if (place_meeting(x, y, obj_slope) && xscale == 1)
 		x -= 2;
 	if (place_meeting(x, y, obj_slope) && xscale == -1)

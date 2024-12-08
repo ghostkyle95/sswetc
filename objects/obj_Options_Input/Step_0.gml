@@ -7,12 +7,12 @@ if (canmove)
 		if ((key_up2 || keyboard_check_pressed(vk_up)) && optionselected > 0)
 		{
 			optionselected -= 1;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 11)
 		{
 			optionselected += 1;
-			scr_sound(sound_step);
+			scr_sound(sfx_step);
 		}
 		if (key_slap2 || key_start)
 		{
@@ -29,7 +29,7 @@ if (canmove)
 			ini_write_string("ControlsKeys", "start", global.key_start);
 			ini_write_string("ControlsKeys", "special", global.key_special);
 			ini_close();
-			scr_sound(sound_enemythrow);
+			scr_sound(sfx_enemythrow);
 			instance_destroy();
 		}
 	}
@@ -52,7 +52,7 @@ if (canmove)
 				ini_write_string("ControlsKeys", "start", global.key_start);
 				ini_write_string("ControlsKeys", "special", global.key_special);
 				ini_close();
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				instance_destroy();
 			}
 			break;

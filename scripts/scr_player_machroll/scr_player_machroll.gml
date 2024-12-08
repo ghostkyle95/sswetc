@@ -26,7 +26,7 @@ function scr_player_machroll()
 	if (!key_down && grounded && (!scr_solid(x + 27, y - 32) && (!scr_solid(x - 27, y - 32) && (!scr_solid(x, y - 32) && !scr_solid(x, y - 16)))))
 	{
 		image_index = 0;
-		scr_sound(sound_rollgetup);
+		scr_sound(sfx_rollgetup);
 		//movespeed = min(movespeed, 12);
 		state = states.mach2
 		sprite_index = spr_rollgetup;

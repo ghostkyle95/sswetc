@@ -4,7 +4,7 @@ if (canmove)
 	if ((key_up2 || keyboard_check_pressed(vk_up)) && optionselected > 0)
 	{
 		optionselected -= 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		/*optionsaved_fullscreen = global.fullscreen;
 		optionsaved_resolution = global.selectedResolution;
 		optionsaved_smoothcam = global.smoothcam;
@@ -14,7 +14,7 @@ if (canmove)
 	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 2)
 	{
 		optionselected += 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		/*optionsaved_fullscreen = global.fullscreen;
 		optionsaved_resolution = global.selectedResolution;
 		optionsaved_smoothcam = global.smoothcam;
@@ -28,7 +28,7 @@ if (canmove)
 			CursorY = -999;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				instance_destroy();
 			}
 			break;
@@ -39,7 +39,7 @@ if (canmove)
 			optionsaved_debug = wrap(optionsaved_debug, 0, 1);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				global.debugmode = optionsaved_debug;
 			}
 			break;
@@ -50,7 +50,7 @@ if (canmove)
 			optionsaved_combotype = wrap(optionsaved_combotype, 0, 2);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				switch (optionsaved_combotype)
 				{
 					case 0:
@@ -72,7 +72,7 @@ if (canmove)
 	}
 	if (key_slap2 || key_start)
 	{
-		scr_sound(sound_enemythrow);
+		scr_sound(sfx_enemythrow);
 		instance_destroy();
 	}
 	obj_Options_Main.CursorY = CursorY;

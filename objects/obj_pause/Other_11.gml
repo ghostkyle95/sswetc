@@ -75,4 +75,4 @@ if (string_letters(roomname) == "noisetv" || string_letters(roomname) == "noiset
 	scr_removeallescapeobstacles()
 }
 else
-	scr_sound(sound_enemythrow);
+	scr_sound(sfx_enemythrow);

@@ -4,7 +4,7 @@ if (canmove)
 	if ((key_up2 || keyboard_check_pressed(vk_up)) && optionselected > 0)
 	{
 		optionselected -= 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		optionsaved_fullscreen = global.fullscreen;
 		optionsaved_resolution = global.selectedResolution;
 		optionsaved_smoothcam = global.smoothcam;
@@ -14,7 +14,7 @@ if (canmove)
 	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 4)
 	{
 		optionselected += 1;
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 		optionsaved_fullscreen = global.fullscreen;
 		optionsaved_resolution = global.selectedResolution;
 		optionsaved_smoothcam = global.smoothcam;
@@ -28,7 +28,7 @@ if (canmove)
 			CursorY = -999;
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				instance_destroy();
 			}
 			break;
@@ -39,7 +39,7 @@ if (canmove)
 			optionsaved_fullscreen = wrap(optionsaved_fullscreen, 0, 1);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				window_set_fullscreen(optionsaved_fullscreen);
 				ini_open("optionData.ini");
 				ini_write_real("Settings", "fullscrn", optionsaved_fullscreen);
@@ -54,7 +54,7 @@ if (canmove)
 			optionsaved_resolution = wrap(optionsaved_resolution, 0, 2);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				switch (optionsaved_resolution)
 				{
 					case 0:
@@ -80,7 +80,7 @@ if (canmove)
 			optionsaved_smoothcam = wrap(optionsaved_smoothcam, 0, 1);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
 				ini_write_real("Settings", "smthcam", optionsaved_smoothcam);
 				ini_close();
@@ -94,7 +94,7 @@ if (canmove)
 			optionsaved_screentilt = wrap(optionsaved_screentilt, 0, 1);
 			if (key_jump)
 			{
-				scr_sound(sound_enemythrow);
+				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
 				ini_write_real("Settings", "scrntilt", optionsaved_screentilt);
 				ini_close();
@@ -104,7 +104,7 @@ if (canmove)
 	}
 	if (key_slap2 || key_start)
 	{
-		scr_sound(sound_enemythrow);
+		scr_sound(sfx_enemythrow);
 		instance_destroy();
 	}
 	obj_Options_Main.CursorY = CursorY;

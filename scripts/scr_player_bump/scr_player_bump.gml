@@ -21,7 +21,7 @@ function scr_player_bump()
 		state = states.normal;
 	if (animation_end() && grounded && sprite_index != spr_wallsplat)
 		state = states.normal;
-	if (audio_is_playing(sound_tumble))
-		audio_stop_sound(sound_tumble);
+	if (audio_is_playing(sfx_tumble))
+		audio_stop_sound(sfx_tumble);
 	image_speed = 0.35;
 }

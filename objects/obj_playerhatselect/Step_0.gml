@@ -8,12 +8,12 @@ if (obj_player.key_jump2 && obj_playerhat.image_index != Selection)
 {
 	if (HatIndex[Selection] == 1)
 	{
-		scr_sound(sound_enemythrow);
+		scr_sound(sfx_enemythrow);
 		instance_create(x, y, obj_poofeffect);
 		obj_playerhat.image_index = Selection;
 	}
 	else
-		scr_sound(sound_step);
+		scr_sound(sfx_step);
 }
 if (fadeout && image_index == 0)
 	image_alpha = clamp(image_alpha - 0.05, 0, 1);

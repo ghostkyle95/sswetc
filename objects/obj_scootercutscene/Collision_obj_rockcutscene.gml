@@ -3,7 +3,7 @@ if (sprite_index != spr_player_outofcontrolfall)
 	hit = true;
 	vsp = -20;
 	hsp = 8;
-	scr_sound(sfx_losetransformation);
+	scr_sound(sfx_transfoend);
 	instance_create(x, y, obj_bangeffect);
 	sprite_index = spr_player_outofcontrolfall;
 	with (instance_create(x, y, obj_debris))

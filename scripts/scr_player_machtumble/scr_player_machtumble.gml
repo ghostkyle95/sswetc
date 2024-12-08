@@ -9,7 +9,7 @@ function scr_player_machtumble()
 		movespeed = 11;
 	if ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y))
 	{
-		scr_sound(sfx_bodyslamland);
+		scr_sound(sfx_groundpoundland);
 		with (obj_camera)
 		{
 			shake_mag = 20;
@@ -46,8 +46,8 @@ function scr_player_machtumble()
 		sprite_index = spr_crouchslip;
 		machhitAnim = false;
 		state = states.crouchslide;
-		if (audio_is_playing(sfx_grabdash))
-			audio_stop_sound(sfx_grabdash);
+		if (audio_is_playing(sfx_plrgrabdash))
+			audio_stop_sound(sfx_plrgrabdash);
 	}
 	if (key_jump)
 	{

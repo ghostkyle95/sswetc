@@ -4,6 +4,7 @@ with (obj_player)
 	{
 		global.combofreeze = 30;
 		state = states.cotton;
+		scr_sound(sfx_transfobegin);
 		instance_create(x, y, obj_poofeffect);
 		instance_create(x, y, obj_poofeffectcotton);
 		sprite_index = spr_cotidle;
