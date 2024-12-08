@@ -8,10 +8,10 @@ if ((ds_list_find_index(global.baddieroom, id) == -1 || important))
 	}
 	instance_create(x, y + 30, obj_bangeffect);
 	camera_shake(3, 3);
-	with (instance_create(x, y, obj_sausageman_dead))
-		sprite_index = other.deadspr;
 	if (object_index != obj_googlyjuice)
 	{
+		with (instance_create(x, y, obj_sausageman_dead))
+			sprite_index = other.deadspr;
 		switch (global.combo)
 		{
 			case 0:

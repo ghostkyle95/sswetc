@@ -1,4 +1,4 @@
-if (sprite_index != spr_gnomewalldebris)
+if (sprite_index != spr_gnomewalldebris && sprite_index != spr_juicedebris)
 	image_index = random_range(0, 6);
 image_speed = 0;
 vsp = random_range(-4, 0);

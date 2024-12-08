@@ -58,7 +58,7 @@ function scr_player_cotton()
 			sprite_index = spr_cotfall;
 		}
 		if animation_end()
-			sprite_index = spr_cotidle;
+			sprite_index = spr_cotfall;
 	}
 	if (grounded && sprite_index == spr_cotattack)
 	{
