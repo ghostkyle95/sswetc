@@ -18,7 +18,7 @@ function scr_player_door()
 		if (!instance_exists(obj_fadeout) && !instance_exists(obj_endlevelfade))
 		{
 			instance_create(x, y, obj_fadeout);
-			scr_sound(sound_door);
+			scr_sound(sfx_doortransition);
 		}
 	}
 	if (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_keydoor) || place_meeting(x, y, obj_keydoorclock))

@@ -38,7 +38,7 @@ function scr_player_minecart()
 		mach2 = 0;
 		image_index = 0;
 		instance_create(x, y, obj_bombexplosionharmless);
-		audio_stop_sound(sfx_railgrind);
+		audio_stop_sound(sfx_minecartrail);
 		for (var i = 0; i < (sprite_get_number(spr_minecartdebris) - 1); i++)
 		{
 			with (instance_create(x + irandom_range(-9, 9), y + irandom_range(-9, 9), obj_debris))

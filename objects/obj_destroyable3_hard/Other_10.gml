@@ -9,7 +9,7 @@ if (DestroyedBy.object_index == obj_player)
 		{
 			ShakeBuffer = 5;
 			hp -= 1;
-			scr_sound(choose(sound_destroyblock1, sound_destroyblock2));
+			scr_sound(choose(sfx_destroyblock1, sfx_destroyblock2));
 			sprite_index = spr_bigbreak;
 			with (instance_create(x + (image_xscale * 32), y + 32, obj_debris))
 				sprite_index = spr_bigdebrisBandage;
@@ -29,7 +29,7 @@ if (DestroyedBy.object_index == obj_player)
 				{
 					ShakeBuffer = 5;
 					hp -= 1;
-					scr_sound(choose(sound_destroyblock1, sound_destroyblock2));
+					scr_sound(choose(sfx_destroyblock1, sfx_destroyblock2));
 					sprite_index = spr_bigbreak;
 					with (instance_create(x + (image_xscale * 32), y + 32, obj_debris))
 						sprite_index = spr_bigdebrisBandage;
@@ -56,7 +56,7 @@ else if (DestroyedBy.object_index == obj_baddie)
 	{
 		ShakeBuffer = 5;
 		hp -= 1;
-		scr_sound(choose(sound_destroyblock1, sound_destroyblock2));
+		scr_sound(choose(sfx_destroyblock1, sfx_destroyblock2));
 		sprite_index = spr_bigbreak;
 		with (instance_create(x + (image_xscale * 32), y + 32, obj_debris))
 			sprite_index = spr_bigdebrisBandage;

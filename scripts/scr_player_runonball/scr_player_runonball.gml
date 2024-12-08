@@ -21,9 +21,9 @@ function scr_player_runonball()
 		image_index = 0;
 		machslideAnim = true;
 		jumpAnim = true;
-		audio_sound_gain(sfx_jump, 0.7, 0);
-		if (!audio_is_playing(sfx_jump))
-			audio_play_sound(sfx_jump, 1, false);
+		audio_sound_gain(sfx_plrjump, 0.7, 0);
+		if (!audio_is_playing(sfx_plrjump))
+			audio_play_sound(sfx_plrjump, 1, false);
 	}
 	movespeed = 2.5;
 	sprite_index = spr_slipnslide;

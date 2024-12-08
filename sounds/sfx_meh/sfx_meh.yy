@@ -10,10 +10,10 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 0.809,
+  "duration": 0.809796,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "ComboSFX",
+    "path": "folders/Sounds/SFX/ComboSFX.yy",
   },
   "preload": true,
   "sampleRate": 44100,

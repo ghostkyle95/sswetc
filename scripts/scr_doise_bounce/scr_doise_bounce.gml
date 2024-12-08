@@ -39,7 +39,7 @@ function scr_doise_bounce(){
 		state = states.freefallprep;
 		sprite_index = spr_crusherstart;
 		vsp = -16;
-		scr_sound(sound_crusherjump)
+		scr_sound(sfx_crusherjump)
 	}
     image_speed = 0.5
     scr_cantaunt()

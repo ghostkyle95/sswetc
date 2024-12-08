@@ -38,7 +38,7 @@ function scr_player_mach3()
 				jumpstop = false;
 			if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && key_attack)
 			{
-				scr_sound(sfx_jump);
+				scr_sound(sfx_plrjump);
 				image_index = 0;
 				sprite_index = spr_mach3jump;
 				vsp = -9;
@@ -79,7 +79,7 @@ function scr_player_mach3()
 				suplexmove = true;
 				sprite_index = spr_uppercutbegin;
 				image_index = 0;
-				scr_sound(sfx_jump);
+				scr_sound(sfx_plrjump);
 				scr_sound(sound_rollgetup);
 				scr_sound(sfx_grabdash);
 				if character != CHARACTERS.NOISE
@@ -97,7 +97,7 @@ function scr_player_mach3()
 			}
 			if ((move == -xscale && grounded) && Dashpad_buffer <= 0)
 			{
-				scr_sound(sfx_machturn);
+				scr_sound(sfx_plrmachturn);
 				sprite_index = spr_machslideboost3;
 				flash = false;
 				state = states.machslide;
@@ -135,7 +135,7 @@ function scr_player_mach3()
 				}
 				else
 				{
-					scr_sound(sound_bump)
+					scr_sound(sfx_bump)
 					xscale *= -1
 					vsp = -5
 					instance_create(x, y, obj_bangeffect);
@@ -143,7 +143,7 @@ function scr_player_mach3()
 			}
 			else if (grounded && scr_solid(x + sign(hsp), y) && (!scr_slope() && scr_solid(x + sign(hsp), y - 2)) && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 			{
-				scr_sound(sound_maximumspeedland);
+				scr_sound(sfx_bodyslamland);
 				with (obj_camera)
 				{
 					shake_mag = 20;
@@ -231,7 +231,7 @@ function scr_player_mach3()
 			state = states.freefallprep;
 			sprite_index = spr_crusherstart;
 			vsp = -16;
-			scr_sound(sound_crusherjump)
+			scr_sound(sfx_crusherjump)
 		}
 		break;
 	}

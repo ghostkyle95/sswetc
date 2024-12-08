@@ -12,12 +12,12 @@
   "conversionMode": 0,
   "duration": 4.383923,
   "parent": {
-    "name": "Noise",
-    "path": "folders/Sounds/SFX/Noise.yy",
+    "name": "Player",
+    "path": "folders/Sounds/SFX/Player.yy",
   },
-  "preload": false,
+  "preload": true,
   "sampleRate": 44100,
   "soundFile": "sfx_crusherjump.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.55,
 }

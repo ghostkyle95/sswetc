@@ -9,7 +9,7 @@ function scr_player_machtumble()
 		movespeed = 11;
 	if ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y))
 	{
-		scr_sound(sound_maximumspeedland);
+		scr_sound(sfx_bodyslamland);
 		with (obj_camera)
 		{
 			shake_mag = 20;

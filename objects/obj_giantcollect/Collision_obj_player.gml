@@ -1,7 +1,7 @@
 if (global.collectsound == 10)
 {
-	scr_sound(sound_points);
-	scr_sound(sound_pizzacoin);
+	scr_sound(sfx_collect);
+	scr_sound(sfx_giantcollect);
 }
 global.collectsound = 0;
 scr_queue_tvanim(obj_tv.collecttvspr, 200);

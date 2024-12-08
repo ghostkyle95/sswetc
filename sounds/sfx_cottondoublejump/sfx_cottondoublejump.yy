@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.004422,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "Transfo",
+    "path": "folders/Sounds/SFX/Player/Transfo.yy",
   },
   "preload": true,
   "sampleRate": 44100,

@@ -3,7 +3,6 @@ function scr_player_cheeseball()
 	hsp = xscale * 12;
 	if (!scr_slope() && instance_place(x + sign(hsp), y, obj_solid))
 	{
-		scr_sound(sound_enemystomp);
 		obj_player.grav = 0.5;
 		repeat (8)
 			instance_create(x, y, obj_slimedebris);
@@ -24,7 +23,7 @@ function scr_player_cheeseball()
 	if (input_buffer_jump < 8 && grounded)
 	{
 		instance_create(x, y, obj_highjumpcloud2);
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		vsp = -5;
 	}
 }

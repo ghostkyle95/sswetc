@@ -1,1 +1,1 @@
-scr_sound(sound_youfuckindick);
+scr_sound(sfx_youfuckindick);

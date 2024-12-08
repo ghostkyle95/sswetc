@@ -32,7 +32,7 @@ function scr_player_superslam()
 	if ((sprite_index == spr_piledriver || sprite_index == spr_piledriverstart) && (grounded && !place_meeting(x, y + 1, obj_destructibles) && vsp > 0))
 	{
 		sprite_index = spr_piledriverland;
-		scr_sound(sound_maximumspeedland);
+		scr_sound(sfx_bodyslamland);
 		jumpAnim = true;
 		jumpstop = false;
 		image_index = 0;
@@ -60,7 +60,7 @@ function scr_player_superslam()
 		{
 			with (baddiegrabbedID)
 			{
-				scr_sound(sound_killingblow);
+				scr_sound(sfx_killingblow);
 				instance_create(x, y, obj_slapstar);
 				instance_create(x, y, obj_baddiegibs);
 				flash = true;

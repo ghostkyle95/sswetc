@@ -66,7 +66,7 @@ function scr_player_freefall()
 		}
 		else
 		{
-			scr_sound(sound_maximumspeedland);
+			scr_sound(sfx_bodyslamland);
 			image_index = 0;
 			state = states.freefallland;
 			jumpAnim = true;

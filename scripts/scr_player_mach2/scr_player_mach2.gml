@@ -28,7 +28,7 @@ function scr_player_mach2()
 			{
 				image_index = 0;
 				sprite_index = spr_secondjump1;
-				scr_sound(sfx_jump);
+				scr_sound(sfx_plrjump);
 				vsp = -9;
 			}
 	}
@@ -96,7 +96,7 @@ function scr_player_mach2()
 	}
 	if (move == -xscale && grounded)
 	{
-		scr_sound(sfx_machturn);
+		scr_sound(sfx_plrmachturn);
 		sprite_index = spr_machslideboost;
 		state = states.machslide;
 		image_index = 0;
@@ -194,7 +194,7 @@ function scr_player_mach2()
 		suplexmove = true;
 		sprite_index = spr_uppercutbegin;
 		image_index = 0;
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		scr_sound(sound_rollgetup);
 		scr_sound(sfx_grabdash);
 		if character != CHARACTERS.NOISE
@@ -208,6 +208,6 @@ function scr_player_mach2()
 		state = states.freefallprep;
 		sprite_index = spr_crusherstart;
 		vsp = -16;
-		scr_sound(sound_crusherjump)
+		scr_sound(sfx_crusherjump)
 	}
 }

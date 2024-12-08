@@ -14,7 +14,7 @@ with (obj_player)
 		}
 		else if (global.key_inv)
 		{
-			scr_sound(sound_unlockingdoor);
+			scr_sound(sfx_unlockeddoor);
 			state = states.victory;
 			image_index = 0;
 			obj_camera.chargecamera = 0;

@@ -37,9 +37,9 @@ function scr_player_shotgunjump()
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);
 		freefallstart = false;
-		audio_sound_gain(sfx_jump, 0.7, 0);
-		if (!audio_is_playing(sfx_jump))
-			audio_play_sound(sfx_jump, 1, false);
+		audio_sound_gain(sfx_plrjump, 0.7, 0);
+		if (!audio_is_playing(sfx_plrjump))
+			audio_play_sound(sfx_plrjump, 1, false);
 	}
 	if (shoot && floor(image_index) == 0)
 	{

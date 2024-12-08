@@ -5,7 +5,7 @@ with (other.id)
 	y = other.y + (other.sprite_height - 46);
 	if (!instance_exists(obj_fadeout))
 	{
-		scr_sound(sound_door);
+		scr_sound(sfx_doortransition);
 		obj_player.targetDoor = other.targetDoor;
 		obj_player.targetRoom = other.targetRoom;
 		obj_player.hallway = true;

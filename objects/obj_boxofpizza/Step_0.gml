@@ -5,7 +5,7 @@ with (obj_player)
 		if (((key_down && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other.id) && (state == states.crouch || state == states.machroll)) || ((state == states.crouchslide || state == states.freefall || state == states.freefallland || sprite_index == spr_tornado || sprite_index == spr_tornadofall || sprite_index == spr_tornadoland) && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other.id))) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
 		{
 			other.depth = -10;
-			scr_sound(sound_box);
+			scr_sound(sfx_pizzaboxtransition);
 			obj_player.box = 1;
 			mach2 = 0;
 			obj_camera.chargecamera = 0;
@@ -21,7 +21,7 @@ with (obj_player)
 	{
 		if ((((key_up || state == states.Sjump) && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other.id) && (state == states.jump || state == states.uppercut || state == states.Sjump)) && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other.id)) && !instance_exists(obj_fadeout))
 		{
-			scr_sound(sound_box);
+			scr_sound(sfx_pizzaboxtransition);
 			other.depth = -10;
 			obj_player.box = 1;
 			other.depth = -8;

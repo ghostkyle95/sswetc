@@ -64,7 +64,7 @@ function scr_player_uppercut()
 	}
 	if (grounded && vsp > 0)
 	{
-		scr_sound(sfx_step);
+		scr_sound(sound_step);
 		if (movespeed >= 12 && key_attack)
 		{
 			sprite_index = spr_mach4

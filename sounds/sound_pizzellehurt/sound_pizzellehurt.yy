@@ -13,7 +13,7 @@
   "duration": 3.980771,
   "parent": {
     "name": "Pizzelle",
-    "path": "folders/Sounds/SFX/Pizzelle.yy",
+    "path": "folders/Sounds/SFX/Player/Voicelines/Pizzelle.yy",
   },
   "preload": false,
   "sampleRate": 44100,

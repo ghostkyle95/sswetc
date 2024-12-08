@@ -45,7 +45,7 @@ function scr_player_bombpep()
 	}
 	if (bombpeptimer <= 0 && sprite_index == spr_bomb_runabouttoexplode)
 	{
-		scr_sound(sound_explosion);
+		scr_sound(sfx_explosion);
 		hurted = true;
 		instance_create(x, y, obj_bombexplosion);
 		sprite_index = spr_bomb_end;

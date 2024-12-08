@@ -1,29 +1,29 @@
 function scr_playersounds()
 {
-	if (!audio_is_playing(sfx_railgrind) && state == states.minecart && grounded)
-		scr_sound(sfx_railgrind);
+	if (!audio_is_playing(sfx_minecartrail) && state == states.minecart && grounded)
+		scr_sound(sfx_minecartrail);
 	else if (state != states.minecart || !grounded)
-		audio_stop_sound(sfx_railgrind);
+		audio_stop_sound(sfx_minecartrail);
 		
-	if (sprite_index == spr_mach1 && (!audio_is_playing(sfx_mach1) && grounded))
-		scr_sound(sfx_mach1);
+	if (sprite_index == spr_mach1 && (!audio_is_playing(sfx_plrmach1) && grounded))
+		scr_sound(sfx_plrmach1);
 	else if (sprite_index != spr_mach1 || (!grounded || move == -xscale))
-		audio_stop_sound(sfx_mach1);
+		audio_stop_sound(sfx_plrmach1);
 		
-	if ((sprite_index == spr_mach && state = states.mach2 || sprite_index == spr_climbwall) && !audio_is_playing(sfx_mach2))
-		scr_sound(sfx_mach2);
+	if ((sprite_index == spr_mach && state = states.mach2 || sprite_index == spr_climbwall) && !audio_is_playing(sfx_plrmach2))
+		scr_sound(sfx_plrmach2);
 	else if (sprite_index != spr_mach) && (sprite_index != spr_climbwall)
-		audio_stop_sound(sfx_mach2);
+		audio_stop_sound(sfx_plrmach2);
 		
-	if (((state == states.mach3 && sprite_index != spr_crazyrun) || sprite_index == spr_machslideboost3 || sprite_index == spr_mach3wallclimb) && !audio_is_playing(sfx_mach3))
-		scr_sound(sfx_mach3);
+	if (((state == states.mach3 && sprite_index != spr_crazyrun) || sprite_index == spr_machslideboost3 || sprite_index == spr_mach3wallclimb) && !audio_is_playing(sfx_plrmach3))
+		scr_sound(sfx_plrmach3);
 	else if ((state != states.mach3 && sprite_index != spr_machslideboost3) || sprite_index == spr_crazyrun) && (sprite_index != spr_mach3wallclimb)
-		audio_stop_sound(sfx_mach3);
+		audio_stop_sound(sfx_plrmach3);
 		
-	if (sprite_index == spr_crazyrun && !audio_is_playing(sfx_mach4))
-		scr_sound(sfx_mach4);
+	if (sprite_index == spr_crazyrun && !audio_is_playing(sfx_plrmach4))
+		scr_sound(sfx_plrmach4);
 	else if (sprite_index != spr_crazyrun)
-		audio_stop_sound(sfx_mach4);
+		audio_stop_sound(sfx_plrmach4);
 		
 	if (sprite_index == spr_mach2jump) && !audio_is_playing(sfx_flip) && character != CHARACTERS.SWAB
 		scr_sound(sfx_flip);

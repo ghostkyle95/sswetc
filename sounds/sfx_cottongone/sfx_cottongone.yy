@@ -10,10 +10,10 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 2.48,
+  "duration": 2.480159,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "Transfo",
+    "path": "folders/Sounds/SFX/Player/Transfo.yy",
   },
   "preload": true,
   "sampleRate": 44100,

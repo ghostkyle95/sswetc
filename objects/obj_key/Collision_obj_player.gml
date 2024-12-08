@@ -9,7 +9,7 @@ if (obj_player.grounded)
 	}
 	if (!global.keyget && obj_player.state != states.knightpep && obj_player.state != states.knightpepattack && obj_player.state != states.boxxedpep && obj_player.state != states.cheesepep && obj_player.state != states.knightpepslopes)
 	{
-		scr_sound(sound_toppingot);
+		scr_sound(sfx_confecticollected);
 		obj_player.state = states.keyget;
 		obj_player.image_index = 0;
 		global.keyget = true;

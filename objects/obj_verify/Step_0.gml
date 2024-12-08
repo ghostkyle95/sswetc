@@ -16,7 +16,7 @@ if (position_meeting(mouse_x, mouse_y, id) && mouse_check_button_pressed(1))
 	}
 	else
 	{
-		scr_sound(sound_losetransformation);
+		scr_sound(sfx_losetransformation);
 		with (obj_tv)
 		{
 			message = "USER AND PASSWORD INCORRECT!";

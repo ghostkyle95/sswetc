@@ -189,7 +189,7 @@ function scr_player_normal()
 	}
 	if (key_jump && grounded && !key_down)
 	{
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		sprite_index = spr_jump;
 		if (shotgunAnim)
 			sprite_index = spr_shotgun_jump;
@@ -201,7 +201,7 @@ function scr_player_normal()
 	}
 	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0)
 	{
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		sprite_index = spr_jump;
 		if (shotgunAnim)
 			sprite_index = spr_shotgun_jump;
@@ -289,7 +289,7 @@ function scr_player_normal()
 		suplexmove = true;
 		sprite_index = spr_uppercutbegin;
 		image_index = 0;
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		scr_sound(sound_rollgetup);
 		scr_sound(sfx_grabdash);
 		if character != CHARACTERS.NOISE

@@ -10,10 +10,10 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 1.279,
+  "duration": 1.279932,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "Mach Run",
+    "path": "folders/Sounds/SFX/Player/Mach Run.yy",
   },
   "preload": true,
   "sampleRate": 44100,

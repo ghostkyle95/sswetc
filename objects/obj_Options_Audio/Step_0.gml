@@ -73,7 +73,7 @@ if (canmove)
 			CursorY = 300;
 			optionsaved_soundVolume += (key_right + key_left) / (key_attack ? 200 : 400);
 			optionsaved_soundVolume = clamp(optionsaved_soundVolume, 0, 1);
-			if ((key_right + key_left) != 0 && !audio_is_playing(sound_combo1))
+			if ((key_right + key_left) != 0 && !audio_is_playing(sfx_enemykilled1))
 				audio_sound_gain(audio_play_sound(sound_step2, 1, false), optionsaved_soundVolume, 0);
 			if (key_jump)
 			{

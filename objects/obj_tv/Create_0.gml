@@ -90,7 +90,7 @@ function scr_combotext(_combo = global.combo)
 	{
 		sprite = spr_wtfcombo_intro;
 		if (chance(0.000000001))
-			scr_sound(sound_youfuckindick);
+			scr_sound(sfx_youfuckindick);
 		else
 			scr_sound(sfx_what_the_fuck);
 	}

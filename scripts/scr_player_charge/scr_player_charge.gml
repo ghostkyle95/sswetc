@@ -39,7 +39,7 @@ function scr_player_charge()
 		jumpstop = false;
 	if (input_buffer_jump < 8 && grounded)
 	{
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		vsp = -10;
 	}
 	if (key_jump)

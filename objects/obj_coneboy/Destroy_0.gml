@@ -14,16 +14,16 @@ if (ds_list_find_index(global.baddieroom, id) == -1 || important)
 	{
 		case 0:
 		case 1:
-			scr_sound(sound_combo1);
+			scr_sound(sfx_enemykilled1);
 			break;
 		case 2:
-			scr_sound(sound_combo2);
+			scr_sound(sfx_enemykilled2);
 			break;
 		case 3:
-			scr_sound(sound_combo3);
+			scr_sound(sfx_enemykilled3);
 			break;
 		default:
-			scr_sound(sound_combo4);
+			scr_sound(sfx_enemykilled4);
 			break;
 	}
 	if (!important)

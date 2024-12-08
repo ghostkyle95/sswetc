@@ -86,7 +86,7 @@ function scr_player_mach1()
 			image_speed = 0.45;
 			if (key_jump && grounded && key_attack)
 			{
-				scr_sound(sfx_jump);
+				scr_sound(sfx_plrjump);
 				sprite_index = spr_airdash1;
 				dir = xscale;
 				momemtum = true;

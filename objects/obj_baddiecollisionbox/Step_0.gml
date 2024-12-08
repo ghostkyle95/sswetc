@@ -31,7 +31,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 			}
 			if (instance_exists(other.baddieID) && y < other.baddieID.y && !attacking && state == states.jump && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
 			{
-				scr_sound(sound_enemyslap);
+				scr_sound(sfx_enemyslap);
 				suplexmove = false;
 				if (other.baddieID.object_index == obj_pizzaball)
 					global.golfhit += 1;
@@ -113,7 +113,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 				instance_create(other.baddieID.x, other.baddieID.y, obj_baddiegibs);
 				other.baddieID.flash = true;
 				other.baddieID.hp = 0;
-				scr_sound(sound_enemystomp);
 				instance_create(x, y, obj_bumpeffect);
 				other.baddieID.stunned = 200;
 				if (x != other.baddieID.x)
@@ -139,7 +138,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					vsp = -5;
 				}
 			}*/
-			if (instance_exists(other.baddieID) && (state == states.mach2 || state == states.rocketfistpizzano || state == states.jetpackdoise || sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall || sprite_index == spr_wallbounce) && other.baddieID.grounded)
+			if (instance_exists(other.baddieID) && (state == states.rocketfistpizzano || state == states.jetpackdoise || sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall || sprite_index == spr_wallbounce) && other.baddieID.grounded)
 			{
 				if (other.baddieID.object_index == obj_pizzaball)
 					global.golfhit += 1;
@@ -149,7 +148,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 				instance_create(other.baddieID.x, other.baddieID.y, obj_baddiegibs);
 				other.baddieID.flash = true;
 				other.baddieID.hp = 0;
-				scr_sound(sound_enemystomp);
+				scr_sound(sfx_enemyslap);
 				instance_create(x, y, obj_bumpeffect);
 				other.baddieID.vsp = -10;
 				other.baddieID.hsp = xscale;
@@ -157,12 +156,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 				machpunchAnim = true;
 				other.baddieID.stunned = 200;
 				other.baddieID.state = baddiestates.stun;
-				if (!grounded && state != states.freefall && key_jump2)
-				{
-					suplexmove = false;
-					sprite_index = spr_mach2jump;
-					vsp = -11;
-				}
 				if (other.baddieID.hp == 0 && other.baddieID.object_index != obj_boss)
 				{
 					instance_destroy(other.baddieID);

@@ -69,7 +69,7 @@ function scr_pizzano_shoulderbash()
 		instance_create(x + (10 * xscale), y + 10, obj_bumpeffect);
 		if (audio_is_playing(sfx_grabdash))
 			audio_stop_sound(sfx_grabdash);
-		scr_sound(sound_bump);
+		scr_sound(sfx_bump);
 	}
 	if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || !grounded && scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))
 	{

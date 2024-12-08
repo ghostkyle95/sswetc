@@ -1,3 +1,3 @@
-if (!audio_is_playing(sound_train))
-	scr_sound(sound_train);
+if (!audio_is_playing(sfx_trainhorn))
+	scr_sound(sfx_trainhorn);
 movespeed = 15;

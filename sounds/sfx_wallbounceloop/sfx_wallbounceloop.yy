@@ -13,7 +13,7 @@
   "duration": 2.571429,
   "parent": {
     "name": "Noise",
-    "path": "folders/Sounds/SFX/Noise.yy",
+    "path": "folders/Sounds/SFX/Player/Noise.yy",
   },
   "preload": false,
   "sampleRate": 44100,

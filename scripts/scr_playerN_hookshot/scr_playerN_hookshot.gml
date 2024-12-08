@@ -8,7 +8,7 @@ function scr_playerN_hookshot()
 	{
 		vsp = -6;
 		instance_create(x, y, obj_washingmachine);
-		scr_sound(sfx_machturn);
+		scr_sound(sfx_plrmachturn);
 		sprite_index = spr_jump;
 		stompAnim = false;
 		state = states.jump;

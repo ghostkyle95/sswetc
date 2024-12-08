@@ -6,8 +6,8 @@ if (grounded && go)
 {
 	if (distance_to_point(obj_player.x, y) > 700 && rubberband < 3 && ((obj_player.x <= x && image_xscale <= -1) || (obj_player.x >= x && image_xscale >= 1)))
 	{
-		if (!audio_is_playing(sound_train))
-			scr_sound(sound_train);
+		if (!audio_is_playing(sfx_trainhorn))
+			scr_sound(sfx_trainhorn);
 		rubberband = 3;
 	}
 	else

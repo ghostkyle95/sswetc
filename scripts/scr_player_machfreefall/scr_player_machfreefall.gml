@@ -43,9 +43,9 @@ function scr_player_machfreefall()
 			image_xscale = obj_player.image_xscale;
 		instance_create(x, y, obj_landcloud);
 		freefallstart = false;
-		audio_sound_gain(sfx_land, 0.7, 0);
-		if (!audio_is_playing(sfx_land))
-			audio_play_sound(sfx_land, 1, false);
+		audio_sound_gain(sound_land, 0.7, 0);
+		if (!audio_is_playing(sound_land))
+			audio_play_sound(sound_land, 1, false);
 		with (obj_baddie)
 		{
 			if (point_in_camera(x, y, view_camera[0]) && grounded)
@@ -57,9 +57,9 @@ function scr_player_machfreefall()
 			}
 		}
 	}
-	audio_sound_gain(sfx_mach2, 0.7, 0);
-	if (!audio_is_playing(sfx_mach2))
-		audio_play_sound(sfx_mach2, 1, false);
+	audio_sound_gain(sfx_plrmach2, 0.7, 0);
+	if (!audio_is_playing(sfx_plrmach2))
+		audio_play_sound(sfx_plrmach2, 1, false);
 	if (grounded && input_buffer_jump < 8 && vsp > 0)
 	{
 		sprite_index = spr_player_hanstandjump;

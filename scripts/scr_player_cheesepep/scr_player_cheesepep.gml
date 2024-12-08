@@ -62,7 +62,7 @@ function scr_player_cheesepep()
 		sprite_index = spr_cheesepep_idle;
 	if (input_buffer_jump < 8 && vsp > 0 && grounded && (sprite_index == spr_cheesepep_idle || sprite_index == spr_cheesepep_walk))
 	{
-		scr_sound(sfx_machturn);
+		scr_sound(sfx_plrmachturn);
 		image_index = 0;
 		sprite_index = spr_cheesepep_jumpstart;
 	}
@@ -116,7 +116,6 @@ function scr_player_cheesepep()
 		instance_create(x, y + 43, obj_cloudeffect);
 	if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy)
 	{
-		scr_sound(sound_killenemy);
 		steppy = true;
 	}
 	if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)

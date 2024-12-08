@@ -58,6 +58,6 @@ function scr_player_cottondrill()
 			image_xscale = other.xscale;
 			sprite_index = spr_cottonpoof;
 		}
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 	}
 }

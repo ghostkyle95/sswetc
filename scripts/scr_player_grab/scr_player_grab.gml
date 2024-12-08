@@ -98,7 +98,7 @@ function scr_player_grab()
 		input_buffer_jump = 0;
 	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && sprite_index != spr_swingding)
 	{
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		sprite_index = spr_haulingjump;
 		instance_create(x, y, obj_highjumpcloud2);
 		vsp = -11;

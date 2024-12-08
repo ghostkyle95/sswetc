@@ -9,7 +9,7 @@ if (global.combotime <= 0)
 	{
 		instance_destroy(obj_comboend)
 		instance_create(x,y,obj_comboend)
-		scr_sound(sound_comboend);
+		scr_sound(sfx_comboend);
 		chooseOnecomboend = true;
 	}
 }

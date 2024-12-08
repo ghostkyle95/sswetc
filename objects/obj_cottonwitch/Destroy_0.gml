@@ -53,25 +53,25 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
 		global.combo += 1;
 		if (global.combo == 1)
 		{
-			scr_sound(sound_combo1);
+			scr_sound(sfx_enemykilled1);
 			create_small_number(x, y, "10");
 			global.collect += 10;
 		}
 		if (global.combo == 2)
 		{
-			scr_sound(sound_combo2);
+			scr_sound(sfx_enemykilled2);
 			create_small_number(x, y, "20");
 			global.collect += 20;
 		}
 		if (global.combo == 3)
 		{
-			scr_sound(sound_combo3);
+			scr_sound(sfx_enemykilled3);
 			create_small_number(x, y, "40");
 			global.collect += 40;
 		}
 		if (global.combo >= 4)
 		{
-			scr_sound(sound_combo4);
+			scr_sound(sfx_enemykilled4);
 			create_small_number(x, y, "80");
 			global.collect += 80;
 		}

@@ -13,7 +13,7 @@
   "duration": 1.144229,
   "parent": {
     "name": "Pizzano",
-    "path": "folders/Sounds/SFX/Pizzano.yy",
+    "path": "folders/Sounds/SFX/Player/Voicelines/Pizzano.yy",
   },
   "preload": false,
   "sampleRate": 44100,

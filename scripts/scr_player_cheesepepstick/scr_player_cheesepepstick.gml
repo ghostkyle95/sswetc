@@ -27,7 +27,7 @@ function scr_player_cheesepepstick()
 	}
 	if (key_jump && (place_meeting(x + 1, y, obj_railv) || place_meeting(x - 1, y, obj_railv)))
 	{
-		scr_sound(sfx_machturn);
+		scr_sound(sfx_plrmachturn);
 		grav = 0.5;
 		vsp = -9;
 		image_index = 0;
@@ -36,7 +36,7 @@ function scr_player_cheesepepstick()
 	}
 	if (key_jump && place_meeting(x, y - 1, obj_railh))
 	{
-		scr_sound(sfx_machturn);
+		scr_sound(sfx_plrmachturn);
 		grav = 0.5;
 		vsp = 1;
 		image_index = 0;

@@ -40,9 +40,9 @@ function scr_player_secondjump()
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);
 		freefallstart = false;
-		audio_sound_gain(sfx_jump, 0.7, 0);
-		if (!audio_is_playing(sfx_jump))
-			audio_play_sound(sfx_jump, 1, false);
+		audio_sound_gain(sfx_plrjump, 0.7, 0);
+		if (!audio_is_playing(sfx_plrjump))
+			audio_play_sound(sfx_plrjump, 1, false);
 	}
 	if (grounded && vsp > 0)
 	{
@@ -56,9 +56,9 @@ function scr_player_secondjump()
 		if (!place_meeting(x, y, obj_water2))
 			instance_create(x, y, obj_landcloud);
 		freefallstart = false;
-		audio_sound_gain(sfx_land, 0.7, 0);
-		if (!audio_is_playing(sfx_land))
-			audio_play_sound(sfx_land, 1, false);
+		audio_sound_gain(sound_land, 0.7, 0);
+		if (!audio_is_playing(sound_land))
+			audio_play_sound(sound_land, 1, false);
 	}
 	if (key_jump)
 		input_buffer_highjump = 0;

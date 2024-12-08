@@ -88,7 +88,7 @@ function scr_player_cotton()
 		image_index = 0;
 		sprite_index = spr_cotland;
 		instance_create(x, y, obj_landcloud);
-		scr_sound(sfx_land);
+		scr_sound(sound_land);
 	}
 	if (sprite_index == spr_cotfall && key_jump)
 	{

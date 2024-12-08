@@ -65,7 +65,7 @@ function scr_doise_rocket()
 		}
 		if ((move == -xscale) && Dashpad_buffer <= 0)
 		{
-			scr_sound(sfx_machturn);
+			scr_sound(sfx_plrmachturn);
 			image_index = 0;
 			// temp scrapped until we get a new grounded turn sprite...
 			
@@ -82,7 +82,7 @@ function scr_doise_rocket()
 			vsp = 5;
 		if ((scr_solid(x + xscale, y, true) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 		{
-			scr_sound(sound_maximumspeedland);
+			scr_sound(sfx_bodyslamland);
 			with (obj_camera)
 			{
 				shake_mag = 20;

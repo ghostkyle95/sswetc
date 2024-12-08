@@ -17,8 +17,8 @@ function scr_player_finishingblow()
 	{
 		//movespeed = 5;
 		vsp = -5;
-		scr_sound(sound_punch);
-		scr_sound(sound_killingblow);
+		scr_sound(sfx_punch);
+		scr_sound(sfx_killingblow);
 		instance_create(x, y, obj_swordhitbox);
 		with (baddiegrabbedID)
 		{
@@ -46,8 +46,8 @@ function scr_player_finishingblow()
 	if (sprite_index == spr_swingdingend && !instance_exists(obj_swordhitbox))
 	{
 		movespeed = 3;
-		scr_sound(sound_punch);
-		scr_sound(sound_killingblow);
+		scr_sound(sfx_punch);
+		scr_sound(sfx_killingblow);
 		instance_create(x, y, obj_swordhitbox);
 		with (baddiegrabbedID)
 		{

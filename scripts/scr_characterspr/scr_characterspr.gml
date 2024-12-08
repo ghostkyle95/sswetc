@@ -265,25 +265,19 @@ function scr_characterspr()
 		global.lap2mus = mu_lap2;
 		global.lap3mus = mu_lap3;
 		
-		sfx_step = sound_step;
-		sfx_land = sound_land;
-		sfx_jump = sound_jump;
-		/*sfx_mach1 = sfx_pizzy_mach1;
-		sfx_mach2 = sfx_pizzy_mach2;
-		sfx_mach3 = sfx_pizzy_mach3;
-		sfx_mach4 = sfx_pizzy_mach4;*/
-		sfx_mach1 = sound_dash1;
-		sfx_mach2 = sound_dash2;
-		sfx_mach3 = sound_maxspeed;
-		sfx_mach4 = sound_dash3;
-		sfx_machturn = sound_maximumspeedstop;
-		sfx_firebutt = sound_fireass;
+		sfx_plrjump = sound_jump;
+		sfx_plrmach1 = sfx_mach1;
+		sfx_plrmach2 = sfx_mach3;
+		sfx_plrmach3 = sfx_mach3;
+		sfx_plrmach4 = sfx_mach4;
+		sfx_plrmachturn = sfx_machturn;
+		sfx_firebutt = sfx_pizzellefire;
 		sfx_parry = sound_parry;
 		sfx_sjumpstart = sound_superjumpcharge1;
 		sfx_sjumphold = sound_superjumpcharge2;
 		sfx_sjump = sound_superjumprelease;
 		sfx_grabdash = sound_suplex1;
-		sfx_machbreak = sound_break;
+		sfx_machbreak = sfx_machslide;
 	}
 	if (character == CHARACTERS.PIZZANO)
 	{
@@ -529,21 +523,19 @@ function scr_characterspr()
 		global.lap2mus = mu_pizzanolap2;
 		global.lap3mus = mu_lap3;
 		
-		sfx_step = sound_step;
-		sfx_land = sound_land;
-		sfx_jump = sound_jump;
-		sfx_mach1 = sound_dash1;
-		sfx_mach2 = sound_dash2;
-		sfx_mach3 = sound_maxspeed;
-		sfx_mach4 = sound_dash3;
-		sfx_machturn = sound_maximumspeedstop;
-		sfx_firebutt = sound_fireass;
+		sfx_plrjump = sound_jump;
+		sfx_plrmach1 = sfx_mach1;
+		sfx_plrmach2 = sfx_mach3;
+		sfx_plrmach3 = sfx_mach3;
+		sfx_plrmach4 = sfx_mach4;
+		sfx_plrmachturn = sfx_machturn;
+		sfx_firebutt = sfx_pizzellefire;
 		sfx_parry = sound_parry;
 		sfx_sjumpstart = sound_superjumpcharge1;
 		sfx_sjumphold = sound_superjumpcharge2;
 		sfx_sjump = sound_superjumprelease;
 		sfx_grabdash = sound_suplex1;
-		sfx_machbreak = sound_break;
+		sfx_machbreak = sfx_machslide;
 	}
 	if (character == CHARACTERS.NOISE && doisemode == false)
 	{
@@ -810,15 +802,13 @@ function scr_characterspr()
 		global.lap2mus = mu_noiselap2;
 		global.lap3mus = mu_noiselap3;
 		
-		sfx_step = sound_step;
-		sfx_land = sound_land;
-		sfx_jump = sfx_noisejump;
-		sfx_mach1 = sfx_noisemach1;
-		sfx_mach2 = sfx_noisemach2;
-		sfx_mach3 = sfx_noisemach3;
-		sfx_mach4 = sfx_noisemach4;
-		sfx_machturn = sfx_noisemachslide;
-		sfx_firebutt = sound_fireass;
+		sfx_plrjump = sfx_noisejump;
+		sfx_plrmach1 = sfx_noisemach1;
+		sfx_plrmach2 = sfx_noisemach2;
+		sfx_plrmach3 = sfx_noisemach3;
+		sfx_plrmach4 = sfx_noisemach4;
+		sfx_plrmachturn = sfx_noisemachslide;
+		sfx_firebutt = sfx_pizzellefire;
 		sfx_parry = sound_parry;
 		sfx_sjumpstart = sfx_noisesjumpstart;
 		sfx_sjumphold = sfx_noisesjumploop;
@@ -1090,16 +1080,14 @@ function scr_characterspr()
 		global.panicmus = mu_noiseescape;
 		global.lap2mus = mu_noiselap2;
 		global.lap3mus = mu_noiselap3;
-		
-		sfx_step = sound_step;
-		sfx_land = sound_land;
-		sfx_jump = sfx_noisejump;
-		sfx_mach1 = sfx_noisemach1;
-		sfx_mach2 = sfx_noisemach2;
-		sfx_mach3 = sfx_noisemach3;
-		sfx_mach4 = sfx_noisemach4;
-		sfx_machturn = sfx_noisemachslide;
-		sfx_firebutt = sound_fireass;
+
+		sfx_plrjump = sfx_noisejump;
+		sfx_plrmach1 = sfx_noisemach1;
+		sfx_plrmach2 = sfx_noisemach2;
+		sfx_plrmach3 = sfx_noisemach3;
+		sfx_plrmach4 = sfx_noisemach4;
+		sfx_plrmachturn = sfx_noisemachslide;
+		sfx_firebutt = sfx_pizzellefire;
 		sfx_parry = sound_parry;
 		sfx_sjumpstart = sfx_noisesjumpstart;
 		sfx_sjumphold = sfx_noisesjumploop;
@@ -1360,25 +1348,19 @@ function scr_characterspr()
 		global.lap2mus = mu_lap2;
 		global.lap3mus = mu_lap3;
 		
-		sfx_step = sound_step;
-		sfx_land = sound_land;
-		sfx_jump = sound_jump;
-		/*sfx_mach1 = sfx_pizzy_mach1;
-		sfx_mach2 = sfx_pizzy_mach2;
-		sfx_mach3 = sfx_pizzy_mach3;
-		sfx_mach4 = sfx_pizzy_mach4;*/
-		sfx_mach1 = sound_dash1;
-		sfx_mach2 = sound_dash2;
-		sfx_mach3 = sound_maxspeed;
-		sfx_mach4 = sound_dash3;
-		sfx_machturn = sound_maximumspeedstop;
-		sfx_firebutt = sound_fireass;
+		sfx_plrjump = sound_jump;
+		sfx_plrmach1 = sfx_mach1;
+		sfx_plrmach2 = sfx_mach3;
+		sfx_plrmach3 = sfx_mach3;
+		sfx_plrmach4 = sfx_mach4;
+		sfx_plrmachturn = sfx_machturn;
+		sfx_firebutt = sfx_pizzellefire;
 		sfx_parry = sound_parry;
 		sfx_sjumpstart = sound_superjumpcharge1;
 		sfx_sjumphold = sound_superjumpcharge2;
 		sfx_sjump = sound_superjumprelease;
 		sfx_grabdash = sound_suplex1;
-		sfx_machbreak = sound_break;
+		sfx_machbreak = sfx_machslide;
 	}
 	if (character == CHARACTERS.GUMBOB)
 	{

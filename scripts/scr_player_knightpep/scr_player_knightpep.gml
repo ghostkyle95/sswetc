@@ -42,7 +42,7 @@ function scr_player_knightpep()
 		sprite_index = spr_knightpep_idle;
 	if (input_buffer_jump < 8 && vsp > 0 && grounded && (sprite_index == spr_knightpep_idle || sprite_index == spr_knightpep_walk))
 	{
-		scr_sound(sfx_machturn);
+		scr_sound(sfx_plrmachturn);
 		image_index = 0;
 		sprite_index = spr_knightpep_jumpstart;
 	}

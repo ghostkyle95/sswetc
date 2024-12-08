@@ -20,7 +20,7 @@ function scr_player_crouch()
 	}
 	if (key_jump && grounded && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		vsp = -8;
 		state = states.crouchjump;
 		movespeed = 4;

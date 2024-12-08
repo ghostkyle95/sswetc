@@ -28,7 +28,7 @@ function scr_player_Sjump()
 	}
 	if (scr_solid(x, y + vsp) && !place_meeting(x, y + vsp, obj_boxofpizza) && !place_meeting(x, y + vsp, obj_metalblock) && !place_meeting(x, y + vsp, obj_destructibles))
 	{
-		scr_sound(sound_maximumspeedland);
+		scr_sound(sfx_bodyslamland);
 		sprite_index = spr_superjumpland;
 		with (obj_camera)
 		{

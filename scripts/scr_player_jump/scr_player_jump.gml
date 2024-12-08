@@ -44,7 +44,7 @@ function scr_player_jump()
 		state = states.freefallprep;
 		sprite_index = spr_crusherstart;
 		vsp = -16;
-		scr_sound(sound_crusherjump)
+		scr_sound(sfx_crusherjump)
 	}
 	if (ladderbuffer > 0)
 		ladderbuffer--;
@@ -68,7 +68,7 @@ function scr_player_jump()
 	}
 	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && !(sprite_index == spr_facestomp || sprite_index == spr_freefall))
 	{
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		sprite_index = spr_jump;
 		if (shotgunAnim)
 			sprite_index = spr_shotgun_jump;
@@ -103,7 +103,7 @@ function scr_player_jump()
 		image_index = 0;
 		freefallstart = 0;
 		instance_create_depth(x, y, 0, obj_landcloud);
-		scr_sound(sfx_step);
+		scr_sound(sound_step);
 		doublejumped = false;
 	}
 	if (key_jump)
@@ -207,7 +207,7 @@ function scr_player_jump()
 	}
 	if (grounded && (sprite_index == spr_facestomp || sprite_index == spr_freefall || sprite_index == spr_freefall2))
 	{
-		scr_sound(sound_maximumspeedland);
+		scr_sound(sfx_bodyslamland);
 		with (obj_baddie)
 		{
 			if (point_in_camera(x, y, view_camera[0]) && grounded)

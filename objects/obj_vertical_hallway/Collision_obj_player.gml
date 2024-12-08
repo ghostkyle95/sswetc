@@ -16,7 +16,7 @@ with (other.id)
 	hallwaydirection = sign(other.image_yscale);
 	if (!instance_exists(obj_fadeout))
 	{
-		scr_sound(sound_door);
+		scr_sound(sfx_doortransition);
 		instance_create(x, y, obj_fadeout);
 	}
 }

@@ -78,7 +78,7 @@ function scr_player_climbwall()
 	if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles) && !scr_slope_ext(x + sign(hsp), y) && !scr_slope_ext(x - sign(hsp), y))
 	{
 		sprite_index = spr_ceilingcrash;
-		scr_sound(sound_maximumspeedland);
+		scr_sound(sfx_bodyslamland);
 		image_index = 0;
 		state = states.Sjumpland;
 		machhitAnim = false;

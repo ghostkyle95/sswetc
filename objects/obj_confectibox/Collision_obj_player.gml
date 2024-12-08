@@ -8,7 +8,7 @@ if (sprite_index != spr_confectiboxopen)
 			sprite_index = spr_taunteffect;
 			depth = -2;
 		}
-		scr_sound(sound_toppingot);
+		scr_sound(sfx_confecticollected);
 		global.collect += 1000;
 		global.combofreeze = 30;
 		global.combotime = 60;

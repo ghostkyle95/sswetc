@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.433152,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "Enemy",
+    "path": "folders/Sounds/SFX/Enemy.yy",
   },
   "preload": true,
   "sampleRate": 44100,

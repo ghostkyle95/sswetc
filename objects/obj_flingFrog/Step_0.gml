@@ -21,7 +21,7 @@ if (place_meeting(x, y, _player) && !scr_solid(x, y) && _player.vsp >= -3 && _pl
 		if (!instance_exists(obj_candifiedeffect1))
 		{
 			instance_create(x, y, obj_candifiedeffect1);
-			scr_sound(sfx_bloop);
+			scr_sound(sfx_candybegin);
 		}
 		state = states.fling;
 		hsp = 0;
@@ -71,7 +71,7 @@ if (grabbedPlayer != -4)
 	{
 		with (grabbedPlayer)
 		{
-			scr_sound(sfx_bloop2);
+			scr_sound(sfx_candyjump);
 			state = states.jump;
 			jumpstop = true;
 			hsp = other.hsp;

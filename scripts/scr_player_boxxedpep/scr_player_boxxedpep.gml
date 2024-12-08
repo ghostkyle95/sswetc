@@ -35,7 +35,7 @@ function scr_player_boxxedpep()
 		movespeed = 0;
 	if (grounded && input_buffer_jump < 8 && vsp > 0 && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
-		scr_sound(sfx_machturn);
+		scr_sound(sfx_plrmachturn);
 		instance_create(x, y, obj_highjumpcloud2);
 		vsp = -11;
 	}
@@ -72,7 +72,6 @@ function scr_player_boxxedpep()
 		instance_create(x, y + 43, obj_cloudeffect);
 	if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && !steppy)
 	{
-		scr_sound(sound_killenemy);
 		steppy = true;
 	}
 	if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)

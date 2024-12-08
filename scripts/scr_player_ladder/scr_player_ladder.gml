@@ -48,7 +48,7 @@ function scr_player_ladder()
 	}
 	if (key_jump)
 	{
-		scr_sound(sfx_jump);
+		scr_sound(sfx_plrjump);
 		sprite_index = spr_jump;
 		ladderbuffer = 20;
 		jumpAnim = true;

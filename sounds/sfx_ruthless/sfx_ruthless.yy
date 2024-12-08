@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.835918,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "ComboSFX",
+    "path": "folders/Sounds/SFX/ComboSFX.yy",
   },
   "preload": true,
   "sampleRate": 44100,

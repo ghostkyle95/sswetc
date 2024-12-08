@@ -13,20 +13,20 @@ if (abletomove)
 	}
 	if (key_jump && selected == 0 && obj_file1.sprite_index != spr_file1confirm)
 	{
-		scr_sound(sound_toppingot);
+		scr_sound(sfx_confecticollected);
 		abletomove = false;
 		obj_file1.image_index = 0;
 		obj_file1.sprite_index = spr_file1confirm;
 	}
 	if (key_jump && selected == 1 && !instance_exists(obj_Options_Main))
 	{
-		scr_sound(sound_toppingot);
+		scr_sound(sfx_confecticollected);
 		abletomove = false;
 		instance_create(0, 0, obj_Options_Main);
 	}
 	if (key_jump && selected == 2 && !instance_exists(obj_erasefile))
 	{
-		scr_sound(sound_toppingot);
+		scr_sound(sfx_confecticollected);
 		abletomove = false;
 		instance_create(0, 0, obj_erasefile);
 	}

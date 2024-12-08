@@ -106,7 +106,7 @@ function scr_playerN_machcancel(){
 		state = states.freefallprep;
 		sprite_index = spr_crusherstart;
 		vsp = -16;
-		scr_sound(sound_crusherjump)
+		scr_sound(sfx_crusherjump)
 	}
     if (sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall)
     {
