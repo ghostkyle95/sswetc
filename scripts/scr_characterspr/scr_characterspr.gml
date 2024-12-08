@@ -242,7 +242,7 @@ function scr_characterspr()
 		spr_mach4start = spr_playerSW_mach4start;
 		spr_crouchslipstart = spr_playerSW_crouchslipstart;
 		spr_uppercutcancelstart = spr_playerSW_Sjumpcancelstart2;
-		spr_mach3wallclimb = spr_playerSW_mach3wall;
+		spr_mach3wallclimb = spr_player_climbwallmach3;
 		
 		spr_mach3hit = spr_player_machhit;
 		

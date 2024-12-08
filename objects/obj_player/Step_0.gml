@@ -96,6 +96,21 @@ if ((global.combo % 3) == 0 && playComboVariable != global.combo && global.combo
 	scr_queue_tvanim(obj_tv.combotvspr, 250);
 	playComboVariable = global.combo;
 }
+if (global.combo != global.previouscombo)
+{
+	if (global.combo > global.highest_combo)
+		global.highest_combo = global.combo
+	global.previouscombo = global.combo
+	if ((global.combo % 5) == 0 && global.combo != 0)
+	{
+		instance_destroy(obj_combotitle)
+		with (instance_create(x, (y - 80), obj_combotitle))
+		{
+			title = floor(global.combo / 5)
+			event_perform(ev_step, ev_step_normal)
+		}
+	}
+}
 global.combofreeze--;
 global.combofreeze = clamp(global.combofreeze, 0, 75);
 if (global.combotime <= 0 && global.combo != 0)

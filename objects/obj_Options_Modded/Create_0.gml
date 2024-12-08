@@ -10,6 +10,7 @@ ini_open("optionData.ini");
 global.selectedCombo = ini_read_real("Settings", "combotype", 2);
 ini_close();
 optionsaved_combotype = global.selectedCombo;
+global.combohudtype = global.selectedCombo;
 subtitle = "GO BACK TO MAIN SCREEN";
 CursorY = -999;
 depth = -100;

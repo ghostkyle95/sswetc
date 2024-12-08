@@ -29,6 +29,8 @@ global.brank = 0;
 global.crank = 0;
 character = "PIZZELLE";
 BarSurface = -4;
+BarSurfaceV = -4;
+BarSurfaceD1 = -4;
 BarX = 0;
 tvcount = 500;
 draw_combo = false;
@@ -45,6 +47,7 @@ tvlength = 0;
 global.newhudtvanim = ds_queue_create();
 //alarm[1] = 1;
 DrawY = 0;
+animation_image_index = 0;
 function scr_combotext(_combo = global.combo)
 {
 	var sprite = spr_badcombo_intro;

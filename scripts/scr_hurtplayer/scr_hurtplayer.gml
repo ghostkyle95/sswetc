@@ -39,9 +39,6 @@ function scr_hurtplayer(_player_index = obj_player)
 			else if (state == states.cheesepep || state == states.cheesepepstick)
 			{
 			}
-			else if (state == states.cotton || state = states.cottondrill || state = states.cottonroll)
-			{
-			}
 			else if (state != states.hurt && state != states.backbreaker && !hurted && !cutscene && state != states.bump && state != states.tumble)
 			{
 				scr_sound(sound_touchspike);

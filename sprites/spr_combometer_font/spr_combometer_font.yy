@@ -35,8 +35,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Combo Meter",
-    "path": "folders/Sprites/UI Related/TV/Combo Meter.yy",
+    "name": "Fonts",
+    "path": "folders/Sprites/Misc./Fonts.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

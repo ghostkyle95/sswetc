@@ -15,15 +15,13 @@ function scr_player_cotton()
 	hsp = move * movespeed;
 	if (move != 0)
 	{
-		if (movespeed < 6)
+		if (movespeed < 8)
 			movespeed += 0.5;
-		else if (floor(movespeed) >= 6)
-			movespeed = 6;
+		if (movespeed > 8 && sprite_index != spr_cotton_attack && grounded)
+			movespeed = 8;
 	}
-	else
-		movespeed = 0;
-	if (movespeed > 6)
-		movespeed -= 0.1;
+    else if (movespeed > 0 && sprite_index != spr_cotton_attack)
+        movespeed -= 0.5
 	if (vsp > 5)
 		vsp = 5;
 	if (key_jump && grounded)
@@ -60,11 +58,7 @@ function scr_player_cotton()
 			sprite_index = spr_cotfall;
 		}
 		if animation_end()
-		{
-			movespeed = 0;
-			vsp = 0;
 			sprite_index = spr_cotidle;
-		}
 	}
 	if (grounded && sprite_index == spr_cotattack)
 	{

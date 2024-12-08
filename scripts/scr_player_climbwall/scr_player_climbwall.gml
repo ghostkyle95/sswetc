@@ -38,13 +38,16 @@ function scr_player_climbwall()
 		wallspeed += 0.025
 	crouchslideAnim = true;
 	sprite_index = spr_climbwall;
-	if (character == CHARACTERS.SWAB)
+	if (character == CHARACTERS.SWAB || character == CHARACTERS.PIZZELLE)
 	{
 		if (wallspeed >= 12)
 		{
 			sprite_index = spr_mach3wallclimb
-			if (!instance_exists(obj_SWwallchargeeffect) && sprite_index == spr_mach3wallclimb)
-				instance_create(x, y, obj_SWwallchargeeffect);
+			if (character == CHARACTERS.SWAB)
+			{
+				if (!instance_exists(obj_SWwallchargeeffect) && sprite_index == spr_mach3wallclimb)
+					instance_create(x, y, obj_SWwallchargeeffect);
+			}
 		}
 		else
 			sprite_index = spr_climbwall
