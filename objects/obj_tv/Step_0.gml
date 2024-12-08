@@ -51,27 +51,6 @@ else
 	DrawY = lerp(DrawY, 0, 0.15);
 	alpha = 1;
 }
-if (global.collect > global.arank && !shownranka)
-{
-	message = "YOU GOT ENOUGH FOR RANK A";
-	showtext = true;
-	alarm[0] = 200;
-	shownranka = true;
-}
-else if (global.collect > global.brank && !shownrankb)
-{
-	message = "YOU GOT ENOUGH FOR RANK B";
-	showtext = true;
-	alarm[0] = 200;
-	shownrankb = true;
-}
-else if (global.collect > global.crank && !shownrankc)
-{
-	message = "YOU GOT ENOUGH FOR RANK C";
-	showtext = true;
-	alarm[0] = 200;
-	shownrankc = true;
-}
 if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0 && global.hurtmilestone != 0)
 {
 	alarm[0] = 150;
@@ -86,7 +65,7 @@ if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0 && g
 	else if (obj_player.character == CHARACTERS.SWAB)
 		character = "SWAB";
 	message = "YOU HAVE HURT " + string(character) + " " + string(global.hurtmilestone) + " TIMES...";
-	global.hurtmilestone += 3;
+	global.hurtmilestone += 10;
 }
 if (obj_player.state == states.keyget)
 {

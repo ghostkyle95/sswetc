@@ -28,6 +28,7 @@ function scr_tvsprites()
 		tvchange2 = spr_pizzanotv2;
 		collecttvspr = spr_pizzanotvcollect;
 		combotvspr = spr_pizzanotvcombo;
+		machtvspr = spr_pizzanotv_mach;
 		mach3tvspr = spr_pizzanotv_mach3;
 		minecarttvspr = spr_pizzanotv_mine;
 	}
