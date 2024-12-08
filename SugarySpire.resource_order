@@ -1229,6 +1229,7 @@
     {"name":"sfx_noisesjumpstart","order":12,"path":"sounds/sfx_noisesjumpstart/sfx_noisesjumpstart.yy",},
     {"name":"sound_fireass","order":41,"path":"sounds/sound_fireass/sound_fireass.yy",},
     {"name":"scr_player_Sjumpcancelprep","order":113,"path":"scripts/scr_player_Sjumpcancelprep/scr_player_Sjumpcancelprep.yy",},
+    {"name":"spr_pizzytv_slipnslide","order":24,"path":"sprites/spr_pizzytv_slipnslide/spr_pizzytv_slipnslide.yy",},
     {"name":"mu_tutorial","order":21,"path":"sounds/mu_tutorial/mu_tutorial.yy",},
     {"name":"sfx_ruthless","order":14,"path":"sounds/sfx_ruthless/sfx_ruthless.yy",},
     {"name":"sfx_bad","order":1,"path":"sounds/sfx_bad/sfx_bad.yy",},

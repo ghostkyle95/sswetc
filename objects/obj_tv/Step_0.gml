@@ -150,7 +150,6 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 					{
 						tvcount = choose(500, 450, 400, 550);
 						tvsprite = secrettvspr;
-						image_index = 0;
 					}
 					else
 					{

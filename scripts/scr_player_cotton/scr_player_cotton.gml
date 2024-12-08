@@ -39,15 +39,12 @@ function scr_player_cotton()
 		image_index = 0;
 		sprite_index = spr_cotattack;
 		grounded = false;
-		vsp = -5;
 		grav = 0.2;
 		scr_sound(sfx_cottonattack);
-		groundedcot = false;
 	}
 	if (sprite_index == spr_cotattack)
 	{
 		hsp = 8 * xscale;
-		movespeed = 0;
 		instance_create(x, y, obj_swordhitbox);
 		move = xscale;
 		if ((-key_left2 && xscale == 1) || (key_right2 && xscale == -1))
@@ -57,13 +54,14 @@ function scr_player_cotton()
 			hsp = 0;
 			sprite_index = spr_cotfall;
 		}
+		if key_down2
+		{
+			state = states.cottonroll;
+			movespeed = 12;
+			sprite_index = spr_cotroll;
+		}
 		if animation_end()
 			sprite_index = spr_cotfall;
-	}
-	if (grounded && sprite_index == spr_cotattack)
-	{
-		image_index = 0;
-		sprite_index = spr_cotidle;
 	}
 	if (sprite_index == spr_cotidle && move != 0)
 	{

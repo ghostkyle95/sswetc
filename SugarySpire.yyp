@@ -1382,6 +1382,7 @@
     {"id":{"name":"sfx_noisesjumpstart","path":"sounds/sfx_noisesjumpstart/sfx_noisesjumpstart.yy",},},
     {"id":{"name":"sound_fireass","path":"sounds/sound_fireass/sound_fireass.yy",},},
     {"id":{"name":"scr_player_Sjumpcancelprep","path":"scripts/scr_player_Sjumpcancelprep/scr_player_Sjumpcancelprep.yy",},},
+    {"id":{"name":"spr_pizzytv_slipnslide","path":"sprites/spr_pizzytv_slipnslide/spr_pizzytv_slipnslide.yy",},},
     {"id":{"name":"mu_tutorial","path":"sounds/mu_tutorial/mu_tutorial.yy",},},
     {"id":{"name":"README","path":"notes/README/README.yy",},},
     {"id":{"name":"sfx_ruthless","path":"sounds/sfx_ruthless/sfx_ruthless.yy",},},

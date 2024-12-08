@@ -19,6 +19,7 @@ function scr_tvsprites()
 		combotvspr = spr_pizzytv_combo;
 		panictvspr = spr_pizzytv_escape1;
 		secrettvspr = spr_pizzytv_secret;
+		sliptvspr = spr_pizzytv_slipnslide
 	}
 	if (obj_player.character == CHARACTERS.PIZZANO)
 	{
