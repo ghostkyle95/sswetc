@@ -5,6 +5,7 @@ function scr_player_normal()
 		dir = xscale;
 		movespeed = 2;
 		facehurt = 0;
+		divebombfacehurt = false;
 	}
 	mach2 = 0;
 	move = key_left + key_right;
@@ -24,6 +25,7 @@ function scr_player_normal()
 			{
 				shotgunAnim = false;
 				facehurt = false;
+				divebombfacehurt = false;
 				idle = 0;
 				image_index = 0;
 			}
@@ -70,10 +72,15 @@ function scr_player_normal()
 					else if (facehurt)
 					{
 						windingAnim = false;
-						if (sprite_index != spr_facehurtup && sprite_index != spr_facehurt)
+						if (sprite_index != spr_facehurtup && sprite_index != spr_facehurt && divebombfacehurt == false)
 							sprite_index = spr_facehurtup;
 						if (floor(image_index) == (image_number - 1) && sprite_index == spr_facehurtup)
 							sprite_index = spr_facehurt;
+							
+						if (sprite_index != spr_divebombfacehurtup && sprite_index != spr_divebombfacehurt && divebombfacehurt == true)
+							sprite_index = spr_divebombfacehurtup;
+						if (floor(image_index) == (image_number - 1) && sprite_index == spr_divebombfacehurtup)
+							sprite_index = spr_divebombfacehurt;
 					}
 				}
 			}
@@ -87,6 +94,7 @@ function scr_player_normal()
 			machslideAnim = false;
 			idle = 0;
 			facehurt = false;
+			divebombfacehurt = false;
 			if (angry)
 				sprite_index = spr_3hpwalk;
 			else if (global.cane)

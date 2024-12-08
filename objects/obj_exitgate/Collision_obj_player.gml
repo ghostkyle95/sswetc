@@ -5,18 +5,19 @@ if (global.panic)
 		if (grounded && key_up && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3))
 		{
 			targetDoor = "none";
-			if (global.collect >= global.srank)
+			var currentcombo = floor(((global.combo^2) * 0.25) + (10 * global.combo))
+			if (global.collect + currentcombo >= global.srank)
 			{
 				if (global.secretsfound == 3 && global.combodropped == false && global.combo != 0 && global.lap == true)
 					global.rank = "p";
 				else
 					global.rank = "s";
 			}
-			else if (global.collect > global.arank)
+			else if (global.collect + currentcombo > global.arank)
 				global.rank = "a";
-			else if (global.collect > global.brank)
+			else if (global.collect + currentcombo > global.brank)
 				global.rank = "b";
-			else if (global.collect > global.crank)
+			else if (global.collect + currentcombo > global.crank)
 				global.rank = "c";
 			else
 				global.rank = "d";

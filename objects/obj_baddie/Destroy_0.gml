@@ -36,20 +36,20 @@ if ((ds_list_find_index(global.baddieroom, id) == -1 || important))
 		{
 			case 0:
 			case 1:
-				create_small_number(x, y, "10");
-				global.collect += 10;
+				//create_small_number(x, y, "10");
+				//global.collect += 10;
 				break;
 			case 2:
-				create_small_number(x, y, "20");
-				global.collect += 20;
+				//create_small_number(x, y, "20");
+				//global.collect += 20;
 				break;
 			case 3:
-				create_small_number(x, y, "40");
-				global.collect += 40;
+				//create_small_number(x, y, "40");
+				//global.collect += 40;
 				break;
 			default:
-				create_small_number(x, y, "80");
-				global.collect += 80;
+				//create_small_number(x, y, "80");
+				//global.collect += 80;
 				break;
 		}
 		global.combotime = 60;

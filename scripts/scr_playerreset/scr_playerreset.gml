@@ -36,6 +36,8 @@ function scr_playerreset()
 	instance_destroy(obj_confectichoco);
 	instance_destroy(obj_confectiworm);
 	instance_destroy(obj_confecticandy);
+	instance_destroy(obj_combotitle);
+	instance_destroy(obj_comboend);
 	ds_list_clear(global.FollowerList);
 	global.mallowfollow = false;
 	global.crackfollow = false;
@@ -135,6 +137,7 @@ function scr_playerreset()
 		global.combo = 0;
 		global.previouscombo = 0;
 		global.highest_combo = 0;
+		global.savedcombo = 0;
 		global.combotime = 0;
 		global.pizzacoin = 0;
 		global.roomsave = false;

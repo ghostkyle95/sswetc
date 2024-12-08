@@ -140,6 +140,10 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			ChannelState = 6;
 			tvsprite = orbtvspr;
 			break;
+		case states.puddle:
+			ChannelState = 9;
+			tvsprite = sliptvspr;
+			break;
 		default:
 			if !global.panic
 			{
@@ -211,7 +215,7 @@ if (tvlength > 0)
 tvlength--;
 if (global.key_inv)
 	invsprite = spr_invkey;
-else if (global.treat && global.key_inv != true) // yes this is actual code
+else if (global.treat)
 	invsprite = spr_invdonut;
 else
 	invsprite = spr_invempty;

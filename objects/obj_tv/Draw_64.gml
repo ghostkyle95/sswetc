@@ -115,10 +115,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 		animation_image_index += 0.35;
 	}
 	else if (chooseOnecomboend)
-	{
-		draw_sprite_ext(comboendSprite, comboendImage, 832, 74, 1, 1, 0, c_white, combofade * alpha);
 		animation_image_index = 0;
-	}
 }
 draw_set_font(global.font);
 draw_set_halign(fa_center);

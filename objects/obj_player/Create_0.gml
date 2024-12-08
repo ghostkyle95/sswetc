@@ -34,6 +34,7 @@ vsp = 0;
 xscale = 1;
 yscale = 1;
 facehurt = true;
+divebombfacehurt = false;
 steppy = false;
 stop = false;
 storedhsp = 0;
