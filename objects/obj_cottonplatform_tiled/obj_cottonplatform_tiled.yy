@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Unused",
-    "path": "folders/Objects/Unused.yy",
+    "name": "Cottontown",
+    "path": "folders/Objects/Level Specific/Cottontown.yy",
   },
   "parentObjectId": {
     "name": "obj_cottonplatform",
