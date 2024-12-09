@@ -8,7 +8,7 @@ function draw_option(_x, _y, _text, _color)
 }
 
 function draw_option_ext(_x, _y, _text, _color, _save, _array, _global) {
-	var _value = "", _warning = "";
+	var _value = "ERROR", _warning = "";
 	if is_array(_array) for (var _i = 0; _i < array_length(_array); _i++;) 
 		if (_save == _i) _value = _array[_i];
 	
