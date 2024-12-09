@@ -38,7 +38,6 @@ combofade = 0;
 invsprite = spr_invempty;
 scr_pal_swap_init_system(shd_pal_swapper);
 staticdraw = false;
-statictimer = 20;
 ChannelState = 0;
 OLDChannelState = 0;
 playerstate = obj_player.state;
@@ -48,6 +47,8 @@ global.newhudtvanim = ds_queue_create();
 //alarm[1] = 1;
 DrawY = 0;
 animation_image_index = 0;
+transitionimageindex = 0;
+paniclineimageindex = 0;
 function scr_combotext(_combo = global.combo)
 {
 	var sprite = spr_badcombo_intro;

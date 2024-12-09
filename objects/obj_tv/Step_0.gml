@@ -73,11 +73,7 @@ if (obj_player.state == states.keyget)
 	message = "KEY OBTAINED!";
 	alarm[0] = 50;
 }
-if (staticdraw)
-	statictimer--;
-if (statictimer < 0)
-	staticdraw = false;
-if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
+if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0 && !locksprite)
 {
 	switch (obj_player.state)
 	{
@@ -172,7 +168,6 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 	if (OLDChannelState != ChannelState)
 	{
 		staticdraw = true;
-		statictimer = 20;
 		OLDChannelState = ChannelState;
 	}
 }
@@ -186,8 +181,8 @@ if (tvlength > 0)
 	ChannelState = 99;
 	if (OLDChannelState != ChannelState)
 	{
+		transitionimageindex = 0;
 		staticdraw = true;
-		statictimer = 20;
 		OLDChannelState = ChannelState;
 	}
 }

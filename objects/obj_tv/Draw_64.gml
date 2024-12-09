@@ -54,16 +54,26 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 	if global.combohudtype == combotype.verticalcombo && global.combotime > 0 && global.combo > 0
 		draw_sprite_ext(spr_combopointer, -1, 660, -(global.combotime - 50) + 100 + DrawY, 1, 1, 0, c_white, 1);
 		
-	if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon && !staticdraw)
+	if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon)
 		draw_sprite_ext(spr_tvpropeller, -1, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
-	if (staticdraw)
-		draw_sprite_ext(spr_tvpropellerstatic, -1, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
 	draw_sprite_ext(spr_tvbg, 0, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
-	if (!staticdraw)
-		draw_sprite_ext(tvsprite, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
-	else
-		draw_sprite_ext(spr_tvstatic, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(tvsprite, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+	if (staticdraw)
+	{
+		draw_sprite_ext(spr_tvtransition, transitionimageindex, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+		transitionimageindex += 0.35
+		if transitionimageindex >= 9
+		{
+			staticdraw = false;
+			transitionimageindex = 0;
+		}
+	}
+	if global.panic
+	{
+		draw_sprite_ext(spr_tv_panicline, paniclineimageindex, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+		paniclineimageindex += 0.35
+	}
 	pal_swap_reset();
 	if global.combohudtype != combotype.verticalcombo
 		draw_sprite_ext(invsprite, image_index, 700, 57 + DrawY, 1, 1, 0, c_white, 1);
