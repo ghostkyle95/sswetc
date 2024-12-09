@@ -1,5 +1,5 @@
 var xx = x
-var yy = y
+var yy = y + obj_tv.DrawY
 draw_set_color(c_white)
 draw_sprite(spr_comboend, 0, xx, yy)
 var title = floor(savedcombo / 5)

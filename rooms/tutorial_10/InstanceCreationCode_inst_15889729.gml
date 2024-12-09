@@ -1,1 +1,1 @@
-layername = "Tiles_4"
+scr_secrettiles_add("Tiles_4")

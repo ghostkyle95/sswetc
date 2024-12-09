@@ -39,15 +39,15 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 				gpu_set_blendmode(bm_normal);
 				surface_reset_target();
 				
-				draw_sprite_ext(spr_combobackNEW, -1, 500, -18 + DrawY, 1, 1, 0, c_white, 1);
-				draw_surface_ext(BarSurface, 500, -18 + DrawY, 1, 1, 0, c_white, alpha);
-				draw_sprite_ext(spr_combofrontNEW, -1, 500, -18 + DrawY, 1, 1, 0, c_white, 1);
+				draw_sprite_ext(spr_combobackNEW, -1, 699, -45 + DrawY, 1, 1, 0, c_white, 1);
+				draw_surface_ext(BarSurface, 699, -45 + DrawY, 1, 1, 0, c_white, alpha);
+				draw_sprite_ext(spr_combofrontNEW, -1, 699, -45 + DrawY, 1, 1, 0, c_white, 1);
 				
 				draw_set_font(global.combofont);
 				draw_set_halign(fa_right);
 				draw_set_color(c_white);
 				
-				draw_text(499, 200 + DrawY, string(global.combo))
+				draw_text(800, 143 + DrawY, string(global.combo))
 			}
 		}
 	}
