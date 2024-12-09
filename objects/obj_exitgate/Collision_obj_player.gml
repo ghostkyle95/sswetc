@@ -43,7 +43,7 @@ if (global.panic)
 			audio_stop_sound(mu_noiselap2);
 			audio_stop_sound(mu_noiselap3);
 			scr_writetosave()
-			obj_tv.tvsprite = spr_tvoff;
+			obj_tv.tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvoff_nopropeller : spr_tvoff;
 			if (!instance_exists(obj_endlevelfade))
 			{
 				instance_create(x, y, obj_endlevelfade);

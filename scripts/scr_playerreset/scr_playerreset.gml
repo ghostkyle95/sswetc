@@ -25,7 +25,7 @@ function scr_playerreset()
 	global.cane = false;
 	global.hurtcounter = 0;
 	obj_tv.image_index = 0;
-	obj_tv.tvsprite = spr_tvturnon;
+	obj_tv.tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvturnon_nopropeller : spr_tvturnon;
 	obj_player.visible = true;
 	camera_set_view_angle(view_camera[0], 0);
 	ds_list_clear(global.saveroom);

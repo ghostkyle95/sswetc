@@ -5,7 +5,7 @@ if (room != rank_room && room != hub_room1 && room != hub_public && room != oute
 	scr_playerreset();
 	room = hub_room1;
 	with (obj_tv)
-		tvsprite = spr_tvoff;
+		tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvoff_nopropeller : spr_tvoff;
 	with (obj_player)
 		targetDoor = "A";
 	with (instance_create(x, y, obj_fadeout))
@@ -27,7 +27,7 @@ else if (room == hub_room1 || room == hub_public || room == outer_room1 || room 
 		state = states.titlescreen;
 	}
 	with (obj_tv)
-		tvsprite = spr_tvoff;
+		tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvoff_nopropeller : spr_tvoff;
 	with (obj_player)
 		targetDoor = "A";
 	with (instance_create(x, y, obj_fadeout))

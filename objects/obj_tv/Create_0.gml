@@ -3,7 +3,7 @@ chose = 0;
 message = "";
 comboAnim = false;
 showtext = 0;
-tvsprite = spr_tvoff;
+tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvoff_nopropeller : spr_tvoff;
 noisesprite = spr_player_keyget;
 xi = 500;
 yi = 600;

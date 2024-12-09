@@ -73,7 +73,7 @@ if (obj_player.state == states.keyget)
 	message = "KEY OBTAINED!";
 	alarm[0] = 50;
 }
-if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0 && !locksprite)
+if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
 {
 	switch (obj_player.state)
 	{
@@ -193,6 +193,12 @@ else if (global.treat)
 	invsprite = spr_invdonut;
 else
 	invsprite = spr_invempty;
-if (tvsprite == spr_tvturnon && floor(image_index) == (image_number - 1))
+if ((tvsprite == spr_tvturnon || tvsprite == spr_tvturnon_nopropeller) && floor(image_index) == (image_number - 1))
 	tvsprite = idletvspr;
+	
+if (tvsprite == spr_tvturnon || tvsprite == spr_tvoff)
+{
+	var nopropsprite = asset_get_index(string(tvsprite)+"_nopropeller")
+	tvsprite = nopropsprite;
+}
 sprite_index = tvsprite;

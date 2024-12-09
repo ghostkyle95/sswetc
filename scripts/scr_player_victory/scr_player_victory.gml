@@ -26,7 +26,7 @@ function scr_player_victory()
 		{
 			if (!instance_exists(obj_fadeout))
 				instance_create(x, y, obj_fadeout);
-			obj_tv.tvsprite = spr_tvturnon;
+			obj_tv.tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvturnon_nopropeller : spr_tvturnon;;
 			obj_tv.image_index = 0;
 		}
 	}
