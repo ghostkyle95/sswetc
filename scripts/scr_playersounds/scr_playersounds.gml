@@ -17,7 +17,7 @@ function scr_playersounds()
 		
 	if (((state == states.mach3 && sprite_index != spr_crazyrun) || sprite_index == spr_machslideboost3 || sprite_index == spr_mach3wallclimb) && !audio_is_playing(sfx_plrmach3))
 		scr_sound(sfx_plrmach3);
-	else if ((state != states.mach3 && sprite_index != spr_machslideboost3) || sprite_index == spr_crazyrun) && (sprite_index != spr_mach3wallclimb)
+	else if ((state != states.mach3 && sprite_index != spr_machslideboost3) && (sprite_index != spr_mach3wallclimb) || sprite_index == spr_crazyrun)
 		audio_stop_sound(sfx_plrmach3);
 		
 	if (sprite_index == spr_crazyrun && !audio_is_playing(sfx_plrmach4))

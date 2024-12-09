@@ -1,6 +1,6 @@
 if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID.thrown != 1 && other.baddieID.thrown && baddieID.state != baddiestates.grabbed)
 {
-	scr_sound(sound_punch);
+	scr_sound(sfx_punch);
 	instance_destroy(other.baddieID);
 	instance_destroy(baddieID);
 	instance_destroy(other.id);

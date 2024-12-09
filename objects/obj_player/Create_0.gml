@@ -9,6 +9,7 @@ enum combotype
 global.combohudtype = combotype.horizontalcombo;
 global.combodropped = false;
 global.secretsfound = 0;
+global.impactjump = false;
 global.laps = 0;
 global.lap = false;
 grabclimbbuffer = 0;
