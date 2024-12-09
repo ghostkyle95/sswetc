@@ -45,7 +45,7 @@ if (canmove)
 			break;
 		case modded_selected.combotype:
 			subtitle = "CHOOSE THE STYLE OF YOUR COMBO HUD";
-			CursorY = 200;
+			CursorY = 175;
 			optionsaved_combotype += (key_right2 + key_left2);
 			optionsaved_combotype = wrap(optionsaved_combotype, 0, 2);
 			if (key_jump)

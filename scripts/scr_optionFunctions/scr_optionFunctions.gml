@@ -7,12 +7,11 @@ function draw_option(_x, _y, _text, _color)
 	draw_set_color(c_white);
 }
 
-// genuinely cant be bothered to give the variables names rn
-function draw_option_ext(_a, _b, _c, _d, _e, _f) {
-	var _g = "ERROR";
-	if is_array(_f) for (var _h = 0; _h < array_length(_f); _h++;) 
-		if (_e == _h) _g = _f[_h];
-	draw_set_color(_d ? c_white : c_grey);
-	draw_text(_a, _b, $"{_c}: {_g}");
+function draw_option_ext(_x, _y, _text, _color, _save, _array) {
+	var _value = "ERROR";
+	if is_array(_array) for (var _i = 0; _i < array_length(_array); _i++;) 
+		if (_save == _i) _value = _array[_i];
+	draw_set_color(_color ? c_white : 0x666666);
+	draw_text(_x, _y, $"{_text}: {_value}");
 	draw_set_color(c_white);
 }

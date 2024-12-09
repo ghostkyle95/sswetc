@@ -8,7 +8,6 @@ enum option_selected
 	misc
 }
 image_speed = 0.35;
-CursorX = 0;
 CursorY = 0;
 bgx = 0;
 bgy = 0;
