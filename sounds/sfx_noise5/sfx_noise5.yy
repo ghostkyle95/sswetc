@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sfx_noise5.wav",
   "type": 0,
-  "volume": 0.5,
+  "volume": 0.75,
 }

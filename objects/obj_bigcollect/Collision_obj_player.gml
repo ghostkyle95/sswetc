@@ -8,6 +8,11 @@ create_small_number(x, y, "100");
 global.combotime = 60;
 global.combofreeze = 30;
 global.combotime += 5;
+with (obj_player)
+{
+	if irandom_range(0,100) <= 25
+		scr_happyvoiceline()
+}
 repeat (5)
 	instance_create(x + random_range(-32, 32), y + random_range(-32, 32), obj_collecteffect);
 instance_destroy();

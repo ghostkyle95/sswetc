@@ -70,7 +70,7 @@ if (canmove)
 			}
 			break;
 		case modded_selected.impactjump:
-			subtitle = "TOGGLE DEBUG MODE";
+			subtitle = "TOGGLES SCOUTDIGO BODYSLAM LAND";
 			CursorY = 300;
 			optionsaved_impactjump += (key_right2 + key_left2);
 			optionsaved_impactjump = wrap(optionsaved_impactjump, 0, 1);

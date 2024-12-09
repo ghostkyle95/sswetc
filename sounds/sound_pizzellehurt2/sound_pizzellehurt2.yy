@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "sound_pizzellehurt2.ogg",
   "type": 0,
-  "volume": 0.5,
+  "volume": 0.75,
 }

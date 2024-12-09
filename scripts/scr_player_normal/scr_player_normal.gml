@@ -35,6 +35,8 @@ function scr_player_normal()
 				{
 					randomise();
 					idleanim = random_range(0, 100);
+                    if (irandom(100) <= 25)
+                        scr_neutralvoiceline()
                     image_index = 0
                     if (idleanim <= 16)
                         sprite_index = spr_idle1

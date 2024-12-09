@@ -529,7 +529,7 @@ function scr_characterspr()
 		sfx_plrmach3 = sfx_mach3;
 		sfx_plrmach4 = sfx_mach4;
 		sfx_plrmachturn = sfx_machturn;
-		sfx_firebutt = sfx_pizzellefire;
+		sfx_firebutt = sound_pizzanohurt;
 		sfx_parry = sfx_parryenemy;
 		sfx_plrsjumpstart = sfx_sjumpcharge;
 		sfx_plrsjumphold = sfx_sjumpchargeloop;
@@ -808,7 +808,7 @@ function scr_characterspr()
 		sfx_plrmach3 = sfx_noisemach3;
 		sfx_plrmach4 = sfx_noisemach4;
 		sfx_plrmachturn = sfx_noisemachslide;
-		sfx_firebutt = sfx_pizzellefire;
+		sfx_firebutt = sfx_noisescream;
 		sfx_parry = sfx_parryenemy;
 		sfx_plrsjumpstart = sfx_noisesjumpstart;
 		sfx_plrsjumphold = sfx_noisesjumploop;
@@ -1087,7 +1087,7 @@ function scr_characterspr()
 		sfx_plrmach3 = sfx_noisemach3;
 		sfx_plrmach4 = sfx_noisemach4;
 		sfx_plrmachturn = sfx_noisemachslide;
-		sfx_firebutt = sfx_pizzellefire;
+		sfx_firebutt = sfx_doisescream;
 		sfx_parry = sfx_parryenemy;
 		sfx_plrsjumpstart = sfx_noisesjumpstart;
 		sfx_plrsjumphold = sfx_noisesjumploop;

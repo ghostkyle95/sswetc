@@ -47,6 +47,8 @@ function scr_hurtplayer(_player_index = obj_player)
 					scr_sound(sfx_noisehurt);
 				if (state == states.cotton || state == states.cottondrill || state == states.cottonroll || state = states.minecart)
 					scr_sound(sfx_transfoend);
+				if irandom_range(0,100) <= 50
+					scr_hurtvoiceline()
 				global.hurtcounter += 1;
 				state = states.hurt;
 				alarm[8] = 60;
