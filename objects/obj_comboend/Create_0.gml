@@ -1,7 +1,7 @@
 savedcombo = global.savedcombo
 comboscoremax = floor(((savedcombo^2) * 0.25) + (10 * savedcombo))
 comboscore = comboscoremax
-combominus = round(comboscoremax / 50)
+combominus = 0
 timer_max = 1
 timer = 0
 alarm[0] = 1

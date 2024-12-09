@@ -11,7 +11,7 @@ if (canmove)
 		optionsaved_screentilt = global.screentilt;
 		optionsaved_hitstun = global.hitstunEnabled;*/
 	}
-	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 2)
+	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 3)
 	{
 		optionselected += 1;
 		scr_sound(sfx_step);
@@ -67,6 +67,20 @@ if (canmove)
 				ini_write_real("Settings", "combotype", optionsaved_combotype);
 				ini_close();
 				global.selectedCombo = optionsaved_combotype;
+			}
+			break;
+		case modded_selected.impactjump:
+			subtitle = "TOGGLE DEBUG MODE";
+			CursorY = 300;
+			optionsaved_impactjump += (key_right2 + key_left2);
+			optionsaved_impactjump = wrap(optionsaved_impactjump, 0, 1);
+			if (key_jump)
+			{
+				scr_sound(sfx_enemythrow);
+				ini_open("optionData.ini");
+				ini_write_real("Settings", "impacttype", optionsaved_impactjump);
+				ini_close();
+				global.impactjump = optionsaved_impactjump;
 			}
 			break;
 	}

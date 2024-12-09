@@ -5,12 +5,12 @@ else
     timer = timer_max
     if (comboscore > 0)
     {
-        //if (combominus <= 1)
-            //combominus = 1
-        comboscore -= 1;
+        if (combominus <= 1)
+            combominus = 1
+        comboscore -= round(combominus)
         with (instance_create(obj_player.x, obj_player.y, obj_collecteffect))
 			sprite_index = choose(spr_collect1, spr_collect2, spr_collect3, spr_collect4, spr_collect5);
-		global.collect += 1;
+		global.collect += round(combominus);
         if (comboscore < 0)
             comboscore = 0
     }

@@ -7,6 +7,8 @@ draw_option_ext(480, 100, "DEBUG MODE", optionselected == modded_selected.debugm
 optionsaved_debug, ["OFF", "ON"]);
 draw_option_ext(480, 200, "COMBO HUD TYPE", optionselected == modded_selected.combotype, 
 optionsaved_combotype, ["DEMO 1", "VERTICAL", "HORIZONTAL"]);
+draw_option_ext(480, 300, "COMBO HUD TYPE", optionselected == modded_selected.impactjump, 
+optionsaved_combotype, ["OFF", "ON"]);
 
 draw_set_font(global.smallfont);
 draw_text(480, 512, subtitle);

@@ -267,7 +267,7 @@ function scr_characterspr()
 		
 		sfx_plrjump = sfx_jump;
 		sfx_plrmach1 = sfx_mach1;
-		sfx_plrmach2 = sfx_mach3;
+		sfx_plrmach2 = sfx_mach2;
 		sfx_plrmach3 = sfx_mach3;
 		sfx_plrmach4 = sfx_mach4;
 		sfx_plrmachturn = sfx_machturn;
@@ -525,7 +525,7 @@ function scr_characterspr()
 		
 		sfx_plrjump = sfx_jump;
 		sfx_plrmach1 = sfx_mach1;
-		sfx_plrmach2 = sfx_mach3;
+		sfx_plrmach2 = sfx_mach2;
 		sfx_plrmach3 = sfx_mach3;
 		sfx_plrmach4 = sfx_mach4;
 		sfx_plrmachturn = sfx_machturn;
@@ -1350,7 +1350,7 @@ function scr_characterspr()
 		
 		sfx_plrjump = sfx_jump;
 		sfx_plrmach1 = sfx_mach1;
-		sfx_plrmach2 = sfx_mach3;
+		sfx_plrmach2 = sfx_mach2;
 		sfx_plrmach3 = sfx_mach3;
 		sfx_plrmach4 = sfx_mach4;
 		sfx_plrmachturn = sfx_machturn;
