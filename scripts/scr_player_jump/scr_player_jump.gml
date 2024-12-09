@@ -233,6 +233,7 @@ function scr_player_jump()
 	{
 		image_index = 0;
 		state = states.freefallprep;
+		divebombfacehurt = false;
 		sprite_index = spr_bodyslamstart;
 		scr_sound(sfx_groundpoundstart);
 		vsp = -3;

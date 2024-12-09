@@ -29,9 +29,10 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					vsp = -11;
 				}
 			}
-			if (instance_exists(other.baddieID) && y < other.baddieID.y && !attacking && state == states.jump && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
+			if (instance_exists(other.baddieID) && (y < other.baddieID.y && !attacking && state == states.jump && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep) || state == states.mach2)
 			{
-				scr_sound(sfx_enemyslap);
+				if state != states.mach2
+					scr_sound(sfx_enemyslap);
 				suplexmove = false;
 				if (other.baddieID.object_index == obj_pizzaball)
 					global.golfhit += 1;
@@ -40,30 +41,52 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 					other.baddieID.squashed = true;
 					other.baddieID.squashval = 0;
 					other.baddieID.stunned = 200;
-					if (x != other.baddieID.x)
+					if (x != other.baddieID.x && state != states.mach2)
+					{
 						other.baddieID.image_xscale = -sign(other.baddieID.x - x);
-					image_index = 0;
+						image_index = 0;
+					}
 					if (key_jump2)
 					{
-						other.baddieID.vsp = -5;
-						other.baddieID.hsp = -other.baddieID.image_xscale * 3;
 						instance_create(x, y + 50, obj_stompeffect);
 						other.baddieID.state = baddiestates.stun;
 						stompAnim = true;
 						other.baddieID.image_index = 0;
-						vsp = -14;
-						sprite_index = spr_stompprep;
+						if state != states.mach2
+						{
+							other.baddieID.vsp = -5;
+							other.baddieID.hsp = -other.baddieID.image_xscale * 3;
+							stompAnim = true;
+							vsp = -14;
+							sprite_index = spr_stompprep;
+						}
+						else
+						{
+							other.baddieID.image_xscale = -xscale;
+							other.baddieID.vsp = -5;
+							other.baddieID.hsp = 10 * xscale
+						}
 					}
 					else
 					{
-						other.baddieID.vsp = -5;
 						other.baddieID.hsp = -other.baddieID.image_xscale * 3;
 						instance_create(x, y + 50, obj_stompeffect);
 						other.baddieID.state = baddiestates.stun;
-						stompAnim = true;
 						other.baddieID.image_index = 0;
-						vsp = -9;
-						sprite_index = spr_stompprep;
+						if state != states.mach2
+						{
+							other.baddieID.vsp = -3;
+							other.baddieID.hsp = -other.baddieID.image_xscale * 3;
+							stompAnim = true;
+							vsp = -9;
+							sprite_index = spr_stompprep;
+						}
+						else
+						{
+							other.baddieID.image_xscale = -xscale;
+							other.baddieID.vsp = -5;
+							other.baddieID.hsp = 10 * xscale
+						}
 					}
 				}
 			}
