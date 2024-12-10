@@ -147,23 +147,10 @@ function scr_player_mach2()
 	if animation_end() && sprite_index == spr_walljumpstart && !grounded
 		sprite_index = spr_walljump;
 	scr_cantaunt()
-	if (sprite_index == spr_rollgetup)
+	if (sprite_index == spr_rollgetup || sprite_index == spr_longjumpstart || sprite_index == spr_longjumpend)
 		image_speed = 0.4;
 	else
 		image_speed = 0.65;
-	/*if (character == CHARACTERS.PIZZANO && key_down2)
-	{
-		sprite_index = spr_pizzano_crouchslide;
-		state = states.machroll;
-	}
-	if (character == CHARACTERS.PIZZANO && key_up && key_slap2 && charged)
-	{
-		flash = true;
-		alarm[0] = 240;
-		image_index = 0;
-		state = states.Sjump;
-		sprite_index = spr_pizzano_sjumpprep;
-	}*/
 	if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
 	{
 		scr_sound(sfx_plrgrabdash);
