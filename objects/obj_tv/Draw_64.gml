@@ -22,7 +22,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 				draw_set_font(global.combofontVERTICAL);
 				draw_set_halign(fa_center);
 				draw_set_color(c_white);
-				draw_text(672, 20 + DrawY, string(global.combo)+"x")
+				draw_text(499, 20 + DrawY, string(global.combo)+"x")
 			}
 		}
 		else if global.combohudtype == combotype.horizontalcombo
