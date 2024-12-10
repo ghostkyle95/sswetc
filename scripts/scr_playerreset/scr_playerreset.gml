@@ -86,6 +86,8 @@ function scr_playerreset()
 		supertauntbuffer = 0;
 		supertaunteffect = -4;
 		supertauntcharged = false;
+		scale_xs = 1;
+		scale_ys = 1;
 		scr_characterspr();
 		alarm[0] = -1;
 		alarm[1] = -1;
@@ -118,6 +120,8 @@ function scr_playerreset()
 		crouchAnim = true;
 		machhitAnim = false;
 		stompAnim = false;
+		lastroom = -4;
+		lastTargetDoor = -4;
 		inv_frames = 0;
 		turning = false;
 		hurtbounce = 0;

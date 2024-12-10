@@ -3,16 +3,16 @@ enum modded_selected
 	back,
 	debugmode,
 	combotype,
-	impactjump
+	impactJump
 };
 optionselected = modded_selected.back;
 optionsaved_debug = global.debugmode;
 ini_open("optionData.ini");
 global.selectedCombo = ini_read_real("Settings", "combotype", 2);
-global.impactJump = ini_read_real("Settings", "impactjump", 0);
+global.impactJump = ini_read_real("Settings", "impactJump", 0);
 ini_close();
 optionsaved_combotype = global.selectedCombo;
-optionsaved_impactjump = global.impactJump;
+optionsaved_impactJump = global.impactJump;
 global.combohudtype = global.selectedCombo;
 subtitle = "GO BACK TO MAIN SCREEN";
 CursorY = -999;

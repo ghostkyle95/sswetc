@@ -1,7 +1,7 @@
 {
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
-  "name": "secret",
+  "name": "ts_secret",
   "autoTileSets": [],
   "macroPageTiles": {
     "SerialiseHeight": 0,
