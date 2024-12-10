@@ -4,6 +4,18 @@ function scr_pizzano_shoulderbash()
 	if movespeed < 12
 		movespeed = 12;
 	//instakillmove = 1
+	if (move != xscale && move != 0)
+	{
+		state = states.jump;
+		image_index = 0;
+		sprite_index = spr_suplexdashCancel;
+		jumpAnim = true;
+		momemtum = false;
+		mach2 = 0;
+		xscale *= -1;
+		if (audio_is_playing(sfx_plrgrabdash))
+			audio_stop_sound(sfx_plrgrabdash);
+	}
 	if (key_down)
 	{
 		if (grounded)

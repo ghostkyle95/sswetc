@@ -361,7 +361,14 @@ function scr_characterspr()
 		spr_canewalk = spr_player_canewalk;
 		spr_canesuplex = spr_player_canesuplex;
 		spr_canehit = spr_player_canehit;
+		spr_uppizzabox = spr_player_uppizzabox;
+		spr_downpizzabox = spr_pizzano_downpizzabox;
+		spr_tumblestart = spr_player_tumblestart;
+		spr_tumble = spr_player_tumble;
+		spr_tumbleend = spr_player_tumbleend;
 		spr_machroll = spr_pizzano_machroll;
+		spr_escapeidle = spr_player_escapeidle;
+		spr_timesupidle = spr_player_timesupidle;
 		
 		spr_taunt = spr_pizzano_taunt;
 		spr_winding = spr_player_winding;
