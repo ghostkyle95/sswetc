@@ -15,8 +15,8 @@ if (touched && sprite_index == spr_secretportal_enter)
         vsp = 0
         x = other.x
         y = other.y
-        scale_xs = Approach(scale_xs, 0, 0.05)
-        scale_ys = Approach(scale_ys, 0, 0.05)
+        scale_xs = approach(scale_xs, 0, 0.05)
+        scale_ys = approach(scale_ys, 0, 0.05)
         fallinganimation = 0
         if (state == states.mach2 || state == states.mach3)
             state = states.normal
@@ -27,9 +27,6 @@ if (floor(image_index) == (image_number - 1))
     switch sprite_index
     {
         case spr_secretportal_enter:
-            sprite_index = spr_secretportal_idle
-            break
-        case spr_secretportal_spawnclosenew:
             image_index = image_number - 1
             if touched
             {

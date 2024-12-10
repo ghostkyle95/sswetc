@@ -5,8 +5,6 @@ switch sprite_index
     case spr_secretportal_spawnopennew:
         with (obj_player)
         {
-            if (object_index != obj_player2 || global.coop)
-            {
                 x = other.x
                 y = other.y
                 roomstartx = x
@@ -16,7 +14,6 @@ switch sprite_index
                 movespeed = 0
                 cutscene = true
                 visible = false
-            }
         }
         waitbuffer = 80
         drop = false
@@ -58,14 +55,14 @@ switch sprite_index
                     hsp = 0
                     movespeed = 0
                     vsp = 10
-                    scale_xs = Approach(scale_xs, 1, 0.05)
-                    scale_ys = Approach(scale_ys, 1, 0.05)
+                    scale_xs = approach(scale_xs, 1, 0.05)
+                    scale_ys = approach(scale_ys, 1, 0.05)
                     fallinganimation = 0
                     if (scale_xs == 1)
                         other.drop = true
                     if other.drop
                     {
-                        if ((!isgustavo) && (tauntstoredstate == states.cotton || tauntstoredstate == states.cottonroll || tauntstoredstate == states.cottondrill || tauntstoredstate == states.minecart))
+                        if ((tauntstoredstate == states.cotton || tauntstoredstate == states.cottonroll || tauntstoredstate == states.cottondrill || tauntstoredstate == states.minecart))
                         {
                             state = tauntstoredstate
                             movespeed = tauntstoredmovespeed

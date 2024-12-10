@@ -2,10 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_player_wallkick(){
 	static attack_afterimagetimer = 6;
-    hsp = movespeed
+    hsp = movespeed * xscale
     move = key_right + key_left
 	if (move != 0)
-        movespeed = approach(movespeed, (move * 12), 1)
+        movespeed = approach(movespeed, ((move * xscale) * 12), 1)
     else
         movespeed = approach(movespeed, 0, 0.5)
 	if (key_down)

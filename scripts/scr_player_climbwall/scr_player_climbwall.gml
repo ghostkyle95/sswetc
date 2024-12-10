@@ -98,7 +98,7 @@ function scr_player_climbwall()
 			sprite_index = spr_player_wallkickstart;
 			state = states.wallkick;
 			xscale *= -1;
-			movespeed = (9 * xscale)
+			movespeed = 9
 		}
 		else
 		{
