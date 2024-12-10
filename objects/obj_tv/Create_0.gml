@@ -98,3 +98,4 @@ function scr_combotext(_combo = global.combo)
 	}
 	return sprite;
 }
+event_user(0);

@@ -65,7 +65,8 @@ function scr_player_mach2()
 		machhitAnim = false;
 		state = states.mach3;
 		flash = true;
-		sprite_index = spr_mach4;
+		if sprite_index != spr_rollgetup
+			sprite_index = spr_mach4;
 		instance_create(x, y, obj_jumpdust);
 	}
 	if animation_end() && sprite_index == spr_sidewayspin

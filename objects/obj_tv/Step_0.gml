@@ -1,4 +1,5 @@
 scr_tvsprites();
+event_user(0);
 if (room == steamy_1)
 {
 	global.srank = 22000;
@@ -77,40 +78,6 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 {
 	switch (obj_player.state)
 	{
-		case states.hurt:
-			tvsprite = hurttvspr;
-			break;
-		case states.minecart:
-			tvsprite = minecarttvspr;
-			break;
-		case states.fireass:
-			tvsprite = firetvspr;
-			break;
-		case states.bombpep:
-			tvsprite = bombtvspr;
-			break;
-		case states.cotton:
-		case states.cottondrill:
-		case states.cottonroll:
-			tvsprite = cottontvspr;
-			break;
-		case states.mach2:
-		case states.machslide:
-		case states.climbwall:
-		case states.mach3:
-			if (obj_player.state == states.mach3 && obj_player.sprite_index != obj_player.spr_crazyrun)
-				tvsprite = mach3tvspr;
-			else if (obj_player.sprite_index == obj_player.spr_crazyrun)
-				tvsprite = crazyruntvspr
-			else
-				tvsprite = machtvspr;
-			break;
-		case states.fling:
-			tvsprite = orbtvspr;
-			break;
-		case states.puddle:
-			tvsprite = sliptvspr;
-			break;
 		default:
 			if !global.panic
 			{
@@ -154,8 +121,42 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 				tvsprite = panictvspr;
 			}
 			break;
+		case states.minecart:
+			tvsprite = minecarttvspr;
+			break;
+		case states.fireass:
+			tvsprite = firetvspr;
+			break;
+		case states.bombpep:
+			tvsprite = bombtvspr;
+			break;
+		case states.fling:
+			tvsprite = orbtvspr;
+			break;
+		case states.cotton:
+		case states.cottondrill:
+		case states.cottonroll:
+			tvsprite = cottontvspr;
+			break;
+		case states.mach2:
+		case states.machslide:
+		case states.climbwall:
+		case states.mach3:
+			if (obj_player.state == states.mach3 && obj_player.sprite_index != obj_player.spr_crazyrun)
+				tvsprite = mach3tvspr;
+			else if (obj_player.sprite_index == obj_player.spr_crazyrun)
+				tvsprite = crazyruntvspr
+			else
+				tvsprite = machtvspr;
+			break;
+		case states.puddle:
+			tvsprite = sliptvspr;
+			break;
+		case states.hurt:
+			tvsprite = hurttvspr;
+			break;
 	}
-	if (OLDtvsprite != tvsprite)
+	if (OLDtvsprite != tvsprite && tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != spr_tvoff && tvsprite != spr_tvturnon && tvsprite != spr_tvoff_nopropeller && tvsprite != spr_tvturnon_nopropeller)
 	{
 		transitionimageindex = 0;
 		staticdraw = true;
@@ -170,7 +171,7 @@ else if (tvsprite != spr_tvturnon && tvsprite != spr_tvturnon_nopropeller && ds_
 }
 if (tvlength > 0)
 {
-	if (OLDtvsprite != tvsprite)
+	if (OLDtvsprite != tvsprite && tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != spr_tvoff && tvsprite != spr_tvturnon && tvsprite != spr_tvoff_nopropeller && tvsprite != spr_tvturnon_nopropeller)
 	{
 		transitionimageindex = 0;
 		staticdraw = true;
@@ -187,10 +188,4 @@ else
 	invsprite = spr_invempty;
 if ((tvsprite == spr_tvturnon || tvsprite == spr_tvturnon_nopropeller) && floor(image_index) == (image_number - 1))
 	tvsprite = idletvspr;
-	
-if (tvsprite == spr_tvturnon || tvsprite == spr_tvoff)
-{
-	var nopropsprite = asset_get_index(sprite_get_name(tvsprite)+"_nopropeller")
-	tvsprite = nopropsprite;
-}
 sprite_index = tvsprite;
