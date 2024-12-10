@@ -78,32 +78,26 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 	switch (obj_player.state)
 	{
 		case states.hurt:
-			ChannelState = 0;
 			tvsprite = hurttvspr;
 			break;
 		case states.minecart:
-			ChannelState = 1;
 			tvsprite = minecarttvspr;
 			break;
 		case states.fireass:
-			ChannelState = 2;
 			tvsprite = firetvspr;
 			break;
 		case states.bombpep:
-			ChannelState = 3;
 			tvsprite = bombtvspr;
 			break;
 		case states.cotton:
 		case states.cottondrill:
 		case states.cottonroll:
-			ChannelState = 4;
 			tvsprite = cottontvspr;
 			break;
 		case states.mach2:
 		case states.machslide:
 		case states.climbwall:
 		case states.mach3:
-			ChannelState = 5;
 			if (obj_player.state == states.mach3 && obj_player.sprite_index != obj_player.spr_crazyrun)
 				tvsprite = mach3tvspr;
 			else if (obj_player.sprite_index == obj_player.spr_crazyrun)
@@ -112,11 +106,9 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 				tvsprite = machtvspr;
 			break;
 		case states.fling:
-			ChannelState = 6;
 			tvsprite = orbtvspr;
 			break;
 		case states.puddle:
-			ChannelState = 9;
 			tvsprite = sliptvspr;
 			break;
 		default:
@@ -124,7 +116,6 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			{
 				if (!obj_player.angry)
 				{
-					ChannelState = 7;
 					if (string_pos("secret", room_get_name(room)) != 0)
 					{
 						tvcount = choose(500, 450, 400, 550);
@@ -155,7 +146,6 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 				}
 				else
 				{
-					ChannelState = 8;
 					tvsprite = angrytvspr;
 				}
 			}
@@ -165,25 +155,27 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			}
 			break;
 	}
-	if (OLDChannelState != ChannelState)
+	if (OLDtvsprite != tvsprite)
 	{
+		transitionimageindex = 0;
 		staticdraw = true;
-		OLDChannelState = ChannelState;
+		savedsprite = OLDtvsprite;
+		OLDtvsprite = tvsprite;
 	}
 }
-else if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) > 1)
+else if (tvsprite != spr_tvturnon && tvsprite != spr_tvturnon_nopropeller && ds_queue_size(global.newhudtvanim) > 1)
 {
 	tvsprite = ds_queue_dequeue(global.newhudtvanim);
 	tvlength = ds_queue_dequeue(global.newhudtvanim);
 }
 if (tvlength > 0)
 {
-	ChannelState = 99;
-	if (OLDChannelState != ChannelState)
+	if (OLDtvsprite != tvsprite)
 	{
 		transitionimageindex = 0;
 		staticdraw = true;
-		OLDChannelState = ChannelState;
+		savedsprite = OLDtvsprite;
+		OLDtvsprite = tvsprite;
 	}
 }
 tvlength--;
@@ -198,7 +190,7 @@ if ((tvsprite == spr_tvturnon || tvsprite == spr_tvturnon_nopropeller) && floor(
 	
 if (tvsprite == spr_tvturnon || tvsprite == spr_tvoff)
 {
-	var nopropsprite = asset_get_index(string(tvsprite)+"_nopropeller")
+	var nopropsprite = asset_get_index(sprite_get_name(tvsprite)+"_nopropeller")
 	tvsprite = nopropsprite;
 }
 sprite_index = tvsprite;

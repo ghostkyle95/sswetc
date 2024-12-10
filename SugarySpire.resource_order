@@ -43,6 +43,7 @@
     {"name":"Door Letters","order":1,"path":"folders/Objects/Gameplay/Room Transitions/Door Letters.yy",},
     {"name":"Doors","order":4,"path":"folders/Objects/Gameplay/Room Transitions/Doors.yy",},
     {"name":"Hallways","order":5,"path":"folders/Objects/Gameplay/Room Transitions/Hallways.yy",},
+    {"name":"Secret Portal","order":7,"path":"folders/Objects/Gameplay/Room Transitions/Secret Portal.yy",},
     {"name":"Switch","order":19,"path":"folders/Objects/Gameplay/Switch.yy",},
     {"name":"Transformation Givers","order":7,"path":"folders/Objects/Gameplay/Transformation Givers.yy",},
     {"name":"Level Specific","order":2,"path":"folders/Objects/Level Specific.yy",},
@@ -262,7 +263,6 @@
     {"name":"TV Thingamajigs","order":42,"path":"folders/Sprites/Unused/TV Thingamajigs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Secret Portal","order":7,"path":"folders/Objects/Gameplay/Room Transitions/Secret Portal.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_doorS","order":6,"path":"objects/obj_doorS/obj_doorS.yy",},

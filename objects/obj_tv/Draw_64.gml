@@ -22,7 +22,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 				draw_set_font(global.combofontVERTICAL);
 				draw_set_halign(fa_center);
 				draw_set_color(c_white);
-				draw_text(499, 20 + DrawY, string(global.combo)+"x")
+				draw_text(672, 20 + DrawY, string(global.combo)+"x")
 			}
 		}
 		else if global.combohudtype == combotype.horizontalcombo
@@ -39,15 +39,15 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 				gpu_set_blendmode(bm_normal);
 				surface_reset_target();
 				
-				draw_sprite_ext(spr_combobackNEW, -1, 699, -45 + DrawY, 1, 1, 0, c_white, 1);
-				draw_surface_ext(BarSurface, 699, -45 + DrawY, 1, 1, 0, c_white, alpha);
-				draw_sprite_ext(spr_combofrontNEW, -1, 699, -45 + DrawY, 1, 1, 0, c_white, 1);
+				draw_sprite_ext(spr_combobackNEW, -1, 699, -50 + DrawY, 1, 1, 0, c_white, 1);
+				draw_surface_ext(BarSurface, 699, -50 + DrawY, 1, 1, 0, c_white, alpha);
+				draw_sprite_ext(spr_combofrontNEW, -1, 699, -50 + DrawY, 1, 1, 0, c_white, 1);
 				
 				draw_set_font(global.combofont);
 				draw_set_halign(fa_right);
 				draw_set_color(c_white);
 				
-				draw_text(800, 143 + DrawY, string(global.combo))
+				draw_text(800, 165 + DrawY, string(global.combo))
 			}
 		}
 	}
@@ -58,7 +58,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 		draw_sprite_ext(spr_tvpropeller, -1, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
 	draw_sprite_ext(spr_tvbg, 0, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
-	draw_sprite_ext(tvsprite, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+	draw_sprite_ext((!staticdraw) ? tvsprite : savedsprite, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 	if (staticdraw)
 	{
 		draw_sprite_ext(spr_tvtransition, transitionimageindex, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
