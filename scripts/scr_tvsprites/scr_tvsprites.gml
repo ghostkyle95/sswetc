@@ -20,6 +20,11 @@ function scr_tvsprites()
 		panictvspr = spr_pizzytv_escape1;
 		secrettvspr = spr_pizzytv_secret;
 		sliptvspr = spr_pizzytv_slipnslide;
+		marshtvspr = spr_pizzytv_marshmellow;
+		chocotvspr = spr_pizzytv_chocolate;
+		smoretvspr = spr_pizzytv_smore;
+		gummywormtvspr = spr_pizzytv_gummyworm;
+		candytvspr = spr_pizzytv_candy;
 	}
 	if (obj_player.character == CHARACTERS.PIZZANO)
 	{
