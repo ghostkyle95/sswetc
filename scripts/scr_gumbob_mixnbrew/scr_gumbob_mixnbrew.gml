@@ -22,6 +22,6 @@ function scr_gumbob_mixnbrew()
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_gumbob_brew_up)
 	{
 		state = states.normal;
-		sprite_index = spr_gumbob_idle;
+		sprite_index = spr_idle;
 	}
 }
