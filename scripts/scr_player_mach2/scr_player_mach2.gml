@@ -192,6 +192,20 @@ function scr_player_mach2()
 		else
 			vsp = -21;
 	}
+	if global.cane
+	{
+		if (!key_down && key_slap2 && !suplexmove && !shotgunAnim)
+		{
+			scr_sound(sfx_plrgrabdash);
+			instance_create(x, y, obj_slaphitbox);
+			suplexmove = true;
+			vsp = 0;
+			instance_create(x, y, obj_jumpdust);
+			image_index = 0;
+			sprite_index = spr_canesuplex;
+			state = states.handstandjump;
+		}
+	}
 	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
 	{
 		image_index = 0;

@@ -1246,6 +1246,7 @@
     {"id":{"name":"sfx_explosion","path":"sounds/sfx_explosion/sfx_explosion.yy",},},
     {"id":{"name":"spr_playerSW_divebombstart","path":"sprites/spr_playerSW_divebombstart/spr_playerSW_divebombstart.yy",},},
     {"id":{"name":"spr_playerN_clownbump","path":"sprites/spr_playerN_clownbump/spr_playerN_clownbump.yy",},},
+    {"id":{"name":"obj_canegiver","path":"objects/obj_canegiver/obj_canegiver.yy",},},
     {"id":{"name":"spr_playerN_supertaunt4","path":"sprites/spr_playerN_supertaunt4/spr_playerN_supertaunt4.yy",},},
     {"id":{"name":"mu_paletteselect","path":"sounds/mu_paletteselect/mu_paletteselect.yy",},},
     {"id":{"name":"spr_playerN_finishingblow3","path":"sprites/spr_playerN_finishingblow3/spr_playerN_finishingblow3.yy",},},

@@ -32,8 +32,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Unused",
-    "path": "folders/Sprites/Unused.yy",
+    "name": "Transformation Givers",
+    "path": "folders/Sprites/Gameplay/Transformation Givers.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

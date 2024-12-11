@@ -49,8 +49,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "Unused",
-    "path": "folders/Sprites/Unused.yy",
+    "name": "Assets",
+    "path": "folders/Sprites/Level Specific/Cottontown/Assets.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
