@@ -7,7 +7,7 @@ if (pause)
 	var option4pos = [30, 382]
 	
 	// bg
-	draw_sprite_tiled(bg_paused, 0, x++, y++);
+	draw_sprite_tiled_ext(bg_paused, 0, x++, y++, 1 ,1 ,c_white, 0.5);
 	draw_rectangle_color(-5000, 0, 0, 1080, 2752517, 2752517, 2752517, 2752517, false);
 	draw_rectangle_color(960, 0, 5960, 1080, 2752517, 2752517, 2752517, 2752517, false);
 	
