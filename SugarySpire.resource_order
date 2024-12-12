@@ -2110,6 +2110,7 @@
     {"name":"spr_playerN_minigunidle","order":212,"path":"sprites/spr_playerN_minigunidle/spr_playerN_minigunidle.yy",},
     {"name":"spr_babybear_scared","order":1,"path":"sprites/spr_babybear_scared/spr_babybear_scared.yy",},
     {"name":"spr_verticalhallway","order":1,"path":"sprites/spr_verticalhallway/spr_verticalhallway.yy",},
+    {"name":"spr_pizzano_mach3turn","order":52,"path":"sprites/spr_pizzano_mach3turn/spr_pizzano_mach3turn.yy",},
     {"name":"spr_worlddoor_closed","order":8,"path":"sprites/spr_worlddoor_closed/spr_worlddoor_closed.yy",},
     {"name":"spr_playerN_knightslide","order":174,"path":"sprites/spr_playerN_knightslide/spr_playerN_knightslide.yy",},
     {"name":"bg_thesunisadeadlylazer","order":1,"path":"sprites/bg_thesunisadeadlylazer/bg_thesunisadeadlylazer.yy",},

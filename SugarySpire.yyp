@@ -2365,6 +2365,7 @@
     {"id":{"name":"spr_playerN_minigunidle","path":"sprites/spr_playerN_minigunidle/spr_playerN_minigunidle.yy",},},
     {"id":{"name":"spr_babybear_scared","path":"sprites/spr_babybear_scared/spr_babybear_scared.yy",},},
     {"id":{"name":"spr_verticalhallway","path":"sprites/spr_verticalhallway/spr_verticalhallway.yy",},},
+    {"id":{"name":"spr_pizzano_mach3turn","path":"sprites/spr_pizzano_mach3turn/spr_pizzano_mach3turn.yy",},},
     {"id":{"name":"spr_worlddoor_closed","path":"sprites/spr_worlddoor_closed/spr_worlddoor_closed.yy",},},
     {"id":{"name":"spr_playerN_knightslide","path":"sprites/spr_playerN_knightslide/spr_playerN_knightslide.yy",},},
     {"id":{"name":"bg_thesunisadeadlylazer","path":"sprites/bg_thesunisadeadlylazer/bg_thesunisadeadlylazer.yy",},},

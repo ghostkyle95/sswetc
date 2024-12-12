@@ -20,6 +20,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
                 {
                     sprite_index = spr_mach3hit;
                     image_index = 0;
+					anger = 100;
                 }
 				global.hit += 1;
 				global.combotime = 60;

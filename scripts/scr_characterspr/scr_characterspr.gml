@@ -412,7 +412,7 @@ function scr_characterspr()
 		spr_mach3jump = spr_pizzano_mach3jump;
 		spr_plrdashpad = spr_player_dashpad;
 		spr_crazyrun = spr_pizzano_crazyrun;
-		spr_machslideboost3 = spr_player_machslideboost3;
+		spr_machslideboost3 = spr_pizzano_mach3turn;
 		spr_3hpidle = spr_player_angryidle;
 		spr_3hpwalk = spr_player_angrywalk;
 		spr_facehurtup = spr_player_facehurtup;

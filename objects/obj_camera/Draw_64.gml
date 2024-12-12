@@ -42,7 +42,7 @@ for (var i = 0; i < _string_length; i++)
 	
 // rank bubble
 enum RANKS { D, C, B, A, S, P };
-var _score = global.collect, _rframe = RANKS.D,
+var _score = global.collect + floor(((global.combo^2) * 0.25) + (10 * global.combo)), _rframe = RANKS.D,
 _rw = sprite_get_width(spr_rankbubble), _rh = sprite_get_height(spr_rankbubble),
 _rxo = sprite_get_xoffset(spr_rankbubble), _ryo = sprite_get_yoffset(spr_rankbubble),
 _rx = 217 + _rxo, _ry = 22 + _ryo + DrawY;
