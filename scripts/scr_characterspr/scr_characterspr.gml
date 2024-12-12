@@ -253,6 +253,9 @@ function scr_characterspr()
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		
+		spr_50comboidle = spr_player_50comboidle;
+		spr_50combowalk = spr_player_50combowalk;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -517,6 +520,9 @@ function scr_characterspr()
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		spr_dive = spr_pizzano_dive;
+		
+		spr_50comboidle = spr_player_50comboidle;
+		spr_50combowalk = spr_player_50combowalk;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -797,6 +803,9 @@ function scr_characterspr()
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		
+		spr_50comboidle = spr_player_50comboidle;
+		spr_50combowalk = spr_player_50combowalk;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1076,6 +1085,9 @@ function scr_characterspr()
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		
+		spr_50comboidle = spr_player_50comboidle;
+		spr_50combowalk = spr_player_50combowalk;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1336,6 +1348,9 @@ function scr_characterspr()
 		
 		spr_mach3hit = spr_playerSW_mach3hit;
 		
+		spr_50comboidle = spr_playerSW_3hpidle;
+		spr_50combowalk = spr_playerSW_move;
+		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;
 		spr_firecovered = spr_player_fire; 
@@ -1350,8 +1365,8 @@ function scr_characterspr()
 		spr_drank = spr_rankSWD;
 		spr_prank = spr_rankSWP;
 		
-		global.entrancemus = mu_waffle;
-		global.panicmus = mu_escape;
+		global.entrancemus = mu_swabentrance;
+		global.panicmus = mu_swabescape;
 		global.lap2mus = mu_lap2;
 		global.lap3mus = mu_lap3;
 		

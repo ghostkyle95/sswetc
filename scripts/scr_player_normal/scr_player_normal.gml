@@ -57,7 +57,9 @@ function scr_player_normal()
 					{
 						start_running = true;
 						movespeed = 0;
-						if (global.cane)
+						if global.combo > 50
+							sprite_index = spr_50comboidle;
+						else if (global.cane)
 							sprite_index = spr_caneidle;
 						else if angry
 							sprite_index = spr_3hpidle;
@@ -96,10 +98,12 @@ function scr_player_normal()
 			idle = 0;
 			facehurt = false;
 			divebombfacehurt = false;
-			if (angry)
-				sprite_index = spr_3hpwalk;
+			if global.combo > 50
+				sprite_index = spr_50combowalk;
 			else if (global.cane)
 				sprite_index = spr_canewalk;
+			else if (angry)
+				sprite_index = spr_3hpwalk;
 			else
 				sprite_index = spr_move;
 		}
