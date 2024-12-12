@@ -13,15 +13,15 @@ if (sprite_index != spr_confectiboxopen)
 		global.combofreeze = 30;
 		global.combotime = 60;
 	}
-	if content == obj_confectimallow
+	if BoxContent == obj_confectimallow
 		scr_queue_tvanim(obj_tv.marshtvspr, 200);
-	else if content == obj_confectichoco
+	else if BoxContent == obj_confectichoco
 		scr_queue_tvanim(obj_tv.chocotvspr, 200);
-	else if content == obj_confecticrack
+	else if BoxContent == obj_confecticrack
 		scr_queue_tvanim(obj_tv.smoretvspr, 200);
-	else if content == obj_confectiworm
+	else if BoxContent == obj_confectiworm
 		scr_queue_tvanim(obj_tv.gummywormtvspr, 200);
-	else if content == obj_confecticandy
+	else if BoxContent == obj_confecticandy
 		scr_queue_tvanim(obj_tv.candytvspr, 200);
 	else
 		scr_queue_tvanim(obj_tv.collecttvspr, 200);
