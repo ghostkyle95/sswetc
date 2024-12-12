@@ -35,6 +35,7 @@ function scr_tvsprites()
 		combotvspr = spr_pizzanotvcombo;
 		machtvspr = spr_pizzanotv_mach;
 		mach3tvspr = spr_pizzanotv_mach3;
+		crazyruntvspr = spr_pizzanotv_mach4;
 		minecarttvspr = spr_pizzanotv_mine;
 	}
 	if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == false)
