@@ -1330,6 +1330,7 @@
     {"id":{"name":"mu_steamysecret","path":"sounds/mu_steamysecret/mu_steamysecret.yy",},},
     {"id":{"name":"sfx_trainhorn","path":"sounds/sfx_trainhorn/sfx_trainhorn.yy",},},
     {"id":{"name":"spr_comboverticalgoo","path":"sprites/spr_comboverticalgoo/spr_comboverticalgoo.yy",},},
+    {"id":{"name":"spr_player_idle4","path":"sprites/spr_player_idle4/spr_player_idle4.yy",},},
     {"id":{"name":"mu_looptest","path":"sounds/mu_looptest/mu_looptest.yy",},},
     {"id":{"name":"spr_playerSW_machslidestart","path":"sprites/spr_playerSW_machslidestart/spr_playerSW_machslidestart.yy",},},
     {"id":{"name":"mu_title","path":"sounds/mu_title/mu_title.yy",},},

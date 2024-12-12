@@ -33,7 +33,7 @@ function scr_player_normal()
 			{
 				if (idle >= 300 && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3 && sprite_index != spr_idle4 && sprite_index != spr_idle5 && sprite_index != spr_idle6)
 				{
-					randomise();
+					//randomise();
 					idleanim = random_range(0, 100);
                     if (irandom(100) <= 25)
                         scr_neutralvoiceline()
@@ -51,40 +51,43 @@ function scr_player_normal()
                     else
                         sprite_index = spr_idle6
 				}
-				if (!facehurt)
+				if (idle < 300)
 				{
-					if (windingAnim < 1800 || angry)
+					if (!facehurt)
 					{
-						start_running = true;
-						movespeed = 0;
-						if global.combo > 50
-							sprite_index = spr_50comboidle;
-						else if (global.cane)
-							sprite_index = spr_caneidle;
-						else if angry
-							sprite_index = spr_3hpidle;
-						else
-							sprite_index = spr_idle;
+						if (windingAnim < 1800 || angry)
+						{
+							start_running = true;
+							movespeed = 0;
+							if global.combo > 50
+								sprite_index = spr_50comboidle;
+							else if (global.cane)
+								sprite_index = spr_caneidle;
+							else if angry
+								sprite_index = spr_3hpidle;
+							else
+								sprite_index = spr_idle;
+						}
+						else if !(windingAnim < 1800)
+						{
+							idle = 0;
+							windingAnim--;
+							sprite_index = spr_winding;
+						}
 					}
-					else if !(windingAnim < 1800)
+					else if (facehurt)
 					{
-						idle = 0;
-						windingAnim--;
-						sprite_index = spr_winding;
-					}
-				}
-				else if (facehurt)
-				{
-					windingAnim = false;
-					if (sprite_index != spr_facehurtup && sprite_index != spr_facehurt && divebombfacehurt == false)
-						sprite_index = spr_facehurtup;
-					if (floor(image_index) == (image_number - 1) && sprite_index == spr_facehurtup)
-						sprite_index = spr_facehurt;
+						windingAnim = false;
+						if (sprite_index != spr_facehurtup && sprite_index != spr_facehurt && divebombfacehurt == false)
+							sprite_index = spr_facehurtup;
+						if (floor(image_index) == (image_number - 1) && sprite_index == spr_facehurtup)
+							sprite_index = spr_facehurt;
 						
-					if (sprite_index != spr_divebombfacehurtup && sprite_index != spr_divebombfacehurt && divebombfacehurt == true)
-						sprite_index = spr_divebombfacehurtup;
-					if (floor(image_index) == (image_number - 1) && sprite_index == spr_divebombfacehurtup)
-						sprite_index = spr_divebombfacehurt;
+						if (sprite_index != spr_divebombfacehurtup && sprite_index != spr_divebombfacehurt && divebombfacehurt == true)
+							sprite_index = spr_divebombfacehurtup;
+						if (floor(image_index) == (image_number - 1) && sprite_index == spr_divebombfacehurtup)
+							sprite_index = spr_divebombfacehurt;
+					}
 				}
 			}
 			if (global.panic)

@@ -70,8 +70,8 @@ function scr_characterspr()
 		spr_keyget = spr_player_keyget;
 		spr_idle1 = spr_player_idle1;
 		spr_idle2 = spr_player_idle2;
-		spr_idle3 = spr_player_idle1;
-		spr_idle4 = spr_player_idle2;
+		spr_idle3 = spr_player_idle3;
+		spr_idle4 = spr_player_idle4;
 		spr_idle5 = spr_player_idle1;
 		spr_idle6 = spr_player_idle2;
 		spr_suplexdash = spr_player_suplexdash;

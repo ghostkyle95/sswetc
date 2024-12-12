@@ -1174,6 +1174,7 @@
     {"name":"mu_steamysecret","order":16,"path":"sounds/mu_steamysecret/mu_steamysecret.yy",},
     {"name":"sfx_trainhorn","order":8,"path":"sounds/sfx_trainhorn/sfx_trainhorn.yy",},
     {"name":"spr_comboverticalgoo","order":4,"path":"sprites/spr_comboverticalgoo/spr_comboverticalgoo.yy",},
+    {"name":"spr_player_idle4","order":187,"path":"sprites/spr_player_idle4/spr_player_idle4.yy",},
     {"name":"mu_looptest","order":3,"path":"sounds/mu_looptest/mu_looptest.yy",},
     {"name":"spr_playerSW_machslidestart","order":95,"path":"sprites/spr_playerSW_machslidestart/spr_playerSW_machslidestart.yy",},
     {"name":"mu_title","order":20,"path":"sounds/mu_title/mu_title.yy",},
