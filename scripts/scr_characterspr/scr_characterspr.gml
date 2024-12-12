@@ -495,7 +495,7 @@ function scr_characterspr()
 		spr_divebombland = spr_player_bodyslamlandOLD;
 		
 		spr_bodyslamjump = spr_playerSW_bodyslamjump;
-		spr_piledriverjump = spr_pizzano_jump;
+		spr_piledriverjump = spr_pizzano_jumpOLD;
 		
 		spr_sidewayspin = spr_playerN_sidewayspin;
 		spr_sidewayspinend = spr_playerN_sidewayspinend;
