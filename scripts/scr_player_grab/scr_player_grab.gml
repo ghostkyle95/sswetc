@@ -140,7 +140,6 @@ function scr_player_grab()
 		image_index = 0;
 		hsp = 0;
 		movespeed = 0;
-		anger = 100;
 	}
 	if (key_attack2)
 	{

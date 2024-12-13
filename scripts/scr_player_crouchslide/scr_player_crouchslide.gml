@@ -25,7 +25,7 @@ function scr_player_crouchslide()
 	{
 		if (!grounded)
 		{
-			if character != CHARACTERS.NOISE
+			if (character != CHARACTERS.NOISE || doisemode == true)
 			{
 				sprite_index = spr_dive;
 				vsp = 10;

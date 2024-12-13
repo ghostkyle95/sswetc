@@ -1,6 +1,6 @@
 if ((ds_list_find_index(global.baddieroom, id) == -1 || important))
 {
-	obj_tv.image_index = irandom_range(0, 4);
+	obj_player.anger = 100;
 	repeat (3)
 	{
 		instance_create(x, y, obj_slapstar);

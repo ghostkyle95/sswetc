@@ -33,7 +33,7 @@ function scr_doise_bounce(){
         state = states.normal
         movespeed = abs(hsp)
     }
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB && !(sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall))
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
 	{
 		image_index = 0;
 		state = states.freefallprep;

@@ -1045,9 +1045,9 @@ function scr_characterspr()
 		spr_walljumpstart = spr_playerN_walljumpstart;
 		spr_walljump = spr_playerN_walljumpend;
 		
-		spr_divebombstart = spr_player_bodyslamstartOLD;
-		spr_divebombfall = spr_player_bodyslamfallOLD;
-		spr_divebombland = spr_player_bodyslamlandOLD;
+		spr_divebombstart = spr_playerN_bodyslamstart;
+		spr_divebombfall = spr_playerN_bodyslam;
+		spr_divebombland = spr_playerN_bodyslamland;
 		
 		spr_cotidle = spr_cotton_idle;
 		spr_cotwalk = spr_cotton_walk;
@@ -1081,9 +1081,9 @@ function scr_characterspr()
 		spr_kungfu5 = spr_pizzano_kungfu5;
 		spr_firecovered = spr_player_fire; 
 		spr_firecovereddash = spr_player_firedash;
-		spr_dive = spr_player_dive;
-		spr_divebombfacehurtup = spr_player_facehurtup;
-		spr_divebombfacehurt = spr_player_facehurt;
+		spr_dive = spr_playerN_dive;
+		spr_divebombfacehurtup = spr_playerN_facehurtup;
+		spr_divebombfacehurt = spr_playerN_facehurt;
 		
 		spr_50comboidle = spr_player_50comboidle;
 		spr_50combowalk = spr_player_50combowalk;

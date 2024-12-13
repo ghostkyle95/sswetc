@@ -33,7 +33,7 @@ function scr_player_machroll()
 	}
 	else if (sprite_index != spr_dive && !grounded)
 	{
-		if character != CHARACTERS.NOISE
+		if (character != CHARACTERS.NOISE || doisemode == true)
 		{
 			sprite_index = spr_dive;
 			vsp = 10;
@@ -53,7 +53,7 @@ function scr_player_machroll()
 	}
 	if (key_jump && !grounded)
 	{
-		if character != CHARACTERS.NOISE
+		if (character != CHARACTERS.NOISE || doisemode == true)
 		{
 			image_index = 0;
 			state = states.freefallprep;
@@ -76,16 +76,34 @@ function scr_player_machroll()
 	}
 	if ((scr_solid(x + 1, y, true) && !place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + 1, y)) && xscale == 1 && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
-		movespeed = 0;
-		state = states.bump;
-		sprite_index = spr_wallsplat
-		image_index = 0
+		if doisemode == true
+		{
+			xscale *= -1
+			instance_create(x, y, obj_bangeffect);
+			scr_sound(sfx_bump);
+		}
+		else
+		{
+			movespeed = 0;
+			state = states.bump;
+			sprite_index = spr_wallsplat
+			image_index = 0
+		}
 	}
 	if ((scr_solid(x - 1, y, true) && !place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x - 1, y)) && xscale == -1 && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
-		movespeed = 0;
-		state = states.bump;
-		sprite_index = spr_wallsplat
-		image_index = 0
+		if doisemode == true
+		{
+			xscale *= -1
+			instance_create(x, y, obj_bangeffect);
+			scr_sound(sfx_bump);
+		}
+		else
+		{
+			movespeed = 0;
+			state = states.bump;
+			sprite_index = spr_wallsplat
+			image_index = 0
+		}
 	}
 }
