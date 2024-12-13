@@ -229,15 +229,6 @@ function scr_player_jump()
 		doublejumped = 0;
 	}
 			scr_cantaunt()
-	if (key_down2 && !global.cane)
-	{
-		image_index = 0;
-		state = states.freefallprep;
-		divebombfacehurt = false;
-		sprite_index = spr_bodyslamstart;
-		scr_sound(sfx_groundpoundstart);
-		vsp = -3;
-	}
 	if (global.cane)
 	{
 		if (!grounded)
@@ -282,4 +273,13 @@ function scr_player_jump()
 	}
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_candytransitionup)
 		sprite_index = spr_candyup;
+	if (key_down2 && !global.cane)
+	{
+		image_index = 0;
+		state = states.freefallprep;
+		divebombfacehurt = false;
+		sprite_index = spr_bodyslamstart;
+		scr_sound(sfx_groundpoundstart);
+		vsp = -3;
+	}
 }

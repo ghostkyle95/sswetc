@@ -39,7 +39,7 @@ function scr_player_freefall()
 		if (move != 0)
 			xscale = move;
 	}
-	if (global.cane)
+	if (global.cane) && sprite_index == spr_bodyslamfall
 		sprite_index = spr_caneslam;
 	if ((grounded && !input_buffer_jump < 8) && !place_meeting(x, y + 1, obj_destructibles))
 	{
