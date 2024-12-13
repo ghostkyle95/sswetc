@@ -80,6 +80,11 @@ function scr_doise_rocket()
 			vsp = -5;
 		if (key_down)
 			vsp = 5;
+		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_jetpackjump  && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
+			sprite_index = spr_superjumpside;
+			
+		if (grounded && hsp != 0 && sprite_index != spr_rocketfistground && sprite_index != spr_jetpackjump && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
+			sprite_index = spr_rocketfistground;
 		if ((scr_solid(x + xscale, y, true) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 		{
 			scr_sound(sfx_groundpoundland);
@@ -108,11 +113,6 @@ function scr_doise_rocket()
 			sprite_index = spr_mach3hitwall;
 			state = states.bump;
 		}
-		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_jetpackjump  && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
-			sprite_index = spr_superjumpside;
-			
-		if (grounded && hsp != 0 && sprite_index != spr_rocketfistground && sprite_index != spr_jetpackjump && sprite_index != spr_jetpackturn && sprite_index != spr_mach3hitwall && sprite_index != spr_groundedjetpackturn)
-			sprite_index = spr_rocketfistground;
 			
 		if (key_slap2 && key_up)
 		{

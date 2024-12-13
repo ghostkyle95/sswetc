@@ -36,6 +36,10 @@ function scr_rocketfist_pizzano()
 			vsp = -5;
 		if (key_down)
 			vsp = 5;
+		if (key_down && grounded)
+			sprite_index = spr_crouchslide;
+		else if (!key_down && grounded && hsp != 0)
+			sprite_index = spr_rocketfistground;
 		if ((scr_solid(x + xscale, y, true) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 		{
 			scr_sound(sfx_groundpoundland);
@@ -69,19 +73,6 @@ function scr_rocketfist_pizzano()
 		}
 		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_mach3hitwall && sprite_index != spr_airhitwall)
 			sprite_index = spr_superjumpside;
-		if (key_slap2 && key_up && charged)
-		{
-			flash = true;
-			alarm[0] = 240;
-			image_index = 0;
-			state = states.Sjump;
-			sjumpspeed = 12;
-			sprite_index = spr_superjump;
-		}
-		if (key_down && grounded)
-			sprite_index = spr_crouchslide;
-		else if (!key_down && grounded && hsp != 0)
-			sprite_index = spr_rocketfistground;
 	}
 	image_speed = 0.35;
 }
