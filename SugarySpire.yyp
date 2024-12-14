@@ -341,6 +341,7 @@
     {"id":{"name":"spr_player_grind","path":"sprites/spr_player_grind/spr_player_grind.yy",},},
     {"id":{"name":"obj_gnome","path":"objects/obj_gnome/obj_gnome.yy",},},
     {"id":{"name":"obj_cottonplatform_tiled","path":"objects/obj_cottonplatform_tiled/obj_cottonplatform_tiled.yy",},},
+    {"id":{"name":"spr_player_idle5","path":"sprites/spr_player_idle5/spr_player_idle5.yy",},},
     {"id":{"name":"spr_playerN_minigunslamland","path":"sprites/spr_playerN_minigunslamland/spr_playerN_minigunslamland.yy",},},
     {"id":{"name":"obj_molassesWall","path":"objects/obj_molassesWall/obj_molassesWall.yy",},},
     {"id":{"name":"spr_player_firedash","path":"sprites/spr_player_firedash/spr_player_firedash.yy",},},
