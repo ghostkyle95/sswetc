@@ -256,7 +256,7 @@ function scr_characterspr()
 		spr_50comboidle = spr_player_50comboidle;
 		spr_50combowalk = spr_player_50combowalk;
 		
-		spr_breakdance = spr_player_breakdancebeach;
+		spr_breakdance = spr_player_breakdance;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
