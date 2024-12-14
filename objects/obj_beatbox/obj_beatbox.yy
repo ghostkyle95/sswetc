@@ -32,6 +32,9 @@
     "name": "spr_beatbox",
     "path": "sprites/spr_beatbox/spr_beatbox.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_crouchmask",
+    "path": "sprites/spr_crouchmask/spr_crouchmask.yy",
+  },
   "visible": true,
 }
