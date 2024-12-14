@@ -102,7 +102,7 @@ function scr_player_freefall()
 	freefallsmash++;
 	if (freefallsmash > 10 && !instance_exists(obj_groundpoundeffect))
 		instance_create_depth(x, y, -6, obj_groundpoundeffect);
-	if (key_slap2 && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
+	if (key_slap2 && character != CHARACTERS.NOISE && !grounded && vsp > 10 && instance_exists(obj_groundpoundeffect))
 	{
 		if (character != CHARACTERS.SWAB)
 		{
