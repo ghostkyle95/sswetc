@@ -55,20 +55,17 @@ function scr_player_normal()
 				{
 					if (!facehurt)
 					{
-						if (windingAnim < 1800 || angry)
-						{
-							start_running = true;
-							movespeed = 0;
-							if global.combo > 50
-								sprite_index = spr_50comboidle;
-							else if (global.cane)
-								sprite_index = spr_caneidle;
-							else if angry
-								sprite_index = spr_3hpidle;
-							else
-								sprite_index = spr_idle;
-						}
-						else if !(windingAnim < 1800)
+						start_running = true;
+						movespeed = 0;
+						if global.combo > 50
+							sprite_index = spr_50comboidle;
+						else if (global.cane)
+							sprite_index = spr_caneidle;
+						else if angry
+							sprite_index = spr_3hpidle;
+						else
+							sprite_index = spr_idle;
+						if !(windingAnim < 1800)
 						{
 							idle = 0;
 							windingAnim--;
