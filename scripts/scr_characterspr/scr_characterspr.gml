@@ -256,6 +256,8 @@ function scr_characterspr()
 		spr_50comboidle = spr_player_50comboidle;
 		spr_50combowalk = spr_player_50combowalk;
 		
+		spr_breakdance = spr_player_breakdancebeach;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -523,6 +525,8 @@ function scr_characterspr()
 		
 		spr_50comboidle = spr_player_50comboidle;
 		spr_50combowalk = spr_player_50combowalk;
+		
+		spr_breakdance = spr_player_breakdancebeach;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -806,6 +810,8 @@ function scr_characterspr()
 		spr_50comboidle = spr_player_50comboidle;
 		spr_50combowalk = spr_player_50combowalk;
 		
+		spr_breakdance = spr_playerN_breakdancing;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1088,6 +1094,8 @@ function scr_characterspr()
 		spr_50comboidle = spr_player_50comboidle;
 		spr_50combowalk = spr_player_50combowalk;
 		
+		spr_breakdance = spr_playerN_breakdancing;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1350,6 +1358,8 @@ function scr_characterspr()
 		
 		spr_50comboidle = spr_playerSW_3hpidle;
 		spr_50combowalk = spr_playerSW_move;
+		
+		spr_breakdance = spr_playerSW_breakdance;
 		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;

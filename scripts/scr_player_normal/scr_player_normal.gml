@@ -15,6 +15,32 @@ function scr_player_normal()
 		hsp = (move * movespeed) - 5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = (move * movespeed) + 5;
+    var breakdance_max = 10
+    if (key_taunt)
+        breakdance_pressed++
+    else
+        breakdance_pressed = 0
+    if (breakdance_pressed >= breakdance_max)
+    {
+        breakdance_speed = approach(breakdance_speed, 0.6, 0.005)
+    }
+    else
+        breakdance_speed = 0.25
+    if (breakdance_speed >= 0.5)
+    {
+        if (!instance_exists(obj_beatbox))
+        {
+            instance_create(x, y, obj_poofeffect)
+            with (instance_create(x, y, obj_beatbox))
+                vsp = -11
+        }
+        notecreate--
+    }
+    if (notecreate <= 0)
+    {
+        instance_create((x + (random_range(-70, 70))), (y + (random_range(-70, 70))), obj_notes)
+        notecreate = 10
+    }
 	if (!machslideAnim && !landAnim && !shotgunAnim)
 	{
 		if (move == 0)
@@ -29,9 +55,7 @@ function scr_player_normal()
 				idle = 0;
 				image_index = 0;
 			}
-			if (sprite_index != spr_caneidle && sprite_index != spr_3hpidle)
-			{
-				if (idle >= 300 && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3 && sprite_index != spr_idle4 && sprite_index != spr_idle5 && sprite_index != spr_idle6)
+				if (idle >= 300 && sprite_index != spr_caneidle && sprite_index != spr_3hpidle && sprite_index != spr_breakdance && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3 && sprite_index != spr_idle4 && sprite_index != spr_idle5 && sprite_index != spr_idle6)
 				{
 					//randomise();
 					idleanim = random_range(0, 100);
@@ -55,7 +79,9 @@ function scr_player_normal()
 				{
 					if (!facehurt)
 					{
-						if global.combo > 50
+						if (breakdance_pressed >= breakdance_max)
+							sprite_index = spr_breakdance
+						else if global.combo > 50
 							sprite_index = spr_50comboidle;
 						else if (global.cane)
 							sprite_index = spr_caneidle;
@@ -94,14 +120,15 @@ function scr_player_normal()
 					}
 				}
 			}
-		}
 		if (move != 0)
 		{
 			machslideAnim = false;
 			idle = 0;
 			facehurt = false;
 			divebombfacehurt = false;
-			if global.combo > 50
+			if (breakdance_pressed >= breakdance_max)
+				sprite_index = spr_breakdance
+			else if global.combo > 50
 				sprite_index = spr_50combowalk;
 			else if (global.cane)
 				sprite_index = spr_canewalk;

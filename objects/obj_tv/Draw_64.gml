@@ -63,7 +63,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 			    for (var i = 0; i < string_length(string(global.combo)); i++)
 			    {
 					var _xx = (-((string_width(string(global.combo)) / 2))) + string_width(string(global.combo)) / string_length(string(global.combo)) * i
-					var _yy = i * -4
+					var _yy = i * 4
 			        if ComboShake
 					{
 						_xx += irandom_range(-2, 2)

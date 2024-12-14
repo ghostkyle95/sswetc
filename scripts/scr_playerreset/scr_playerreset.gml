@@ -80,6 +80,9 @@ function scr_playerreset()
 		Sjumpcan_doublejump = true;
 		playComboVariable = -4;
 		ResetMusic = false;
+		breakdance_pressed = 0;
+		breakdance_speed = 0.25;
+		notecreate = 50;
 		Dashpad_buffer = 0;
 		Dashpad_buffer = 0;
 		vertical = false;
