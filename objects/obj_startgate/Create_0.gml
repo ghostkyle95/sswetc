@@ -6,6 +6,5 @@ drawtext = false;
 
 parallax = { draw : false, alpha : 1, surface : noone, array : [] };
 function gate_parallax(_sprite, _speed) constructor { 
-	sprite_index = _sprite; speed = _speed; x = 0;
-	return;
+	sprite_index = _sprite; speed = _speed; x = 0; return;
 };
