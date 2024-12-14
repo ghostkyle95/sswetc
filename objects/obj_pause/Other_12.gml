@@ -8,6 +8,7 @@ if (room != rank_room && room != hub_room1 && room != hub_public && room != oute
 		tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvoff_nopropeller : spr_tvoff;
 	with (obj_player)
 		targetDoor = "A";
+	obj_tv.showcombo = false;
 	with (instance_create(x, y, obj_fadeout))
 	{
 		fadealpha = 1;
@@ -30,6 +31,7 @@ else if (room == hub_room1 || room == hub_public || room == outer_room1 || room 
 		tvsprite = (global.combohudtype == combotype.horizontalcombo) ? spr_tvoff_nopropeller : spr_tvoff;
 	with (obj_player)
 		targetDoor = "A";
+	obj_tv.showcombo = false;
 	with (instance_create(x, y, obj_fadeout))
 	{
 		fadealpha = 1;

@@ -15,6 +15,7 @@ ComboShake = false;
 comboendImage = 0;
 comboendSprite = spr_badcombo_boil;
 combocanFade = true;
+showcombo = false;
 once = 0;
 global.hurtcounter = 0;
 global.hurtmilestone = 3;

@@ -2,11 +2,16 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 {
 	if global.combotime > 0 && global.combo > 0 
 	{
+		showcombo = true;
 		combo_posX = wave(-5, 5, 2, 20)
 		ComboY = approach(ComboY, 10, 1)
 	}
 	else
+	{
 		ComboY = approach(ComboY, (global.combohudtype == combotype.verticalcombo) ? -100 : -60, 2)
+		if ComboY > ((global.combohudtype == combotype.verticalcombo) ? -100 : -60)
+			showcombo = false;
+	}
 		
 	if !(global.combotime < 0 && global.combo < 0) && ComboY > ((global.combohudtype == combotype.verticalcombo) ? -100 : -60)
 	{
