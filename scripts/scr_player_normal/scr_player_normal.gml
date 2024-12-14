@@ -33,7 +33,7 @@ function scr_player_normal()
 			{
 				if (idle >= 300 && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3 && sprite_index != spr_idle4 && sprite_index != spr_idle5 && sprite_index != spr_idle6)
 				{
-					//randomise();
+					randomise();
 					idleanim = random_range(0, 100);
                     if (irandom(100) <= 25)
                         scr_neutralvoiceline()
