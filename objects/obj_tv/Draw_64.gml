@@ -13,7 +13,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 			showcombo = false;
 	}
 		
-	if !(global.combotime < 0 && global.combo < 0) && ComboY > ((global.combohudtype == combotype.verticalcombo) ? -100 : -60)
+	if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global.combohudtype == combotype.verticalcombo) ? -100 : -60)
 	{
 		if global.combohudtype == combotype.verticalcombo
 		{
