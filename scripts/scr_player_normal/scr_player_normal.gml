@@ -57,14 +57,6 @@ function scr_player_normal()
 					{
 						start_running = true;
 						movespeed = 0;
-						if global.combo > 50
-							sprite_index = spr_50comboidle;
-						else if (global.cane)
-							sprite_index = spr_caneidle;
-						else if angry
-							sprite_index = spr_3hpidle;
-						else
-							sprite_index = spr_idle;
 						if !(windingAnim < 1800)
 						{
 							idle = 0;
@@ -87,10 +79,18 @@ function scr_player_normal()
 					}
 				}
 			}
-			if (global.panic)
+			if global.combo > 50
+				sprite_index = spr_50comboidle;
+			else if (global.cane)
+				sprite_index = spr_caneidle;
+			else if angry
+				sprite_index = spr_3hpidle;
+			else if (global.panic)
 				sprite_index = spr_escapeidle;
-			if (instance_exists(obj_coneball) && sprite_index == spr_escapeidle)
+			else if (instance_exists(obj_coneball) && sprite_index == spr_escapeidle)
 				sprite_index = spr_timesupidle;
+			else
+				sprite_index = spr_idle;
 		}
 		if (move != 0)
 		{
