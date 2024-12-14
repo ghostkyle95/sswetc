@@ -13,7 +13,12 @@ global.impactJump = ini_read_real("Settings", "impactJump", 0);
 ini_close();
 optionsaved_combotype = global.selectedCombo;
 optionsaved_impactJump = global.impactJump;
-global.combohudtype = global.selectedCombo;
+if global.selectedCombo == 0
+	global.combohudtype = combotype.democombo;
+else if global.selectedCombo == 1
+	global.combohudtype = combotype.verticalcombo;
+else if global.selectedCombo == 2
+	global.combohudtype = combotype.horizontalcombo;
 subtitle = "GO BACK TO MAIN SCREEN";
 CursorY = -999;
 depth = -100;
