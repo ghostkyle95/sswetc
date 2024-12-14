@@ -68,7 +68,7 @@ function scr_player_mach3()
 			if !grounded && input_buffer_jump == 0 && character == CHARACTERS.PIZZANO
 			{
 				state = states.cape;
-				sprite_index == spr_capebegin;
+				sprite_index = spr_capebegin;
 				image_index = 0;
 			}
 			if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
