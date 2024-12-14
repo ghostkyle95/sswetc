@@ -120,7 +120,8 @@ enum states {
     jetpackdoise, // 117
 	wallkick, // 118
 	trickjump, // 119
-	doisebounce // 120
+	doisebounce, // 120
+	cape // 121
 };
 
 
@@ -491,6 +492,9 @@ function scr_playerstate()
 			break
 		case states.doisebounce:
 			_stateFunction = scr_doise_bounce;
+			break
+		case states.cape:
+			_stateFunction = scr_pizzano_cape;
 			break
 	}
 	stateName = "states.undefined";
