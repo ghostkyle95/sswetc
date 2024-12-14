@@ -33,7 +33,7 @@ function scr_player_normal()
 			{
 				if (idle >= 300 && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3 && sprite_index != spr_idle4 && sprite_index != spr_idle5 && sprite_index != spr_idle6)
 				{
-					randomise();
+					//randomise();
 					idleanim = random_range(0, 100);
                     if (irandom(100) <= 25)
                         scr_neutralvoiceline()
@@ -55,9 +55,32 @@ function scr_player_normal()
 				{
 					if (!facehurt)
 					{
-						start_running = true;
-						movespeed = 0;
-						if !(windingAnim < 1800)
+						if global.combo > 50
+							sprite_index = spr_50comboidle;
+						else if (global.cane)
+							sprite_index = spr_caneidle;
+						else if angry
+							sprite_index = spr_3hpidle;
+						else if (global.panic)
+							sprite_index = spr_escapeidle;
+						else if (instance_exists(obj_coneball) && sprite_index == spr_escapeidle)
+							sprite_index = spr_timesupidle;
+						else
+							sprite_index = spr_idle;
+						if (windingAnim < 1800 || angry)
+						{
+							start_running = true;
+							movespeed = 0;
+							/*if global.combo > 50
+								sprite_index = spr_50comboidle;
+							else if (global.cane)
+								sprite_index = spr_caneidle;
+							else if angry
+								sprite_index = spr_3hpidle;
+							else
+								sprite_index = spr_idle;*/
+						}
+						else if !(windingAnim < 1800)
 						{
 							idle = 0;
 							windingAnim--;
@@ -79,18 +102,6 @@ function scr_player_normal()
 					}
 				}
 			}
-			if global.combo > 50
-				sprite_index = spr_50comboidle;
-			else if (global.cane)
-				sprite_index = spr_caneidle;
-			else if angry
-				sprite_index = spr_3hpidle;
-			else if (global.panic)
-				sprite_index = spr_escapeidle;
-			else if (instance_exists(obj_coneball) && sprite_index == spr_escapeidle)
-				sprite_index = spr_timesupidle;
-			else
-				sprite_index = spr_idle;
 		}
 		if (move != 0)
 		{
