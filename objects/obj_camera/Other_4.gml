@@ -7,6 +7,9 @@ Camera_yorigin = 0;
 cam_lzoom = 1;
 cam_langle = 0;
 var _region = -4;
+var _roomname = room_get_name(room)
+var _strpos = string_pos("_", _roomname)
+global.levelname = string_delete(_roomname, _strpos, 999)
 with (obj_cameraRegion)
 {
 	if (Region_active && activationCode())

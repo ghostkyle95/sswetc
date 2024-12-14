@@ -53,6 +53,7 @@ DrawY = 0;
 animation_image_index = 0;
 transitionimageindex = 0;
 paniclineimageindex = 0;
+tvbgsprite = spr_tvbg_hub;
 function scr_combotext(_combo = global.combo)
 {
 	var sprite = spr_badcombo_intro;

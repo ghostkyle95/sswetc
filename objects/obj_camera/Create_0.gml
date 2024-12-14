@@ -50,3 +50,4 @@ oldrank = RANKS.D;
 ranksize = 1;
 savedcollect = 0;
 color_array = array_create(1, 0)
+global.levelname = ""

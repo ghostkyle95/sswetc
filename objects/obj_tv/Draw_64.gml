@@ -80,7 +80,7 @@ if (room != scootercutsceneidk && room != devroom && room != palroom && room != 
 	if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon && global.combohudtype != combotype.horizontalcombo)
 		draw_sprite_ext(spr_tvpropeller, -1, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
-	draw_sprite_ext(spr_tvbg, 0, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(tvbgsprite, 0, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 	draw_sprite_ext((!staticdraw) ? tvsprite : savedsprite, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 	if (staticdraw)
 	{
