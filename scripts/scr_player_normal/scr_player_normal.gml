@@ -36,6 +36,8 @@ function scr_player_normal()
         }
         notecreate--
     }
+	if (breakdance_pressed >= breakdance_max) && sprite_index != spr_breakdance
+		sprite_index = spr_breakdance
     if (notecreate <= 0)
     {
         instance_create((x + (random_range(-70, 70))), (y + (random_range(-70, 70))), obj_notes)
@@ -279,7 +281,9 @@ function scr_player_normal()
 	if (move != 0)
 	{
 		xscale = move;
-		if (movespeed < 3 && move != 0)
+        if (sprite_index == spr_breakdance)
+            image_speed = breakdance_speed
+        else if (movespeed < 3 && move != 0)
 			image_speed = 0.35;
 		else if (movespeed > 3 && movespeed < 6)
 			image_speed = 0.45;
