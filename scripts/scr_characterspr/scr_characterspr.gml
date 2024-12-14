@@ -257,6 +257,11 @@ function scr_characterspr()
 		spr_50combowalk = spr_player_50combowalk;
 		
 		spr_breakdance = spr_player_breakdance;
+		spr_capebegin = spr_pizzano_capebegin;
+		spr_capeup = spr_pizzano_capeup;
+		spr_capeupstart = spr_pizzano_capeupstart;
+		spr_capefall = spr_pizzano_capefall;
+		spr_capefallstart = spr_pizzano_capefallstart;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -527,6 +532,11 @@ function scr_characterspr()
 		spr_50combowalk = spr_player_50combowalk;
 		
 		spr_breakdance = spr_player_breakdancebeach;
+		spr_capebegin = spr_pizzano_capebegin;
+		spr_capeup = spr_pizzano_capeup;
+		spr_capeupstart = spr_pizzano_capeupstart;
+		spr_capefall = spr_pizzano_capefall;
+		spr_capefallstart = spr_pizzano_capefallstart;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -811,6 +821,11 @@ function scr_characterspr()
 		spr_50combowalk = spr_player_50combowalk;
 		
 		spr_breakdance = spr_playerN_breakdancing;
+		spr_capebegin = spr_pizzano_capebegin;
+		spr_capeup = spr_pizzano_capeup;
+		spr_capeupstart = spr_pizzano_capeupstart;
+		spr_capefall = spr_pizzano_capefall;
+		spr_capefallstart = spr_pizzano_capefallstart;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
@@ -1095,6 +1110,11 @@ function scr_characterspr()
 		spr_50combowalk = spr_player_50combowalk;
 		
 		spr_breakdance = spr_playerN_breakdancing;
+		spr_capebegin = spr_pizzano_capebegin;
+		spr_capeup = spr_pizzano_capeup;
+		spr_capeupstart = spr_pizzano_capeupstart;
+		spr_capefall = spr_pizzano_capefall;
+		spr_capefallstart = spr_pizzano_capefallstart;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
@@ -1360,6 +1380,11 @@ function scr_characterspr()
 		spr_50combowalk = spr_playerSW_move;
 		
 		spr_breakdance = spr_playerSW_breakdance;
+		spr_capebegin = spr_pizzano_capebegin;
+		spr_capeup = spr_pizzano_capeup;
+		spr_capeupstart = spr_pizzano_capeupstart;
+		spr_capefall = spr_pizzano_capefall;
+		spr_capefallstart = spr_pizzano_capefallstart;
 		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;
