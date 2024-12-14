@@ -1556,6 +1556,7 @@
     {"name":"bg_spirepara","order":1,"path":"sprites/bg_spirepara/bg_spirepara.yy",},
     {"name":"spr_player_eatspaghetti","order":23,"path":"sprites/spr_player_eatspaghetti/spr_player_eatspaghetti.yy",},
     {"name":"spr_playerSW_rollgetup","order":108,"path":"sprites/spr_playerSW_rollgetup/spr_playerSW_rollgetup.yy",},
+    {"name":"hub_room1NEW","order":5,"path":"rooms/hub_room1NEW/hub_room1NEW.yy",},
     {"name":"spr_rudy_walk","order":3,"path":"sprites/spr_rudy_walk/spr_rudy_walk.yy",},
     {"name":"spr_playerN_doublejump","order":88,"path":"sprites/spr_playerN_doublejump/spr_playerN_doublejump.yy",},
     {"name":"spr_playerN_mortwalk","order":227,"path":"sprites/spr_playerN_mortwalk/spr_playerN_mortwalk.yy",},

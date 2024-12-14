@@ -1743,6 +1743,7 @@
     {"id":{"name":"bg_spirepara","path":"sprites/bg_spirepara/bg_spirepara.yy",},},
     {"id":{"name":"spr_player_eatspaghetti","path":"sprites/spr_player_eatspaghetti/spr_player_eatspaghetti.yy",},},
     {"id":{"name":"spr_playerSW_rollgetup","path":"sprites/spr_playerSW_rollgetup/spr_playerSW_rollgetup.yy",},},
+    {"id":{"name":"hub_room1NEW","path":"rooms/hub_room1NEW/hub_room1NEW.yy",},},
     {"id":{"name":"spr_rudy_walk","path":"sprites/spr_rudy_walk/spr_rudy_walk.yy",},},
     {"id":{"name":"spr_playerN_doublejump","path":"sprites/spr_playerN_doublejump/spr_playerN_doublejump.yy",},},
     {"id":{"name":"spr_playerN_mortwalk","path":"sprites/spr_playerN_mortwalk/spr_playerN_mortwalk.yy",},},
@@ -2926,6 +2927,7 @@
     {"roomId":{"name":"noisetv_2","path":"rooms/noisetv_2/noisetv_2.yy",},},
     {"roomId":{"name":"noisetv_3","path":"rooms/noisetv_3/noisetv_3.yy",},},
     {"roomId":{"name":"entryway_lap","path":"rooms/entryway_lap/entryway_lap.yy",},},
+    {"roomId":{"name":"hub_room1NEW","path":"rooms/hub_room1NEW/hub_room1NEW.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [
