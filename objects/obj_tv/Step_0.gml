@@ -56,22 +56,22 @@ if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0 && g
 {
 	alarm[0] = 150;
 	if (obj_player.character == CHARACTERS.PIZZELLE)
-		character = "PIZZELLE";
+		character = "Pizelle";
 	else if (obj_player.character == CHARACTERS.PIZZANO)
-		character = "THE PIZZANO";
+		character = "The Pizzano";
 	else if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == false)
-		character = "THE NOISE";
+		character = "The Noise";
 	else if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == true)
-		character = "THE DOISE";
+		character = "The Doise";
 	else if (obj_player.character == CHARACTERS.SWAB)
-		character = "SWAB";
-	message = "YOU HAVE HURT " + string(character) + " " + string(global.hurtmilestone) + " TIMES...";
+		character = "Swab";
+	message = "You have hurt " + string(character) + " " + string(global.hurtmilestone) + " times...";
 	global.hurtmilestone += 10;
 }
 if (obj_player.state == states.keyget)
 {
 	showtext = true;
-	message = "KEY OBTAINED!";
+	message = "Key obtained!";
 	alarm[0] = 50;
 }
 if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)

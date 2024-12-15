@@ -8,7 +8,7 @@ if (obj_shell.isOpen == false)
 		obj_player.state = states.normal
 		obj_player.sprite_index = obj_player.spr_idle
 		obj_player.doisemode = false;
-		message = "THE PIZZANO";
+		message = "The Pizzano";
 		showtext = true;
 		alarm[0] = 200;
 		scr_tvsprites();
@@ -21,7 +21,7 @@ if (obj_shell.isOpen == false)
 		obj_player.state = states.normal
 		obj_player.sprite_index = obj_player.spr_idle
 		obj_player.doisemode = false;
-		message = "THE NOISE";
+		message = "The Noise";
 		showtext = true;
 		alarm[0] = 200;
 		scr_tvsprites();
@@ -34,7 +34,7 @@ if (obj_shell.isOpen == false)
 		obj_player.state = states.normal
 		obj_player.sprite_index = obj_player.spr_idle
 		obj_player.doisemode = true;
-		message = "THE DOISE";
+		message = "The Doise";
 		showtext = true;
 		alarm[0] = 200;
 		scr_tvsprites();
@@ -47,7 +47,7 @@ if (obj_shell.isOpen == false)
 		obj_player.state = states.normal
 		obj_player.sprite_index = obj_player.spr_idle
 		obj_player.doisemode = false;
-		message = "SWAB";
+		message = "Swab";
 		showtext = true;
 		alarm[0] = 200;
 		scr_tvsprites();
@@ -60,7 +60,7 @@ if (obj_shell.isOpen == false)
 		obj_player.state = states.normal
 		obj_player.sprite_index = obj_player.spr_idle
 		obj_player.doisemode = false;
-		message = "PIZZELLE";
+		message = "Pizzelle";
 		showtext = true;
 		alarm[0] = 200;
 		scr_tvsprites();

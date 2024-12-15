@@ -5,12 +5,12 @@ if drawtext with (obj_tv) {
 	switch (other.level) {
 		default: message = "PLACEHOLDER"; break;
 		
-		case "entryway": message = "CRUNCHY CONSTRUCTION"; break;
-		case "steamy": message = "COTTONTOWN"; break;
-		case "molasses": message = "MOLASSES SWAMP"; break;
-		case "mines": message = "SUGARSHACK MINES"; break;
+		case "entryway": message = "Crunchy Construction"; break;
+		case "steamy": message = "Cottontown"; break;
+		case "molasses": message = "Molasses Swamp"; break;
+		case "mines": message = "Sugarshack Mines"; break;
 		
-		case "noisetv": message = "NOISE TV STUDIOS"; break;
+		case "noisetv": message = "Noise TV Studios"; break;
 	};
 	showtext = true;
 	alarm[0] = 2;

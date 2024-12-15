@@ -36,15 +36,15 @@ switch (selected)
 {
 	case 0:
 		justfarded = 96;
-		_message = "PLAY GAME";
+		_message = "Play game";
 		break;
 	case 1:
 		justfarded = 480;
-		_message = "OPTIONS";
+		_message = "Options";
 		break;
 	case 2:
 		justfarded = 828;
-		_message = "ERASE SAVE FILE";
+		_message = "Erase save file";
 		break;
 }
 lightX = lerp(lightX, justfarded, 0.2);
