@@ -23,17 +23,17 @@ if (global.panic)
 				global.rank = "d";
 				
 			if (global.rank == "p")
-				scr_sound(mu_ranks);
+				scr_sound(mu_rankpnew);
 			if (global.rank == "s")
-				scr_sound(mu_ranks);
+				scr_sound(mu_ranknew);
 			if (global.rank == "a")
-				scr_sound(mu_ranka);
+				scr_sound(mu_rankanew);
 			if (global.rank == "b")
-				scr_sound(mu_rankb);
+				scr_sound(mu_ranknew);
 			if (global.rank == "c")
-				scr_sound(mu_rankc);
+				scr_sound(mu_ranknew);
 			if (global.rank == "d")
-				scr_sound(mu_rankd);
+				scr_sound(mu_rankdnew);
 			audio_stop_sound(mu_escape);
 			audio_stop_sound(mu_lap2);
 			audio_stop_sound(mu_lap3);
