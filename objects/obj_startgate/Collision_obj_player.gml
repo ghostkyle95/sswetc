@@ -19,11 +19,11 @@ if (sprite_index != spr_exitgateclosed)
         {
             with (instance_create(x, y, obj_titlecard))
             {
-                    titlecard_sprite = gate.titlecard_sprite;
-                    titlecard_index = gate.titlecard_index;
-                    title_sprite = gate.title_sprite;
-                    title_index = gate.title_index;
-                    title_music = gate.title_music;
+                titlecard_sprite = gate.titlecard_sprite;
+                titlecard_index = gate.titlecard_index;
+                title_sprite = gate.title_sprite;
+                title_index = gate.title_index;
+				title_music = gate.title_music;
             }
         }
 	}
