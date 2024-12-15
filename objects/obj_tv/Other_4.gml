@@ -1,6 +1,4 @@
-var _rmname = room_get_name(room), _letters = string_letters(_rmname);
 switch global.levelname {
-	default: tvbgsprite = spr_tvbg_hub; break;
 	case "entryway":
 		tvbgsprite = (global.panic ? spr_tvbg_wafer_panic : spr_tvbg_wafer); break;
 	case "steamy":
@@ -9,5 +7,7 @@ switch global.levelname {
 		tvbgsprite = (global.panic ? spr_tvbg_mlass_panic : spr_tvbg_mlass); break;
 	case "mines":
 		tvbgsprite = (global.panic ? spr_tvbg_mines_panic : spr_tvbg_mines); break;
+	default: tvbgsprite = spr_tvbg_hub; break;
 };
+var _letters = string_letters(room_get_name(room));
 if string_ends_with(_letters, "secret") tvbgsprite = spr_tvbg_secret;

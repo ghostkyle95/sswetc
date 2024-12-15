@@ -22,29 +22,31 @@ if (parallax.alpha != 1) {
 	draw_surface(parallax.surface, x - _w / 2, y - _h);
 } else surface_free(parallax.surface);
 
-// draw sprite and whitespace
 draw_sprite(sprite_index, 0, x, y);
 parallax.alpha = lerp(parallax.alpha, !parallax.draw, 0.05); 
 draw_sprite_ext(sprite_index, 1, x, y, 1, 1, 0, c_white, parallax.alpha);
 
-if drawtext
-{
-	ini_open("saveData.ini");
+// display statistics
+ini_open("saveData.ini");
+if drawtext {
+	var _height = sprite_get_height(sprite_index), _spacing = 75,
+	_points = ini_read_real("Score", level, 0), 
+	_secrets = ini_read_real("SecretsFound", level, 0),
+	_laps = ini_read_real("Laps", level, 0), _plural = (_laps > 1 ? "LAPS" : "LAP");
 	
-	var points = ini_read_real("Score", level, 0)
-	var laps = ini_read_real("Laps", level, 0)
-		
-	var secretsfound = ini_read_real("SecretsFound", level, 0)
-	if secretsfound == -4
-		secretsfound = 0
-		
-	if points != 0
-	{
+	// if level has data on record, draw text
+	if (_points != 0) {
 		draw_set_font(global.font);
-		draw_text(x, y - 135, string(points));
+		draw_text(x, y - _height - _spacing, _points);
+		
 		draw_set_font(global.smallfont);
-		draw_text(x, y - 75, string(secretsfound) + " OUT OF 3 SECRETS FOUND");
-		if laps != 0 && laps != -4
-			draw_text(x, y - 50, string(laps) + " LAPS");
-	}
+		_spacing -= 50;
+		draw_text(x, y - _height - _spacing, $"{_secrets} OUT OF 3 SECRETS FOUND");
+		
+		if (_laps > 0) { 
+			_spacing -= 25;
+			draw_text(x, y - _height - _spacing, $"{_laps} {_plural}");
+		};
+	};
 };
+ini_close();
