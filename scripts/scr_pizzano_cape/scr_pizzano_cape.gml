@@ -57,6 +57,7 @@ function scr_pizzano_cape()
 			instance_create(x, y, obj_bangeffect);
 			scr_sound(sfx_bump);
 			falltimer = 0;
+			vsp += 5
 			sprite_index = spr_capefallstart
 		}
 	}
