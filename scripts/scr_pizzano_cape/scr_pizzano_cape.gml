@@ -44,7 +44,7 @@ function scr_pizzano_cape()
 		
 	if (!scr_slope() && scr_solid(x + sign(hsp), y) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y))
 	{
-		capebumpbuffer = 25;
+		capebumpbuffer = 10;
 		xscale *= -1
 		instance_create(x, y, obj_bangeffect);
 		scr_sound(sfx_bump);
