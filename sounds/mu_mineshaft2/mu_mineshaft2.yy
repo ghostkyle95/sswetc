@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 160.0,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Mines",
+    "path": "folders/Sounds/Music/Levels/Mines.yy",
   },
   "preload": true,
   "sampleRate": 44100,

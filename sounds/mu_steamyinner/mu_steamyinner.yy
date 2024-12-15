@@ -10,10 +10,10 @@
   "bitRate": 128,
   "compression": 2,
   "conversionMode": 0,
-  "duration": 147.692,
+  "duration": 147.6923,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Steamy",
+    "path": "folders/Sounds/Music/Levels/Steamy.yy",
   },
   "preload": true,
   "sampleRate": 44100,

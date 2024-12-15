@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 128.74734,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Panic",
+    "path": "folders/Sounds/Music/Panic.yy",
   },
   "preload": false,
   "sampleRate": 44100,

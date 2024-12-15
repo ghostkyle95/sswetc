@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 133.56522,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Molasses",
+    "path": "folders/Sounds/Music/Levels/Molasses.yy",
   },
   "preload": true,
   "sampleRate": 44100,

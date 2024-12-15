@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 50.4,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Steamy",
+    "path": "folders/Sounds/Music/Levels/Steamy.yy",
   },
   "preload": true,
   "sampleRate": 44100,

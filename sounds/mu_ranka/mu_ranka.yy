@@ -10,10 +10,10 @@
   "bitRate": 128,
   "compression": 2,
   "conversionMode": 0,
-  "duration": 15.001,
+  "duration": 15.001995,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Old",
+    "path": "folders/Sounds/Music/Ranks/Old.yy",
   },
   "preload": true,
   "sampleRate": 44100,

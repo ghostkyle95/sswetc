@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 50.442,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Entryway",
+    "path": "folders/Sounds/Music/Levels/Entryway.yy",
   },
   "preload": true,
   "sampleRate": 44100,

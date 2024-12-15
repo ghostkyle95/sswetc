@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 255.94151,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Sugar Rush",
+    "path": "folders/Sounds/Music/Panic/Sugar Rush.yy",
   },
   "preload": true,
   "sampleRate": 44100,
