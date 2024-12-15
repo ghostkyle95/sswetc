@@ -6,10 +6,7 @@ Camera_xorigin = 0;
 Camera_yorigin = 0;
 cam_lzoom = 1;
 cam_langle = 0;
-var _region = -4;
-var _roomname = room_get_name(room)
-var _strpos = string_pos("_", _roomname)
-global.levelname = string_delete(_roomname, _strpos, 999)
+var _region = noone;
 with (obj_cameraRegion)
 {
 	if (Region_active && activationCode())
@@ -78,3 +75,9 @@ if (instance_exists(obj_player) && (obj_player.state != states.timesup && obj_pl
 }
 global.wave = global.maxwave - (((global.minutes * 60) + global.seconds) * 60);
 scr_escapebgs();
+
+var _lvlarr = [ "entryway", "steamy", "molasses", "mines", "noisetv" ], 
+_rmname = room_get_name(room);
+global.levelname = "none";
+for (var _i = 0; _i < array_length(_lvlarr); _i++;) 
+	if (string_count(_lvlarr[_i], _rmname) > 0) global.levelname = _lvlarr[_i];
