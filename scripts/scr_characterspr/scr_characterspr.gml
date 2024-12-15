@@ -113,9 +113,9 @@ function scr_characterspr()
 		spr_supertaunt3 = spr_player_supertaunt3;
 		spr_ceilingcrash = spr_player_ceilingcrash;
 		spr_rollgetup = spr_player_rollgetup;
-		spr_bodyslamstart = spr_player_bodyslamstart;
-		spr_bodyslamland = spr_player_bodyslamland;
-		spr_bodyslamfall = spr_player_bodyslamfall;
+		spr_bodyslamstart = spr_player_poundprepare;
+		spr_bodyslamland = spr_player_poundend;
+		spr_bodyslamfall = spr_player_pound;
 		spr_crusherstart = spr_player_bodyslamstartOLD;
 		spr_crusherland = spr_player_bodyslamlandOLD;
 		spr_crusherfall = spr_player_bodyslamfallOLD;
@@ -263,6 +263,8 @@ function scr_characterspr()
 		spr_capefall = spr_pizzano_capefall;
 		spr_capefallstart = spr_pizzano_capefallstart;
 		
+		spr_cotstart = spr_player_cottontransfo;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -398,10 +400,10 @@ function scr_characterspr()
 		spr_supertaunt2 = spr_pizzano_supertaunt1;
 		spr_supertaunt3 = spr_pizzano_supertaunt1;
 		spr_ceilingcrash = spr_player_ceilingcrash;
-		spr_rollgetup = spr_player_rollgetup;
-		spr_bodyslamstart = spr_player_bodyslamstart;
-		spr_bodyslamland = spr_player_bodyslamland;
-		spr_bodyslamfall = spr_player_bodyslamfall;
+		spr_rollgetup = spr_pizzano_rollgetup;
+		spr_bodyslamstart = spr_player_poundprepare;
+		spr_bodyslamland = spr_player_poundend;
+		spr_bodyslamfall = spr_player_pound;
 		spr_crusherstart = spr_player_bodyslamstartOLD;
 		spr_crusherland = spr_player_bodyslamlandOLD;
 		spr_crusherfall = spr_player_bodyslamfallOLD;
@@ -537,6 +539,8 @@ function scr_characterspr()
 		spr_capeupstart = spr_pizzano_capeupstart;
 		spr_capefall = spr_pizzano_capefall;
 		spr_capefallstart = spr_pizzano_capefallstart;
+		
+		spr_cotstart = spr_player_cottontransfo;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -676,7 +680,7 @@ function scr_characterspr()
 		spr_supertaunt3 = spr_playerN_supertaunt3;
 		spr_ceilingcrash = spr_playerN_Sjumpland;
 		spr_rollgetup = spr_playerN_rollgetup;
-		spr_bodyslamstart = spr_playerN_bodyslamstart;
+		spr_bodyslamstart = spr_playerN_bodyslamstart
 		spr_bodyslamland = spr_playerN_bodyslamland;
 		spr_bodyslamfall = spr_playerN_bodyslam;
 		spr_crusherstart = spr_playerN_noisecrusherstart;
@@ -827,6 +831,8 @@ function scr_characterspr()
 		spr_capefall = spr_pizzano_capefall;
 		spr_capefallstart = spr_pizzano_capefallstart;
 		
+		spr_cotstart = spr_player_cottontransfo;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -965,7 +971,7 @@ function scr_characterspr()
 		spr_supertaunt3 = spr_playerN_supertaunt3;
 		spr_ceilingcrash = spr_playerN_Sjumpland;
 		spr_rollgetup = spr_playerN_rollgetup;
-		spr_bodyslamstart = spr_playerN_bodyslamstart;
+		spr_bodyslamstart = spr_playerN_bodyslamstart
 		spr_bodyslamland = spr_playerN_bodyslamland;
 		spr_bodyslamfall = spr_playerN_bodyslam;
 		spr_crusherstart = spr_playerN_noisecrusherstart;
@@ -1106,8 +1112,8 @@ function scr_characterspr()
 		spr_divebombfacehurtup = spr_playerN_facehurtup;
 		spr_divebombfacehurt = spr_playerN_facehurt;
 		
-		spr_50comboidle = spr_player_50comboidle;
-		spr_50combowalk = spr_player_50combowalk;
+		spr_50comboidle = spr_playerN_rageidle;
+		spr_50combowalk = spr_playerN_ragemove;
 		
 		spr_breakdance = spr_playerN_breakdancing;
 		spr_capebegin = spr_pizzano_capebegin;
@@ -1115,6 +1121,8 @@ function scr_characterspr()
 		spr_capeupstart = spr_pizzano_capeupstart;
 		spr_capefall = spr_pizzano_capefall;
 		spr_capefallstart = spr_pizzano_capefallstart;
+		
+		spr_cotstart = spr_player_cottontransfo;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
@@ -1243,9 +1251,6 @@ function scr_characterspr()
 		spr_supertaunt3 = spr_playerSW_supertaunt3;
 		spr_ceilingcrash = spr_playerSW_superjumpland;
 		spr_rollgetup = spr_playerSW_rollgetup;
-		spr_bodyslamstart = spr_playerSW_bodyslamstart;
-		spr_bodyslamland = spr_playerSW_bodyslamland;
-		spr_bodyslamfall = spr_playerSW_bodyslamfall;
 		spr_bodyslamstart = spr_playerSW_bodyslamstart;
 		spr_bodyslamland = spr_playerSW_bodyslamland;
 		spr_bodyslamfall = spr_playerSW_bodyslamfall;
@@ -1392,6 +1397,8 @@ function scr_characterspr()
 		spr_firecovereddash = spr_player_firedash;
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
+		
+		spr_cotstart = spr_player_cottontransfo;
 		
 		spr_srank = spr_rankSWS;
 		spr_arank = spr_rankSWA;

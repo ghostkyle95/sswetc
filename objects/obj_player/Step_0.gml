@@ -194,7 +194,7 @@ else
 	cutscene = false;
 if (state != states.hurt)
 	hurtsound = false;
-if (((place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_doorblocked)) || (place_meeting(x, y, obj_startgate) && state != states.victory) || place_meeting(x, y, obj_keydoorclock) || place_meeting(x, y, obj_keydoor) || (place_meeting(x, y, obj_exitgate) && global.panic)) && !instance_exists(obj_uparrow) && scr_solid(x, y + 1) && state == states.normal)
+if ((place_meeting(x, y, obj_cottoncreator) || (place_meeting(x, y, obj_door) && !place_meeting(x, y, obj_doorblocked)) || (place_meeting(x, y, obj_startgate) && state != states.victory) || place_meeting(x, y, obj_keydoorclock) || place_meeting(x, y, obj_keydoor) || (place_meeting(x, y, obj_exitgate) && global.panic)) && !instance_exists(obj_uparrow) && scr_solid(x, y + 1) && state == states.normal)
 	instance_create(x, y, obj_uparrow);
 if ((state == states.mach2 || state == states.mach3) && !instance_exists(obj_speedlines))
 	instance_create(x, y, obj_speedlines);
