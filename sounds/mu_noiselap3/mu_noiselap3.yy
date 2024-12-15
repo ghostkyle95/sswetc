@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 128.74734,
   "parent": {
-    "name": "Panic",
-    "path": "folders/Sounds/Music/Panic.yy",
+    "name": "Lap 3",
+    "path": "folders/Sounds/Music/Panic/Lap 3.yy",
   },
   "preload": false,
   "sampleRate": 44100,
