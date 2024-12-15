@@ -103,14 +103,14 @@ function scr_collide_destructibles()
 				{
 					if (place_meeting(x, y + vsp + 2, obj_metalblock) && state != states.puddle)
 					{
-						state = states.freefallland;
+						/*state = states.freefallland;
 						if sprite_index == spr_bodyslamfall
 							sprite_index = spr_bodyslamland;
 						else if sprite_index == spr_crusherfall
 							sprite_index = spr_crusherland;
 						else if sprite_index == spr_divebombfall
 							sprite_index = spr_divebombland;
-						image_index = 0;
+						image_index = 0;*/
 					}
 				}
 				DestroyedBy = other.id;
@@ -125,14 +125,14 @@ function scr_collide_destructibles()
 				{
 					if (place_meeting(x, y + vsp + 2, obj_bigdestructibles) && state != states.puddle && freefallsmash <= 10)
 					{
-						state = states.freefallland;
+						/*state = states.freefallland;
 						if sprite_index == spr_bodyslamfall
 							sprite_index = spr_bodyslamland;
 						else if sprite_index == spr_crusherfall
 							sprite_index = spr_crusherland;
 						else if sprite_index == spr_divebombfall
 							sprite_index = spr_divebombland;
-						image_index = 0;
+						image_index = 0;*/
 					}
 				}
 				DestroyedBy = other.id;
