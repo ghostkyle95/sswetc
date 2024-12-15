@@ -483,19 +483,19 @@ function scr_playerstate()
 			break;
 		case states.jetpackdoise:
 			_stateFunction = scr_doise_rocket;
-			break
+			break;
 		case states.wallkick:
 			_stateFunction = scr_player_wallkick;
-			break
+			break;
 		case states.trickjump:
 			_stateFunction = scr_player_trickjump;
-			break
+			break;
 		case states.doisebounce:
 			_stateFunction = scr_doise_bounce;
-			break
+			break;
 		case states.cape:
 			_stateFunction = scr_pizzano_cape;
-			break
+			break;
 	}
 	stateName = "states.undefined";
 	if (!is_undefined(_stateFunction))
