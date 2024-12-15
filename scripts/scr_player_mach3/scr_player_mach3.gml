@@ -71,7 +71,7 @@ function scr_player_mach3()
 				state = states.cape;
 				sprite_index = spr_capebegin;
 				image_index = 0;
-				vsp = -10
+				vsp = -10;
 			}
 			if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
 			{

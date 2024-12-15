@@ -28,9 +28,11 @@ function scr_rocketfist_pizzano()
 			movespeed += 0.1;
 		if (key_jump)
 		{
-			state = states.mach2;
-			sprite_index = spr_mach2jump
-			vsp = -12;
+			falltimer = 25;
+			sprite_index = spr_capebegin;
+			state = states.cape;
+			image_index = 0;
+			vsp = -10;
 		}
 		if (key_up)
 			vsp = -5;

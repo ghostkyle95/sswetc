@@ -102,17 +102,12 @@ function scr_player_Sjump()
 	}
 	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && sprite_index != spr_superjumpland)
 	{
-		scr_sound(sfx_superjumpcancel);
-		flash = true;
-		charged = false;
-		sprite_index = spr_superjumpprepside;
+		falltimer = 25;
+		state = states.cape;
+		sprite_index = spr_capebegin;
 		image_index = 0;
-		movespeed = 0;
-		vsp = 0;
-		mach2 = 0;
-		state = states.rocketfistpizzano;
-		if move != 0
-			xscale = move;
+		vsp = -10;
+		if (move != 0) xscale = move;
 	}
 	scr_collide_player();
 }

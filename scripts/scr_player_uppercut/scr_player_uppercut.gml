@@ -28,24 +28,8 @@ function scr_player_uppercut()
 	}
 	if (key_slap2 && !grounded)
 	{
-		if (character != CHARACTERS.SWAB)
-		{
-			if (move != 0)
-				xscale = move;
-			movespeed = 12;
-			machhitAnim = false;
-			state = states.mach2;
-			flash = true;
-			vsp = -7;
-			sprite_index = spr_mach2jump;
-			with (instance_create(x, y, obj_jumpdust))
-				image_xscale = other.xscale;
-			freefallsmash = false;
-		}
-		else
-		{
-			if (move != 0)
-				xscale = move;
+		if (character == CHARACTERS.SWAB) {
+			if (move != 0) xscale = move;
 			state = states.sjumpcancelprep;
 			flash = true;
 			vsp = 0;
@@ -56,6 +40,31 @@ function scr_player_uppercut()
 			sjumpspeed = 0;
 			with (instance_create(x, y, obj_jumpdust))
 				image_xscale = other.xscale;
+		}
+		else if (character == CHARACTERS.PIZZANO) {
+			if (move != 0) xscale = move;
+			scr_sound(sfx_superjumpcancel);
+			flash = true;
+			charged = false;
+			sprite_index = spr_superjumpprepside;
+			image_index = 0;
+			movespeed = 0;
+			vsp = 0;
+			mach2 = 0;
+			state = states.rocketfistpizzano;
+		}
+		else
+		{
+			if (move != 0) xscale = move;
+			movespeed = 12;
+			machhitAnim = false;
+			state = states.mach2;
+			flash = true;
+			vsp = -7;
+			sprite_index = spr_mach2jump;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+			freefallsmash = false;
 		}
 	}
 	if (!instance_exists(obj_dashcloud) && grounded)

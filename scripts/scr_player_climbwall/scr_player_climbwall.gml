@@ -100,6 +100,14 @@ function scr_player_climbwall()
 			xscale *= -1;
 			movespeed = 9
 		}
+		else if (character == CHARACTERS.PIZZANO) {
+			vsp = -10;
+			state = states.cape;
+			falltimer = 25;
+			capebumpbuffer = 10;
+			xscale *= -1;
+			sprite_index = spr_capefallstart;
+		}
 		else
 		{
 			if (mach2 >= 100)
