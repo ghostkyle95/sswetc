@@ -44,7 +44,7 @@ if drawtext {
 		draw_text(x, y - _height - _spacing, $"{_secrets} OUT OF 3 SECRETS FOUND");
 		
 		if (_laps > 0) { 
-			_spacing -= 25;
+			_spacing -= 20;
 			draw_text(x, y - _height - _spacing, $"{_laps} {_plural}");
 		};
 	};

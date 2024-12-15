@@ -28,15 +28,7 @@ function scr_pizzano_twirl()
 		vsp = -10;
 	}
 	if (key_slap2 && character == CHARACTERS.PIZZANO && charged && !key_up)
-	{
-		flash = true;
-		state = states.rocketfistpizzano;
-		sprite_index = spr_pizzano_sjumpprepside;
-		image_index = 0;
-		movespeed = 0;
-		mach2 = 0;
-		charged = false;
-	}
+		pizzano_do_rocket();
 	if (key_slap2 && key_up && character == CHARACTERS.PIZZANO && charged)
 	{
 		flash = true;

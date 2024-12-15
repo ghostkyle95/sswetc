@@ -65,14 +65,9 @@ function scr_player_mach3()
 			else if (key_jump)
 				input_buffer_jump = 0;
 				
-			if !grounded && input_buffer_jump == 0 && character == CHARACTERS.PIZZANO
-			{
-				falltimer = 25;
-				state = states.cape;
-				sprite_index = spr_capebegin;
-				image_index = 0;
-				vsp = -10;
-			}
+			if (!grounded && input_buffer_jump == 0 && character == CHARACTERS.PIZZANO)
+				pizzano_do_cape();
+			
 			if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
 			{
 				scr_sound(sfx_plrsjumpstart);

@@ -81,17 +81,5 @@ function scr_pizzano_cape()
 			movespeed = 0;
 		}
 	}
-	
-	if (key_slap2 || key_attack2) {
-		scr_sound(sfx_superjumpcancel);
-		flash = true;
-		charged = false;
-		sprite_index = spr_superjumpprepside;
-		image_index = 0;
-		movespeed = 0;
-		vsp = 0;
-		mach2 = 0;
-		state = states.rocketfistpizzano;
-		if (move != 0) xscale = move;
-	};
+	if (key_slap2 || key_attack2) pizzano_do_rocket();
 }

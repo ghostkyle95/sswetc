@@ -26,14 +26,6 @@ function scr_rocketfist_pizzano()
 			movespeed -= 0.05;
 		if ((move != 0 && move == xscale) && movespeed < 24)
 			movespeed += 0.1;
-		if (key_jump)
-		{
-			falltimer = 25;
-			sprite_index = spr_capebegin;
-			state = states.cape;
-			image_index = 0;
-			vsp = -10;
-		}
 		if (key_up)
 			vsp = -5;
 		if (key_down)
@@ -75,6 +67,8 @@ function scr_rocketfist_pizzano()
 		}
 		if (!grounded && hsp != 0 && sprite_index != spr_superjumpside && sprite_index != spr_mach3hitwall && sprite_index != spr_airhitwall)
 			sprite_index = spr_superjumpside;
+		
+		if key_jump pizzano_do_cape();
 	}
 	image_speed = 0.35;
 }

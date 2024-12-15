@@ -41,18 +41,7 @@ function scr_player_uppercut()
 			with (instance_create(x, y, obj_jumpdust))
 				image_xscale = other.xscale;
 		}
-		else if (character == CHARACTERS.PIZZANO) {
-			if (move != 0) xscale = move;
-			scr_sound(sfx_superjumpcancel);
-			flash = true;
-			charged = false;
-			sprite_index = spr_superjumpprepside;
-			image_index = 0;
-			movespeed = 0;
-			vsp = 0;
-			mach2 = 0;
-			state = states.rocketfistpizzano;
-		}
+		else if (character == CHARACTERS.PIZZANO) pizzano_do_rocket();
 		else
 		{
 			if (move != 0) xscale = move;

@@ -100,18 +100,10 @@ function scr_player_Sjump()
 			sjumpspeed = 0;
 		}
 	}
-	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && sprite_index != spr_superjumpland)
-	{
-		scr_sound(sfx_superjumpcancel);
-		flash = true;
-		charged = false;
-		sprite_index = spr_superjumpprepside;
-		movespeed = 0;
-		vsp = 0;
-		mach2 = 0;
-		state = states.rocketfistpizzano;
-		if move != 0
-			xscale = move;
-	}
+	
+	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && 
+	sprite_index != spr_superjumpland)
+		pizzano_do_rocket();
+	
 	scr_collide_player();
 }
