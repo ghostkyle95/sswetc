@@ -290,6 +290,7 @@
     {"name":"Signs","order":1,"path":"folders/Theater Hub/Signs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
+    {"name":"NoiseTV","order":5,"path":"folders/Sounds/Music/Levels/NoiseTV.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_doorS","order":6,"path":"objects/obj_doorS/obj_doorS.yy",},

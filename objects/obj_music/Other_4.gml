@@ -176,4 +176,15 @@ if (!global.panic)
 			pausedmusic = mu_paletteselect;
 		}
 	}
+	
+	if (string_letters(roomname) == "noisetv")
+	{
+		if (!audio_is_playing(mu_noisetv))
+		{
+			audio_stop_all_music();
+			scr_music(mu_noisetv);
+			pausedmusic = mu_noisetv;
+			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
+		}
+	}
 }
