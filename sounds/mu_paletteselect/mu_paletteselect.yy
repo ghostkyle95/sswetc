@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mu_paletteselect.mp3",
   "type": 0,
-  "volume": 0.75,
+  "volume": 0.5,
 }
