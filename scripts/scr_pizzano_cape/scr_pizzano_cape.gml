@@ -49,7 +49,18 @@ function scr_pizzano_cape()
 		instance_create(x, y, obj_bangeffect);
 		scr_sound(sfx_bump);
 	}
-		
+	
+	if (scr_solid(x, y + vsp) && !place_meeting(x, y + vsp, obj_boxofpizza) && !place_meeting(x, y + vsp, obj_destructibles))
+	{
+		if sprite_index == spr_capeup || sprite_index == spr_capeupstart
+		{
+			instance_create(x, y, obj_bangeffect);
+			scr_sound(sfx_bump);
+			falltimer = 0;
+			sprite_index = spr_capefallstart
+		}
+	}
+	
 	if grounded
 	{
 		if key_attack

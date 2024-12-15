@@ -140,7 +140,7 @@ function scr_collide_destructibles()
 			}
 		}
 	}
-	if (state == states.jump || state == states.Sjump || state == states.mach2 || state == states.mach3 || state == states.machpizzano)
+	if (state == states.jump || state == states.Sjump || state = states.caoe || state == states.mach2 || state == states.mach3 || state == states.machpizzano)
 	{
 		if (place_meeting(x, y + vsp, obj_destructibles) && vsp < 0)
 		{
