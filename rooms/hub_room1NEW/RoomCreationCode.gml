@@ -1,1 +1,1 @@
-global.collect = 0
+return;

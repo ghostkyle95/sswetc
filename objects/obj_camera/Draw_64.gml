@@ -1,5 +1,4 @@
-if (!is_level())
-	exit;
+if (global.levelname == "none") global.collect = 0; exit;
 
 var shakeX = irandom_range(-Collectshake, Collectshake), 
 shakeY = irandom_range(-Collectshake, Collectshake);
