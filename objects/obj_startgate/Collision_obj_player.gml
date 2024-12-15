@@ -15,7 +15,7 @@ if (sprite_index != spr_exitgateclosed)
 			obj_tv.showcombo = false;
 			audio_stop_all();
 		}
-        if animation_end() && (!instance_exists(obj_titlecard)) && sprite_index == spr_entergate
+        if animation_end() && (!instance_exists(obj_titlecard)) && sprite_index = spr_entergate
         {
             with (instance_create(x, y, obj_titlecard))
             {
