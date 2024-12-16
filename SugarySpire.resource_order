@@ -110,6 +110,8 @@
     {"name":"Panic","order":21,"path":"folders/Sounds/Music/Panic.yy",},
     {"name":"Lap 2","order":1,"path":"folders/Sounds/Music/Panic/Lap 2.yy",},
     {"name":"Lap 3","order":2,"path":"folders/Sounds/Music/Panic/Lap 3.yy",},
+    {"name":"Lap 4","order":5,"path":"folders/Sounds/Music/Panic/Lap 4.yy",},
+    {"name":"Lap 5","order":7,"path":"folders/Sounds/Music/Panic/Lap 5.yy",},
     {"name":"Ranks","order":19,"path":"folders/Sounds/Music/Ranks.yy",},
     {"name":"New","order":10,"path":"folders/Sounds/Music/Ranks/New.yy",},
     {"name":"Old","order":11,"path":"folders/Sounds/Music/Ranks/Old.yy",},
@@ -291,8 +293,6 @@
     {"name":"Signs","order":1,"path":"folders/Theater Hub/Signs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Lap 4","order":5,"path":"folders/Sounds/Music/Panic/Lap 4.yy",},
-    {"name":"Lap 5","order":7,"path":"folders/Sounds/Music/Panic/Lap 5.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_doorS","order":6,"path":"objects/obj_doorS/obj_doorS.yy",},

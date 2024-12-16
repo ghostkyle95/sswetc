@@ -14,13 +14,18 @@ function scr_pizzano_cape()
 		vsp = -10
 	if sprite_index == spr_capeup || sprite_index == spr_capeupstart
 	{
-		if falltimer > 0
-			falltimer--
-		vsp = -10
-		if !key_jump2 && falltimer == 0
+		if (!key_down)
+		{
+			if falltimer > 0
+				falltimer--
+			vsp = -10
+			if !key_jump2 && falltimer == 0
+				sprite_index = spr_capefallstart
+		}
+		else
 			sprite_index = spr_capefallstart
 	}
-	if sprite_index == spr_capefall
+	if sprite_index == spr_capefall || sprite_index == spr_capefallstart
 	{
 		if key_jump
 		{
@@ -28,6 +33,8 @@ function scr_pizzano_cape()
 			sprite_index = spr_capeupstart
 			vsp = -10
 		}
+		if key_down
+			vsp = approach(vsp, 20, 1)
 	}
 	
 	if (move != 0) && capebumpbuffer == 0
