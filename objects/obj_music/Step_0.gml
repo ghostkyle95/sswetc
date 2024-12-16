@@ -4,7 +4,7 @@ if (global.panic && !obj_pause.pause && room != timesuproom)
 	if (global.lap)
 	{
 		var musarraylength = array_length(global.lapmusarray)
-		var selectedmus = (global.laps > musarraylength) ? global.lapmusarray[musarraylength] : global.lapmusarray[global.laps];
+		var selectedmus = (global.laps > musarraylength) ? global.lapmusarray[musarraylength] : global.lapmusarray[global.laps - 1];
 		if (!audio_is_playing(selectedmus))
 		{
 			audio_stop_all_music();
