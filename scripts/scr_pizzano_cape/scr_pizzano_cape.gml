@@ -88,5 +88,5 @@ function scr_pizzano_cape()
 			movespeed = 0;
 		}
 	}
-	if (key_slap2 || key_attack2) pizzano_do_rocket();
+	if (key_slap2) pizzano_do_rocket();
 }
