@@ -274,8 +274,7 @@ function scr_characterspr()
 		
 		global.entrancemus = mu_waffle;
 		global.panicmus = mu_escape;
-		global.lap2mus = mu_lap2;
-		global.lap3mus = mu_lap3;
+		global.lapmusarray = [mu_lap2, mu_lap3, mu_lap4, mu_lap5];
 		
 		sfx_plrjump = sfx_jump;
 		sfx_plrmach1 = sfx_mach1;
@@ -551,8 +550,7 @@ function scr_characterspr()
 		
 		global.entrancemus = mu_pizzanoorchestralplay;
 		global.panicmus = mu_pizzanoescape;
-		global.lap2mus = mu_pizzanolap2;
-		global.lap3mus = mu_lap3;
+		global.lapmusarray = [mu_pizzanolap2, mu_lap3, mu_lap4, mu_lap5];
 		
 		sfx_plrjump = sfx_jump;
 		sfx_plrmach1 = sfx_mach1;
@@ -842,8 +840,7 @@ function scr_characterspr()
 		
 		global.entrancemus = mu_noiseentrance;
 		global.panicmus = mu_noiseescape;
-		global.lap2mus = mu_noiselap2;
-		global.lap3mus = mu_noiselap3;
+		global.lapmusarray = [mu_noiselap2, mu_noiselap3, mu_noiselap4, mu_noiselap5];
 		
 		sfx_plrjump = sfx_noisejump;
 		sfx_plrmach1 = sfx_noisemach1;
@@ -1133,8 +1130,7 @@ function scr_characterspr()
 		
 		global.entrancemus = mu_noiseentrance;
 		global.panicmus = mu_noiseescape;
-		global.lap2mus = mu_noiselap2;
-		global.lap3mus = mu_noiselap3;
+		global.lapmusarray = [mu_noiselap2, mu_noiselap3, mu_noiselap4, mu_noiselap5];
 
 		sfx_plrjump = sfx_noisejump;
 		sfx_plrmach1 = sfx_noisemach1;
@@ -1409,8 +1405,7 @@ function scr_characterspr()
 		
 		global.entrancemus = mu_swabentrance;
 		global.panicmus = mu_swabescape;
-		global.lap2mus = mu_lap2;
-		global.lap3mus = mu_lap3;
+		global.lapmusarray = [mu_lap2, mu_lap3, mu_lap4, mu_lap5];
 		
 		sfx_plrjump = sfx_jump;
 		sfx_plrmach1 = sfx_mach1;

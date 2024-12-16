@@ -3,23 +3,13 @@ if (global.panic && !obj_pause.pause && room != timesuproom)
 {
 	if (global.lap)
 	{
-		if (global.laps < 2)
+		var musarraylength = array_length(global.lapmusarray)
+		var selectedmus = (global.laps > musarraylength) ? global.lapmusarray[musarraylength] : global.lapmusarray[global.laps];
+		if (!audio_is_playing(selectedmus))
 		{
-			if (!audio_is_playing(global.lap2mus))
-			{
-				audio_stop_all_music();
-				scr_music(global.lap2mus);
-				pausedmusic = global.lap2mus;
-			}
-		}
-		else if (global.laps >= 2)
-		{
-			if (!audio_is_playing(global.lap3mus))
-			{
-				audio_stop_all_music();
-				scr_music(global.lap3mus);
-				pausedmusic = global.lap3mus;
-			}
+			audio_stop_all_music();
+			scr_music(selectedmus);
+			pausedmusic = selectedmus;
 		}
 	}
 	else

@@ -1651,6 +1651,7 @@
     {"id":{"name":"spr_player_bodyslamfall","path":"sprites/spr_player_bodyslamfall/spr_player_bodyslamfall.yy",},},
     {"id":{"name":"spr_giantcollect3","path":"sprites/spr_giantcollect3/spr_giantcollect3.yy",},},
     {"id":{"name":"sfx_noise2","path":"sounds/sfx_noise2/sfx_noise2.yy",},},
+    {"id":{"name":"mu_lap5","path":"sounds/mu_lap5/mu_lap5.yy",},},
     {"id":{"name":"spr_noisetv_bomb","path":"sprites/spr_noisetv_bomb/spr_noisetv_bomb.yy",},},
     {"id":{"name":"spr_pizzano_supertaunt1","path":"sprites/spr_pizzano_supertaunt1/spr_pizzano_supertaunt1.yy",},},
     {"id":{"name":"spr_bombpep_runabouttoexplode","path":"sprites/spr_bombpep_runabouttoexplode/spr_bombpep_runabouttoexplode.yy",},},

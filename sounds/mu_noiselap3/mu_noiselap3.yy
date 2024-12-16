@@ -10,14 +10,14 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 128.74734,
+  "duration": 220.36897,
   "parent": {
     "name": "Lap 3",
     "path": "folders/Sounds/Music/Panic/Lap 3.yy",
   },
   "preload": false,
   "sampleRate": 44100,
-  "soundFile": "mu_noiselap3.ogg",
+  "soundFile": "mu_noiselap3.mp3",
   "type": 1,
-  "volume": 0.6,
+  "volume": 1.0,
 }
