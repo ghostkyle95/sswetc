@@ -383,6 +383,7 @@
     {"name":"obj_keydoorclock","order":3,"path":"objects/obj_keydoorclock/obj_keydoorclock.yy",},
     {"name":"obj_destroyable3_hard","order":6,"path":"objects/obj_destroyable3_hard/obj_destroyable3_hard.yy",},
     {"name":"spr_playerSW_uppercutfinishingblow","order":135,"path":"sprites/spr_playerSW_uppercutfinishingblow/spr_playerSW_uppercutfinishingblow.yy",},
+    {"name":"spr_pizzytvmach4","order":24,"path":"sprites/spr_pizzytvmach4/spr_pizzytvmach4.yy",},
     {"name":"obj_secretdestroyable_tiles5","order":6,"path":"objects/obj_secretdestroyable_tiles5/obj_secretdestroyable_tiles5.yy",},
     {"name":"obj_doorD","order":3,"path":"objects/obj_doorD/obj_doorD.yy",},
     {"name":"spr_playerSW_haulingwalk","order":52,"path":"sprites/spr_playerSW_haulingwalk/spr_playerSW_haulingwalk.yy",},

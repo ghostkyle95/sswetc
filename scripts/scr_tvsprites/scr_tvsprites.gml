@@ -14,7 +14,7 @@ function scr_tvsprites()
 		orbtvspr = spr_pizzytv_croaked;
 		machtvspr = spr_pizzytvmach2;
 		mach3tvspr = spr_pizzytvmach3;
-		crazyruntvspr = spr_pizzytvmach3;
+		crazyruntvspr = spr_pizzytvmach4;
 		collecttvspr = spr_pizzytvhappy;
 		combotvspr = spr_pizzytv_combo;
 		panictvspr = spr_pizzytv_escape1;

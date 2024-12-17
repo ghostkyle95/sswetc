@@ -463,6 +463,7 @@
     {"id":{"name":"obj_keydoorclock","path":"objects/obj_keydoorclock/obj_keydoorclock.yy",},},
     {"id":{"name":"obj_destroyable3_hard","path":"objects/obj_destroyable3_hard/obj_destroyable3_hard.yy",},},
     {"id":{"name":"spr_playerSW_uppercutfinishingblow","path":"sprites/spr_playerSW_uppercutfinishingblow/spr_playerSW_uppercutfinishingblow.yy",},},
+    {"id":{"name":"spr_pizzytvmach4","path":"sprites/spr_pizzytvmach4/spr_pizzytvmach4.yy",},},
     {"id":{"name":"obj_ranksign","path":"objects/obj_ranksign/obj_ranksign.yy",},},
     {"id":{"name":"obj_secretdestroyable_tiles5","path":"objects/obj_secretdestroyable_tiles5/obj_secretdestroyable_tiles5.yy",},},
     {"id":{"name":"obj_afterimageoutward","path":"objects/obj_afterimageoutward/obj_afterimageoutward.yy",},},
