@@ -10,11 +10,36 @@ function scr_player_handstandjump()
 			landAnim = false;
 			//mach2 = 35;
 			hsp = xscale * movespeed;
-			grav = 0;
+			if character != CHARACTERS.NOISE && character != CHARACTERS.SWAB
+				grav = 0;
+			else
+				grav = 0.5;
 			momemtum = true;
 			dir = xscale;
 			if (movespeed < 12)
 				movespeed = 12;
+			
+			if character == CHARACTERS.NOISE || character == CHARACTERS.SWAB
+			{
+				if (sprite_index == spr_suplexdash && !grounded)
+				{
+					if sprite_index == spr_suplexdashfallstart && animation_end()
+						sprite_index = spr_suplexdashfall
+						
+					if (sprite_index == spr_suplexdashfallstart || sprite_index == spr_suplexdashfall) && grounded
+					{
+						state = states.normal;
+						grav = 0.5;
+						flash = false;
+					}
+					
+					if sprite_index != spr_suplexdashfallstart && sprite_index != spr_suplexdashfall
+					{
+						sprite_index = spr_suplexdashfallstart;
+						image_index = 0;
+					}
+				}
+			}
 			if (move != xscale && move != 0)
 			{
 				state = states.jump;

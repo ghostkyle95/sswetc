@@ -60,8 +60,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Noise",
-    "path": "folders/Sprites/Player/Noise.yy",
+    "name": "Currently Unused",
+    "path": "folders/Sprites/Player/Noise/Currently Unused.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

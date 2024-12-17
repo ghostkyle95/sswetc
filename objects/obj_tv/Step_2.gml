@@ -13,6 +13,11 @@ if (global.combotime <= 0)
 		chooseOnecomboend = true;
 	}
 }
+comboendImage += 0.35;
+if (!combocanFade)
+	combofade = clamp(combofade + 0.25, 0, 25);
+else
+	combofade = clamp(combofade - 0.05, 0, 25);
 if (draw_combo != global.combo && global.combotime > 0 && global.combo > 0)
 {
 	draw_combo = global.combo;

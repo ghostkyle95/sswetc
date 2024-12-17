@@ -38,8 +38,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Noise",
-    "path": "folders/Sprites/Player/Noise.yy",
+    "name": "Doise-Exclusive",
+    "path": "folders/Sprites/Player/Noise/Doise-Exclusive.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

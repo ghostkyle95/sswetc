@@ -265,6 +265,9 @@ function scr_characterspr()
 		
 		spr_cotstart = spr_player_cottontransfo;
 		
+		spr_suplexdashfallstart = spr_playerN_suplexgrabjumpstart;
+		spr_suplexdashfall = spr_playerN_suplexgrabjump;
+		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
 		spr_brank = spr_rankB;
@@ -540,6 +543,9 @@ function scr_characterspr()
 		spr_capefallstart = spr_pizzano_capefallstart;
 		
 		spr_cotstart = spr_player_cottontransfo;
+		
+		spr_suplexdashfallstart = spr_playerN_suplexgrabjumpstart;
+		spr_suplexdashfall = spr_playerN_suplexgrabjump;
 		
 		spr_srank = spr_rankS;
 		spr_arank = spr_rankA;
@@ -819,8 +825,8 @@ function scr_characterspr()
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		
-		spr_50comboidle = spr_player_50comboidle;
-		spr_50combowalk = spr_player_50combowalk;
+		spr_50comboidle = spr_playerN_rageidle;
+		spr_50combowalk = spr_playerN_ragemove;
 		
 		spr_breakdance = spr_playerN_breakdancing;
 		spr_capebegin = spr_pizzano_capebegin;
@@ -830,6 +836,9 @@ function scr_characterspr()
 		spr_capefallstart = spr_pizzano_capefallstart;
 		
 		spr_cotstart = spr_player_cottontransfo;
+		
+		spr_suplexdashfallstart = spr_playerN_suplexgrabjumpstart;
+		spr_suplexdashfall = spr_playerN_suplexgrabjump;
 		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
@@ -1121,6 +1130,9 @@ function scr_characterspr()
 		
 		spr_cotstart = spr_player_cottontransfo;
 		
+		spr_suplexdashfallstart = spr_playerN_suplexgrabjumpstart;
+		spr_suplexdashfall = spr_playerN_suplexgrabjump;
+		
 		spr_srank = spr_rankNS;
 		spr_arank = spr_rankNA;
 		spr_brank = spr_rankNB;
@@ -1377,8 +1389,8 @@ function scr_characterspr()
 		
 		spr_mach3hit = spr_playerSW_mach3hit;
 		
-		spr_50comboidle = spr_playerSW_3hpidle;
-		spr_50combowalk = spr_playerSW_move;
+		spr_50comboidle = spr_playerSW_rageidle;
+		spr_50combowalk = spr_playerSW_ragemove;
 		
 		spr_breakdance = spr_playerSW_breakdance;
 		spr_capebegin = spr_pizzano_capebegin;
@@ -1395,6 +1407,9 @@ function scr_characterspr()
 		spr_divebombfacehurt = spr_player_facehurt;
 		
 		spr_cotstart = spr_player_cottontransfo;
+		
+		spr_suplexdashfallstart = spr_playerSW_suplexgrabjumpstart;
+		spr_suplexdashfall = spr_playerSW_suplexgrabjump;
 		
 		spr_srank = spr_rankSWS;
 		spr_arank = spr_rankSWA;

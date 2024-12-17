@@ -187,3 +187,18 @@ function meta_instance_create()
 		argumentDescriptions: ["the X coordinate to create the object at", "the Y coordinate to create the object at", "the object to create"]
 	};
 }
+function sh_setlaps()
+{
+	if global.panic
+		global.laps = real(argument0[1]);
+}
+function meta_setlaps()
+{
+	return 
+	{
+		description: "set lap count",
+		arguments: ["<laps>"],
+		suggestions: [[]],
+		argumentDescriptions: ["lap count"]
+	};
+}
