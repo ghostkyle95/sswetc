@@ -93,7 +93,6 @@ if (global.combofreeze <= 0)
 	global.combotime = approach(global.combotime, 0, 0.15);
 if ((global.combo % 3) == 0 && playComboVariable != global.combo && global.combotime > 0 && global.combo > 0)
 {
-	scr_queue_tvanim(obj_tv.combotvspr, 250);
 	playComboVariable = global.combo;
 }
 if (global.combo != global.previouscombo)
