@@ -1859,6 +1859,7 @@
     {"name":"spr_rod","order":6,"path":"sprites/spr_rod/spr_rod.yy",},
     {"name":"spr_playerN_knightland","order":172,"path":"sprites/spr_playerN_knightland/spr_playerN_knightland.yy",},
     {"name":"obj_ramp","order":3,"path":"objects/obj_ramp/obj_ramp.yy",},
+    {"name":"spr_pizzano_bodyslam","order":59,"path":"sprites/spr_pizzano_bodyslam/spr_pizzano_bodyslam.yy",},
     {"name":"spr_ufra","order":9,"path":"sprites/spr_ufra/spr_ufra.yy",},
     {"name":"spr_playerN_deathstart","order":80,"path":"sprites/spr_playerN_deathstart/spr_playerN_deathstart.yy",},
     {"name":"spr_cottonwitch_walk","order":4,"path":"sprites/spr_cottonwitch_walk/spr_cottonwitch_walk.yy",},

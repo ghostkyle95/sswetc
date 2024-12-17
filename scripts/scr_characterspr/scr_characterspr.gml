@@ -402,7 +402,7 @@ function scr_characterspr()
 		spr_rollgetup = spr_pizzano_rollgetup;
 		spr_bodyslamstart = spr_player_poundprepare;
 		spr_bodyslamland = spr_player_poundend;
-		spr_bodyslamfall = spr_player_pound;
+		spr_bodyslamfall = spr_pizzano_bodyslam;
 		spr_crusherstart = spr_player_bodyslamstartOLD;
 		spr_crusherland = spr_player_bodyslamlandOLD;
 		spr_crusherfall = spr_player_bodyslamfallOLD;

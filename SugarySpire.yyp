@@ -2082,6 +2082,7 @@
     {"id":{"name":"spr_rod","path":"sprites/spr_rod/spr_rod.yy",},},
     {"id":{"name":"spr_playerN_knightland","path":"sprites/spr_playerN_knightland/spr_playerN_knightland.yy",},},
     {"id":{"name":"obj_ramp","path":"objects/obj_ramp/obj_ramp.yy",},},
+    {"id":{"name":"spr_pizzano_bodyslam","path":"sprites/spr_pizzano_bodyslam/spr_pizzano_bodyslam.yy",},},
     {"id":{"name":"spr_ufra","path":"sprites/spr_ufra/spr_ufra.yy",},},
     {"id":{"name":"spr_playerN_deathstart","path":"sprites/spr_playerN_deathstart/spr_playerN_deathstart.yy",},},
     {"id":{"name":"spr_cottonwitch_walk","path":"sprites/spr_cottonwitch_walk/spr_cottonwitch_walk.yy",},},
