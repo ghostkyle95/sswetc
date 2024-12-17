@@ -1183,6 +1183,7 @@
     {"name":"spr_playerSW_lookdoor","order":70,"path":"sprites/spr_playerSW_lookdoor/spr_playerSW_lookdoor.yy",},
     {"name":"sfx_mach3","order":6,"path":"sounds/sfx_mach3/sfx_mach3.yy",},
     {"name":"mu_void","order":7,"path":"sounds/mu_void/mu_void.yy",},
+    {"name":"spr_pizzytv_impact","order":25,"path":"sprites/spr_pizzytv_impact/spr_pizzytv_impact.yy",},
     {"name":"spr_playerN_jetpackslide","order":156,"path":"sprites/spr_playerN_jetpackslide/spr_playerN_jetpackslide.yy",},
     {"name":"sfx_comboend","order":9,"path":"sounds/sfx_comboend/sfx_comboend.yy",},
     {"name":"sfx_giantcollect","order":1,"path":"sounds/sfx_giantcollect/sfx_giantcollect.yy",},

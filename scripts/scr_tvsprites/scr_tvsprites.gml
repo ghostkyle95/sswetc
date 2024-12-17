@@ -20,6 +20,9 @@ function scr_tvsprites()
 		panictvspr = spr_pizzytv_escape1;
 		secrettvspr = spr_pizzytv_secret;
 		sliptvspr = spr_pizzytv_slipnslide;
+		impacttvspr = spr_pizzytv_impact
+		
+		// confecti
 		marshtvspr = spr_pizzytv_marshmellow;
 		chocotvspr = spr_pizzytv_chocolate;
 		smoretvspr = spr_pizzytv_smore;

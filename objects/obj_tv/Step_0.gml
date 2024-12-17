@@ -155,6 +155,10 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 		case states.hurt:
 			tvsprite = hurttvspr;
 			break;
+		case states.freefallland:
+		case states.Sjumpland:
+			tvsprite = impacttvspr;
+			break;
 	}
 	if (OLDtvsprite != tvsprite && tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != spr_tvoff && tvsprite != spr_tvturnon && tvsprite != spr_tvoff_nopropeller && tvsprite != spr_tvturnon_nopropeller)
 	{

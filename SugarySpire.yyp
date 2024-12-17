@@ -1345,6 +1345,7 @@
     {"id":{"name":"spr_playerSW_lookdoor","path":"sprites/spr_playerSW_lookdoor/spr_playerSW_lookdoor.yy",},},
     {"id":{"name":"sfx_mach3","path":"sounds/sfx_mach3/sfx_mach3.yy",},},
     {"id":{"name":"mu_void","path":"sounds/mu_void/mu_void.yy",},},
+    {"id":{"name":"spr_pizzytv_impact","path":"sprites/spr_pizzytv_impact/spr_pizzytv_impact.yy",},},
     {"id":{"name":"spr_playerN_jetpackslide","path":"sprites/spr_playerN_jetpackslide/spr_playerN_jetpackslide.yy",},},
     {"id":{"name":"sfx_comboend","path":"sounds/sfx_comboend/sfx_comboend.yy",},},
     {"id":{"name":"sfx_giantcollect","path":"sounds/sfx_giantcollect/sfx_giantcollect.yy",},},
