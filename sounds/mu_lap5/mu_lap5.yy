@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "mu_lap5.mp3",
   "type": 0,
-  "volume": 0.9,
+  "volume": 0.8,
 }
