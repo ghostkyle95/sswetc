@@ -49,12 +49,20 @@ function scr_player_machtumble()
 		if (audio_is_playing(sfx_plrgrabdash))
 			audio_stop_sound(sfx_plrgrabdash);
 	}
-	if (key_jump)
+	if (key_jump && grounded)
 	{
+		/*
 		vsp = -10;
 		movespeed = 12;
 		state = states.mach3;
-		sprite_index = spr_outofcontrolfall;	
+		sprite_index = spr_outofcontrolfall;
+		*/
+		
+		state = states.mach2
+		image_index = 0;
+		sprite_index = spr_secondjump1;
+		scr_sound(sfx_plrjump);
+		vsp = -9;
 	}
 	if (animation_end())
 	{

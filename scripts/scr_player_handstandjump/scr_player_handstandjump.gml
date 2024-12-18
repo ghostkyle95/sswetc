@@ -21,24 +21,32 @@ function scr_player_handstandjump()
 			
 			if character == CHARACTERS.NOISE || character == CHARACTERS.SWAB
 			{
-				if (sprite_index == spr_suplexdash && !grounded)
+				if (sprite_index == spr_suplexdashfallstart || sprite_index == spr_suplexdashfall) && grounded
 				{
-					if sprite_index == spr_suplexdashfallstart && animation_end()
-						sprite_index = spr_suplexdashfall
-						
-					if (sprite_index == spr_suplexdashfallstart || sprite_index == spr_suplexdashfall) && grounded
+					if !key_attack
 					{
 						state = states.normal;
 						grav = 0.5;
 						flash = false;
 					}
-					
-					if sprite_index != spr_suplexdashfallstart && sprite_index != spr_suplexdashfall
+					else
+					{
+						if movespeed < 8
+							movespeed = 8
+						state = states.mach2;
+						sprite_index = spr_mach;
+					}
+				}
+				if (sprite_index == spr_suplexdash && !grounded)
+				{		
+					if (sprite_index != spr_suplexdashfallstart && sprite_index != spr_suplexdashfall) && !grounded
 					{
 						sprite_index = spr_suplexdashfallstart;
 						image_index = 0;
 					}
 				}
+				if sprite_index == spr_suplexdashfallstart && animation_end()
+					sprite_index = spr_suplexdashfall
 			}
 			if (move != xscale && move != 0)
 			{
@@ -52,7 +60,7 @@ function scr_player_handstandjump()
 				if (audio_is_playing(sfx_plrgrabdash))
 					audio_stop_sound(sfx_plrgrabdash);
 			}
-			if (floor(image_index) == (image_number - 1))
+			if (floor(image_index) == (image_number - 1)) && sprite_index != spr_suplexdashfallstart && sprite_index != spr_suplexdashfall
 			{
 				state = states.normal;
 				grav = 0.5;
@@ -116,27 +124,27 @@ function scr_player_handstandjump()
 			image_speed = 0.3;
 			if (!instance_exists(obj_slidecloud) && grounded && movespeed > 5)
 				instance_create(x, y, obj_slidecloud);
+			if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump) && sprite_index != spr_suplexdashfallstart && sprite_index != spr_suplexdashfall
+			{
+				//movespeed = 10;
+				//mach2 = 20;
+				if movespeed < 8
+					movespeed = 8
+				state = states.mach2;
+				sprite_index = spr_mach;
+			}
+			if (key_slap2 && !key_down)
+			{
+				sprite_index = spr_machtumble;
+				image_index = 0;
+				image_speed = 0.2;
+				state = states.machtumble;
+				movespeed += 3
+				if !grounded
+					vsp = -5;
+				with (instance_create(x, y, obj_jumpdust))
+					image_xscale = other.xscale;
+			}
 			break;
-	}
-	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump)
-	{
-		//movespeed = 10;
-		//mach2 = 20;
-		if movespeed < 8
-			movespeed = 8
-		state = states.mach2;
-		sprite_index = spr_mach;
-	}
-	if (key_slap2 && !key_down)
-	{
-		sprite_index = spr_machtumble;
-		image_index = 0;
-		image_speed = 0.2;
-		state = states.machtumble;
-		movespeed += 3
-		if !grounded
-			vsp = -5;
-		with (instance_create(x, y, obj_jumpdust))
-			image_xscale = other.xscale;
 	}
 }

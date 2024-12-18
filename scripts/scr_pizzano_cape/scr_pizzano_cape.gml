@@ -33,7 +33,7 @@ function scr_pizzano_cape()
 			sprite_index = spr_capeupstart
 			vsp = -10
 		}
-		if key_down2
+		if key_down
 			vsp = approach(vsp, 20, 1)
 	}
 	
