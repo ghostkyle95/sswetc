@@ -107,7 +107,7 @@ function scr_player_climbwall()
 		}
 		else
 		{
-			if (mach2 >= 100)
+			if (mach2 >= 100) && character != CHARACTERS.SWAB
 			{
 				{
 					mach2 = 100;

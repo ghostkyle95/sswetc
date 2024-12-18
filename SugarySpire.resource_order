@@ -232,6 +232,7 @@
     {"name":"Breakdance","order":9,"path":"folders/Sprites/Player/Breakdance.yy",},
     {"name":"Gumbob","order":1,"path":"folders/Sprites/Player/Gumbob.yy",},
     {"name":"Noise","order":5,"path":"folders/Sprites/Player/Noise.yy",},
+    {"name":"Currently Unused","order":336,"path":"folders/Sprites/Player/Noise/Currently Unused.yy",},
     {"name":"Doise-Exclusive","order":334,"path":"folders/Sprites/Player/Noise/Doise-Exclusive.yy",},
     {"name":"Pizzano","order":3,"path":"folders/Sprites/Player/Pizzano.yy",},
     {"name":"Pizzelle","order":2,"path":"folders/Sprites/Player/Pizzelle.yy",},
@@ -293,7 +294,6 @@
     {"name":"Signs","order":1,"path":"folders/Theater Hub/Signs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Currently Unused","order":336,"path":"folders/Sprites/Player/Noise/Currently Unused.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_doorS","order":6,"path":"objects/obj_doorS/obj_doorS.yy",},
