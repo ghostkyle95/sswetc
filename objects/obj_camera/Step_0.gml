@@ -105,7 +105,6 @@ if (global.panic && global.minutes == 0 && global.seconds == 0 && room != timesu
 {
 	if (!instance_exists(obj_coneball))
 	{
-		scr_sound(sfx_coneballspawn);
 		instance_create(obj_player.x, obj_player.y, obj_coneball);
 	}
 }

@@ -9,3 +9,4 @@ x = obj_player.x
 y = obj_player.y
 alarm[1] = 10
 image_alpha = 0
+scr_sound(sfx_coneballspawn);
