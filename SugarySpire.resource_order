@@ -1929,6 +1929,7 @@
     {"name":"spr_branktopping","order":1,"path":"sprites/spr_branktopping/spr_branktopping.yy",},
     {"name":"spr_playerN_piledriverland","order":251,"path":"sprites/spr_playerN_piledriverland/spr_playerN_piledriverland.yy",},
     {"name":"spr_playerN_crazyrun","order":70,"path":"sprites/spr_playerN_crazyrun/spr_playerN_crazyrun.yy",},
+    {"name":"spr_pizzano_bump","order":60,"path":"sprites/spr_pizzano_bump/spr_pizzano_bump.yy",},
     {"name":"spr_molassesbgpara1_escape","order":24,"path":"sprites/spr_molassesbgpara1_escape/spr_molassesbgpara1_escape.yy",},
     {"name":"bg_entryway2_sky","order":3,"path":"sprites/bg_entryway2_sky/bg_entryway2_sky.yy",},
     {"name":"spr_vilething","order":3,"path":"sprites/spr_vilething/spr_vilething.yy",},

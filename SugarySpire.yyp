@@ -2160,6 +2160,7 @@
     {"id":{"name":"spr_branktopping","path":"sprites/spr_branktopping/spr_branktopping.yy",},},
     {"id":{"name":"spr_playerN_piledriverland","path":"sprites/spr_playerN_piledriverland/spr_playerN_piledriverland.yy",},},
     {"id":{"name":"spr_playerN_crazyrun","path":"sprites/spr_playerN_crazyrun/spr_playerN_crazyrun.yy",},},
+    {"id":{"name":"spr_pizzano_bump","path":"sprites/spr_pizzano_bump/spr_pizzano_bump.yy",},},
     {"id":{"name":"spr_molassesbgpara1_escape","path":"sprites/spr_molassesbgpara1_escape/spr_molassesbgpara1_escape.yy",},},
     {"id":{"name":"bg_entryway2_sky","path":"sprites/bg_entryway2_sky/bg_entryway2_sky.yy",},},
     {"id":{"name":"spr_vilething","path":"sprites/spr_vilething/spr_vilething.yy",},},
