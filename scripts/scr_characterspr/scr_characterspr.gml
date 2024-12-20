@@ -308,7 +308,7 @@ function scr_characterspr()
 		spr_crouchjump = spr_player_crouchjump;
 		spr_crouchfall = spr_pizzano_crouchfall;
 		spr_couchstart = spr_player_crouchstart;
-		spr_bump = spr_player_bump;
+		spr_bump = spr_pizzano_bump;
 		spr_land = spr_player_land;
 		spr_land2 = spr_player_land2;
 		spr_lookdoor = spr_player_lookdoor;
@@ -381,7 +381,7 @@ function scr_characterspr()
 		spr_tumble = spr_player_tumble;
 		spr_tumbleend = spr_player_tumbleend;
 		spr_machroll = spr_pizzano_machroll;
-		spr_escapeidle = spr_player_escapeidle;
+		spr_escapeidle = spr_pizzano_panic;
 		spr_timesupidle = spr_player_timesupidle;
 		
 		spr_taunt = spr_pizzano_taunt;

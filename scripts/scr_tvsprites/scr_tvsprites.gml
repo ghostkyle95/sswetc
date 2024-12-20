@@ -40,6 +40,7 @@ function scr_tvsprites()
 		mach3tvspr = spr_pizzanotv_mach3;
 		crazyruntvspr = spr_pizzanotv_mach4;
 		minecarttvspr = spr_pizzanotv_mine;
+		hurttvspr = spr_pizzanotv_hurt;
 	}
 	if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == false)
 	{
