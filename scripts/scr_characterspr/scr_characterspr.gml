@@ -248,8 +248,6 @@ function scr_characterspr()
 		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;
-		spr_firecovered = spr_player_fire; 
-		spr_firecovereddash = spr_player_firedash;
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		
@@ -526,8 +524,6 @@ function scr_characterspr()
 		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;
-		spr_firecovered = spr_player_fire; 
-		spr_firecovereddash = spr_player_firedash;
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		spr_dive = spr_pizzano_dive;
@@ -819,8 +815,6 @@ function scr_characterspr()
 		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;
-		spr_firecovered = spr_player_fire; 
-		spr_firecovereddash = spr_player_firedash;
 		spr_dive = spr_playerN_dive;
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
@@ -1112,8 +1106,6 @@ function scr_characterspr()
 		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;
-		spr_firecovered = spr_player_fire; 
-		spr_firecovereddash = spr_player_firedash;
 		spr_dive = spr_playerN_dive;
 		spr_divebombfacehurtup = spr_playerN_facehurtup;
 		spr_divebombfacehurt = spr_playerN_facehurt;
@@ -1401,8 +1393,6 @@ function scr_characterspr()
 		
 		spr_kungfu4 = spr_pizzano_kungfu4;
 		spr_kungfu5 = spr_pizzano_kungfu5;
-		spr_firecovered = spr_player_fire; 
-		spr_firecovereddash = spr_player_firedash;
 		spr_divebombfacehurtup = spr_player_facehurtup;
 		spr_divebombfacehurt = spr_player_facehurt;
 		
