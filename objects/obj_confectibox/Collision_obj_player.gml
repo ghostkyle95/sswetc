@@ -30,7 +30,6 @@ if (sprite_index != spr_confectiboxopen)
 		if irandom_range(0,100) <= 25
 			scr_happyvoiceline()
 	}
-	sprite_index = spr_confectiboxopen;
-	image_index = 0;
 	ds_list_add(global.saveroom, id);
+	instance_destroy()
 }

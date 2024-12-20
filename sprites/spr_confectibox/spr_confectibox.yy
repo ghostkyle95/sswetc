@@ -52,10 +52,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"02489ae4-c3d2-4198-af16-f7a355180830","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 9,
+  "origin": 4,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Box",
+    "path": "folders/Sprites/Gameplay/Collectables/Confecti/Box.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -118,7 +118,7 @@
     "visibleRange": null,
     "volume": 1.0,
     "xorigin": 50,
-    "yorigin": 35,
+    "yorigin": 50,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,
