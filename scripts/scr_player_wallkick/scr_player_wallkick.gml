@@ -34,12 +34,16 @@ function scr_player_wallkick(){
 	{
 		if (key_attack)
 		{
+			if (move != 0)
+				xscale = move;
 			movespeed = 12;
 			sprite_index = spr_mach4;
 			state = states.mach3;
 		}
 		else
 		{
+			if (move != 0)
+				xscale = move;
 			sprite_index = spr_idle
 			state = states.normal;
 		}

@@ -18,7 +18,7 @@ if key_jump2 {
 	with obj_player { 
 		// set character
 		character = _return.value;
-		doisemode = (_return == 3 ? true : false);
+		doisemode = (other.selected == 3 ? true : false);
 	};
 	_cancel();
 } else if key_slap2 _cancel();
