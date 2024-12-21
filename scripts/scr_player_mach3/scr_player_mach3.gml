@@ -51,7 +51,7 @@ function scr_player_mach3()
 			}
 			if (grounded && vsp > 0)
 				jumpstop = false;
-			if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && key_attack)
+			if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1) && key_attack&& sprite_index != spr_mach3jump)
 			{
 				scr_sound(sfx_plrjump);
 				image_index = 0;

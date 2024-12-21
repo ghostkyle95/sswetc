@@ -24,7 +24,7 @@ function scr_player_mach2()
 	{
 			if (grounded && vsp > 0)
 				jumpstop = false;
-			if (input_buffer_jump < 8 && grounded && move != -xscale && key_attack)
+			if (input_buffer_jump < 8 && grounded && move != -xscale && key_attack && sprite_index != spr_secondjump1)
 			{
 				image_index = 0;
 				sprite_index = spr_secondjump1;
