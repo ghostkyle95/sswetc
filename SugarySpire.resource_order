@@ -2601,6 +2601,7 @@
     {"name":"spr_rankND","order":3,"path":"sprites/spr_rankND/spr_rankND.yy",},
     {"name":"spr_rankNB","order":1,"path":"sprites/spr_rankNB/spr_rankNB.yy",},
     {"name":"spr_rankNC","order":2,"path":"sprites/spr_rankNC/spr_rankNC.yy",},
+    {"name":"bg_characterselect","order":8,"path":"sprites/bg_characterselect/bg_characterselect.yy",},
     {"name":"mu_pizzanoescape","order":2,"path":"sounds/mu_pizzanoescape/mu_pizzanoescape.yy",},
     {"name":"spr_rankP","order":5,"path":"sprites/spr_rankP/spr_rankP.yy",},
     {"name":"spr_rankNS","order":4,"path":"sprites/spr_rankNS/spr_rankNS.yy",},

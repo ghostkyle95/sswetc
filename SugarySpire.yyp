@@ -2925,6 +2925,7 @@
     {"id":{"name":"spr_rankND","path":"sprites/spr_rankND/spr_rankND.yy",},},
     {"id":{"name":"spr_rankNB","path":"sprites/spr_rankNB/spr_rankNB.yy",},},
     {"id":{"name":"spr_rankNC","path":"sprites/spr_rankNC/spr_rankNC.yy",},},
+    {"id":{"name":"bg_characterselect","path":"sprites/bg_characterselect/bg_characterselect.yy",},},
     {"id":{"name":"mu_pizzanoescape","path":"sounds/mu_pizzanoescape/mu_pizzanoescape.yy",},},
     {"id":{"name":"spr_rankP","path":"sprites/spr_rankP/spr_rankP.yy",},},
     {"id":{"name":"spr_entryway_gate","path":"sprites/spr_entryway_gate/spr_entryway_gate.yy",},},
