@@ -746,6 +746,7 @@
     {"id":{"name":"spr_playerN_golfidle","path":"sprites/spr_playerN_golfidle/spr_playerN_golfidle.yy",},},
     {"id":{"name":"obj_attack_aftereffect","path":"objects/obj_attack_aftereffect/obj_attack_aftereffect.yy",},},
     {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
+    {"id":{"name":"spr_pizzano_dashpad","path":"sprites/spr_pizzano_dashpad/spr_pizzano_dashpad.yy",},},
     {"id":{"name":"spr_pizzano_laddermoveup","path":"sprites/spr_pizzano_laddermoveup/spr_pizzano_laddermoveup.yy",},},
     {"id":{"name":"obj_saveroom","path":"objects/obj_saveroom/obj_saveroom.yy",},},
     {"id":{"name":"obj_pizzaball","path":"objects/obj_pizzaball/obj_pizzaball.yy",},},
