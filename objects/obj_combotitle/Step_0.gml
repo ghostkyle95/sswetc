@@ -1,7 +1,7 @@
 image_index = title
-if (image_index > sprite_get_number(spr_combotitles))
+if (image_index > sprite_get_number(spr_combotitles) - 1)
 {
-    image_index -= sprite_get_number(spr_combotitles)
+    image_index -= (sprite_get_number(spr_combotitles))
     very = true
 }
 paletteselect = 0

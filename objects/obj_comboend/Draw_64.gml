@@ -8,7 +8,7 @@ if (title > sprite_get_number(spr_combotitles))
     title -= sprite_get_number(spr_combotitles)
     very = true
 }
-if (savedcombo >= 80)
+if (savedcombo >= 120)
     very = true
 draw_sprite(spr_combotitles, title, xx, (yy + 30))
 draw_set_font(global.smallfont)
