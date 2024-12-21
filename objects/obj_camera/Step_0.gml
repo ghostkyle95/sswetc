@@ -6,8 +6,8 @@ if (global.panic)
 	timestop = false;
 if (!global.panic)
 	timestop = true;
-if (global.seconds == 0 && global.minutes == 0)
-	alarm[1] = -1;
+//if (global.seconds == 0 && global.minutes == 0)
+	//alarm[1] = -1;
 if (global.seconds < 0)
 {
 	global.seconds = 59;
