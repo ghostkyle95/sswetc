@@ -7,7 +7,7 @@ if (global.panic)
 	global.pizzameter += 1;
 	create_small_number(x + 16, y, "10");
 	global.combofreeze = 30;
-	global.combotime += 1;
+	global.combotime += 10;
 	with (instance_create(x, y, obj_collecteffect))
 	{
 		sprite_index = other.sprite_index;

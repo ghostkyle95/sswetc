@@ -1,6 +1,6 @@
 global.collect += 25;
 global.combofreeze = 30;
-global.combotime += 3;
+global.combotime += 30;
 create_small_number(x, y, "25");
 if (audio_is_playing(sfx_collect))
 	audio_stop_sound(sfx_collect);
