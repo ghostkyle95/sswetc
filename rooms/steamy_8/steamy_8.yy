@@ -114,6 +114,10 @@
     {"name":"inst_96F5DD82","path":"rooms/steamy_8/steamy_8.yy",},
     {"name":"inst_2BB94B0A","path":"rooms/steamy_8/steamy_8.yy",},
     {"name":"inst_AF6CC972","path":"rooms/steamy_8/steamy_8.yy",},
+    {"name":"inst_13AFEA17","path":"rooms/steamy_8/steamy_8.yy",},
+    {"name":"inst_31DDB937","path":"rooms/steamy_8/steamy_8.yy",},
+    {"name":"inst_17F32BF7","path":"rooms/steamy_8/steamy_8.yy",},
+    {"name":"inst_64A4658","path":"rooms/steamy_8/steamy_8.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -224,6 +228,10 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_96F5DD82","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_siren","path":"objects/obj_siren/obj_siren.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2016.0,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2BB94B0A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_siren","path":"objects/obj_siren/obj_siren.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2528.0,"y":192.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_AF6CC972","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_exitdoorsign","path":"objects/obj_exitdoorsign/obj_exitdoorsign.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1296.0,"y":224.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_13AFEA17","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_babybear","path":"objects/obj_babybear/obj_babybear.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2336.0,"y":1088.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_31DDB937","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_babybear","path":"objects/obj_babybear/obj_babybear.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2400.0,"y":1088.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_17F32BF7","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_babybear","path":"objects/obj_babybear/obj_babybear.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2464.0,"y":1088.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_64A4658","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_babybear","path":"objects/obj_babybear/obj_babybear.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2528.0,"y":1088.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":true,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles_2","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":49,"SerialiseWidth":105,"TileCompressedData":[
 -5145,0,],"TileDataFormat":1,},"tilesetId":{"name":"tile_clock","path":"tilesets/tile_clock/tile_clock.yy",},"userdefinedDepth":true,"visible":true,"x":0,"y":0,},
