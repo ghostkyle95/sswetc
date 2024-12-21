@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Movement",
-    "path": "folders/Objects/Gameplay/Movement.yy",
+    "name": "Collision",
+    "path": "folders/Objects/Technical Stuff/Collision.yy",
   },
   "parentObjectId": {
     "name": "obj_slope",
