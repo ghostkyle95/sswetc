@@ -5,11 +5,8 @@ move = key_left2 + key_right2;
 if move != 0
 	chosencharacter += move;
 	
-if (chosencharacter > array_length(chararray) - 1)
+if (chosencharacter > array_length(chararray) - 1 || chosencharacter < 0)
 	chosencharacter = 0;
-	
-if (chosencharacter < 0)
-	chosencharacter = array_length(chararray) - 1;
 	
 if (key_jump)
 {
