@@ -761,7 +761,7 @@
     {"name":"devroom","order":6,"path":"rooms/devroom/devroom.yy",},
     {"name":"spr_nikocadotv_combo","order":1,"path":"sprites/spr_nikocadotv_combo/spr_nikocadotv_combo.yy",},
     {"name":"tutorial_2","order":2,"path":"rooms/tutorial_2/tutorial_2.yy",},
-    {"name":"spr_playerN_climbwall","order":184,"path":"sprites/spr_playerN_climbwall/spr_playerN_climbwall.yy",},
+    {"name":"spr_playerN_climbwall","order":43,"path":"sprites/spr_playerN_climbwall/spr_playerN_climbwall.yy",},
     {"name":"tutorial_3","order":3,"path":"rooms/tutorial_3/tutorial_3.yy",},
     {"name":"spr_playerN_cheesedsticksidedown","order":41,"path":"sprites/spr_playerN_cheesedsticksidedown/spr_playerN_cheesedsticksidedown.yy",},
     {"name":"spr_playerSW_handgesture4","order":46,"path":"sprites/spr_playerSW_handgesture4/spr_playerSW_handgesture4.yy",},

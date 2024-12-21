@@ -7,7 +7,7 @@ _ymid = window_get_height() / 2;
 
 pal_swap_set(_char.palette, 1, 0);
 image_speed = 0.35;
-draw_sprite_ext(_char.sprite_index, image_index, _xmid, _ymid, 2, 2, 0, c_white, 1);
+draw_sprite_ext(_char.sprite_index, image_index, _xmid, _ymid + 25, 2, 2, 0, c_white, 1);
 shader_reset();
 
 draw_set_font(global.tvfont);
