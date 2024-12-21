@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Swab",
-    "path": "folders/Sprites/Player/Swab.yy",
+    "name": "Palettes",
+    "path": "folders/Sprites/Palettes.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

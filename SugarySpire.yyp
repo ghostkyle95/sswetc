@@ -2080,6 +2080,7 @@
     {"id":{"name":"spr_chocolate_panic","path":"sprites/spr_chocolate_panic/spr_chocolate_panic.yy",},},
     {"id":{"name":"spr_duck","path":"sprites/spr_duck/spr_duck.yy",},},
     {"id":{"name":"spr_slim","path":"sprites/spr_slim/spr_slim.yy",},},
+    {"id":{"name":"obj_characterchanger","path":"objects/obj_characterchanger/obj_characterchanger.yy",},},
     {"id":{"name":"obj_secretportal","path":"objects/obj_secretportal/obj_secretportal.yy",},},
     {"id":{"name":"spr_playerSW_Sjumpcancelstart2","path":"sprites/spr_playerSW_Sjumpcancelstart2/spr_playerSW_Sjumpcancelstart2.yy",},},
     {"id":{"name":"spr_soda","path":"sprites/spr_soda/spr_soda.yy",},},
