@@ -82,6 +82,7 @@ function scr_player_handstandjump()
 				}
 				else
 				{
+					if character == CHARACTERS.NIKOCADO return;
 					grav = 0.5;
 					image_index = 1;
 					state = states.freefallprep;

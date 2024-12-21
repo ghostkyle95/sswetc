@@ -51,7 +51,7 @@ function scr_player_machroll()
             return;
 		}
 	}
-	if (key_jump && !grounded)
+	if (key_jump && !grounded && character != CHARACTERS.NIKOCADO)
 	{
 		if (character != CHARACTERS.NOISE || doisemode == true)
 		{

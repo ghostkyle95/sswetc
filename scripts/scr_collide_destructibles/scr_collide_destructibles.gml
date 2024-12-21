@@ -158,6 +158,26 @@ function scr_collide_destructibles()
 				event_user(0);
 			}
 		}
+		
+		if character == CHARACTERS.NIKOCADO
+		{
+			if (place_meeting(x, y + vsp + 2, obj_destructibles))
+			{
+				with (instance_place(x, y + vsp + 2, obj_destructibles))
+				{
+					DestroyedBy = other.id;
+					event_user(0);
+				}
+			}
+			if (place_meeting(x, y + vsp + 2, obj_metalblock))
+			{
+				with (instance_place(x, y + vsp + 2, obj_metalblock))
+				{
+					DestroyedBy = other.id;
+					event_user(0);
+				}
+			}
+		}
 	}
 	if (state == states.uppercut && vsp < 0)
 	{

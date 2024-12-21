@@ -210,7 +210,7 @@ function scr_player_mach2()
 			state = states.handstandjump;
 		}
 	}
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
+	if (key_jump && key_up && character != CHARACTERS.NIKOCADO && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
 	{
 		image_index = 0;
 		state = states.freefallprep;

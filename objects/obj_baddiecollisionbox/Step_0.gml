@@ -90,6 +90,8 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && !obj_player.
 						}
 					}
 				}
+				if character == CHARACTERS.NIKOCADO
+					instance_destroy(other.baddieID)
 			}
 			if (instance_exists(other.baddieID) && ((state == states.cotton || state == states.cottonroll)))
 			{

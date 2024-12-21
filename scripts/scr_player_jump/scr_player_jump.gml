@@ -38,7 +38,7 @@ function scr_player_jump()
 		vsp /= 5;
 		jumpstop = true;
 	}
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB && character != CHARACTERS.NIKOCADO)
 	{
 		image_index = 0;
 		state = states.freefallprep;
@@ -296,7 +296,7 @@ function scr_player_jump()
 	}
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_candytransitionup)
 		sprite_index = spr_candyup;
-	if (key_down2 && !global.cane)
+	if (key_down2 && !global.cane && character != CHARACTERS.NIKOCADO)
 	{
 		image_index = 0;
 		state = states.freefallprep;
