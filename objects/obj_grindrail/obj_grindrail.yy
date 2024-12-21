@@ -28,12 +28,12 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_Minecartrail",
-    "path": "sprites/spr_Minecartrail/spr_Minecartrail.yy",
+    "name": "spr_hurtbox",
+    "path": "sprites/spr_hurtbox/spr_hurtbox.yy",
   },
   "spriteMaskId": {
-    "name": "spr_wall",
-    "path": "sprites/spr_wall/spr_wall.yy",
+    "name": "spr_hurtbox",
+    "path": "sprites/spr_hurtbox/spr_hurtbox.yy",
   },
   "visible": false,
 }

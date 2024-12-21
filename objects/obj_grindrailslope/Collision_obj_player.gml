@@ -2,8 +2,8 @@ if ((other.y > other.yprevious || (other.xscale == sign(image_xscale) && other.y
 {
     with (other)
     {
-        while place_meeting(x, y, obj_grindrailslope)
-            y--
+       // while place_meeting(x, y, obj_grindrailslope)
+            //y--
     }
     if (other.movespeed < 10)
 	{

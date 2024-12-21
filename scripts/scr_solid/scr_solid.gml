@@ -98,6 +98,36 @@ function scr_solid(_x, _y, _is_slope = false)
 			}
 		}
 	}
+	if (place_meeting(x, y, obj_grindrailslope))
+	{
+		var grindslope2 = instance_place(x, y, obj_grindrailslope);
+		with (grindslope2)
+		{
+			var gobject2_side = 0;
+			var gslope2_start = 0;
+			var gslope2_end = 0;
+			if (image_xscale > 0)
+			{
+				gobject2_side = other.bbox_right;
+				gslope2_start = bbox_bottom;
+				gslope2_end = bbox_top;
+			}
+			else
+			{
+				gobject2_side = other.bbox_left;
+				gslope2_start = bbox_top;
+				gslope2_end = bbox_bottom;
+			}
+			var n = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
+			var grindsslope2 = gslope2_start - round(n * (gobject2_side - bbox_left));
+			if (other.y >= old_y && can_collide(other.object_index) && other.bbox_bottom == grindsslope2 && other.bbox_top < grindsslope2 && gobject2_side != grindsslope2)
+			{
+				other.x = old_x;
+				other.y = old_y;
+				return true;
+			}
+		}
+	}
 	x = old_x;
 	y = old_y;
 	return false;
