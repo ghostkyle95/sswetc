@@ -117,7 +117,9 @@ function scr_player_jump()
 				}
 			}
 			with (obj_metalblock)
-				instance_destroy()
+				instance_destroy();
+			with (obj_destructibles)
+				instance_destroy();
 			with (obj_camera)
 			{
 				shake_mag = 10;
