@@ -334,7 +334,6 @@ function scr_characterspr()
 		spr_stompprep = spr_player_stompprep;
 		spr_crouchslide = spr_player_machslide;
 		spr_crouch = spr_pizzano_crouch;
-		spr_bump = spr_player_bump;
 		spr_victory = spr_player_entergate;
 		spr_climbwall = spr_pizzano_wallclimb;
 		spr_grab = spr_player_grab;
@@ -610,7 +609,6 @@ function scr_characterspr()
 		spr_stompprep = spr_playerN_stompprep;
 		spr_crouchslide = spr_playerN_crouchslip;
 		spr_crouch = spr_playerN_crouch;
-		spr_bump = spr_playerN_bump;
 		spr_victory = spr_playerN_entergate;
 		spr_hurt = spr_playerN_hurt;
 		spr_climbwall = spr_playerN_climbwall;
