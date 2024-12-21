@@ -3,4 +3,4 @@ hsp = 0;
 grav = 1;
 depth = -3;
 grounded = false;
-scr_sound(sfx_enemythrow190);
+scr_sound(sfx_boomboxsong);

@@ -1631,6 +1631,7 @@
     {"name":"spr_gummyworm_taunt","order":3,"path":"sprites/spr_gummyworm_taunt/spr_gummyworm_taunt.yy",},
     {"name":"spr_playerSW_idle","order":56,"path":"sprites/spr_playerSW_idle/spr_playerSW_idle.yy",},
     {"name":"spr_geyserIdle","order":2,"path":"sprites/spr_geyserIdle/spr_geyserIdle.yy",},
+    {"name":"sfx_boomboxsong","order":98,"path":"sounds/sfx_boomboxsong/sfx_boomboxsong.yy",},
     {"name":"spr_player_levelcomplete","order":8,"path":"sprites/spr_player_levelcomplete/spr_player_levelcomplete.yy",},
     {"name":"spr_playerN_knightjump","order":98,"path":"sprites/spr_playerN_knightjump/spr_playerN_knightjump.yy",},
     {"name":"spr_playerSW_crouchmove","order":16,"path":"sprites/spr_playerSW_crouchmove/spr_playerSW_crouchmove.yy",},

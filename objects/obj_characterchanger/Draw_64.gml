@@ -5,3 +5,8 @@ draw_rectangle_color(960, 0, 5960, 1080, 2752517, 2752517, 2752517, 2752517, fal
 pal_swap_set(chararray[chosencharacter].palettesprite, chararray[chosencharacter].palettenum, 0);
 draw_sprite_ext(chararray[chosencharacter].idlesprite, image_index, 480, 270, 2, 2, 0, c_white, 1);
 shader_reset();
+
+draw_set_font(global.tvfont);
+draw_set_halign(fa_center);
+
+draw_text(480, 350, chararray[chosencharacter].name)

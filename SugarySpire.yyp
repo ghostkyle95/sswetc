@@ -1833,6 +1833,7 @@
     {"id":{"name":"spr_gummyworm_taunt","path":"sprites/spr_gummyworm_taunt/spr_gummyworm_taunt.yy",},},
     {"id":{"name":"spr_playerSW_idle","path":"sprites/spr_playerSW_idle/spr_playerSW_idle.yy",},},
     {"id":{"name":"spr_geyserIdle","path":"sprites/spr_geyserIdle/spr_geyserIdle.yy",},},
+    {"id":{"name":"sfx_boomboxsong","path":"sounds/sfx_boomboxsong/sfx_boomboxsong.yy",},},
     {"id":{"name":"spr_cardboardcherry","path":"sprites/spr_cardboardcherry/spr_cardboardcherry.yy",},},
     {"id":{"name":"spr_player_levelcomplete","path":"sprites/spr_player_levelcomplete/spr_player_levelcomplete.yy",},},
     {"id":{"name":"spr_playerN_knightjump","path":"sprites/spr_playerN_knightjump/spr_playerN_knightjump.yy",},},
