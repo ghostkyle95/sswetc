@@ -107,6 +107,7 @@ function scr_player_jump()
 		doublejumped = false;
 		if character == CHARACTERS.NIKOCADO
 		{
+			scr_sound(sfx_groundpoundland);
 			with (obj_baddie)
 			{
 				if (point_in_camera(x, y, view_camera[0]) && grounded)
@@ -115,6 +116,8 @@ function scr_player_jump()
 					hsp = 0;
 				}
 			}
+			with (obj_metalblock)
+				instance_destroy()
 			with (obj_camera)
 			{
 				shake_mag = 10;
