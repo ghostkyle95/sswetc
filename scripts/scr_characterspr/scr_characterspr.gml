@@ -1455,5 +1455,12 @@ function scr_characterspr()
 		spr_mach3jump = spr_playerNIK_mach3jump;
 		spr_machslideboost3 = spr_playerNIK_mach3turn;
 		spr_dive = spr_playerNIK_dive;
+		
+		spr_srank = spr_rankNIKS;
+		spr_arank = spr_rankNIKA;
+		spr_brank = spr_rankNIKB;
+		spr_crank = spr_rankNIKC;
+		spr_drank = spr_rankNIKD;
+		spr_prank = spr_rankNIKP;
 	}
 }
