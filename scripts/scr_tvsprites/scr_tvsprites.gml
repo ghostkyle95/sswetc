@@ -57,4 +57,19 @@ function scr_tvsprites()
 		firetvspr = spr_noisetv_fire
 		bombtvspr = spr_noisetv_bomb;
 	}
+	if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == true)
+	{
+		idletvspr = spr_noisetv;
+		tvchange1 = spr_noisetv2;
+		tvchange2 = spr_noisetv3;
+		mach3tvspr = spr_noisetv_mach3;
+		crazyruntvspr = spr_noisetv_mach4;
+		collecttvspr = spr_noisetv_collect;
+		combotvspr = spr_noisetv_combo;
+		angrytvspr = spr_noisetv_combo;
+		panictvspr = spr_noisetv_panic;
+		hurttvspr = spr_noisetv_hurt;
+		firetvspr = spr_noisetv_fire
+		bombtvspr = spr_noisetv_bomb;
+	}
 }
