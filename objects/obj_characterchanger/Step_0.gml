@@ -1,24 +1,19 @@
 scr_getinput();
-move = key_left2 + key_right2;
-	
-if move != 0
-{
-	chosencharacter += move;
-	scr_sound(sfx_step);
-}
-	
-if (chosencharacter > array_length(chararray) - 1 || chosencharacter < 0)
-	chosencharacter = 0;
-	
-if (key_jump)
-{
-	obj_player.character = chararray[chosencharacter].charenum;
-	obj_player.doisemode = chararray[chosencharacter].doisemode;
-	obj_player.state = states.normal;
-	obj_player.sprite_index = obj_player.spr_idle;
-	obj_player.paletteselect = 1;
-	instance_destroy();
-}
 
-if (key_slap2)
+move = key_left2 + key_right2;
+if (move != 0) { selected += move; scr_sound(sfx_step); };
+selected = wrap(selected, 0, array_length(characters));
+
+if key_jump2 {
+	with obj_player {
+		// set character
+		character = other.characters[selected].value;
+		doisemode = (other.selected == 3 ? true : false);
+		
+		// unlock movement
+		state = states.normal;
+		sprite_index = spr_idle;
+		paletteselect = 1;
+	};
 	instance_destroy();
+} else if key_slap2 instance_destroy();
