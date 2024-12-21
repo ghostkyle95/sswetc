@@ -1258,7 +1258,7 @@
     {"name":"mu_title","order":6,"path":"sounds/mu_title/mu_title.yy",},
     {"name":"spr_playerN_ratballoonfall","order":140,"path":"sprites/spr_playerN_ratballoonfall/spr_playerN_ratballoonfall.yy",},
     {"name":"mu_wafflesecret","order":5,"path":"sounds/mu_wafflesecret/mu_wafflesecret.yy",},
-    {"name":"spr_pizzanotv_hurt","order":8,"path":"sprites/spr_pizzanotv_hurt/spr_pizzanotv_hurt.yy",},
+    {"name":"spr_pizzanotv_angry","order":8,"path":"sprites/spr_pizzanotv_angry/spr_pizzanotv_angry.yy",},
     {"name":"mu_mineshaft2","order":1,"path":"sounds/mu_mineshaft2/mu_mineshaft2.yy",},
     {"name":"sfx_pizzaboxtransition","order":1,"path":"sounds/sfx_pizzaboxtransition/sfx_pizzaboxtransition.yy",},
     {"name":"sfx_geyser","order":10,"path":"sounds/sfx_geyser/sfx_geyser.yy",},

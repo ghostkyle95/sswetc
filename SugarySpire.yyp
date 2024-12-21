@@ -1431,7 +1431,7 @@
     {"id":{"name":"spr_playerN_ratballoonfall","path":"sprites/spr_playerN_ratballoonfall/spr_playerN_ratballoonfall.yy",},},
     {"id":{"name":"mu_wafflesecret","path":"sounds/mu_wafflesecret/mu_wafflesecret.yy",},},
     {"id":{"name":"mu_ranka","path":"sounds/mu_ranka/mu_ranka.yy",},},
-    {"id":{"name":"spr_pizzanotv_hurt","path":"sprites/spr_pizzanotv_hurt/spr_pizzanotv_hurt.yy",},},
+    {"id":{"name":"spr_pizzanotv_angry","path":"sprites/spr_pizzanotv_angry/spr_pizzanotv_angry.yy",},},
     {"id":{"name":"mu_mineshaft2","path":"sounds/mu_mineshaft2/mu_mineshaft2.yy",},},
     {"id":{"name":"sfx_pizzaboxtransition","path":"sounds/sfx_pizzaboxtransition/sfx_pizzaboxtransition.yy",},},
     {"id":{"name":"sfx_geyser","path":"sounds/sfx_geyser/sfx_geyser.yy",},},
