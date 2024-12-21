@@ -1391,6 +1391,7 @@
     {"name":"spr_mineken","order":5,"path":"sprites/spr_mineken/spr_mineken.yy",},
     {"name":"spr_knight_scared","order":2,"path":"sprites/spr_knight_scared/spr_knight_scared.yy",},
     {"name":"spr_tvoff_nopropeller","order":11,"path":"sprites/spr_tvoff_nopropeller/spr_tvoff_nopropeller.yy",},
+    {"name":"mu_placeholdertitlecard","order":4,"path":"sounds/mu_placeholdertitlecard/mu_placeholdertitlecard.yy",},
     {"name":"spr_player_machslideend","order":94,"path":"sprites/spr_player_machslideend/spr_player_machslideend.yy",},
     {"name":"spr_player_minecartfast","order":100,"path":"sprites/spr_player_minecartfast/spr_player_minecartfast.yy",},
     {"name":"spr_player_minecart","order":98,"path":"sprites/spr_player_minecart/spr_player_minecart.yy",},

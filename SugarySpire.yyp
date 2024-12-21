@@ -1572,6 +1572,7 @@
     {"id":{"name":"spr_mineken","path":"sprites/spr_mineken/spr_mineken.yy",},},
     {"id":{"name":"spr_knight_scared","path":"sprites/spr_knight_scared/spr_knight_scared.yy",},},
     {"id":{"name":"spr_tvoff_nopropeller","path":"sprites/spr_tvoff_nopropeller/spr_tvoff_nopropeller.yy",},},
+    {"id":{"name":"mu_placeholdertitlecard","path":"sounds/mu_placeholdertitlecard/mu_placeholdertitlecard.yy",},},
     {"id":{"name":"spr_player_machslideend","path":"sprites/spr_player_machslideend/spr_player_machslideend.yy",},},
     {"id":{"name":"spr_player_minecartfast","path":"sprites/spr_player_minecartfast/spr_player_minecartfast.yy",},},
     {"id":{"name":"spr_player_minecart","path":"sprites/spr_player_minecart/spr_player_minecart.yy",},},
