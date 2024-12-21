@@ -2,12 +2,12 @@ scr_getinput();
 
 move = key_left2 + key_right2;
 if (move != 0) { selected += move; scr_sound(sfx_step); };
-selected = wrap(selected, 0, array_length(characters));
+selected = wrap(selected, 0, array_length(characters) - 1);
 
 if key_jump2 {
 	with obj_player {
 		// set character
-		character = other.characters[selected].value;
+		character = other.characters[other.selected].value;
 		doisemode = (other.selected == 3 ? true : false);
 		
 		// unlock movement
