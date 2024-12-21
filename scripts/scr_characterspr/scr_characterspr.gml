@@ -1,4 +1,4 @@
-enum CHARACTERS { PIZZELLE, PIZZANO, NOISE, GUMBOB, SWAB };
+enum CHARACTERS { PIZZELLE, PIZZANO, NOISE, GUMBOB, SWAB, NIKOCADO};
 function scr_characterspr()
 {
 	if (character == CHARACTERS.PIZZELLE)
@@ -1438,7 +1438,20 @@ function scr_characterspr()
 		spr_idle2 = spr_gumbob_idle;
 		spr_idle3 = spr_gumbob_idle;
 		spr_palette = spr_palg;
-		spr_player_taunt = spr_gumbob_taunt;
+		spr_taunt = spr_gumbob_taunt;
 		spr_cotidle = spr_gumbob_cotton_idle;
+	}
+	if (character == CHARACTERS.NIKOCADO)
+	{
+		spr_idle = spr_playerNIK_idle;
+		spr_move = spr_playerNIK_move;
+		spr_jump = spr_playerNIK_jump;
+		spr_fall = spr_playerNIK_fall;
+		spr_taunt = spr_playerNIK_taunt;
+		spr_breakdance = spr_playerNIK_breakdancing;
+		spr_mach1 = spr_playerNIK_mach1;
+		spr_mach = spr_playerNIK_mach2;
+		spr_mach4 = spr_playerNIK_mach3;
+		spr_mach3jump = spr_playerNIK_mach3jump;
 	}
 }

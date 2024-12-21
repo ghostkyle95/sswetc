@@ -58,8 +58,20 @@ swab =
 	name: "Swab",
 	desc: ""
 };
+nikocado = 
+{
+	charenum: CHARACTERS.NIKOCADO,
+	idlesprite: spr_playerNIK_idle,
+	selectedsprite: spr_playerNIK_breakdancing,
+	doisemode: false,
+	palettesprite: spr_pal,
+	palettenum: 1,
+	
+	name: "Nikocado",
+	desc: ""
+};
 
-chararray = [pizzelle, pizzano, noise, doise, swab];
+chararray = [pizzelle, pizzano, noise, doise, swab, nikocado];
 chosencharacter = 0;
 move = 0;
 image_speed = 0.35;

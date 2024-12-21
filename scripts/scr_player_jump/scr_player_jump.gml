@@ -105,6 +105,22 @@ function scr_player_jump()
 		instance_create_depth(x, y, 0, obj_landcloud);
 		scr_sound(sfx_step);
 		doublejumped = false;
+		if character == CHARACTERS.NIKOCADO
+		{
+			with (obj_baddie)
+			{
+				if (point_in_camera(x, y, view_camera[0]) && grounded)
+				{
+					vsp = -7;
+					hsp = 0;
+				}
+			}
+			with (obj_camera)
+			{
+				shake_mag = 10;
+				shake_mag_acc = 30 / room_speed;
+			}
+		}
 	}
 	if (key_jump)
 		input_buffer_jump = 0;
@@ -185,22 +201,26 @@ function scr_player_jump()
 	}
 	if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
 	{
-		scr_sound(sfx_plrgrabdash);
-		instance_create(x, y, obj_slaphitbox);
-		suplexmove = true;
-		vsp = 0;
-		instance_create(x, y, obj_jumpdust);
-		
 		switch (character)
 		{
 			case CHARACTERS.PIZZELLE:
 			case CHARACTERS.NOISE:
 			case CHARACTERS.SWAB:
+				scr_sound(sfx_plrgrabdash);
+				instance_create(x, y, obj_slaphitbox);
+				suplexmove = true;
+				vsp = 0;
+				instance_create(x, y, obj_jumpdust);
 				image_index = 0;
 				sprite_index = spr_suplexdash;
 				state = states.handstandjump;
 			break;
 			case CHARACTERS.PIZZANO:
+				scr_sound(sfx_plrgrabdash);
+				instance_create(x, y, obj_slaphitbox);
+				suplexmove = true;
+				vsp = 0;
+				instance_create(x, y, obj_jumpdust);
 				image_index = 0;
 				sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3, spr_kungfu4, spr_kungfu5);
 				state = states.pizzanoshoulderbash;

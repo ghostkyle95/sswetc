@@ -6,6 +6,7 @@ function scr_player_mach3()
 		case CHARACTERS.NOISE:
 		case CHARACTERS.PIZZANO:
 		case CHARACTERS.SWAB:
+		case CHARACTERS.NIKOCADO:
 			if (grounded)
 				Sjumpcan_doublejump = true;
 			if (windingAnim < 2000)
@@ -20,19 +21,33 @@ function scr_player_mach3()
 			momemtum = true;
 			move = key_right + key_left;
 			move2 = key_right2 + key_left2;
-			if (movespeed < 24 && move == xscale)
+			if character != CHARACTERS.NIKOCADO
 			{
-				movespeed += 0.05;
-				if (!instance_exists(obj_crazyruneffect))
-					instance_create(x, y, obj_crazyruneffect);
+				if (movespeed < 24 && move == xscale)
+				{
+					movespeed += 0.05;
+					if (!instance_exists(obj_crazyruneffect))
+						instance_create(x, y, obj_crazyruneffect);
+				}
+				else if ((movespeed > 12 && move != xscale) && Dashpad_buffer <= 0)
+					movespeed -= 0.05;
 			}
-			else if ((movespeed > 12 && move != xscale) && Dashpad_buffer <= 0)
-				movespeed -= 0.05;
+			else
+			{
+				if (movespeed < 15 && move == xscale)
+				{
+					movespeed += 0.05;
+					if (!instance_exists(obj_crazyruneffect))
+						instance_create(x, y, obj_crazyruneffect);
+				}
+				else if ((movespeed > 12 && move != xscale) && Dashpad_buffer <= 0)
+					movespeed -= 0.05;
+			}
 			crouchslideAnim = true;
 			if (!key_jump2 && !jumpstop && vsp < 0.5)
 			{
 				vsp /= 2;
-				jumpstop = true	;
+				jumpstop = true;
 			}
 			if (grounded && vsp > 0)
 				jumpstop = false;
@@ -53,7 +68,7 @@ function scr_player_mach3()
 				sprite_index = spr_mach4;
 			if animation_end() && sprite_index == spr_mach3hit
 				sprite_index = spr_mach4;
-			if ((movespeed > 20 && sprite_index != spr_crazyrun) && sprite_index != spr_dive && sprite_index != spr_rollgetup && sprite_index != spr_mach3hit)
+			if ((movespeed > 20 && sprite_index != spr_crazyrun) && character != CHARACTERS.NIKOCADO && sprite_index != spr_dive && sprite_index != spr_rollgetup && sprite_index != spr_mach3hit)
 			{
 				flash = true;
 				sprite_index = spr_crazyrun;
@@ -209,22 +224,26 @@ function scr_player_mach3()
 			scr_cantaunt()
 	if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
 	{
-		scr_sound(sfx_plrgrabdash);
-		instance_create(x, y, obj_slaphitbox);
-		suplexmove = true;
-		vsp = 0;
-		instance_create(x, y, obj_jumpdust);
-		
 		switch (character)
 		{
 			case CHARACTERS.PIZZELLE:
 			case CHARACTERS.NOISE:
 			case CHARACTERS.SWAB:
+				scr_sound(sfx_plrgrabdash);
+				instance_create(x, y, obj_slaphitbox);
+				suplexmove = true;
+				vsp = 0;
+				instance_create(x, y, obj_jumpdust);
 				image_index = 0;
 				sprite_index = spr_suplexdash;
 				state = states.handstandjump;
 			break;
 			case CHARACTERS.PIZZANO:
+				scr_sound(sfx_plrgrabdash);
+				instance_create(x, y, obj_slaphitbox);
+				suplexmove = true;
+				vsp = 0;
+				instance_create(x, y, obj_jumpdust);
 				image_index = 0;
 				sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3, spr_kungfu4, spr_kungfu5);
 				state = states.pizzanoshoulderbash;

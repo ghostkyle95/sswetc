@@ -72,4 +72,9 @@ function scr_tvsprites()
 		firetvspr = spr_noisetv_fire
 		bombtvspr = spr_noisetv_bomb;
 	}
+	if (obj_player.character == CHARACTERS.NIKOCADO)
+	{
+		mach3tvspr = spr_nikocadotv_mach3;
+		combotvspr = spr_nikocadotv_combo;
+	}
 }
