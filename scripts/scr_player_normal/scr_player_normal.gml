@@ -100,7 +100,7 @@ function scr_player_normal()
 							start_running = true;
 							movespeed = 0;
 						}
-						else if !(windingAnim < 1800)
+						else if !(windingAnim < 1800) && !(breakdance_pressed >= breakdance_max)
 						{
 							idle = 0;
 							windingAnim--;

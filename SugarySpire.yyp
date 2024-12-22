@@ -1107,6 +1107,7 @@
     {"id":{"name":"spr_playerN_finalattack1","path":"sprites/spr_playerN_finalattack1/spr_playerN_finalattack1.yy",},},
     {"id":{"name":"scr_player_Sjumpprep","path":"scripts/scr_player_Sjumpprep/scr_player_Sjumpprep.yy",},},
     {"id":{"name":"scr_player_skateboard","path":"scripts/scr_player_skateboard/scr_player_skateboard.yy",},},
+    {"id":{"name":"molasses_lap","path":"rooms/molasses_lap/molasses_lap.yy",},},
     {"id":{"name":"spr_playerN_bomb","path":"sprites/spr_playerN_bomb/spr_playerN_bomb.yy",},},
     {"id":{"name":"scr_player_slam","path":"scripts/scr_player_slam/scr_player_slam.yy",},},
     {"id":{"name":"scr_player_slap","path":"scripts/scr_player_slap/scr_player_slap.yy",},},
@@ -3012,6 +3013,7 @@
     {"roomId":{"name":"entryway_lap","path":"rooms/entryway_lap/entryway_lap.yy",},},
     {"roomId":{"name":"hub_room1NEW","path":"rooms/hub_room1NEW/hub_room1NEW.yy",},},
     {"roomId":{"name":"noisetv_4","path":"rooms/noisetv_4/noisetv_4.yy",},},
+    {"roomId":{"name":"molasses_lap","path":"rooms/molasses_lap/molasses_lap.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

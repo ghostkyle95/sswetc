@@ -960,6 +960,7 @@
     {"name":"spr_playerN_finalattack1","order":60,"path":"sprites/spr_playerN_finalattack1/spr_playerN_finalattack1.yy",},
     {"name":"scr_player_Sjumpprep","order":93,"path":"scripts/scr_player_Sjumpprep/scr_player_Sjumpprep.yy",},
     {"name":"scr_player_skateboard","order":94,"path":"scripts/scr_player_skateboard/scr_player_skateboard.yy",},
+    {"name":"molasses_lap","order":21,"path":"rooms/molasses_lap/molasses_lap.yy",},
     {"name":"spr_playerN_bomb","order":7,"path":"sprites/spr_playerN_bomb/spr_playerN_bomb.yy",},
     {"name":"scr_player_slam","order":95,"path":"scripts/scr_player_slam/scr_player_slam.yy",},
     {"name":"scr_player_slap","order":96,"path":"scripts/scr_player_slap/scr_player_slap.yy",},
