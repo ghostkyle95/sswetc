@@ -8,6 +8,7 @@ characters = [
 	// sugary spire
 	new _player(CHARACTERS.PIZZELLE, "Pizzelle", spr_player_idle, spr_pal),
 	new _player(CHARACTERS.PIZZANO, "Pizzano", spr_pizzano_idle, spr_palp),
+	new _player(CHARACTERS.GUMBOB, "Gumbob", spr_gumbob_idle, spr_palg),
 	
 	// pizza tower
 	new _player(CHARACTERS.NOISE, "The Noise", spr_playerN_idle, spr_paln),

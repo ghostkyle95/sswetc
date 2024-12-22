@@ -12,13 +12,13 @@ var _cancel = function() {
 		paletteselect = 1;
 	};
 	instance_destroy();
-};
+}, _return = characters[selected];
 
 if key_jump2 {
 	with obj_player { 
 		// set character
-		character = other.characters[other.selected].value;
-		doisemode = (other.selected == 3 ? true : false);
+		character = _return.value;
+		doisemode = (string_count("Doise", _return.name) > 0);
 	};
 	_cancel();
 } else if key_slap2 _cancel();
