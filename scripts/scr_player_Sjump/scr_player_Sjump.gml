@@ -52,58 +52,61 @@ function scr_player_Sjump()
 		sjumpspeed = 0;
 	}
 	image_speed = 0.5;
-	if (key_attack2 && !grounded && vsp < -10 && (character == CHARACTERS.PIZZELLE || character == CHARACTERS.SWAB))
+	if (key_attack2 && !grounded && vsp < -10 && sprite_index != spr_superjumpland)
 	{
-		scr_sound(sfx_superjumpcancel);
-		if (move != 0)
-			xscale = move;
-		state = states.sjumpcancelprep;
-		flash = true;
-		vsp = 0;
-		hsp = 0;
-		image_index = 0;
-		sprite_index = spr_Sjumpcancelprep;
-		sjumpspeed = 0;
-		with (instance_create(x, y, obj_jumpdust))
-			image_xscale = other.xscale;
-	}
-	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.NOISE)
-	{
-		if !doisemode
+		switch (character)
 		{
-			if (move != 0)
-				xscale = move
-			machpunchAnim = false;
-			machhitAnim = false;
-			vsp = -5
-			state = states.mach2
-			movespeed = 12
-			sprite_index = spr_sidewayspin
-			with (instance_create(x, y, obj_crazyrunothereffect))
-				image_xscale = other.xscale
-			image_index = 0
-			sjumpspeed = 0;
-		}
-		else
-		{
-			scr_sound(sfx_superjumpcancel);
-			flash = true;
-			charged = false;
-			sprite_index = spr_superjumpprepside;
-			image_index = 0;
-			movespeed = 0;
-			vsp = 0;
-			mach2 = 0;
-			state = states.jetpackdoise;
-			if move != 0
-				xscale = move;
-			sjumpspeed = 0;
+			default:
+				scr_sound(sfx_superjumpcancel);
+				if (move != 0)
+					xscale = move;
+				state = states.sjumpcancelprep;
+				flash = true;
+				vsp = 0;
+				hsp = 0;
+				image_index = 0;
+				sprite_index = spr_Sjumpcancelprep;
+				sjumpspeed = 0;
+				with (instance_create(x, y, obj_jumpdust))
+					image_xscale = other.xscale;
+			break;
+			case CHARACTERS.NOISE:
+				if !doisemode
+				{
+					if (move != 0)
+						xscale = move
+					machpunchAnim = false;
+					machhitAnim = false;
+					vsp = -5
+					state = states.mach2
+					movespeed = 12
+					sprite_index = spr_sidewayspin
+					with (instance_create(x, y, obj_crazyrunothereffect))
+						image_xscale = other.xscale
+					image_index = 0
+					sjumpspeed = 0;
+				}
+				else
+				{
+					scr_sound(sfx_superjumpcancel);
+					flash = true;
+					charged = false;
+					sprite_index = spr_superjumpprepside;
+					image_index = 0;
+					movespeed = 0;
+					vsp = 0;
+					mach2 = 0;
+					state = states.jetpackdoise;
+					if move != 0
+						xscale = move;
+					sjumpspeed = 0;
+				}
+			break;
+			case CHARACTERS.PIZZANO:
+				pizzano_do_rocket();
+			break;
 		}
 	}
-	
-	if (key_attack2 && !grounded && vsp < -10 && character == CHARACTERS.PIZZANO && 
-	sprite_index != spr_superjumpland)
-		pizzano_do_rocket();
 	
 	scr_collide_player();
 }
