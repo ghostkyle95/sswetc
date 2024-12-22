@@ -123,6 +123,11 @@ function scr_doise_rocket()
 			sjumpspeed = 12;
 			sprite_index = spr_superjump;
 		}
+		if place_meeting(x + hsp, y, obj_slope) && place_meeting(x, y-1, obj_destructibles)
+		{
+			var block = instance_place(x, y-1, obj_destructibles);
+			instance_destroy(block);
+		}
 	}
 	image_speed = 0.35;
 }
