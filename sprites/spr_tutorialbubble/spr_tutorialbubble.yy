@@ -52,8 +52,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "SugarySpire",
-    "path": "SugarySpire.yyp",
+    "name": "Ice Pop",
+    "path": "folders/Sprites/Ice Pop.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

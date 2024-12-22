@@ -403,7 +403,7 @@
     {"name":"spr_playerN_barrelmove","order":8,"path":"sprites/spr_playerN_barrelmove/spr_playerN_barrelmove.yy",},
     {"name":"obj_tauntaftereffectspawner","order":18,"path":"objects/obj_tauntaftereffectspawner/obj_tauntaftereffectspawner.yy",},
     {"name":"spr_playerSW_haulingland","order":50,"path":"sprites/spr_playerSW_haulingland/spr_playerSW_haulingland.yy",},
-    {"name":"spr_tutorialbubble","order":15,"path":"sprites/spr_tutorialbubble/spr_tutorialbubble.yy",},
+    {"name":"spr_tutorialbubble","order":2,"path":"sprites/spr_tutorialbubble/spr_tutorialbubble.yy",},
     {"name":"obj_secretdestroyable_big","order":1,"path":"objects/obj_secretdestroyable_big/obj_secretdestroyable_big.yy",},
     {"name":"obj_file3","order":2,"path":"objects/obj_file3/obj_file3.yy",},
     {"name":"obj_erasefile","order":3,"path":"objects/obj_erasefile/obj_erasefile.yy",},
