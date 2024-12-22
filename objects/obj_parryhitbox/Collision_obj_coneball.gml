@@ -1,4 +1,4 @@
-with (obj_baddie)
+/*with (obj_baddie)
 {
 	if (distance_to_object(other.id) < 64 && (object_index != obj_charcherry || (object_index == obj_charcherry && state == baddiestates.charcherry)))
 		instance_destroy();
@@ -16,4 +16,4 @@ with (obj_player)
 		scr_sound(sfx_parry);
 }
 global.minutes = 0;
-global.seconds = 10;
+global.seconds = 10;*/
