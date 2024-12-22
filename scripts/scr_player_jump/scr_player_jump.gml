@@ -129,21 +129,18 @@ function scr_player_jump()
 	}
 	if (key_jump)
 		input_buffer_jump = 0;
-	if (character == CHARACTERS.PIZZELLE)
+	if (vsp > 5)
+		fallinganimation++;
+	if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index != spr_candyup)
+		sprite_index = spr_freefall;
+	if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index == spr_candyup)
 	{
-		if (vsp > 5)
-			fallinganimation++;
-		if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index != spr_candyup)
-			sprite_index = spr_freefall;
-		if ((fallinganimation >= 40 && fallinganimation < 80) && sprite_index == spr_candyup)
-		{
-			sprite_index = spr_freefall;
-			if (!instance_exists(obj_candifiedeffect1))
-				instance_create(x, y, obj_candifiedeffect1);
-		}
-		if (fallinganimation >= 80)
-			sprite_index = spr_freefall2;
+		sprite_index = spr_freefall;
+		if (!instance_exists(obj_candifiedeffect1))
+			instance_create(x, y, obj_candifiedeffect1);
 	}
+	if (fallinganimation >= 80)
+		sprite_index = spr_freefall2;
 	if (!stompAnim)
 	{
 		if (jumpAnim)
@@ -209,6 +206,7 @@ function scr_player_jump()
 		switch (character)
 		{
 			case CHARACTERS.PIZZELLE:
+			case CHARACTERS.GUMBOB:
 				scr_sound(sfx_plrgrabdash);
 				instance_create(x, y, obj_slaphitbox);
 				suplexmove = true;

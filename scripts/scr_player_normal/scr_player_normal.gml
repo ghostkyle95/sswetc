@@ -211,18 +211,15 @@ function scr_player_normal()
 		state = states.jump;
 		image_index = 0;
 	}
-	if (character == CHARACTERS.PIZZELLE || character == CHARACTERS.PIZZANO || character == CHARACTERS.NOISE || character == CHARACTERS.SWAB || character == CHARACTERS.NIKOCADO)
+	if (key_attack && grounded && !place_meeting(x + xscale, y, obj_solid))
 	{
-		if (key_attack && grounded && !place_meeting(x + xscale, y, obj_solid))
-		{
-			mach2 = 0;
-			if (movespeed < 6)
-				movespeed = 6;
-			sprite_index = spr_mach1;
-			jumpAnim = true;
-			state = states.mach2;
-			image_index = 0;
-		}
+		mach2 = 0;
+		if (movespeed < 6)
+			movespeed = 6;
+		sprite_index = spr_mach1;
+		jumpAnim = true;
+		state = states.mach2;
+		image_index = 0;
 	}
 	if (key_jump && grounded && !key_down)
 	{
@@ -297,6 +294,7 @@ function scr_player_normal()
 		switch (character)
 		{
 			case CHARACTERS.PIZZELLE:
+			case CHARACTERS.GUMBOB:
 				scr_sound(sfx_plrgrabdash);
 				instance_create(x, y, obj_slaphitbox);
 				suplexmove = true;
@@ -377,15 +375,5 @@ function scr_player_normal()
 	}
 	if (key_shoot2 && key_up && breakdanceammo > 0)
 	{
-		state = states.breakdance;
-		sprite_index = spr_player_breakdancebeach;
-		image_index = 0;
-		breakdanceammo -= 1;
-	}
-	if (key_slap2 && character == CHARACTERS.GUMBOB)
-	{
-		state = states.gumbobmixnbrew;
-		image_index = 0;
-		sprite_index = spr_gumbob_brew_pulloutdrink;
 	}
 }

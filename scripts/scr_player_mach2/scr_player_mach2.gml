@@ -156,6 +156,7 @@ function scr_player_mach2()
 		switch (character)
 		{
 			case CHARACTERS.PIZZELLE:
+			case CHARACTERS.GUMBOB:
 				scr_sound(sfx_plrgrabdash);
 				instance_create(x, y, obj_slaphitbox);
 				suplexmove = true;

@@ -7,6 +7,7 @@ function scr_player_mach3()
 		case CHARACTERS.PIZZANO:
 		case CHARACTERS.SWAB:
 		case CHARACTERS.NIKOCADO:
+		case CHARACTERS.GUMBOB:
 			if (grounded)
 				Sjumpcan_doublejump = true;
 			if (windingAnim < 2000)
