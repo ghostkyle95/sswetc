@@ -106,4 +106,9 @@ function scr_player_machroll()
 			image_index = 0
 		}
 	}
+	if place_meeting(x + hsp, y, obj_slope) && place_meeting(x, y-1, obj_destructibles)
+	{
+		var block = instance_place(x, y-1, obj_destructibles)
+		instance_destroy(block)
+	}
 }

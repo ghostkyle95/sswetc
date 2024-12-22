@@ -54,6 +54,11 @@ function scr_player_crouchslide()
 		sprite_index = spr_wallsplat;
 		image_index = 0;
 	}
+	if place_meeting(x + hsp, y, obj_slope) && place_meeting(x, y-1, obj_destructibles)
+	{
+		var block = instance_place(x, y-1, obj_destructibles)
+		instance_destroy(block)
+	}
 	if (!instance_exists(obj_slidecloud) && grounded && movespeed > 5)
 		instance_create(x, y, obj_slidecloud);
 	image_speed = 0.35;

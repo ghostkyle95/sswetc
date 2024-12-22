@@ -124,6 +124,8 @@
     {"name":"Enemy","order":9,"path":"folders/Sounds/SFX/Enemy.yy",},
     {"name":"Player","order":7,"path":"folders/Sounds/SFX/Player.yy",},
     {"name":"Mach Run","order":2,"path":"folders/Sounds/SFX/Player/Mach Run.yy",},
+    {"name":"Moves","order":30,"path":"folders/Sounds/SFX/Player/Moves.yy",},
+    {"name":"SlipnSlide","order":31,"path":"folders/Sounds/SFX/Player/SlipnSlide.yy",},
     {"name":"Taunts","order":29,"path":"folders/Sounds/SFX/Player/Taunts.yy",},
     {"name":"Transfo","order":1,"path":"folders/Sounds/SFX/Player/Transfo.yy",},
     {"name":"Voicelines","order":6,"path":"folders/Sounds/SFX/Player/Voicelines.yy",},
@@ -288,8 +290,6 @@
     {"name":"Signs","order":1,"path":"folders/Theater Hub/Signs.yy",},
     {"name":"Tile Sets","order":1,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":7,"path":"folders/Timelines.yy",},
-    {"name":"Moves","order":30,"path":"folders/Sounds/SFX/Player/Moves.yy",},
-    {"name":"SlipnSlide","order":31,"path":"folders/Sounds/SFX/Player/SlipnSlide.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_doorS","order":6,"path":"objects/obj_doorS/obj_doorS.yy",},
