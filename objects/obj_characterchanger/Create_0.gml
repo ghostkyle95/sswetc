@@ -26,4 +26,6 @@ with obj_player {
 	hsp = 0;
 	movespeed = 0;
 	state = states.actor;
+	
+	other.selected = character + real(doisemode);
 };
