@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 1.857125,
   "parent": {
-    "name": "Player",
-    "path": "folders/Sounds/SFX/Player.yy",
+    "name": "Moves",
+    "path": "folders/Sounds/SFX/Player/Moves.yy",
   },
   "preload": false,
   "sampleRate": 44100,

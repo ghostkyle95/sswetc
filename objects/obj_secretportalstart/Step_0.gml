@@ -24,6 +24,7 @@ switch sprite_index
             {
 					if (tauntstoredstate != states.cotton && tauntstoredstate != states.cottondrill && tauntstoredstate != states.cottonroll && tauntstoredstate != states.minecart)
 					{
+						scr_sound(sfx_secretexit);
                         visible = true
                         cutscene = false
                         sprite_index = spr_bodyslamstart

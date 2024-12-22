@@ -8,6 +8,7 @@ if (global.panic)
         {
             if (other.playerid == noone && place_meeting(x, y, other))
             {
+				scr_sound(sfx_lapenter);
                 state = states.actor
                 visible = false
                 other.sprite_index = spr_pizzaportalend

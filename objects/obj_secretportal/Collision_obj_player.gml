@@ -27,6 +27,7 @@ if (active && ds_list_find_index(global.saveroom, id) == -1)
         other.tauntstoredvsp = other.vsp
         other.tauntstoredsprite = other.sprite_index
         other.state = states.actor
+		scr_sound(sfx_secretenter);
     }
 	touched = true
     instance_destroy(obj_supertaunteffect)

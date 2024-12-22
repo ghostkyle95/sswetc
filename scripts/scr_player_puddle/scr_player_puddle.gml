@@ -19,12 +19,14 @@ function scr_player_puddle()
 				vsp = -7;
 				movespeed /= 1.2;
 				instance_create(x, y, obj_bangeffect);
+				scr_sound(choose(sfx_slipnslide1,sfx_slipnslide2,sfx_slipnslide3,sfx_slipnslide4,sfx_slipnslide5,sfx_slipnslide6,sfx_slipnslide7,sfx_slipnslide8));
 			}
 			else
 			{
 				sprite_index = spr_slipnslideend;
 				image_index = 0;
 				image_speed = 0.35;
+				scr_sound(choose(sfx_slipnslideend1, sfx_slipnslideend2, sfx_slipnslideend3));
 			}
 		}
 	}

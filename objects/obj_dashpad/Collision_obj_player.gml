@@ -6,27 +6,28 @@ if (other.state != states.bombpep && other.Dashpad_buffer <= 0)
 		{
 			if (state == states.mach3 && xscale == sign(other.image_xscale))
 				movespeed += 4;
+			scr_sound(sfx_dashpad);
 			movespeed = clamp(movespeed, 12, 24);
-				state = states.mach3;
-				Dashpad_buffer = 25;
-				sprite_index = spr_plrdashpad;
-				xscale = sign(other.image_xscale);
-				var try_y = 0;
-				while (try_y <= 16)
+			state = states.mach3;
+			Dashpad_buffer = 25;
+			sprite_index = spr_plrdashpad;
+			xscale = sign(other.image_xscale);
+			var try_y = 0;
+			while (try_y <= 16)
+			{
+				if (scr_solid(x, other.y - try_y))
+					try_y++;
+				else
 				{
-					if (scr_solid(x, other.y - try_y))
-						try_y++;
-					else
-					{
-						y = other.y - try_y;
-						break;
-					}
+					y = other.y - try_y;
+					break;
 				}
-				if (state != states.climbwall && !scr_solid(other.x, y))
-					x = other.x;
-				image_index = 0;
-				vsp = 3;
-				flash = true;
+			}
+			if (state != states.climbwall && !scr_solid(other.x, y))
+				x = other.x;
+			image_index = 0;
+			vsp = 3;
+			flash = true;
 		}
 		else if (state == states.minecart && sprite_get_bbox_bottom(mask_index) <= other.bbox_bottom)
 		{

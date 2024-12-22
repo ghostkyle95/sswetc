@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 0.700952,
   "parent": {
-    "name": "Player",
-    "path": "folders/Sounds/SFX/Player.yy",
+    "name": "Taunts",
+    "path": "folders/Sounds/SFX/Player/Taunts.yy",
   },
   "preload": true,
   "sampleRate": 44100,
