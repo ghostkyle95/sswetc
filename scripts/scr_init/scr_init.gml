@@ -16,6 +16,7 @@ global.collectfontOLD = font_add_sprite_ext(spr_fontcollectOLD, "0123456789", 1,
 global.resultscollectfont = font_add_sprite_ext(spr_resultsfont, "0123456789", 1, 0);
 global.resultscombofont = font_add_sprite_ext(spr_combofontresults, "0123456789", 1, 0);
 global.tvfont = font_add_sprite_ext(spr_tvfont, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz.:!0123456789?'\"ÁÄÃÀÂÉÈÊËÍÎÏÓÖÕÔÚÙÛÜáäãàâéèêëíîïóöõôúùûüÇç_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнль", true, 2);
+global.numberfont = font_add_sprite_ext(spr_numbers, "0123456789.:", 1, 0)
 global.shellactivate = false;
 global.showcollisions = false;
 global.debugmode = false;
