@@ -10,6 +10,9 @@ optionsaved_combotype, ["DEMO 1", "VERTICAL", "HORIZONTAL"], global.selectedComb
 draw_option_ext(90, 250, "IMPACT JUMP", optionselected == modded_selected.impactJump, 
 optionsaved_impactJump, ["OFF", "ON"], global.impactJump);
 
+draw_option_ext(90, 325, "BUFFED UPPERCUT", optionselected == modded_selected.buffedUppercut, 
+optionsaved_buffedUppercut, ["OFF", "ON"], global.buffedUppercut);
+
 draw_set_halign(fa_center);
 draw_option(150, 30, "BACK", optionselected == modded_selected.back);
 draw_set_font(global.smallfont);

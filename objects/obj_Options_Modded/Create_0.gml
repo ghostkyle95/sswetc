@@ -3,16 +3,19 @@ enum modded_selected
 	back,
 	debugmode,
 	combotype,
-	impactJump
+	impactJump,
+	buffedUppercut
 };
 optionselected = modded_selected.back;
 optionsaved_debug = global.debugmode;
 ini_open("optionData.ini");
 global.selectedCombo = ini_read_real("Settings", "combotype", 2);
 global.impactJump = ini_read_real("Settings", "impactJump", 0);
+global.buffedUppercut = ini_read_real("Settings", "buffedUppercut", 0);
 ini_close();
 optionsaved_combotype = global.selectedCombo;
 optionsaved_impactJump = global.impactJump;
+optionsaved_buffedUppercut = global.buffedUppercut;
 if global.selectedCombo == 0
 	global.combohudtype = combotype.democombo;
 else if global.selectedCombo == 1

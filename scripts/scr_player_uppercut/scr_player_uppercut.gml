@@ -17,10 +17,20 @@ function scr_player_uppercut()
 	if (move != 0)
 	{
 		xscale = move;
-		if (movespeed < 4)
-			movespeed += 0.4;
-		if (movespeed > 20)
-			movespeed = 20;
+		if global.buffedUppercut
+		{
+			if (movespeed < 4)
+				movespeed += 0.4;
+			if (movespeed > 20)
+				movespeed = 20;
+		}
+		else
+		{
+			if (movespeed < 4)
+				movespeed += 0.4;
+			if (movespeed > 4)
+				movespeed = 4;
+		}
 	}
 	else if (move == 0)
 	{

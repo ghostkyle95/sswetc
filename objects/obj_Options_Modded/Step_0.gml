@@ -11,7 +11,7 @@ if (canmove)
 		optionsaved_screentilt = global.screentilt;
 		optionsaved_hitstun = global.hitstunEnabled;*/
 	}
-	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 3)
+	if ((key_down2 || keyboard_check_pressed(vk_down)) && optionselected < 4)
 	{
 		optionselected += 1;
 		scr_sound(sfx_step);
@@ -70,7 +70,7 @@ if (canmove)
 			}
 			break;
 		case modded_selected.impactJump:
-			subtitle = "TOGGLES SCOUTDIGO BODYSLAM LAND";
+			subtitle = "TOGGLES OLD BODYSLAM LAND";
 			CursorY = 250;
 			optionsaved_impactJump += (key_right2 + key_left2);
 			optionsaved_impactJump = wrap(optionsaved_impactJump, 0, 1);
@@ -78,9 +78,23 @@ if (canmove)
 			{
 				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
-				ini_write_real("Settings", "impacttype", optionsaved_impactJump);
+				ini_write_real("Settings", "impactJump", optionsaved_impactJump);
 				ini_close();
 				global.impactJump = optionsaved_impactJump;
+			}
+			break;
+		case modded_selected.buffedUppercut:
+			subtitle = "TOGGLES BUFFED UPPERCUT";
+			CursorY = 325;
+			optionsaved_buffedUppercut += (key_right2 + key_left2);
+			optionsaved_buffedUppercut = wrap(optionsaved_buffedUppercut, 0, 1);
+			if (key_jump)
+			{
+				scr_sound(sfx_enemythrow);
+				ini_open("optionData.ini");
+				ini_write_real("Settings", "buffedUppercut", optionsaved_buffedUppercut);
+				ini_close();
+				global.buffedUppercut = optionsaved_buffedUppercut;
 			}
 			break;
 	}

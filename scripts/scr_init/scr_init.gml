@@ -41,6 +41,7 @@ global.soundVolume = ini_read_real("Settings", "soundvol", 1);
 global.masterVolume = ini_read_real("Settings", "mastervol", 1);
 global.selectedCombo = ini_read_real("Settings", "combotype", 2);
 global.impactJump = ini_read_real("Settings", "impactJump", 0);
+global.buffedUppercut = ini_read_real("Settings", "buffedUppercut", 0);
 
 if global.selectedCombo == 0
 	global.combohudtype = combotype.democombo;

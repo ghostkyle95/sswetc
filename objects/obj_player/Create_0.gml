@@ -6,11 +6,11 @@ enum combotype
 	verticalcombo,
 	horizontalcombo
 }
-global.combohudtype = combotype.horizontalcombo;
 global.combodropped = false;
 global.secretsfound = 0;
 global.savedcombo = 0;
 global.impactJump = false;
+global.buffedUppercut = false;
 global.laps = 0;
 global.lap = false;
 scale_xs = 1;

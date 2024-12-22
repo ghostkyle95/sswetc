@@ -3,7 +3,6 @@ function scr_pizzano_shoulderbash()
 	hsp = xscale * movespeed;
 	if movespeed < 12
 		movespeed = 12;
-	//instakillmove = 1
 	if (move != xscale && move != 0)
 	{
 		state = states.jump;
@@ -20,7 +19,6 @@ function scr_pizzano_shoulderbash()
 	{
 		if (grounded)
 		{
-			//instakillmove = 0
 			grav = 0.5;
 			sprite_index = spr_crouchslip;
 			machhitAnim = false;
@@ -40,8 +38,6 @@ function scr_pizzano_shoulderbash()
 	}
 	if (key_jump && grounded)
 	{
-		//instakillmove = 0
-		//movespeed = 10;
 		sprite_index = spr_mach2jump;
 		instance_create(x, y, obj_jumpdust);
 		state = states.mach2;
@@ -51,16 +47,12 @@ function scr_pizzano_shoulderbash()
 	}	
 	if (floor(image_index) == (image_number - 1))
 	{
-		//instakillmove = 0
 		state = states.normal;
 		grav = 0.5;
 		flash = false;
 	}
 	if (key_attack && floor(image_index) == (image_number - 1) && sprite_index != spr_bump)
 	{
-		//instakillmove = 0
-		//movespeed = 10;
-		//mach2 = 20;
 		if movespeed < 8
 			movespeed = 8
 		state = states.mach2;
@@ -68,7 +60,6 @@ function scr_pizzano_shoulderbash()
 	}
 	if (grounded && ((scr_solid(x + xscale, y) && !scr_slope_ext(x + xscale, y)) && !place_meeting(x + xscale, y, obj_destructibles) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 	{
-		//instakillmove = 0
 		grav = 0.5;
 		movespeed = 0;
 		state = states.bump;
@@ -85,7 +76,6 @@ function scr_pizzano_shoulderbash()
 	}
 	if (((!grounded && place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope)) || !grounded && scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) || (grounded && place_meeting(x + hsp, y - 32, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && place_meeting(x, y + 1, obj_slope))
 	{
-		//instakillmove = 0
 		wallspeed = movespeed;
 		grabclimbbuffer = 10;
 		state = states.climbwall;
