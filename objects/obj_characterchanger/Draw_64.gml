@@ -10,6 +10,8 @@ pal_swap_set(_char.palette, 1, 0);
 draw_sprite_ext(_char.sprite_index, image_index, _xmid, _ymid - 25, 2, 2, 0, c_white, 1);
 shader_reset();
 
+draw_set_font(global.tvfont); 
+draw_set_halign(fa_center); 
 draw_text(_xmid, _ymid + 75, _char.name);
 
 draw_set_font(global.smallfont); 
