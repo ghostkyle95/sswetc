@@ -227,12 +227,20 @@ function scr_player_mach3()
 		switch (character)
 		{
 			case CHARACTERS.PIZZELLE:
+				scr_sound(sfx_plrgrabdash);
+				instance_create(x, y, obj_slaphitbox);
+				suplexmove = true;
+				vsp = 0;
+				instance_create(x, y, obj_jumpdust);
+				image_index = 0;
+				sprite_index = spr_suplexdash;
+				state = states.handstandjump;
+			break;
 			case CHARACTERS.NOISE:
 			case CHARACTERS.SWAB:
 				scr_sound(sfx_plrgrabdash);
 				instance_create(x, y, obj_slaphitbox);
 				suplexmove = true;
-				vsp = 0;
 				instance_create(x, y, obj_jumpdust);
 				image_index = 0;
 				sprite_index = spr_suplexdash;
