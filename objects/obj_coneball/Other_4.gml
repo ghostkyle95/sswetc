@@ -7,5 +7,8 @@ if (room == rank_room)
     instance_destroy()
 if (room == timesuproom)
     instance_destroy()
+	
+if (room == steamy_13)
+	maxspeed = 4;
 
 
