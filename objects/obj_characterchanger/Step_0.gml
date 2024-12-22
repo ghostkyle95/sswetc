@@ -12,12 +12,12 @@ var _cancel = function() {
 		paletteselect = 1;
 	};
 	instance_destroy();
-}, _return = characters[selected];
+};
 
 if key_jump2 {
 	with obj_player { 
 		// set character
-		character = _return.value;
+		character = other.characters[other.selected].value;
 		doisemode = (other.selected == 3 ? true : false);
 	};
 	_cancel();
