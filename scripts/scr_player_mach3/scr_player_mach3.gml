@@ -95,6 +95,7 @@ function scr_player_mach3()
 				}
 			}
 			else
+			{
 				if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
 				{
 					scr_sound(sfx_plrsjumpstart);
@@ -235,64 +236,64 @@ function scr_player_mach3()
 			if (sprite_index == spr_plrdashpad)
 				image_speed = 0.3;
 			scr_cantaunt()
-	if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
-	{
-		switch (character)
-		{
-			case CHARACTERS.PIZZELLE:
-				scr_sound(sfx_plrgrabdash);
-				instance_create(x, y, obj_slaphitbox);
-				suplexmove = true;
-				vsp = 0;
-				instance_create(x, y, obj_jumpdust);
+			if (key_slap2 && !key_down && !key_up && !suplexmove && !shotgunAnim && global.cane != true && sprite_index != spr_sidewayspin && sprite_index != spr_sidewayspinend)
+			{
+				switch (character)
+				{
+					case CHARACTERS.PIZZELLE:
+						scr_sound(sfx_plrgrabdash);
+						instance_create(x, y, obj_slaphitbox);
+						suplexmove = true;
+						vsp = 0;
+						instance_create(x, y, obj_jumpdust);
+						image_index = 0;
+						sprite_index = spr_suplexdash;
+						state = states.handstandjump;
+					break;
+					case CHARACTERS.NOISE:
+					case CHARACTERS.SWAB:
+						scr_sound(sfx_plrgrabdash);
+						instance_create(x, y, obj_slaphitbox);
+						suplexmove = true;
+						instance_create(x, y, obj_jumpdust);
+						image_index = 0;
+						sprite_index = spr_suplexdash;
+						state = states.handstandjump;
+						break;
+					case CHARACTERS.PIZZANO:
+						scr_sound(sfx_plrgrabdash);
+						instance_create(x, y, obj_slaphitbox);
+						suplexmove = true;
+						vsp = 0;
+						instance_create(x, y, obj_jumpdust);
+						image_index = 0;
+						sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3, spr_kungfu4, spr_kungfu5);
+						state = states.pizzanoshoulderbash;
+					break;
+				}
+			}
+			if global.cane
+			{
+				if (!key_down && key_slap2 && !suplexmove && !shotgunAnim)
+				{
+					scr_sound(sfx_plrgrabdash);
+					instance_create(x, y, obj_slaphitbox);
+					suplexmove = true;
+					vsp = 0;
+					instance_create(x, y, obj_jumpdust);
+					image_index = 0;
+					sprite_index = spr_canesuplex;
+					state = states.handstandjump;
+				}
+			}
+			if (key_jump && key_up && character != CHARACTERS.NIKOCADO && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
+			{
 				image_index = 0;
-				sprite_index = spr_suplexdash;
-				state = states.handstandjump;
-			break;
-			case CHARACTERS.NOISE:
-			case CHARACTERS.SWAB:
-				scr_sound(sfx_plrgrabdash);
-				instance_create(x, y, obj_slaphitbox);
-				suplexmove = true;
-				instance_create(x, y, obj_jumpdust);
-				image_index = 0;
-				sprite_index = spr_suplexdash;
-				state = states.handstandjump;
-			break;
-			case CHARACTERS.PIZZANO:
-				scr_sound(sfx_plrgrabdash);
-				instance_create(x, y, obj_slaphitbox);
-				suplexmove = true;
-				vsp = 0;
-				instance_create(x, y, obj_jumpdust);
-				image_index = 0;
-				sprite_index = choose(spr_kungfu1, spr_kungfu2, spr_kungfu3, spr_kungfu4, spr_kungfu5);
-				state = states.pizzanoshoulderbash;
+				state = states.freefallprep;
+				sprite_index = spr_crusherstart;
+				vsp = -16;
+				scr_sound(sfx_crusherjump)
+			}
 			break;
 		}
-	}
-	if global.cane
-	{
-		if (!key_down && key_slap2 && !suplexmove && !shotgunAnim)
-		{
-			scr_sound(sfx_plrgrabdash);
-			instance_create(x, y, obj_slaphitbox);
-			suplexmove = true;
-			vsp = 0;
-			instance_create(x, y, obj_jumpdust);
-			image_index = 0;
-			sprite_index = spr_canesuplex;
-			state = states.handstandjump;
-		}
-	}
-		if (key_jump && key_up && character != CHARACTERS.NIKOCADO && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
-		{
-			image_index = 0;
-			state = states.freefallprep;
-			sprite_index = spr_crusherstart;
-			vsp = -16;
-			scr_sound(sfx_crusherjump)
-		}
-		break;
-	}
 }
