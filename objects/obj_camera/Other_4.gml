@@ -80,4 +80,4 @@ var _lvlarr = [ "entryway", "steamy", "molasses", "mines", "noisetv" ],
 _rmname = room_get_name(room);
 global.levelname = "none";
 for (var _i = 0; _i < array_length(_lvlarr); _i++;) 
-	if (string_count(_lvlarr[_i], _rmname) > 0) global.levelname = _lvlarr[_i];
+	if (string_count(_lvlarr[_i], _rmname) != 0) global.levelname = _lvlarr[_i];

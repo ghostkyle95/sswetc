@@ -1,22 +1,31 @@
+// this fuken bullshit
+var _draw = sprite_index;
+if (character == CHARACTERS.NIKOCADO && string_count("NIK", sprite_get_name(_draw)) == 0)
+	_draw = spr_playerNIK_idle;
+
 pal_swap_set(spr_palette, paletteselect, 0);
-draw_sprite_ext(sprite_index, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), draw_angle, image_blend, image_alpha);
+draw_sprite_ext(_draw, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), 
+draw_angle, image_blend, image_alpha);
 shader_reset();
+
 if (flash)
 {
 	shader_set(shd_hit);
-	draw_sprite_ext(sprite_index, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), draw_angle, image_blend, image_alpha);
+	draw_sprite_ext(_draw, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), 
+	draw_angle, image_blend, image_alpha);
 	shader_reset();
 }
 if (flash && alarm[11] <= 0)
 	alarm[11] = 5;
 shader_reset();
+
 if (global.debugmode)
 {
 	draw_set_font(font_dev);
 	draw_set_halign(fa_center);
 	draw_set_color(c_white);
 	draw_text(x, y - 150, movespeed);
-	draw_text(x, y - 125, string_upper(sprite_get_name(obj_player.sprite_index)));
+	draw_text(x, y - 125, string_upper(sprite_get_name(_draw)));
 	draw_text(x, y - 100, hsp);
 	draw_text(x, y - 75, vsp);
 	draw_text(x, y - 50, "State: " + string(state) + ", " + string(stateName));
