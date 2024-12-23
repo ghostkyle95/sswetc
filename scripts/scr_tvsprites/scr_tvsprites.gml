@@ -77,4 +77,8 @@ function scr_tvsprites()
 		mach3tvspr = spr_nikocadotv_mach3;
 		combotvspr = spr_nikocadotv_combo;
 	}
+	if (obj_player.character == CHARACTERS.GUMBOB)
+	{
+		idletvspr = spr_gumbobtv;
+	}
 }

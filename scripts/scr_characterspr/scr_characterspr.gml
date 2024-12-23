@@ -1433,6 +1433,7 @@ function scr_characterspr()
 		spr_jump2 = spr_gumbob_jump;
 		spr_fall = spr_gumbob_fall;
 		spr_fall2 = spr_gumbob_fall;
+		spr_hurt = spr_gumbob_hurt;
 		spr_hurtjump = spr_gumbob_hurt;
 		spr_idle1 = spr_gumbob_idle;
 		spr_idle2 = spr_gumbob_idle;
@@ -1440,6 +1441,9 @@ function scr_characterspr()
 		spr_palette = spr_palg;
 		spr_taunt = spr_gumbob_taunt;
 		spr_cotidle = spr_gumbob_cotton_idle;
+		spr_mach4 = spr_gumbob_mach3;
+		spr_machslideboost3 = spr_gumbob_mach3turn;
+		spr_crouch = spr_gumbob_crouch;
 	}
 	if (character == CHARACTERS.NIKOCADO)
 	{

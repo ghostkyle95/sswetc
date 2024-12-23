@@ -47,7 +47,7 @@
   "origin": 4,
   "parent": {
     "name": "Player",
-    "path": "folders/Sprites/Gameplay/Pizza Portal/Player.yy",
+    "path": "folders/Sprites/Gameplay/Lapping/Player.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

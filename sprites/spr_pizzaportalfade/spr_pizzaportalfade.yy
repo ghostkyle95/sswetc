@@ -36,8 +36,8 @@
   "nineSlice": null,
   "origin": 4,
   "parent": {
-    "name": "Pizza Portal",
-    "path": "folders/Sprites/Gameplay/Pizza Portal.yy",
+    "name": "Lapping",
+    "path": "folders/Sprites/Gameplay/Lapping.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
