@@ -49,11 +49,11 @@ if (!global.panic)
 	}
 	if (string_letters(roomname) == "entrywaysecret")
 	{
-		if (!audio_is_playing(mu_wafflesecret))
+		if (!audio_is_playing(global.entrancesecretmus))
 		{
 			audio_stop_all_music();
-			scr_music(mu_wafflesecret);
-			pausedmusic = mu_wafflesecret;
+			scr_music(global.entrancesecretmus);
+			pausedmusic = global.entrancesecretmus;
 			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
 		}
 	}

@@ -274,6 +274,7 @@ function scr_characterspr()
 		spr_prank = spr_rankP;
 		
 		global.entrancemus = mu_waffle;
+		global.entrancesecretmus = mu_wafflesecret;
 		global.panicmus = mu_escape;
 		global.lapmusarray = [mu_lap2, mu_lap3, mu_lap4, mu_lap5];
 		
@@ -550,6 +551,7 @@ function scr_characterspr()
 		spr_prank = spr_rankP;
 		
 		global.entrancemus = mu_pizzanoorchestralplay;
+		global.entrancesecretmus = mu_pizzanosecret;
 		global.panicmus = mu_pizzanoescape;
 		global.lapmusarray = [mu_pizzanolap2, mu_lap3, mu_lap4, mu_lap5];
 		
@@ -840,6 +842,7 @@ function scr_characterspr()
 		spr_prank = spr_rankNP;
 		
 		global.entrancemus = mu_noiseentrance;
+		global.entrancesecretmus = mu_wafflesecret;
 		global.panicmus = mu_noiseescape;
 		global.lapmusarray = [mu_noiselap2, mu_noiselap3, mu_noiselap4, mu_noiselap5];
 		
@@ -1131,6 +1134,7 @@ function scr_characterspr()
 		spr_prank = spr_rankNP;
 		
 		global.entrancemus = mu_noiseentrance;
+		global.entrancesecretmus = mu_wafflesecret;
 		global.panicmus = mu_noiseescape;
 		global.lapmusarray = [mu_noiselap2, mu_noiselap3, mu_noiselap4, mu_noiselap5];
 
@@ -1407,6 +1411,7 @@ function scr_characterspr()
 		spr_prank = spr_rankSWP;
 		
 		global.entrancemus = mu_swabentrance;
+		global.entrancesecretmus = mu_wafflesecret;
 		global.panicmus = mu_swabescape;
 		global.lapmusarray = [mu_lap2, mu_lap3, mu_lap4, mu_lap5];
 		
@@ -1447,6 +1452,7 @@ function scr_characterspr()
 		spr_land = spr_gumbob_land;
 		
 		global.entrancemus = mu_waffle;
+		global.entrancesecretmus = mu_wafflesecret;
 		global.panicmus = mu_escape;
 		global.lapmusarray = [mu_lap2, mu_lap3, mu_lap4, mu_lap5];
 		
