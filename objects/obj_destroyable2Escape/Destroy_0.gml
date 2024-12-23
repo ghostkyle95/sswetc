@@ -22,7 +22,7 @@ if (ds_list_find_index(global.escaperoom, id) == -1)
 		global.pizzameter += 1;
 		create_small_number(x + 16, y, "10");
 		global.combofreeze = 30;
-		global.combotime += 1;
+		global.combotime += 10;
 	repeat (3)
 		instance_create(x + random_range(-5, 5), y + random_range(-5, 5), obj_collecteffect);
 }
