@@ -3,7 +3,10 @@ if active
     with (obj_player)
     {
 		if other.playedsound == false
+		{
 			scr_sound(sfx_lapexit);
+			scr_sound(sfx_secretexit);
+		}
 		other.playedsound = true;
         state = states.actor
         hsp = 0
