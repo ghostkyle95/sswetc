@@ -18,7 +18,7 @@ if key_jump2 {
 	with obj_player { 
 		// set character
 		character = _return.value;
-		doisemode = (string_count("Doise", _return.name) > 0);
+		doisemode = (string_count("Doise", _return.name) != 0);
 	};
 	_cancel();
 } else if key_slap2 _cancel();
