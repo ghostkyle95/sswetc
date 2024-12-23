@@ -28,7 +28,7 @@ with obj_player {
 	movespeed = 0;
 	state = states.actor;
 	
-	var _saved = character;
-	if (character >= CHARACTERS.SWAB || doisemode) _saved++;
-	other.selected = _saved;
+	// load character
+	var _doise = (doisemode || character >= CHARACTERS.SWAB);
+	other.selected = character + real(_doise);
 };
