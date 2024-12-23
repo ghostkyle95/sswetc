@@ -121,7 +121,9 @@ enum states {
 	wallkick, // 118
 	trickjump, // 119
 	doisebounce, // 120
-	cape // 121
+	cape, // 121
+	gumbobwallbounce, // 122
+	gumbobwallstick // 123
 };
 
 
@@ -495,6 +497,12 @@ function scr_playerstate()
 			break;
 		case states.cape:
 			_stateFunction = scr_pizzano_cape;
+			break;
+		case states.gumbobwallstick:
+			_stateFunction = scr_gumbob_wallstick;
+			break;
+		case states.gumbobwallbounce:
+			_stateFunction = scr_gumbob_wallbounce;
 			break;
 	}
 	stateName = "states.undefined";

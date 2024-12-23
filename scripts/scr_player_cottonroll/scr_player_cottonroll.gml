@@ -42,4 +42,9 @@ function scr_player_cottonroll()
 		with (instance_create(x, y, obj_afterimageoutward))
 			vspeed = -7;
 	}
+	if place_meeting(x + hsp, y, obj_slope) && place_meeting(x, y-1, obj_destructibles)
+	{
+		var block = instance_place(x, y-1, obj_destructibles);
+		instance_destroy(block);
+	}
 }

@@ -2126,6 +2126,7 @@
     {"id":{"name":"spr_playerN_ghostdash","path":"sprites/spr_playerN_ghostdash/spr_playerN_ghostdash.yy",},},
     {"id":{"name":"spr_playerN_grab","path":"sprites/spr_playerN_grab/spr_playerN_grab.yy",},},
     {"id":{"name":"spr_gumball_dead","path":"sprites/spr_gumball_dead/spr_gumball_dead.yy",},},
+    {"id":{"name":"scr_gumbob_wallmoves","path":"scripts/scr_gumbob_wallmoves/scr_gumbob_wallmoves.yy",},},
     {"id":{"name":"spr_playerSW_suplexgrabjump","path":"sprites/spr_playerSW_suplexgrabjump/spr_playerSW_suplexgrabjump.yy",},},
     {"id":{"name":"spr_pizzano_chargedidle","path":"sprites/spr_pizzano_chargedidle/spr_pizzano_chargedidle.yy",},},
     {"id":{"name":"spr_gumball_stun","path":"sprites/spr_gumball_stun/spr_gumball_stun.yy",},},

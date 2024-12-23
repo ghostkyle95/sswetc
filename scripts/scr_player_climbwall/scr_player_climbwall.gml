@@ -28,6 +28,13 @@ function scr_player_climbwall()
 		return;
     }
 	
+	if character == CHARACTERS.GUMBOB
+	{
+		state = states.gumbobwallstick;
+		image_index = 0;
+		return;
+	}
+	
 	if (windingAnim < 200)
 		windingAnim++;
     if (grabclimbbuffer > 0)

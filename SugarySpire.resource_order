@@ -1901,6 +1901,7 @@
     {"name":"spr_gumball_throw","order":3,"path":"sprites/spr_gumball_throw/spr_gumball_throw.yy",},
     {"name":"spr_playerN_ghostdash","order":71,"path":"sprites/spr_playerN_ghostdash/spr_playerN_ghostdash.yy",},
     {"name":"spr_playerN_grab","order":43,"path":"sprites/spr_playerN_grab/spr_playerN_grab.yy",},
+    {"name":"scr_gumbob_wallmoves","order":2,"path":"scripts/scr_gumbob_wallmoves/scr_gumbob_wallmoves.yy",},
     {"name":"spr_playerSW_suplexgrabjump","order":128,"path":"sprites/spr_playerSW_suplexgrabjump/spr_playerSW_suplexgrabjump.yy",},
     {"name":"spr_pizzano_chargedidle","order":1,"path":"sprites/spr_pizzano_chargedidle/spr_pizzano_chargedidle.yy",},
     {"name":"spr_gumball_stun","order":2,"path":"sprites/spr_gumball_stun/spr_gumball_stun.yy",},
