@@ -80,5 +80,6 @@ function scr_tvsprites()
 	if (obj_player.character == CHARACTERS.GUMBOB)
 	{
 		idletvspr = spr_gumbobtv;
+		tvchange1 = spr_gumbobtv1;
 	}
 }
