@@ -1,5 +1,5 @@
 var roomname = room_get_name(room);
-if (string_letters(roomname) == "entryway" || string_letters(roomname) == "entrywaysecret")
+if (string_letters(roomname) == "entryway" || string_letters(roomname) == "entrywaylap" || string_letters(roomname) == "entrywaysecret")
 {
 	instance_activate_all();
 	scr_playerreset();
@@ -29,7 +29,7 @@ else if (string_letters(roomname) == "steamy" || string_letters(roomname) == "st
 	}
 	scr_removeallescapeobstacles()
 }
-else if (string_letters(roomname) == "molasses" || string_letters(roomname) == "molassesb" || string_letters(roomname) == "molassesc" || string_letters(roomname) == "molassesd" || string_letters(roomname) == "molassessecret")
+else if (string_letters(roomname) == "molasses" || string_letters(roomname) == "molassesb" || string_letters(roomname) == "molassesc" || string_letters(roomname) == "molassesd" || string_letters(roomname) == "molasseslap" || string_letters(roomname) == "molassessecret")
 {
 	instance_activate_all();
 	scr_playerreset();
@@ -59,7 +59,7 @@ else if (string_letters(roomname) == "mines" || string_letters(roomname) == "min
 	}
 	scr_removeallescapeobstacles()
 }
-if (string_letters(roomname) == "noisetv" || string_letters(roomname) == "noisetvsecret")
+else if (string_letters(roomname) == "noisetv" || string_letters(roomname) == "noisetvsecret")
 {
 	instance_activate_all();
 	scr_playerreset();

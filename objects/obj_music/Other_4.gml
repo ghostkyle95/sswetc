@@ -37,7 +37,7 @@ if (!global.panic)
 			pausedmusic = mu_hub;
 		}
 	}
-	if (string_letters(roomname) == "entryway")
+	if (string_letters(roomname) == "entryway" || string_letters(roomname) == "entrywaylap")
 	{
 		if (!audio_is_playing(global.entrancemus))
 		{
@@ -67,7 +67,7 @@ if (!global.panic)
 			audio_sound_set_track_position(global.music, fadeoff * audio_sound_length(global.music));
 		}
 	}
-	if (string_letters(roomname) == "molasses" || string_letters(roomname) == "molassesb" || string_letters(roomname) == "molassesc" || string_letters(roomname) == "molassesd")
+	if (string_letters(roomname) == "molasses" || string_letters(roomname) == "molassesb" || string_letters(roomname) == "molassesc" || string_letters(roomname) == "molassesd" || string_letters(roomname) == "molasseslap")
 	{
 		if (!audio_is_playing(mu_swamp))
 		{
