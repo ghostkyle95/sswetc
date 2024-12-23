@@ -1444,6 +1444,24 @@ function scr_characterspr()
 		spr_mach4 = spr_gumbob_mach3;
 		spr_machslideboost3 = spr_gumbob_mach3turn;
 		spr_crouch = spr_gumbob_crouch;
+		
+		global.entrancemus = mu_waffle;
+		global.panicmus = mu_escape;
+		global.lapmusarray = [mu_lap2, mu_lap3, mu_lap4, mu_lap5];
+		
+		sfx_plrjump = sfx_jump;
+		sfx_plrmach1 = sfx_mach1;
+		sfx_plrmach2 = sfx_mach2;
+		sfx_plrmach3 = sfx_mach3;
+		sfx_plrmach4 = sfx_mach4;
+		sfx_plrmachturn = sfx_machturn;
+		sfx_firebutt = sfx_pizzellefire;
+		sfx_parry = sfx_parryenemy;
+		sfx_plrsjumpstart = sfx_sjumpcharge;
+		sfx_plrsjumphold = sfx_sjumpchargeloop;
+		sfx_plrsjump = sfx_sjump;
+		sfx_plrgrabdash = sfx_grabdash;
+		sfx_machbreak = sfx_machslide;
 	}
 	if (character == CHARACTERS.NIKOCADO)
 	{
@@ -1466,5 +1484,23 @@ function scr_characterspr()
 		spr_crank = spr_rankNIKC;
 		spr_drank = spr_rankNIKD;
 		spr_prank = spr_rankNIKP;
+		
+		global.entrancemus = mu_waffle;
+		global.panicmus = mu_escape;
+		global.lapmusarray = [mu_lap2, mu_lap3, mu_lap4, mu_lap5];
+		
+		sfx_plrjump = sfx_jump;
+		sfx_plrmach1 = sfx_mach1;
+		sfx_plrmach2 = sfx_mach2;
+		sfx_plrmach3 = sfx_mach3;
+		sfx_plrmach4 = sfx_mach4;
+		sfx_plrmachturn = sfx_machturn;
+		sfx_firebutt = sfx_pizzellefire;
+		sfx_parry = sfx_parryenemy;
+		sfx_plrsjumpstart = sfx_sjumpcharge;
+		sfx_plrsjumphold = sfx_sjumpchargeloop;
+		sfx_plrsjump = sfx_sjump;
+		sfx_plrgrabdash = sfx_grabdash;
+		sfx_machbreak = sfx_machslide;
 	}
 }
