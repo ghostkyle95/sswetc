@@ -83,14 +83,26 @@ function scr_player_mach3()
 				
 			if (!grounded && input_buffer_jump == 0 && character == CHARACTERS.PIZZANO)
 				pizzano_do_cape();
-			
-			if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
+			if character == CHARACTERS.NOISE || character == CHARACTERS.SWAB
 			{
-				scr_sound(sfx_plrsjumpstart);
-				sprite_index = spr_superjumpprep;
-				state = states.Sjumpprep;
-				hsp = 0;
-				image_index = 0;
+				if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive && grounded)
+				{
+					scr_sound(sfx_plrsjumpstart);
+					sprite_index = spr_superjumpprep;
+					state = states.Sjumpprep;
+					hsp = 0;
+					image_index = 0;
+				}
+			}
+			else
+				if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive)
+				{
+					scr_sound(sfx_plrsjumpstart);
+					sprite_index = spr_superjumpprep;
+					state = states.Sjumpprep;
+					hsp = 0;
+					image_index = 0;
+				}
 			}
 			if (key_slap2 && key_up)
 			{
