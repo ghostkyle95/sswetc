@@ -83,6 +83,13 @@ function scr_player_mach3()
 				
 			if (!grounded && input_buffer_jump == 0 && character == CHARACTERS.PIZZANO)
 				pizzano_do_cape();
+			if (!grounded && input_buffer_jump == 0 && character == CHARACTERS.GUMBOB && gumbobpropellercooldown == 0)
+			{
+				state = states.gumbobpropellor;
+				sprite_index = spr_gumbob_propeller_start;
+				movespeed = 0;
+				vsp = 0;
+			}
 			if character == CHARACTERS.NOISE || character == CHARACTERS.SWAB
 			{
 				if (key_up && !key_slap2 && sprite_index != spr_plrdashpad && sprite_index != spr_dive && grounded)
