@@ -221,7 +221,10 @@ function scr_player_normal()
 		state = states.mach2;
 		image_index = 0;
 	}
-	if (key_jump && grounded && !key_down)
+	
+	// jumping
+	var _noise = (character != CHARACTERS.NOISE || character == CHARACTERS.NOISE && !key_up);
+	if (key_jump && grounded && !key_down && _noise)
 	{
 		scr_sound(sfx_plrjump);
 		sprite_index = spr_jump;
@@ -233,7 +236,7 @@ function scr_player_normal()
 		image_index = 0;
 		jumpAnim = true;
 	}
-	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0)
+	if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0 && _noise)
 	{
 		scr_sound(sfx_plrjump);
 		sprite_index = spr_jump;
@@ -248,6 +251,7 @@ function scr_player_normal()
 		image_index = 0;
 		freefallstart = false;
 	}
+	
 	if ((key_down && grounded) || scr_solid(x, y - 3))
 	{
 		state = states.crouch;

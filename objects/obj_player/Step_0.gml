@@ -1,10 +1,19 @@
 scr_getinput();
 scr_characterspr();
 scr_playerstate();
-if (character == CHARACTERS.NOISE && grounded && vsp > 0)
+
+if (character == CHARACTERS.NOISE && grounded && vsp >= 0)
 {
-	noisewalljump = 0
-}
+	noisewalljump = 0;
+	if (key_up && key_jump && state == states.normal || state == states.mach2) {
+		scr_sound(sfx_plrsjumpstart);
+		sprite_index = spr_superjumpprep;
+		state = states.Sjumpprep;
+		hsp = 0;
+		image_index = 0;
+	};
+};
+
 if (state != states.comingoutdoor)
 	image_blend = make_color_hsv(0, 0, 255);
 if (firetrailbuffer > 0)
