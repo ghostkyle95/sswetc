@@ -53,7 +53,7 @@ function scr_player_jump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (charged && sprite_index = spr_jetpackjump && key_attack && doisemode = true)
+	if (charged && sprite_index == spr_jetpackjump && key_attack2 && doisemode)
 	{
 		flash = true;
 		charged = false;
@@ -82,7 +82,7 @@ function scr_player_jump()
 		freefallstart = false;
 		instance_create_depth(x, y, 0, obj_landcloud);
 	}
-	if (key_attack && grounded && fallinganimation < 40 && !charged)
+	if (key_attack && grounded && fallinganimation < 40)
 	{
 		mach2 = 0;
 		if (movespeed < 6)
@@ -259,7 +259,7 @@ function scr_player_jump()
 		state = states.freefallland;
 		doublejumped = 0;
 	}
-			scr_cantaunt()
+	scr_cantaunt()
 	if (global.cane)
 	{
 		if (!grounded)
