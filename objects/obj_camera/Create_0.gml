@@ -51,3 +51,27 @@ ranksize = 1;
 savedcollect = 0;
 color_array = array_create(1, 0);
 global.levelname = "none";
+
+//Bar Timer
+chunkmax = 0
+timer_xplus = -200//-153
+timer_yplus = -153//76
+timer_xstart = cam_w / 2 + timer_xplus
+timer_ystart = cam_h + timer_yplus
+timer_x = timer_xstart
+timer_y = timer_ystart + 212
+timer_tower = false
+coneball_sprite = spr_coneball_bartimer
+coneball_index = 0 // why tf this doesn't work for timer coneball
+coneball_pal = 0
+roll_sprite = spr_coneball_bartimer_roll
+roll_index = 0
+bar_surface = noone
+barfill_x = 0
+showtime_buffer = 0
+clock_index = 0
+target_fill = 0
+timer_index = 0
+tongue_index = 0
+timer_buffer = 0
+timer_coneballindex = 0
