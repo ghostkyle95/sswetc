@@ -72,6 +72,7 @@ function scr_playerreset()
 		ramp_buffer = 0;
 		grabclimbbuffer = 0;
 		falltimer = 25;
+		canclimb = false;
 		capebumpbuffer = 0;
 		targetDoor = "A";
 		sjumpspeed = 0;

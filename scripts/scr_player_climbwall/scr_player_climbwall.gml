@@ -30,9 +30,12 @@ function scr_player_climbwall()
 	
 	if character == CHARACTERS.GUMBOB
 	{
-		state = states.gumbobwallstick;
-		image_index = 0;
-		return;
+		if !canclimb
+		{
+			state = states.gumbobwallstick;
+			image_index = 0;
+			return;
+		}
 	}
 	
 	if (windingAnim < 200)
@@ -64,11 +67,13 @@ function scr_player_climbwall()
 		vsp = 0
 		state = states.jump;
 		sprite_index = spr_fall;
+		canclimb = false;
 	}
 	if (!scr_solid(x + xscale, y) && !scr_solid_slope(x + xscale, y))
 	{
 		instance_create(x, y, obj_jumpdust);
 		vsp = 0;
+		canclimb = false;
 		if (mach2 < 100)
 			state = states.mach2;
 		else if (mach2 >= 100)
@@ -97,6 +102,7 @@ function scr_player_climbwall()
 	}
 	if (key_jump && key_attack)
 	{
+		canclimb = false;
 		if (character == CHARACTERS.PIZZELLE)
 		{
 			mach2 = 100;

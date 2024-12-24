@@ -174,6 +174,10 @@ function scr_player_mach3()
 				{
 					wallspeed = clamp(movespeed, 12, 24);
 					state = states.climbwall;
+					if (scr_slope())
+						canclimb = true;
+					else
+						canclimb = false;
 				}
 				else
 				{

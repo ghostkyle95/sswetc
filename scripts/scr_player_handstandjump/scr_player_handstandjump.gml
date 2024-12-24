@@ -122,6 +122,10 @@ function scr_player_handstandjump()
 				wallspeed = movespeed;
 				grabclimbbuffer = 10;
 				state = states.climbwall;
+				if (scr_slope())
+					canclimb = true;
+				else
+					canclimb = false;
 			}
 			image_speed = 0.3;
 			if (!instance_exists(obj_slidecloud) && grounded && movespeed > 5)

@@ -9,13 +9,10 @@ function scr_gumbob_wallstick(){
 	{
 		sprite_index =  spr_gumbob_wadmode;
 		state = states.gumbobwallbounce;
-		
-		if move != 0
-			xscale = move;
-		else
-			xscale *= -1;
+		capebumpbuffer = 10;
+		xscale *= -1;
 			
-		hsp = 12*xscale;
+		hsp = 8*xscale;
 		vsp = -12;
 	}
 }
@@ -23,10 +20,13 @@ function scr_gumbob_wallstick(){
 function scr_gumbob_wallbounce(){
 	hsp = approach(hsp, (xscale * movespeed), 0.5)
     move = key_right + key_left
+	if capebumpbuffer > 0
+		capebumpbuffer--
 	if (move != 0)
 	{
 		movespeed = 12;
-		xscale = move;
+		if capebumpbuffer == 0
+			xscale = move;
 	}
     else
         movespeed = 0;

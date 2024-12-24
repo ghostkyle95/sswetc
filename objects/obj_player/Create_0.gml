@@ -16,6 +16,7 @@ global.lap = false;
 scale_xs = 1;
 scale_ys = 1;
 lastroom = -4;
+canclimb = false;
 breakdance_pressed = 0;
 breakdance_speed = 0.25;
 notecreate = 50;

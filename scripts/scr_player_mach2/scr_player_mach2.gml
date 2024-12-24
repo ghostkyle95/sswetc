@@ -119,6 +119,10 @@ function scr_player_mach2()
 		wallspeed = movespeed;
 		grabclimbbuffer = 10;
 		state = states.climbwall;
+		if (scr_slope())
+			canclimb = true;
+		else
+			canclimb = false;
 	}
 	if (grounded && !scr_slope() && scr_solid(x + sign(hsp), y) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope) || grounded && scr_solid_slope(x + sign(hsp), y))
 	{
