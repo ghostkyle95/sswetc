@@ -859,7 +859,23 @@ function scr_characterspr()
 		sfx_plrgrabdash = sfx_grabdash;
 		sfx_machbreak = sfx_noisemachstop;
 		
-		if doisemode {spr_wallbounce = spr_playerN_mach2jump; spr_palette = spr_pald; sfx_firebutt = sfx_doisescream; };
+		if doisemode {
+			spr_palette = spr_pald;
+			
+			// vertical
+			spr_uppercutbegin = spr_playerN_doublejump;
+			spr_uppercutend = spr_playerN_doublejumpfall;
+			spr_wallbounce = spr_playerN_mach2jump;
+			
+			// divebomb
+			spr_divebombstart = spr_playerN_bodyslamstart;
+			spr_divebombfall = spr_playerN_bodyslam;
+			spr_divebombland = spr_playerN_bodyslamland;
+			spr_divebombfacehurtup = spr_playerN_facehurtup;
+			spr_divebombfacehurt = spr_playerN_facehurt;
+			
+			sfx_firebutt = sfx_doisescream;
+		};
 	}
 	if (character == CHARACTERS.SWAB)
 	{

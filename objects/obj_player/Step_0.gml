@@ -177,9 +177,13 @@ if (toomuchalarm1 <= 0 && (state == states.mach3 || state == states.hookshot || 
 	with (instance_create(x, y, obj_mach3effect))
 	{
 		playerid = other.object_index;
-		image_index = other.image_index - 1;
 		image_xscale = other.xscale;
-		sprite_index = other.sprite_index;
+		
+		// nikocado peter plus
+		if (character != CHARACTERS.NIKOCADO && string_count("NIK", sprite_get_name(sprite_index)) != 0) {
+			sprite_index = other.sprite_index;
+			image_index = other.image_index - 1;
+		} else sprite_index = spr_playerNIK_idle;
 	}
 	toomuchalarm1 = 6;
 }
