@@ -180,7 +180,8 @@ if (toomuchalarm1 <= 0 && (state == states.mach3 || state == states.hookshot || 
 		image_xscale = other.xscale;
 		
 		// nikocado peter plus
-		if (character != CHARACTERS.NIKOCADO && string_count("NIK", sprite_get_name(sprite_index)) != 0) {
+		if (other.character != CHARACTERS.NIKOCADO && string_count("NIK", 
+		sprite_get_name(other.sprite_index)) != 0) {
 			sprite_index = other.sprite_index;
 			image_index = other.image_index - 1;
 		} else sprite_index = spr_playerNIK_idle;

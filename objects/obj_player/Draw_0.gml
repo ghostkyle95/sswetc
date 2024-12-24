@@ -1,4 +1,4 @@
-// this fuken bullshit
+// nikocado peter plus
 var _draw = sprite_index;
 if (character == CHARACTERS.NIKOCADO && string_count("NIK", sprite_get_name(_draw)) == 0)
 	_draw = spr_playerNIK_idle;
