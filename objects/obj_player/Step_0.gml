@@ -12,7 +12,6 @@ if (character == CHARACTERS.NOISE && grounded && vsp > 0) {
 		image_index = 0;
 	};
 };
-nik_validspr = (character != CHARACTERS.NIKOCADO || string_count("NIK", sprite_get_name(sprite_index)) != 0);
 
 if (state != states.comingoutdoor)
 	image_blend = make_color_hsv(0, 0, 255);
@@ -190,7 +189,7 @@ if (toomuchalarm1 <= 0 && (state == states.mach3 || state == states.hookshot || 
 		image_xscale = other.xscale;
 		
 		// nikocado peter plus
-		sprite_index = (other.nik_validspr ? other.sprite_index : spr_playerNIK_idle);
+		sprite_index = (sprite_get_valid(CHARACTERS.NIKOCADO, "NIK") ? other.sprite_index : spr_playerNIK_idle);
 	}
 	toomuchalarm1 = 6;
 }

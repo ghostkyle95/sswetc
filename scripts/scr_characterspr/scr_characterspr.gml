@@ -1218,3 +1218,11 @@ function scr_characterspr()
 		spr_prank = spr_rankNIKP;
 	}
 }
+
+function sprite_get_valid(_val, _nam) {
+	with (obj_player) {
+		if (character != _val || string_count(_nam, sprite_get_name(sprite_index)) != 0)
+			return true;
+		return false;
+	};
+};

@@ -1,5 +1,5 @@
 // nikocado peter plus
-var _draw = (nik_validspr ? sprite_index : spr_playerNIK_idle);
+var _draw = (sprite_get_valid(CHARACTERS.NIKOCADO, "NIK") ? sprite_index : spr_playerNIK_idle);
 
 pal_swap_set(spr_palette, paletteselect, 0);
 draw_sprite_ext(_draw, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), draw_angle, image_blend, image_alpha);
