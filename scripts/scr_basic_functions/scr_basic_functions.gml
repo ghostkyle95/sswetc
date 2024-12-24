@@ -104,3 +104,10 @@ function instance_create_unique(argument0, argument1, argument2) //gml_Script_in
     var b = instance_create(argument0, argument1, argument2)
     return b;
 }
+function concat()
+{
+    var _string = ""
+    for (var i = 0; i < argument_count; i++)
+        _string += string(argument[i])
+    return _string;
+}
