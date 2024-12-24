@@ -1,21 +1,16 @@
 // nikocado peter plus
-var _draw = sprite_index;
-if (character == CHARACTERS.NIKOCADO && string_count("NIK", sprite_get_name(_draw)) == 0)
-	_draw = spr_playerNIK_idle;
+var _draw = (nik_validspr ? sprite_index : spr_playerNIK_idle);
 
 pal_swap_set(spr_palette, paletteselect, 0);
 draw_sprite_ext(_draw, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), draw_angle, image_blend, image_alpha);
 shader_reset();
 
-if (flash)
-{
+if flash {
 	shader_set(shd_hit);
 	draw_sprite_ext(_draw, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), draw_angle, image_blend, image_alpha);
+	if (alarm[11] <= 0) alarm[11] = 5;
 	shader_reset();
 }
-if (flash && alarm[11] <= 0)
-	alarm[11] = 5;
-shader_reset();
 
 if (global.debugmode)
 {

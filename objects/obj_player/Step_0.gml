@@ -2,10 +2,9 @@ scr_getinput();
 scr_characterspr();
 scr_playerstate();
 
-if (character == CHARACTERS.NOISE && grounded && vsp >= 0)
-{
+if (character == CHARACTERS.NOISE && grounded && vsp > 0) {
 	noisewalljump = 0;
-	if (key_up && key_jump && state == states.normal || state == states.mach2) {
+	if (key_up && key_jump && (state == states.normal || state == states.mach2)) {
 		scr_sound(sfx_plrsjumpstart);
 		sprite_index = spr_superjumpprep;
 		state = states.Sjumpprep;
@@ -13,6 +12,7 @@ if (character == CHARACTERS.NOISE && grounded && vsp >= 0)
 		image_index = 0;
 	};
 };
+nik_validspr = (character != CHARACTERS.NIKOCADO || string_count("NIK", sprite_get_name(sprite_index)) != 0);
 
 if (state != states.comingoutdoor)
 	image_blend = make_color_hsv(0, 0, 255);
@@ -186,13 +186,11 @@ if (toomuchalarm1 <= 0 && (state == states.mach3 || state == states.hookshot || 
 	with (instance_create(x, y, obj_mach3effect))
 	{
 		playerid = other.object_index;
+		image_index = other.image_index - 1;
 		image_xscale = other.xscale;
 		
 		// nikocado peter plus
-		if (other.character != CHARACTERS.NIKOCADO || string_count("NIK", sprite_get_name(other.sprite_index)) != 0) {
-			sprite_index = other.sprite_index;
-			image_index = other.image_index - 1;
-		} else sprite_index = spr_playerNIK_idle;
+		sprite_index = (other.nik_validspr ? other.sprite_index : spr_playerNIK_idle);
 	}
 	toomuchalarm1 = 6;
 }
