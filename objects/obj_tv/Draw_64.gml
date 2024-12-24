@@ -86,13 +86,7 @@ if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon && global.combohudtype != 
 	draw_sprite_ext(spr_tvpropeller, -1, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
 draw_sprite_ext(tvbgsprite, 0, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
-
-// nikocado peter plus
-var _draw = tvsprite;
-if staticdraw _draw = savedsprite;
-if sprite_get_valid(CHARACTERS.NIKOCADO, "nikocado") _draw = spr_nikocadotv_combo;
-
-draw_sprite_ext(_draw, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+draw_sprite_ext((!staticdraw) ? tvsprite : savedsprite, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
 if global.panic
 {
 	draw_sprite_ext(spr_tv_panicline, paniclineimageindex, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
