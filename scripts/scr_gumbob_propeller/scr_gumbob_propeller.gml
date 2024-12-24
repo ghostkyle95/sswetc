@@ -21,7 +21,7 @@ function scr_gumbob_propeller()
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_gumbob_propeller_start)
 		sprite_index = spr_gumbob_propeller_fly;
 	if (sprite_index == spr_gumbob_propeller_fly)
-		vsp = approach(vsp, -10, 1.25)
+		vsp = approach(vsp, -25, 1)
 	if (gumbobpropellerlength == 0)
 	{
 		gumbobpropellerlength = 100;

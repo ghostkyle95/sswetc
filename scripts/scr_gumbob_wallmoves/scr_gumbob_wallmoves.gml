@@ -31,7 +31,14 @@ function scr_gumbob_wallbounce(){
     else
         movespeed = 0;
 		
-		
+	if (key_jump && character == CHARACTERS.GUMBOB && !grounded && gumbobpropellercooldown == 0)
+	{
+		state = states.gumbobpropellor;
+		sprite_index = spr_gumbob_propeller_start;
+		movespeed = 0;
+		vsp = 0;
+	}
+			
 	if (key_slap2 && !grounded)
 	{
 		if (move != 0)
