@@ -130,3 +130,32 @@ else
 if (global.panicbg && global.panic)
 	global.wave = clamp(clamp(global.wave + (60 / room_speed), 0, global.maxwave - (((global.minutes * 60) + global.seconds) * 60)), 0, global.maxwave);
 Collectshake = approach(Collectshake, 0, 20 / room_speed);
+
+timer_xstart = cam_w / 2 + timer_xplus
+timer_ystart = cam_h + timer_yplus
+timer_x = timer_xstart
+coneball_index += 0.35
+roll_index += 0.35
+var time = floor((target_fill / 60))
+var secs = max((time % 60), 0)
+if global.panic
+{
+    if (((((global.minutes * 60) + global.seconds) * 60) > 0))
+    {
+        var _spd = ((1 - (target_fill / global.maxwave)) * (sprite_get_number(spr_coneball_bartimer_roll) * 10))
+        roll_index = (_spd % sprite_get_number(spr_coneball_bartimer_roll))
+        timer_y = approach(timer_y, -136, 1)
+    }
+    else
+    {
+        if ((timer_buffer > 0))
+            timer_buffer--
+        if ((timer_buffer == 0))
+            timer_y = approach(timer_y, 300, 0.8)
+    }
+}
+else
+{
+    timer_y = 0
+    coneball_sprite = spr_coneball_bartimer
+}
