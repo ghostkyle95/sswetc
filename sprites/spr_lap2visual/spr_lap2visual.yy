@@ -2,8 +2,8 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_lap2visual",
-  "bbox_bottom": 163,
-  "bbox_left": 46,
+  "bbox_bottom": 161,
+  "bbox_left": 48,
   "bbox_right": 241,
   "bbox_top": 4,
   "bboxMode": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b368e42-9cf2-416f-8ef4-670be7809f34",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ca37b21-b82d-45d0-b880-15e9c2362f34",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 174,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f40b5478-1a22-4840-bfba-f874287c8b7d","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"36ed823c-edb0-47cd-b6a0-05895d31ccd8","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1b368e42-9cf2-416f-8ef4-670be7809f34","path":"sprites/spr_lap2visual/spr_lap2visual.yy",},},},"Disabled":false,"id":"488b4fbe-126f-4261-9d41-ecb6fdf91d03","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3ca37b21-b82d-45d0-b880-15e9c2362f34","path":"sprites/spr_lap2visual/spr_lap2visual.yy",},},},"Disabled":false,"id":"45970157-0470-414d-be7b-122240686880","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
