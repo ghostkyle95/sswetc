@@ -87,8 +87,7 @@ function scr_player_mach3()
 			{
 				state = states.gumbobpropellor;
 				sprite_index = spr_gumbob_propeller_start;
-				movespeed = 0;
-				vsp = 0;
+				vsp = -5;
 			}
 			if character == CHARACTERS.NOISE || character == CHARACTERS.SWAB
 			{

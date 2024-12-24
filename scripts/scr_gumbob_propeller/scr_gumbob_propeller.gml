@@ -12,16 +12,16 @@ function scr_gumbob_propeller()
 		xscale = move;
 	hsp = move * movespeed;
 	if (move != 0)
-		movespeed = 4;
+	{
+		if movespeed < 4
+			movespeed = 4;
+	}
 	else
-		movespeed = 0;
-	movespeed = 4;
+		movespeed = approach(movespeed, 0, 0.5);
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_gumbob_propeller_start)
 		sprite_index = spr_gumbob_propeller_fly;
-	if (sprite_index == spr_gumbob_propeller_start)
-		vsp = 0;
 	if (sprite_index == spr_gumbob_propeller_fly)
-		vsp--;
+		vsp = approach(vsp, -10, 1.25)
 	if (gumbobpropellerlength == 0)
 	{
 		gumbobpropellerlength = 100;

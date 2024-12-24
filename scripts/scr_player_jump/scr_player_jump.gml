@@ -287,7 +287,7 @@ function scr_player_jump()
 		state = states.gumbobpropellor;
 		sprite_index = spr_gumbob_propeller_start;
 		movespeed = 0;
-		vsp = 0;
+		vsp = -5;
 	}
 	if (key_jump && character == CHARACTERS.PIZZANO && !grounded && doublejumped == 0 && !scr_solid(x + xscale, y, true))
 	{
