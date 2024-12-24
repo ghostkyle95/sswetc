@@ -10,7 +10,7 @@ if flash {
 	draw_sprite_ext(_draw, image_index, x, y, (xscale*scale_xs), (yscale*scale_ys), draw_angle, image_blend, image_alpha);
 	if (alarm[11] <= 0) alarm[11] = 5;
 	shader_reset();
-}
+};
 
 if (global.debugmode)
 {

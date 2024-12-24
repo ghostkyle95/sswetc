@@ -178,5 +178,4 @@ substate = states.normal;
 savedmove = 0;
 noisewalljump = 0;
 doisemode = false;
-
 nik_validspr = true;
