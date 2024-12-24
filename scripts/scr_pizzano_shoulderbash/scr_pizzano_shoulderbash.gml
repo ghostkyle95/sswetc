@@ -1,6 +1,7 @@
 function scr_pizzano_shoulderbash()
 {
 	hsp = xscale * movespeed;
+	move = key_right + key_left
 	if movespeed < 12
 		movespeed = 12;
 	if (move != xscale && move != 0)
