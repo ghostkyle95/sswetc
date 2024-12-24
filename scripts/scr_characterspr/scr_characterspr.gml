@@ -1219,10 +1219,8 @@ function scr_characterspr()
 	}
 }
 
-function sprite_get_valid(_val, _nam) {
-	with (obj_player) {
-		if (character != _val || string_count(_nam, sprite_get_name(sprite_index)) != 0)
-			return true;
-		return false;
-	};
-};
+function sprite_get_valid(_val, _nam, _obj = obj_player) {
+	if (obj_player.character != _val || string_count(_nam, sprite_get_name(_obj.sprite_index)) != 0)
+		return true;
+	return false;
+}
