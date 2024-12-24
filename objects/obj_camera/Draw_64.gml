@@ -93,16 +93,14 @@ if (global.panic) {
 	draw_text(random_range(1, -1) + 480, random_range(1, -1) + 65, 
 	$"{global.minutes}{_cln}{global.seconds}");
 }*/
-
-#region BAR TIMER
-	clock_index += 0.35
-	var timerx = 480
-    var timery = (605 + timer_y)
-    var perc = clamp((1 - (target_fill / global.maxwave)), 0, 1)
-    var harry_ypos = (-12 * perc)
-    var dist = clamp((perc * 268), 0, 268)
-    if global.panic
-    {
+clock_index += 0.35
+var timerx = 480
+var timery = (605 + timer_y)
+var perc = clamp((1 - (target_fill / global.maxwave)), 0, 1)
+var harry_ypos = (-12 * perc)
+var dist = clamp((perc * 268), 0, 268)
+if global.panic
+{
     if (((((global.minutes * 60) + global.seconds) * 60) > 0))
     {
 		timer_coneballindex += 0.35
@@ -148,4 +146,3 @@ if (global.panic) {
     draw_text(timer_x + 190 + _offset, 605 + timer_y + _offset - (sprite_get_yoffset(spr_font) / 2), concat(global.minutes, ":", seconds))
     draw_sprite(spr_coneball_bartimer_clock, clock_index, timer_x + 142 + _offset, 620 + timer_y + _offset - (sprite_get_yoffset(spr_font) / 2))
 }
-#endregion
