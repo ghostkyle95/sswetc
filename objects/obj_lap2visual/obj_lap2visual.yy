@@ -12,8 +12,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Lapping",
-    "path": "folders/Sprites/Gameplay/Lapping.yy",
+    "name": "LapPortal",
+    "path": "folders/Objects/Gameplay/LapPortal.yy",
   },
   "parentObjectId": null,
   "persistent": true,

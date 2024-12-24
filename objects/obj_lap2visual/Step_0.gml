@@ -1,6 +1,6 @@
 if down
 {
-    var ty = 70;
+    var ty = 80;
     y = approach(y, ty, movespeed);
     if (y >= ty && alarm[0] == -1)
         alarm[0] = 80;
