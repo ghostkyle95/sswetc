@@ -964,6 +964,7 @@
     {"id":{"name":"ts_minecartrails","path":"tilesets/ts_minecartrails/ts_minecartrails.yy",},},
     {"id":{"name":"scr_player_machtumble","path":"scripts/scr_player_machtumble/scr_player_machtumble.yy",},},
     {"id":{"name":"scr_escapetimes","path":"scripts/scr_escapetimes/scr_escapetimes.yy",},},
+    {"id":{"name":"spr_player_idle6","path":"sprites/spr_player_idle6/spr_player_idle6.yy",},},
     {"id":{"name":"scr_enemy_inhaled","path":"scripts/scr_enemy_inhaled/scr_enemy_inhaled.yy",},},
     {"id":{"name":"scr_player_coasterpeep","path":"scripts/scr_player_coasterpeep/scr_player_coasterpeep.yy",},},
     {"id":{"name":"spr_playerN_supertaunt1","path":"sprites/spr_playerN_supertaunt1/spr_playerN_supertaunt1.yy",},},

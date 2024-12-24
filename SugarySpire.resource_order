@@ -820,6 +820,7 @@
     {"name":"ts_minecartrails","order":13,"path":"tilesets/ts_minecartrails/ts_minecartrails.yy",},
     {"name":"scr_player_machtumble","order":72,"path":"scripts/scr_player_machtumble/scr_player_machtumble.yy",},
     {"name":"scr_escapetimes","order":2,"path":"scripts/scr_escapetimes/scr_escapetimes.yy",},
+    {"name":"spr_player_idle6","order":194,"path":"sprites/spr_player_idle6/spr_player_idle6.yy",},
     {"name":"scr_enemy_inhaled","order":8,"path":"scripts/scr_enemy_inhaled/scr_enemy_inhaled.yy",},
     {"name":"scr_player_coasterpeep","order":32,"path":"scripts/scr_player_coasterpeep/scr_player_coasterpeep.yy",},
     {"name":"spr_playerN_supertaunt1","order":146,"path":"sprites/spr_playerN_supertaunt1/spr_playerN_supertaunt1.yy",},
