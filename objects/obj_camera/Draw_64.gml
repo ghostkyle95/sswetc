@@ -105,10 +105,13 @@ if global.panic
     {
 		timer_coneballindex += 0.35
 		tongue_index += 0.35
+		timer_tonguesupindex += 0.35
         if ((timer_coneballindex >= sprite_get_number(coneball_sprite)))
             timer_coneballindex= frac(timer_coneballindex)
         if ((tongue_index >= sprite_get_number(spr_coneball_bartimertonguesup)))
             tongue_index = 0
+        if ((timer_tonguesupindex >= sprite_get_number(spr_coneball_bartimertonguesup)))
+            timer_tonguesupindex = -1
     }
     else
     {
@@ -131,7 +134,10 @@ if global.panic
 		draw_sprite_ext(spr_coneball_bartimerfront, timer_coneballindex, (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1)
 	}
 	else if ((coneball_sprite == spr_coneball_bartimesup))
-		draw_sprite_ext(spr_coneball_bartimertonguesup, floor(timer_coneballindex), timerx, timery, 1, 1, 0, c_white, 1)
+	{
+		if timer_tonguesupindex != -1
+			draw_sprite_ext(spr_coneball_bartimertonguesup, floor(timer_tonguesupindex), timerx, timery, 1, 1, 0, c_white, 1)
+	}
 	if ((coneball_sprite == spr_coneball_bartimesup))
 		draw_sprite_ext(coneball_sprite, floor(timer_coneballindex), (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1)
     var seconds
