@@ -5,7 +5,7 @@ scr_playerstate();
 if (character == CHARACTERS.NOISE && grounded && vsp >= 0)
 {
 	noisewalljump = 0;
-	if (key_up && key_jump && state == states.normal || state == states.mach2) {
+	if (key_up && key_jump && (state == states.normal || state == states.mach2)) {
 		scr_sound(sfx_plrsjumpstart);
 		sprite_index = spr_superjumpprep;
 		state = states.Sjumpprep;
