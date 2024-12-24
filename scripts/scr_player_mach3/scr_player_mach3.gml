@@ -294,7 +294,7 @@ function scr_player_mach3()
 					state = states.handstandjump;
 				}
 			}
-			noise_do_crusher();
+			noise_can_crusher();
 			break;
 		}
 }

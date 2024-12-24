@@ -33,7 +33,7 @@ function scr_doise_bounce(){
         state = states.normal
         movespeed = abs(hsp)
     }
-	noise_do_crusher();
-    image_speed = 0.5
-    scr_cantaunt()
+	noise_can_crusher();
+	image_speed = 0.5;
+	scr_cantaunt();
 }

@@ -38,7 +38,7 @@ function scr_player_jump()
 		vsp /= 5;
 		jumpstop = true;
 	}
-	noise_do_crusher();
+	noise_can_crusher();
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)

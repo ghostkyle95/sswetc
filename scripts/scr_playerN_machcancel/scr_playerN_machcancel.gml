@@ -100,15 +100,9 @@ function scr_playerN_machcancel(){
         state = states.normal
         movespeed = abs(hsp)
     }
-	
-	// noisenado
-    if (sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall)
+	if (sprite_index == spr_tornado || sprite_index == spr_tornadoland || sprite_index == spr_tornadofall)
 		image_speed = abs(movespeed) / 40 + 0.4
-    else {
-        image_speed = 0.5;
-		noise_do_crusher();
-	};
-	
+	else { image_speed = 0.5; noise_can_crusher(); };
     scr_cantaunt()
 }
 
@@ -175,14 +169,14 @@ function scr_noise_machcancel_grab() //gml_Script_scr_noise_machcancel_grab
     return false;
 };
 
-function noise_do_crusher() {
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character == CHARACTERS.NOISE)
-	{
+function noise_can_crusher() {
+	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && 
+	sprite_index != spr_airdash2 && character == CHARACTERS.NOISE) {
 		image_index = 0;
 		state = states.freefallprep;
 		sprite_index = spr_crusherstart;
 		vsp = -16;
-		scr_sound(sfx_crusherjump)
-	}
+		scr_sound(sfx_crusherjump);
+	};
 	return;
 };
