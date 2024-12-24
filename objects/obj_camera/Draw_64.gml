@@ -101,9 +101,6 @@ var harry_ypos = (-12 * perc)
 var dist = clamp((perc * 268), 0, 268)
 if global.panic
 {
-	timer_tonguesupindex += 0.35;
-    if ((timer_tonguesupindex >= sprite_get_number(spr_coneball_bartimertonguesup)))
-		timer_tonguesupindex = -1;
     if (((((global.minutes * 60) + global.seconds) * 60) > 0))
     {
 		timer_coneballindex += 0.35;
@@ -124,6 +121,9 @@ if global.panic
         }
         if ((timer_coneballindex < (sprite_get_number(coneball_sprite) - 1)))
             timer_coneballindex += 0.35;
+			
+        if ((timer_tonguesupindex < (sprite_get_number(spr_coneball_bartimertonguesup) - 1)))
+			timer_tonguesupindex += 0.35;
     }
 	target_fill = lerp(target_fill, (((global.minutes * 60) + global.seconds) * 60), 0.03)
 	if ((coneball_sprite != spr_coneball_bartimesup))
@@ -135,10 +135,7 @@ if global.panic
 		draw_sprite_ext(spr_coneball_bartimerfront, timer_coneballindex, (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1);
 	}
 	else if ((coneball_sprite == spr_coneball_bartimesup))
-	{
-		if timer_tonguesupindex != -1
-			draw_sprite_ext(spr_coneball_bartimertonguesup, floor(timer_tonguesupindex), timerx, timery, 1, 1, 0, c_white, 1);
-	}
+		draw_sprite_ext(spr_coneball_bartimertonguesup, floor(timer_tonguesupindex), timerx, timery, 1, 1, 0, c_white, 1);
 	if ((coneball_sprite == spr_coneball_bartimesup))
 		draw_sprite_ext(coneball_sprite, floor(timer_coneballindex), (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1);
     var seconds;
