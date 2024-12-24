@@ -101,54 +101,55 @@ var harry_ypos = (-12 * perc)
 var dist = clamp((perc * 268), 0, 268)
 if global.panic
 {
+	timer_tonguesupindex += 0.35;
+    if ((timer_tonguesupindex >= sprite_get_number(spr_coneball_bartimertonguesup)))
+		timer_tonguesupindex = -1;
     if (((((global.minutes * 60) + global.seconds) * 60) > 0))
     {
-		timer_coneballindex += 0.35
-		tongue_index += 0.35
-		timer_tonguesupindex += 0.35
+		timer_coneballindex += 0.35;
+		tongue_index += 0.35;
         if ((timer_coneballindex >= sprite_get_number(coneball_sprite)))
-            timer_coneballindex= frac(timer_coneballindex)
+            timer_coneballindex= frac(timer_coneballindex);
         if ((tongue_index >= sprite_get_number(spr_coneball_bartimertonguesup)))
-            tongue_index = 0
-        if ((timer_tonguesupindex >= sprite_get_number(spr_coneball_bartimertonguesup)))
-            timer_tonguesupindex = -1
+            tongue_index = 0;
     }
     else
     {
         if ((coneball_sprite == spr_coneball_bartimer))
         {
             coneball_sprite = spr_coneball_bartimesup
-            timer_coneballindex = 0
-            timer_buffer = 200
+			timer_tonguesupindex = 0;
+            timer_coneballindex = 0;
+            timer_buffer = 200;
         }
         if ((timer_coneballindex < (sprite_get_number(coneball_sprite) - 1)))
-            timer_coneballindex += 0.35
+            timer_coneballindex += 0.35;
     }
 	target_fill = lerp(target_fill, (((global.minutes * 60) + global.seconds) * 60), 0.03)
 	if ((coneball_sprite != spr_coneball_bartimesup))
 	{
-		draw_sprite_ext(spr_coneball_bartimer, timer_coneballindex, (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1)
-		draw_sprite_ext(spr_coneball_bartimertongue, timer_coneballindex, timerx + 7, timery + 3, 1, 1, 0, c_white, 1)
-		draw_sprite_part(spr_coneball_bartimer_rolltrail, 0, 0, 0, (dist + 50), 113, (timerx - 182), (timery - 46))
-		draw_sprite_ext(spr_coneball_bartimer_roll, roll_index, ((timerx - 140) + dist), ((timery + harry_ypos) + 36), 1, 1, 0, c_white, 1)
-		draw_sprite_ext(spr_coneball_bartimerfront, timer_coneballindex, (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1)
+		draw_sprite_ext(spr_coneball_bartimer, timer_coneballindex, (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1);
+		draw_sprite_ext(spr_coneball_bartimertongue, timer_coneballindex, timerx + 7, timery + 3, 1, 1, 0, c_white, 1);
+		draw_sprite_part(spr_coneball_bartimer_rolltrail, 0, 0, 0, (dist + 50), 113, (timerx - 182), (timery - 46));
+		draw_sprite_ext(spr_coneball_bartimer_roll, roll_index, ((timerx - 140) + dist), ((timery + harry_ypos) + 36), 1, 1, 0, c_white, 1);
+		draw_sprite_ext(spr_coneball_bartimerfront, timer_coneballindex, (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1);
 	}
 	else if ((coneball_sprite == spr_coneball_bartimesup))
 	{
 		if timer_tonguesupindex != -1
-			draw_sprite_ext(spr_coneball_bartimertonguesup, floor(timer_tonguesupindex), timerx, timery, 1, 1, 0, c_white, 1)
+			draw_sprite_ext(spr_coneball_bartimertonguesup, floor(timer_tonguesupindex), timerx, timery, 1, 1, 0, c_white, 1);
 	}
 	if ((coneball_sprite == spr_coneball_bartimesup))
-		draw_sprite_ext(coneball_sprite, floor(timer_coneballindex), (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1)
-    var seconds
+		draw_sprite_ext(coneball_sprite, floor(timer_coneballindex), (timerx + 135), (timery - 20), 1, 1, 0, c_white, 1);
+    var seconds;
     if global.seconds < 10
-        seconds = concat("0", global.seconds)
+        seconds = concat("0", global.seconds);
     else
-        seconds = string(global.seconds)
-    draw_set_font(global.numberfont)
-    var _offset = 0
+        seconds = string(global.seconds);
+    draw_set_font(global.numberfont);
+    var _offset = 0;
     if global.minutes < 1
-        _offset = random_range(2, -2)
-    draw_text(timer_x + 190 + _offset, 605 + timer_y + _offset - (sprite_get_yoffset(spr_font) / 2), concat(global.minutes, ":", seconds))
-    draw_sprite(spr_coneball_bartimer_clock, clock_index, timer_x + 142 + _offset, 620 + timer_y + _offset - (sprite_get_yoffset(spr_font) / 2))
+        _offset = random_range(2, -2);
+    draw_text(timer_x + 190 + _offset, 605 + timer_y + _offset - (sprite_get_yoffset(spr_font) / 2), concat(global.minutes, ":", seconds));
+    draw_sprite(spr_coneball_bartimer_clock, clock_index, timer_x + 142 + _offset, 620 + timer_y + _offset - (sprite_get_yoffset(spr_font) / 2));
 }
