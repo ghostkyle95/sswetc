@@ -33,14 +33,7 @@ function scr_doise_bounce(){
         state = states.normal
         movespeed = abs(hsp)
     }
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && character != CHARACTERS.PIZZANO && character != CHARACTERS.SWAB)
-	{
-		image_index = 0;
-		state = states.freefallprep;
-		sprite_index = spr_crusherstart;
-		vsp = -16;
-		scr_sound(sfx_crusherjump)
-	}
+	noise_do_crusher();
     image_speed = 0.5
     scr_cantaunt()
 }

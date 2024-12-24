@@ -38,14 +38,7 @@ function scr_player_jump()
 		vsp /= 5;
 		jumpstop = true;
 	}
-	if (key_jump && key_up && !grounded && sprite_index != spr_airdash1 && sprite_index != spr_airdash2 && (character == CHARACTERS.NOISE || character == CHARACTERS.PIZZELLE))
-	{
-		image_index = 0;
-		state = states.freefallprep;
-		sprite_index = spr_crusherstart;
-		vsp = -16;
-		scr_sound(sfx_crusherjump)
-	}
+	noise_do_crusher();
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (scr_solid(x, y - 1) && !jumpstop && jumpAnim)
