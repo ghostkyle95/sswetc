@@ -859,7 +859,7 @@ function scr_characterspr()
 		sfx_plrgrabdash = sfx_grabdash;
 		sfx_machbreak = sfx_noisemachstop;
 		
-		if doisemode {spr_wallbounce = spr_playerN_mach2jump; spr spr_palette = spr_pald; sfx_firebutt = sfx_doisescream; };
+		if doisemode {spr_wallbounce = spr_playerN_mach2jump; spr_palette = spr_pald; sfx_firebutt = sfx_doisescream; };
 	}
 	if (character == CHARACTERS.SWAB)
 	{
