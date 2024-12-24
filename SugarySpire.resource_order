@@ -684,6 +684,7 @@
     {"name":"entryway_10","order":1,"path":"rooms/entryway_10/entryway_10.yy",},
     {"name":"steamy_11","order":2,"path":"rooms/steamy_11/steamy_11.yy",},
     {"name":"tutorial_7","order":7,"path":"rooms/tutorial_7/tutorial_7.yy",},
+    {"name":"obj_lap2visual","order":11,"path":"objects/obj_lap2visual/obj_lap2visual.yy",},
     {"name":"steamy_secret4","order":18,"path":"rooms/steamy_secret4/steamy_secret4.yy",},
     {"name":"molassessecret_3","order":20,"path":"rooms/molassessecret_3/molassessecret_3.yy",},
     {"name":"mines_5","order":9,"path":"rooms/mines_5/mines_5.yy",},

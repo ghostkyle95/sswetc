@@ -811,6 +811,7 @@
     {"id":{"name":"entryway_10","path":"rooms/entryway_10/entryway_10.yy",},},
     {"id":{"name":"steamy_11","path":"rooms/steamy_11/steamy_11.yy",},},
     {"id":{"name":"tutorial_7","path":"rooms/tutorial_7/tutorial_7.yy",},},
+    {"id":{"name":"obj_lap2visual","path":"objects/obj_lap2visual/obj_lap2visual.yy",},},
     {"id":{"name":"steamy_secret4","path":"rooms/steamy_secret4/steamy_secret4.yy",},},
     {"id":{"name":"molassessecret_3","path":"rooms/molassessecret_3/molassessecret_3.yy",},},
     {"id":{"name":"mines_5","path":"rooms/mines_5/mines_5.yy",},},
