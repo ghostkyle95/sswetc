@@ -38,4 +38,4 @@ if (global.levelname != "none")
 	draw_set_halign(fa_center);
 	var _bullshit = (global.playseconds < 10 ? "0" : "");
 	draw_text(86, 32, $"{global.playminutes}:{_bullshit}{global.playseconds}");
-}
+} else { global.playminutes = 0; global.playseconds = 0; };
