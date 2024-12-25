@@ -8,7 +8,7 @@ room != rank_room && room != realtitlescreen && canmove && !instance_exists(obj_
 	if !instance_exists(_fade) instance_create(x, y, _fade);
 	selected = 0;
 	palette = obj_player.paletteselect;
-		
+	
 	// screenshot gameplay
 	if sprite_exists(screenshot) sprite_delete(screenshot);
 	screenshot = sprite_create_from_surface(application_surface, 0, 0, 
@@ -23,5 +23,5 @@ if (pause && canmove) {
 	if key_jump {
 		if (selected == 0 && !instance_exists(_fade)) instance_create(x, y, _fade);
 		else event_user(selected);
-	};
+	}
 }

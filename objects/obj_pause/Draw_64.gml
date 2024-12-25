@@ -33,6 +33,9 @@ draw_sprite(spr_pizzelle_pause, global.panic, 686, 285);
 shader_reset();
 
 // time
-draw_set_halign(fa_center);
-var _bullshit = (global.playseconds < 10 ? "0" : "");
-draw_text(86, 32, $"{global.playminutes}:{_bullshit}{global.playseconds}");
+if (global.levelname != "none")
+{
+	draw_set_halign(fa_center);
+	var _bullshit = (global.playseconds < 10 ? "0" : "");
+	draw_text(86, 32, $"{global.playminutes}:{_bullshit}{global.playseconds}");
+}
