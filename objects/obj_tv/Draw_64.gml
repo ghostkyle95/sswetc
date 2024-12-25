@@ -4,6 +4,7 @@ draw_set_color(c_white);
 draw_text(xi, yi, string_hash_to_newline(message));
 
 if (global.levelname == "none") exit;
+var comboclampedtime = clamp(global.combotime, 0, 60)
 
 if global.combotime > 0 && global.combo > 0 
 {
@@ -28,7 +29,7 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 		{
 			surface_set_target(BarSurfaceV)
 			draw_clear_alpha(c_black, 0);
-			draw_sprite_ext(spr_comboverticalgoo, animation_image_index, 0, -(global.combotime - 40), 1, 1, 0, c_white, 1);
+			draw_sprite_ext(spr_comboverticalgoo, animation_image_index, 0, -(comboclampedtime - 45), 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite_ext(spr_comboverticalsubtract, 0, 0, 0, 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_normal);
@@ -41,7 +42,7 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 			draw_set_halign(fa_center);
 			draw_set_color(c_white);
 			draw_text(682 - ComboY, 20 + DrawY, string(global.combo)+"x")
-			draw_sprite_ext(spr_combopointer, -1, 670 - ComboY, -(global.combotime - 50) + 100 + DrawY, 1, 1, 0, c_white, 1);
+			draw_sprite_ext(spr_combopointer, -1, 670 - ComboY, -(comboclampedtime - 65) + 100 + DrawY, 1, 1, 0, c_white, 1);
 		}
 	}
 	else if global.combohudtype == combotype.horizontalcombo
@@ -53,7 +54,7 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 		{
 			surface_set_target(BarSurface)
 			draw_clear_alpha(c_black, 0);
-			draw_sprite_ext(!global.combodropped ? spr_combogoopNEWP : spr_combogoopNEW, animation_image_index, (global.combotime - 40) * 2.5, 200, 1, 1, 0, c_white, 1);
+			draw_sprite_ext(!global.combodropped ? spr_combogoopNEWP : spr_combogoopNEW, animation_image_index, (comboclampedtime - 40) * 2.5, 200, 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite_ext(spr_combomask, 0, 0, 0, 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_normal);
@@ -139,9 +140,9 @@ if (global.combotime > 0 && global.combo > 0)
 			draw_clear_alpha(c_white, 0);
 			draw_sprite_tiled(spr_barpop2, 0, BarX, 0);
 			draw_set_color(0x280048);
-			draw_rectangle(112 * (global.combotime / 60), -50, 112, 50, false);
+			draw_rectangle(112 * (comboclampedtime / 60), -50, 112, 50, false);
 			draw_set_color(c_white);
-			draw_sprite_ext(spr_barpop3, 0, 112 * (global.combotime / 60), -64, 1, 5, 0, c_white, 1);
+			draw_sprite_ext(spr_barpop3, 0, 112 * (comboclampedtime / 60), -64, 1, 5, 0, c_white, 1);
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite_ext(spr_barpop, 1, 0, 0, 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_normal);

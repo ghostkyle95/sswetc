@@ -198,3 +198,4 @@ else
 if ((tvsprite == spr_tvturnon || tvsprite == spr_tvturnon_nopropeller) && floor(image_index) == (image_number - 1))
 	tvsprite = idletvspr;
 sprite_index = tvsprite;
+global.combotime = clamp(global.combotime, 0, 60);
