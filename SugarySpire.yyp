@@ -1920,6 +1920,7 @@
     {"id":{"name":"sfx_transfobegin","path":"sounds/sfx_transfobegin/sfx_transfobegin.yy",},},
     {"id":{"name":"spr_playerSW_mach2wall","path":"sprites/spr_playerSW_mach2wall/spr_playerSW_mach2wall.yy",},},
     {"id":{"name":"spr_geyseractive","path":"sprites/spr_geyseractive/spr_geyseractive.yy",},},
+    {"id":{"name":"noisetv_5","path":"rooms/noisetv_5/noisetv_5.yy",},},
     {"id":{"name":"spr_doorS","path":"sprites/spr_doorS/spr_doorS.yy",},},
     {"id":{"name":"spr_comboquite","path":"sprites/spr_comboquite/spr_comboquite.yy",},},
     {"id":{"name":"spr_sprayland","path":"sprites/spr_sprayland/spr_sprayland.yy",},},
@@ -3031,6 +3032,7 @@
     {"roomId":{"name":"noisetv_4","path":"rooms/noisetv_4/noisetv_4.yy",},},
     {"roomId":{"name":"molasses_lap","path":"rooms/molasses_lap/molasses_lap.yy",},},
     {"roomId":{"name":"steamy_secret3","path":"rooms/steamy_secret3/steamy_secret3.yy",},},
+    {"roomId":{"name":"noisetv_5","path":"rooms/noisetv_5/noisetv_5.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

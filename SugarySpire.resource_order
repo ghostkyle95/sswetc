@@ -1710,6 +1710,7 @@
     {"name":"sfx_transfobegin","order":8,"path":"sounds/sfx_transfobegin/sfx_transfobegin.yy",},
     {"name":"spr_playerSW_mach2wall","order":78,"path":"sprites/spr_playerSW_mach2wall/spr_playerSW_mach2wall.yy",},
     {"name":"spr_geyseractive","order":4,"path":"sprites/spr_geyseractive/spr_geyseractive.yy",},
+    {"name":"noisetv_5","order":4,"path":"rooms/noisetv_5/noisetv_5.yy",},
     {"name":"spr_doorS","order":7,"path":"sprites/spr_doorS/spr_doorS.yy",},
     {"name":"spr_comboquite","order":17,"path":"sprites/spr_comboquite/spr_comboquite.yy",},
     {"name":"spr_sprayland","order":7,"path":"sprites/spr_sprayland/spr_sprayland.yy",},
