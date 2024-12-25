@@ -6,8 +6,14 @@ if (pause)
 	var option3pos = [71, 256]
 	var option4pos = [30, 382]
 	
+	// screenshot
+	var _camera = { x : view_xport[0], y : view_yport[0], width : view_wport[0], height : view_hport[0] };
+	draw_rectangle_color(0, 0, _camera.x + _camera.width, _camera.y + _camera.height, 
+	c_black, c_black, c_black, c_black, false);
+	draw_sprite(screenshot, 0, 0, 0);
+	
 	// bg
-	draw_sprite_tiled_ext(bg_paused, 0, x++, y++, 1 , 1,c_white, 0.5);
+	draw_sprite_tiled_ext(bg_paused, 0, x++, y++, 1, 1, c_white, 0.5);
 	draw_rectangle_color(-5000, 0, 0, 1080, 2752517, 2752517, 2752517, 2752517, false);
 	draw_rectangle_color(960, 0, 5960, 1080, 2752517, 2752517, 2752517, 2752517, false);
 	

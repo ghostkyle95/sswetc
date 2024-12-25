@@ -12,3 +12,5 @@ pineappledone = 0;
 depth = -98;
 draw_screen = 0;
 pal = 1;
+
+screenshot = noone;
