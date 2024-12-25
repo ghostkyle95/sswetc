@@ -1,73 +1,38 @@
-if (pause)
-{
-	// button positions
-	var option1pos = [153, 9]
-	var option2pos = [114, 130]
-	var option3pos = [71, 256]
-	var option4pos = [30, 382]
-	
-	// screenshot
-	var _camera = { x : view_xport[0], y : view_yport[0], width : view_wport[0], height : view_hport[0] };
-	draw_rectangle_color(0, 0, _camera.x + _camera.width, _camera.y + _camera.height, 
-	c_black, c_black, c_black, c_black, false);
-	draw_sprite(screenshot, 0, 0, 0);
-	
-	// bg
-	draw_sprite_tiled_ext(bg_paused, 0, x++, y++, 1, 1, c_white, 0.5);
-	draw_rectangle_color(-5000, 0, 0, 1080, 2752517, 2752517, 2752517, 2752517, false);
-	draw_rectangle_color(960, 0, 5960, 1080, 2752517, 2752517, 2752517, 2752517, false);
-	
-	// pause menu
-	draw_sprite(spr_pause, -1, 0, 0);
-	draw_sprite(spr_pausebutton, (selected == 0), option1pos[0], option1pos[1]);
-	draw_sprite(spr_pausebutton, (selected == 1), option2pos[0], option2pos[1]);
-	draw_sprite(spr_pausebutton, (selected == 2), option3pos[0], option3pos[1]);
-	draw_sprite(spr_pausebutton, (selected == 3), option4pos[0], option4pos[1]);
-	
-	// pause menu text
-	draw_set_font(global.font);
-	draw_set_halign(fa_left);
-	draw_set_color(c_white);
-	draw_text(option1pos[0] + 100, option1pos[1] + 40, "RESUME");
-	draw_text(option2pos[0] + 100, option2pos[1] + 40, "RETRY");
-	draw_text(option3pos[0] + 100, option3pos[1] + 40, "EXIT");
-	draw_text(option4pos[0] + 100, option4pos[1] + 40, "OPTIONS");
-	
-	// confecti
-	if (global.mallowfollow)
-		draw_sprite(spr_pauseconfecti1, 1, 0, 0);
-	else
-		draw_sprite(spr_pauseconfecti1, 0, 0, 0);
-	if (global.chocofollow)
-		draw_sprite(spr_pauseconfecti2, 1, 0, 0);
-	else
-		draw_sprite(spr_pauseconfecti2, 0, 0, 0);
-	if (global.crackfollow)
-		draw_sprite(spr_pauseconfecti3, 1, 0, 0);
-	else
-		draw_sprite(spr_pauseconfecti3, 0, 0, 0);
-	if (global.wormfollow)
-		draw_sprite(spr_pauseconfecti4, 1, 0, 0);
-	else
-		draw_sprite(spr_pauseconfecti4, 0, 0, 0);
-	if (global.candyfollow)
-		draw_sprite(spr_pauseconfecti5, 1, 0, 0);
-	else
-		draw_sprite(spr_pauseconfecti5, 0, 0, 0);
-		
-	// pizzelle
-	pal_swap_set(spr_pal, pal, 0);
-	draw_sprite(spr_pizzelle_pause, global.panic, 686, 285);
-	shader_reset();
-	
-	// time
-	draw_set_font(global.font);
-	draw_set_halign(fa_center);
-	draw_set_color(c_white);
-	var _x = 86;
-	var _y = 32;
-	if (global.playseconds > 10)
-		draw_text(_x, _y, string_hash_to_newline(string(global.playminutes) + ":" + string(global.playseconds)));
-	if (global.playseconds < 10)
-		draw_text(_x, _y, string_hash_to_newline(string(global.playminutes) + ":0" + string(global.playseconds)));
-}
+if (!pause) exit;
+
+// screenshot
+var _camera = { x : view_xport[0], width : view_wport[0], y : view_yport[0], height : view_hport[0] };
+draw_rectangle_color(0, 0, _camera.x + _camera.width, _camera.y + _camera.height, c_black, c_black, c_black, c_black, false);
+draw_sprite(screenshot, 0, 0, 0);
+
+// bg
+draw_sprite_tiled_ext(bg_paused, 0, x++, y++, 1, 1, c_white, 0.5);
+draw_rectangle_color(-5000, 0, 0, 1080, 2752517, 2752517, 2752517, 2752517, false);
+draw_rectangle_color(960, 0, 5960, 1080, 2752517, 2752517, 2752517, 2752517, false);
+draw_sprite(spr_pause, 0, 0, 0);
+
+// buttons
+var _button = function(_x, _y, _nam) constructor { x = _x; y = _y; name = _nam; return; }, 
+_options = [ new _button(153, 9, "RESUME"), new _button(114, 130, "RETRY"), new _button(71, 256, "EXIT"), new _button(30, 382, "OPTIONS") ];
+draw_set_font(global.font); draw_set_halign(fa_left); draw_set_color(c_white);
+for (var _i = 0; _i < array_length(_options); _i++) { 
+	draw_sprite(spr_pausebutton, selected == _i, _options[_i].x, _options[_i].y); 
+	draw_text(_options[_i].x + 100, _options[_i].y + 40, _options[_i].name);
+};
+
+// confecti
+draw_sprite(spr_pauseconfecti1, global.mallowfollow, 0, 0);
+draw_sprite(spr_pauseconfecti2, global.chocofollow, 0, 0);
+draw_sprite(spr_pauseconfecti3, global.crackfollow, 0, 0);
+draw_sprite(spr_pauseconfecti4, global.wormfollow, 0, 0);
+draw_sprite(spr_pauseconfecti5, global.candyfollow, 0, 0);
+
+// pizzelle
+pal_swap_set(spr_pal, palette, 0);
+draw_sprite(spr_pizzelle_pause, global.panic, 686, 285);
+shader_reset();
+
+// time
+draw_set_halign(fa_center);
+var _bullshit = (global.playseconds < 10 ? "0" : "");
+draw_text(86, 32, $"{global.playminutes}:{_bullshit}{global.playseconds}");

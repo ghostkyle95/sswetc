@@ -1,7 +1,7 @@
 scr_getinput();
 
 move = key_left2 + key_right2;
-if (move != 0) { selected += move; scr_sound(sfx_step); };
+if (move != 0) { selected += move; scr_sound(sfx_land); };
 selected = wrap(selected, 0, array_length(characters) - 1);
 
 var _cancel = function() {
