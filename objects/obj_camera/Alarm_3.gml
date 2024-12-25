@@ -1,9 +1,11 @@
 if (global.levelname != "none" && !obj_pause.pause)
 {
-	global.playseconds += 1;
+	global.playseconds++;
+	
+	// add minute if second count has maxxed
 	if (global.playseconds > 59)
 	{
-		global.playminutes += 1;
+		global.playminutes++;
 		global.playseconds -= 59;
 	}
 };
