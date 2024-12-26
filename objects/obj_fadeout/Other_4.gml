@@ -1,8 +1,7 @@
-if (room == outer_room1 && obj_player.state == states.titlescreen)
-{
-	obj_player.vsp = 5;
-	obj_player.xscale = 1;
-	obj_player.movespeed = 11;
-	obj_player.state = states.backbreaker;
-	obj_player.sprite_index = obj_player.spr_machfreefall;
+with (obj_player) if (room == outer_room1 && state == states.titlescreen) {
+	vsp = 5;
+	xscale = 1;
+	movespeed = 11;
+	state = states.backbreaker;
+	sprite_index = spr_machfreefall;
 }

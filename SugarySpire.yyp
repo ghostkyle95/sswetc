@@ -2771,6 +2771,7 @@
     {"id":{"name":"spr_playerN_pizzapepper","path":"sprites/spr_playerN_pizzapepper/spr_playerN_pizzapepper.yy",},},
     {"id":{"name":"sound_taunt8","path":"sounds/sound_taunt8/sound_taunt8.yy",},},
     {"id":{"name":"spr_playerN_dive","path":"sprites/spr_playerN_dive/spr_playerN_dive.yy",},},
+    {"id":{"name":"spr_tvframe","path":"sprites/spr_tvframe/spr_tvframe.yy",},},
     {"id":{"name":"spr_tvbg_mines","path":"sprites/spr_tvbg_mines/spr_tvbg_mines.yy",},},
     {"id":{"name":"spr_sprayjump","path":"sprites/spr_sprayjump/spr_sprayjump.yy",},},
     {"id":{"name":"spr_tvstatic","path":"sprites/spr_tvstatic/spr_tvstatic.yy",},},

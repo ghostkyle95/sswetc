@@ -82,20 +82,24 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 		}
 	}
 }
-		
-if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon && global.combohudtype != combotype.horizontalcombo)
-	draw_sprite_ext(spr_tvpropeller, -1, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+
 pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
-draw_sprite_ext(tvbgsprite, 0, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
-draw_sprite_ext((!staticdraw) ? tvsprite : savedsprite, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+var _tvx = 832, _tvy = 74 + DrawY, _float = 0;
+if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon && global.combohudtype != combotype.horizontalcombo) {
+	_float = wave(2, -2, 3, 0);
+	draw_sprite(spr_tvpropeller, 0, _tvx, _tvy + _float);
+};
+draw_sprite(tvbgsprite, 0, _tvx, _tvy + _float);
+draw_sprite((!staticdraw) ? tvsprite : savedsprite, image_index, _tvx, _tvy + _float);
+draw_sprite(spr_tvframe, 0, _tvx, _tvy + _float);
 if global.panic
 {
-	draw_sprite_ext(spr_tv_panicline, paniclineimageindex, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+	draw_sprite(spr_tv_panicline, paniclineimageindex, _tvx, _tvy + _float);
 	paniclineimageindex += 0.35
 }
 if (staticdraw)
 {
-	draw_sprite_ext(spr_tvtransition, transitionimageindex, 832, 74 + DrawY, 1, 1, 0, c_white, 1);
+	draw_sprite(spr_tvtransition, transitionimageindex, _tvx, _tvy + _float);
 	transitionimageindex += 0.35
 	if transitionimageindex >= 9
 	{
@@ -108,12 +112,12 @@ pal_swap_reset();
 if global.combohudtype != combotype.verticalcombo
 	draw_sprite_ext(invsprite, image_index, 700, 57 + DrawY, 1, 1, 0, c_white, 1);
 if global.combohudtype == combotype.democombo
-	draw_sprite_ext(spr_tvcomboshadow, image_index, 832, 74 + DrawY, 1, 1, 0, c_white, combofade);
+	draw_sprite_ext(spr_tvcomboshadow, image_index, _tvx, _tvy + _float, 1, 1, 0, c_white, combofade);
 if (global.combotime > 0 && global.combo > 0)
 {
 	if global.combohudtype == combotype.democombo
 	{
-		draw_sprite_ext(spr_tvcombo, image_index, 832, 74, 1, 1, 0, c_white, alpha);
+		draw_sprite_ext(spr_tvcombo, image_index, _tvx, 74 + _float, 1, 1, 0, c_white, alpha);
 		draw_set_font(global.combofontOLD);
 		draw_set_halign(fa_center);
 		draw_set_color(c_white);
@@ -130,7 +134,7 @@ if (global.combotime > 0 && global.combo > 0)
 				_xx += irandom_range(-2, 2);
 				_yy += irandom_range(-2, 2);
 			}
-			draw_text_color(838 + _xx, 50 + _yy, string_char_at(_combo, i + 1), c_white, c_white, c_white, c_white, alpha);
+			draw_text_color(838 + _xx, 50 + _yy + _float, string_char_at(_combo, i + 1), c_white, c_white, c_white, c_white, alpha);
 		}
 		if(!surface_exists(BarSurfaceD1))
 			BarSurfaceD1 = surface_create(112, 32);
@@ -148,8 +152,8 @@ if (global.combotime > 0 && global.combo > 0)
 			gpu_set_blendmode(bm_normal);
 			surface_reset_target();
 			BarX += (-0.5 + (0.45 * (global.combofreeze / 30)));
-			draw_surface_ext(BarSurfaceD1, 763, 107, 1, 1, 0, c_white, alpha);
-			draw_sprite_ext(spr_barpop, 0, 763, 107, 1, 1, 0, c_white, alpha);
+			draw_surface_ext(BarSurfaceD1, 763, 107 + _float, 1, 1, 0, c_white, alpha);
+			draw_sprite_ext(spr_barpop, 0, 763, 107 + _float, 1, 1, 0, c_white, alpha);
 		}
 	}
 	animation_image_index += 0.35;
