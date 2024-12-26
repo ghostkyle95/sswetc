@@ -54,6 +54,7 @@ animation_image_index = 0;
 transitionimageindex = 0;
 paniclineimageindex = 0;
 meterimageindex = 0;
+propeller_index = 0;
 tvbgsprite = spr_tvbg_hub;
 function scr_combotext(_combo = global.combo)
 {
