@@ -6,12 +6,12 @@ draw_text(xi, yi, string_hash_to_newline(message));
 if (global.levelname == "none") exit;
 var comboclampedtime = clamp(global.combotime, 0, 60)
 
-struct_foreach(animation, function(_name, _value) { with (_value) {
-	if !is_undefined(valid) {
-		image_index = 0;
+struct_foreach(animation, function(_name, _value) { 
+	with (_value) {
 		if valid image_index += image_speed;
-	} else image_index += image_speed;
-}});
+		else image_index = 0;
+	}
+});
 
 if global.combotime > 0 && global.combo > 0 
 {

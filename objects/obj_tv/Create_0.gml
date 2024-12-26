@@ -51,9 +51,7 @@ global.newhudtvanim = ds_queue_create();
 //alarm[1] = 1;
 DrawY = 0;
 
-var _index = function(_val = undefined, _spd = 0.35) constructor {
-	valid = _val; image_index = 0; image_speed = _spd; return;
-};
+var _index = function(_val, _spd = 0.35) constructor { valid = !_val; image_index = 0; image_speed = _spd; return; };
 animation = {
 	drain : new _index(global.combotime > 0 && global.combo > 0),
 	change : new _index(staticdraw),
