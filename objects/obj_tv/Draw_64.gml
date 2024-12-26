@@ -8,7 +8,7 @@ var comboclampedtime = clamp(global.combotime, 0, 60)
 
 struct_foreach(animation, function(_name, _value) { with (_value) {
 	if !is_undefined(valid) {
-		image_index = 0
+		image_index = 0;
 		if valid image_index += image_speed;
 	} else image_index += image_speed;
 }});
