@@ -98,8 +98,8 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			tvsprite = _idlespr;
 			OLDtvsprite = tvsprite;
 		break;
-		case states.mach2: tvsprite = machtvspr;
-		case states.mach3: tvsprite = mach3tvspr if (obj_player.movespeed > 20) _idlespr = crazyruntvspr;
+		case states.mach2: tvsprite = machtvspr; break;
+		case states.mach3: tvsprite = mach3tvspr if (obj_player.movespeed > 20) _idlespr = crazyruntvspr; break;
 		case states.minecart: tvsprite = minecarttvspr; break;
 		case states.fireass: tvsprite = firetvspr; break;
 		case states.bombpep: tvsprite = bombtvspr; break;
