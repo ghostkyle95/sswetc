@@ -865,7 +865,7 @@ function scr_characterspr()
 			// vertical
 			spr_uppercutbegin = spr_playerN_doublejump;
 			spr_uppercutend = spr_playerN_doublejumpfall;
-			spr_wallbounce = spr_playerN_mach2jump;
+			spr_wallbounce = spr_playerN_noisebombspinjump;
 			
 			// divebomb
 			spr_divebombstart = spr_playerN_bodyslamstart;

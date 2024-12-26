@@ -123,7 +123,8 @@ enum states {
 	doisebounce, // 120
 	cape, // 121
 	gumbobwallbounce, // 122
-	gumbobwallstick // 123
+	gumbobwallstick, // 123
+	doiserocketjump // 124
 };
 
 
@@ -503,6 +504,9 @@ function scr_playerstate()
 			break;
 		case states.gumbobwallbounce:
 			_stateFunction = scr_gumbob_wallbounce;
+			break;
+		case states.doiserocketjump:
+			_stateFunction = scr_doise_rocketjump();
 			break;
 	}
 	stateName = "states.undefined";

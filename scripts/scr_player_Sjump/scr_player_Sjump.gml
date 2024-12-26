@@ -93,6 +93,7 @@ function scr_player_Sjump()
 					charged = false;
 					sprite_index = spr_superjumpprepside;
 					image_index = 0;
+					image_speed = 0.5;
 					movespeed = 0;
 					vsp = 0;
 					mach2 = 0;

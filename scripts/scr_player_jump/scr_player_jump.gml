@@ -51,6 +51,7 @@ function scr_player_jump()
 		flash = true;
 		charged = false;
 		sprite_index = spr_superjumpprepside;
+		image_speed = 0.5;
 		image_index = 0;
 		movespeed = 0;
 		vsp = 0;
