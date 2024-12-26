@@ -6,6 +6,13 @@ draw_text(xi, yi, string_hash_to_newline(message));
 if (global.levelname == "none") exit;
 var comboclampedtime = clamp(global.combotime, 0, 60)
 
+struct_foreach(animation, function(_name, _value) { with (_value) {
+	if !is_undefined(valid) {
+		image_index = 0
+		if valid image_index += image_speed;
+	} else image_index += image_speed;
+}});
+
 if global.combotime > 0 && global.combo > 0 
 {
 	showcombo = true;
@@ -29,7 +36,7 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 		{
 			surface_set_target(BarSurfaceV)
 			draw_clear_alpha(c_black, 0);
-			draw_sprite_ext(spr_comboverticalgoo, animation_image_index, 0, -(comboclampedtime - 45), 1, 1, 0, c_white, 1);
+			draw_sprite_ext(spr_comboverticalgoo, animation.drain.image_index, 0, -(comboclampedtime - 45), 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite_ext(spr_comboverticalsubtract, 0, 0, 0, 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_normal);
@@ -47,14 +54,13 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 	}
 	else if global.combohudtype == combotype.horizontalcombo
 	{
-		meterimageindex += 0.35
 		if (!surface_exists(BarSurface))
 			BarSurface = surface_create(sprite_get_width(spr_combofront), sprite_get_height(spr_combofront))
 		else
 		{
 			surface_set_target(BarSurface)
 			draw_clear_alpha(c_black, 0);
-			draw_sprite_ext(!global.combodropped ? spr_combogoopNEWP : spr_combogoopNEW, animation_image_index, (comboclampedtime - 40) * 2.5, 200, 1, 1, 0, c_white, 1);
+			draw_sprite_ext(!global.combodropped ? spr_combogoopNEWP : spr_combogoopNEW, animation.drain.image_index, (comboclampedtime - 40) * 2.5, 200, 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite_ext(spr_combomask, 0, 0, 0, 1, 1, 0, c_white, 1);
 			gpu_set_blendmode(bm_normal);
@@ -62,7 +68,7 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 				
 			draw_sprite_ext(spr_comboback, -1, 699 + combo_posX, -60 + DrawY + ComboY, 1, 1, 0, c_white, 1);
 			draw_surface_ext(BarSurface, 699 + combo_posX, -60 + DrawY + ComboY, 1, 1, 0, c_white, alpha);
-			draw_sprite_ext(spr_combofront, meterimageindex, 699 + combo_posX, -60 + DrawY + ComboY, 1, 1, 0, c_white, 1);
+			draw_sprite_ext(spr_combofront, animation.meter.image_index, 699 + combo_posX, -60 + DrawY + ComboY, 1, 1, 0, c_white, 1);
 			draw_sprite_ext(spr_combotext, -1, 699 + combo_posX, -60 + DrawY + ComboY, 1, 1, 0, c_white, 1);
 				
 			draw_set_font(global.combofont);
@@ -87,26 +93,17 @@ pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
 var _tvx = 832, _tvy = 74 + DrawY, _float = 0;
 if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon && global.combohudtype != combotype.horizontalcombo) {
 	_float = wave(2, -2, 3, 0);
-	propeller_index += 0.3;
-	draw_sprite(spr_tvpropeller, propeller_index, _tvx, _tvy + _float);
+	draw_sprite(spr_tvpropeller, animation.propeller.image_index, _tvx, _tvy + _float);
 };
 draw_sprite(tvbgsprite, 0, _tvx, _tvy + _float);
 draw_sprite((!staticdraw) ? tvsprite : savedsprite, image_index, _tvx, _tvy + _float);
-if global.panic
-{
-	draw_sprite(spr_tv_panicline, paniclineimageindex, _tvx, _tvy + _float);
-	paniclineimageindex += 0.35
-}
-if (staticdraw)
-{
-	draw_sprite(spr_tvtransition, transitionimageindex, _tvx, _tvy + _float);
-	transitionimageindex += 0.35
-	if transitionimageindex >= 9
-	{
-		staticdraw = false;
-		transitionimageindex = 0;
-	}
-}
+
+if global.panic draw_sprite(spr_tv_panicline, animation.panic.image_index, _tvx, _tvy + _float);
+if staticdraw {
+	draw_sprite(spr_tvtransition, animation.change.image_index, _tvx, _tvy + _float);
+	if (animation.change.image_index >= 9) staticdraw = false;
+};
+
 draw_sprite(spr_tvframe, 0, _tvx, _tvy + _float);
 if (global.combohudtype != combotype.verticalcombo) draw_sprite(invsprite, 0, 700, 57 + DrawY);
 pal_swap_reset();
@@ -156,7 +153,4 @@ if (global.combotime > 0 && global.combo > 0)
 			draw_sprite_ext(spr_barpop, 0, 763, 107 + _float, 1, 1, 0, c_white, alpha);
 		}
 	}
-	animation_image_index += 0.35;
 }
-else if (chooseOnecomboend)
-	animation_image_index = 0;

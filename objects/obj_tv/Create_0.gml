@@ -50,11 +50,20 @@ tvlength = 0;
 global.newhudtvanim = ds_queue_create();
 //alarm[1] = 1;
 DrawY = 0;
-animation_image_index = 0;
-transitionimageindex = 0;
-paniclineimageindex = 0;
-meterimageindex = 0;
-propeller_index = 0;
+
+var _index = function(_val = undefined, _spd = 0.35) constructor {
+	valid = _val; image_index = 0; image_speed = _spd; return;
+};
+animation = {
+	drain : new _index(global.combotime > 0 && global.combo > 0),
+	change : new _index(staticdraw),
+	panic : new _index(global.panic),
+	meter : new _index(global.combohudtype == combotype.horizontalcombo),
+	propeller : new _index(tvsprite != spr_tvoff && tvsprite != spr_tvturnon && 
+	global.combohudtype != combotype.horizontalcombo)
+};
+
+
 tvbgsprite = spr_tvbg_hub;
 function scr_combotext(_combo = global.combo)
 {
