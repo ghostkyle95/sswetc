@@ -101,7 +101,7 @@ draw_sprite((!staticdraw) ? tvsprite : savedsprite, image_index, _tvx, _tvy + _f
 if global.panic draw_sprite(spr_tv_panicline, animation.panic.image_index, _tvx, _tvy + _float);
 if staticdraw {
 	draw_sprite(spr_tvtransition, animation.change.image_index, _tvx, _tvy + _float);
-	if (animation.change.image_index >= 9) staticdraw = false;
+	if animation_end(animation.change.image_index, sprite_get_number(spr_tvtransition)) staticdraw = false;
 };
 
 draw_sprite(spr_tvframe, 0, _tvx, _tvy + _float);

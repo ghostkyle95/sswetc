@@ -58,11 +58,10 @@ animation = {
 	panic : new _index(global.panic),
 	meter : new _index(global.combohudtype == combotype.horizontalcombo),
 	propeller : new _index(tvsprite != spr_tvoff && tvsprite != spr_tvturnon && 
-	global.combohudtype != combotype.horizontalcombo)
+	global.combohudtype != combotype.horizontalcombo, 0.3)
 };
-
-
 tvbgsprite = spr_tvbg_hub;
+
 function scr_combotext(_combo = global.combo)
 {
 	var sprite = spr_badcombo_intro;

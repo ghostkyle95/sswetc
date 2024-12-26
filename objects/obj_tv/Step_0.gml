@@ -167,7 +167,7 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 	}
 	if (OLDtvsprite != tvsprite && tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != spr_tvoff && tvsprite != spr_tvturnon && tvsprite != spr_tvoff_nopropeller && tvsprite != spr_tvturnon_nopropeller)
 	{
-		transitionimageindex = 0;
+		animation.change.image_index = 0;
 		staticdraw = true;
 		savedsprite = OLDtvsprite;
 		OLDtvsprite = tvsprite;
@@ -182,7 +182,7 @@ if (tvlength > 0)
 {
 	if (OLDtvsprite != tvsprite && tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != spr_tvoff && tvsprite != spr_tvturnon && tvsprite != spr_tvoff_nopropeller && tvsprite != spr_tvturnon_nopropeller)
 	{
-		transitionimageindex = 0;
+		animation.change.image_index = 0;
 		staticdraw = true;
 		savedsprite = OLDtvsprite;
 		OLDtvsprite = tvsprite;
