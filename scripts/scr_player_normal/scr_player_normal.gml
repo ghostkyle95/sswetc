@@ -377,7 +377,4 @@ function scr_player_normal()
 			state = states.handstandjump;
 		}
 	}
-	if (key_shoot2 && key_up && breakdanceammo > 0)
-	{
-	}
 }
