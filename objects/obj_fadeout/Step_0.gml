@@ -1,14 +1,11 @@
 if (fadealpha > 1)
 {
 	fadein = true;
+	obj_tv.message = "";
 	if (instance_exists(obj_player))
 	{
-		if (room_exists(obj_player.targetRoom))
-		{
-			room_goto(obj_player.targetRoom);
-		}
-		else
-			room_goto(rm_missing);
+		if (room_exists(obj_player.targetRoom)) room_goto(obj_player.targetRoom);
+		else room_goto(rm_missing);
 	}
 }
 if (!fadein)
