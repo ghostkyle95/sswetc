@@ -2621,7 +2621,6 @@
     {"id":{"name":"spr_playerSW_rageidle","path":"sprites/spr_playerSW_rageidle/spr_playerSW_rageidle.yy",},},
     {"id":{"name":"spr_baddiespawnerspawn","path":"sprites/spr_baddiespawnerspawn/spr_baddiespawnerspawn.yy",},},
     {"id":{"name":"sfx_swabneutral3","path":"sounds/sfx_swabneutral3/sfx_swabneutral3.yy",},},
-    {"id":{"name":"scr_removeallescapeobstacles","path":"scripts/scr_removeallescapeobstacles/scr_removeallescapeobstacles.yy",},},
     {"id":{"name":"spr_playerN_glide","path":"sprites/spr_playerN_glide/spr_playerN_glide.yy",},},
     {"id":{"name":"spr_playerN_fireass","path":"sprites/spr_playerN_fireass/spr_playerN_fireass.yy",},},
     {"id":{"name":"spr_rankSWA","path":"sprites/spr_rankSWA/spr_rankSWA.yy",},},

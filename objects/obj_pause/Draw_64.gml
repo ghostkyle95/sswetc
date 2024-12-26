@@ -20,6 +20,13 @@ for (var _i = 0; _i < array_length(_options); _i++) {
 	draw_text(_options[_i].x + 100, _options[_i].y + 40, _options[_i].name);
 };
 
+// pizzelle
+pal_swap_set(spr_pal, palette, 0);
+draw_sprite(spr_pizzelle_pause, global.panic, 686, 285);
+shader_reset();
+
+if (global.levelname == "none") exit;
+
 // confecti
 draw_sprite(spr_pauseconfecti1, global.mallowfollow, 0, 0);
 draw_sprite(spr_pauseconfecti2, global.chocofollow, 0, 0);
@@ -27,14 +34,7 @@ draw_sprite(spr_pauseconfecti3, global.crackfollow, 0, 0);
 draw_sprite(spr_pauseconfecti4, global.wormfollow, 0, 0);
 draw_sprite(spr_pauseconfecti5, global.candyfollow, 0, 0);
 
-// pizzelle
-pal_swap_set(spr_pal, palette, 0);
-draw_sprite(spr_pizzelle_pause, global.panic, 686, 285);
-shader_reset();
-
 // time
-if (global.levelname != "none") {
-	draw_set_halign(fa_center);
-	var _bullshit = (global.playseconds < 10 ? "0" : "");
-	draw_text(86, 32, $"{global.playminutes}:{_bullshit}{global.playseconds}");
-} else { global.playminutes = 0; global.playseconds = 0; };
+draw_set_halign(fa_center);
+var _bullshit = (global.playseconds < 10 ? "0" : "");
+draw_text(86, 32, $"{global.playminutes}:{_bullshit}{global.playseconds}");

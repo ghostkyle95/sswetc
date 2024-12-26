@@ -1,5 +1,3 @@
-bgx++;
-bgy++;
 if (selected == 0)
 {
 	scr_getinput();

@@ -1,6 +1,6 @@
 draw_set_halign(fa_center);
 draw_set_font(global.font);
-draw_sprite_tiled(bg_options, 0, bgx, bgy);
+draw_sprite_tiled(bg_options, 0, x++, y++);
 
 var _xpos = instance_exists(obj_Options_Modded) ? 50 : 250;
 draw_sprite_ext(spr_arrow, -1, _xpos, CursorY + 24, 1, 1, 0, c_white, 1);
