@@ -65,50 +65,39 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 {
 	switch (obj_player.state)
 	{
+		// normal
 		default:
-			// enviornment check
-			var _idlespr = idletvspr;
-			if global.panic _idlespr = panictvspr;
-			if _secret _idlespr = secrettvspr;
+			tvsprite = idletvspr;
 			
-			// animate idle
-			if (_idlespr == idletvspr) {
-				var _change = (tvsprite == tvchange1 || tvsprite == tvchange2);
-				if (tvsprite != idletvspr && !_change) {
-					tvcount = choose(500, 450, 400, 550);
-					tvsprite = idletvspr;
-					image_index = 0;
-				};
-				if (tvsprite == idletvspr && tvcount < 1) {
-					tvsprite = choose(tvchange1, tvchange2);
-					image_index = 0;
-				};
-				if (_change && animation_end()) {
-					tvcount = choose(500, 450, 400, 550);
-					tvsprite = idletvspr;
-					image_index = 0;
-				};
-				if (tvsprite == idletvspr) tvcount--;
-			};
+			// enviornment check
+			if global.panic tvsprite = panictvspr;
+			if _secret tvsprite = secrettvspr;
 			
 			// emotion check
-			if (global.combo < 3) _idlespr = combotvspr;
-			if obj_player.angry _idlespr = angrytvspr;
+			if obj_player.angry tvsprite = angrytvspr;
+			else if (global.combo >= 3) tvsprite = combotvspr;
+			
+			OLDtvsprite = tvsprite;
+			break;
+		case states.mach2: case states.machslide: case states.climbwall: case states.mach3:
+			tvsprite = machtvspr;
 			
 			// speed check
-			if (obj_player.movespeed >= 6) _idlespr = machtvspr;
-			else if (obj_player.movespeed >= 12) _idlespr = mach3tvspr;
-			else if (obj_player.movespeed > 20) _idlespr = crazyruntvspr;
+			if (obj_player.movespeed >= 12) tvsprite = mach3tvspr;
+			else if (obj_player.movespeed > 20) tvsprite = crazyruntvspr;
 			
-			tvsprite = _idlespr;
 			OLDtvsprite = tvsprite;
-		break;
+			break;
+		
+		// transformations
 		case states.minecart: tvsprite = minecarttvspr; break;
 		case states.fireass: tvsprite = firetvspr; break;
 		case states.bombpep: tvsprite = bombtvspr; break;
 		case states.fling: tvsprite = orbtvspr; break;
 		case states.cotton: case states.cottondrill: case states.cottonroll:
 			tvsprite = cottontvspr; break;
+		
+		// misc.
 		case states.puddle: tvsprite = sliptvspr; break;
 		case states.hurt: tvsprite = hurttvspr; break;
 		case states.freefallland: case states.Sjumpland: tvsprite = impacttvspr; break;
