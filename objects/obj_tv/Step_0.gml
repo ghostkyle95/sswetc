@@ -78,7 +78,7 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			else if (global.combo >= 3) tvsprite = combotvspr;
 			
 			OLDtvsprite = tvsprite;
-			break;
+		break;
 		case states.mach2: case states.machslide: case states.climbwall: case states.mach3:
 			tvsprite = machtvspr;
 			
@@ -87,7 +87,7 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			else if (obj_player.movespeed > 20) tvsprite = crazyruntvspr;
 			
 			OLDtvsprite = tvsprite;
-			break;
+		break;
 		
 		// transformations
 		case states.minecart: tvsprite = minecarttvspr; break;
