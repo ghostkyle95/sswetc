@@ -92,17 +92,14 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 			};
 			
 			// emotion check
-			if (global.combo < 3) _idlespr = combotvspr;
+			if (global.combo >= 3) _idlespr = combotvspr;
 			if obj_player.angry _idlespr = angrytvspr;
-			
-			// speed check
-			if (obj_player.movespeed >= 6) _idlespr = machtvspr;
-			else if (obj_player.movespeed >= 12) _idlespr = mach3tvspr;
-			else if (obj_player.movespeed > 20) _idlespr = crazyruntvspr;
 			
 			tvsprite = _idlespr;
 			OLDtvsprite = tvsprite;
 		break;
+		case states.mach2: tvsprite = machtvspr;
+		case states.mach3: tvsprite = mach3tvspr if (obj_player.movespeed > 20) _idlespr = crazyruntvspr;
 		case states.minecart: tvsprite = minecarttvspr; break;
 		case states.fireass: tvsprite = firetvspr; break;
 		case states.bombpep: tvsprite = bombtvspr; break;
