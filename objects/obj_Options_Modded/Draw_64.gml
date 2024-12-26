@@ -7,11 +7,11 @@ optionsaved_debug, ["OFF", "ON"], global.debugmode);
 draw_option_ext(90, 175, "COMBO HUD TYPE", optionselected == modded_selected.combotype, 
 optionsaved_combotype, ["DEMO 1", "VERTICAL", "HORIZONTAL"], global.selectedCombo);
 
-draw_option_ext(90, 250, "IMPACT JUMP", optionselected == modded_selected.impactJump, 
-optionsaved_impactJump, ["OFF", "ON"], global.impactJump);
+draw_option_ext(90, 250, "IMPACT JUMP", optionselected == modded_selected.impactjump, 
+optionsaved_impactjump, ["OFF", "ON"], global.impactjump);
 
-draw_option_ext(90, 325, "BUFFED UPPERCUT", optionselected == modded_selected.buffedUppercut, 
-optionsaved_buffedUppercut, ["OFF", "ON"], global.buffedUppercut);
+draw_option_ext(90, 325, "BUFFED UPPERCUT", optionselected == modded_selected.buffeduppercut, 
+optionsaved_buffeduppercut, ["OFF", "ON"], global.buffeduppercut);
 
 draw_set_halign(fa_center);
 draw_option(150, 30, "BACK", optionselected == modded_selected.back);

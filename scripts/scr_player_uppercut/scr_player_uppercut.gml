@@ -9,15 +9,12 @@ function scr_player_uppercut()
 	}
 	if (scr_solid(x + sign(hsp), y) && !scr_slope_ext(x + xscale, y) && move != 0)
 		movespeed = 0;
+	hsp = approach(hsp, (xscale * movespeed), 1)
 	move = key_left + key_right;
-	if (move == 0)
-		hsp = xscale * movespeed;
-	else
-		hsp = move * movespeed;
 	if (move != 0)
 	{
 		xscale = move;
-		if global.buffedUppercut
+		if global.buffeduppercut
 		{
 			if (movespeed < 4)
 				movespeed += 0.4;

@@ -69,32 +69,32 @@ if (canmove)
 				global.selectedCombo = optionsaved_combotype;
 			}
 			break;
-		case modded_selected.impactJump:
+		case modded_selected.impactjump:
 			subtitle = "TOGGLES OLD BODYSLAM LAND";
 			CursorY = 250;
-			optionsaved_impactJump += (key_right2 + key_left2);
-			optionsaved_impactJump = wrap(optionsaved_impactJump, 0, 1);
+			optionsaved_impactjump += (key_right2 + key_left2);
+			optionsaved_impactjump = wrap(optionsaved_impactjump, 0, 1);
 			if (key_jump)
 			{
 				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
-				ini_write_real("Settings", "impactJump", optionsaved_impactJump);
+				ini_write_real("Settings", "impactjump", optionsaved_impactjump);
 				ini_close();
-				global.impactJump = optionsaved_impactJump;
+				global.impactjump = optionsaved_impactjump;
 			}
 			break;
-		case modded_selected.buffedUppercut:
+		case modded_selected.buffeduppercut:
 			subtitle = "TOGGLES BUFFED UPPERCUT";
 			CursorY = 325;
-			optionsaved_buffedUppercut += (key_right2 + key_left2);
-			optionsaved_buffedUppercut = wrap(optionsaved_buffedUppercut, 0, 1);
+			optionsaved_buffeduppercut += (key_right2 + key_left2);
+			optionsaved_buffeduppercut = wrap(optionsaved_buffeduppercut, 0, 1);
 			if (key_jump)
 			{
 				scr_sound(sfx_enemythrow);
 				ini_open("optionData.ini");
-				ini_write_real("Settings", "buffedUppercut", optionsaved_buffedUppercut);
+				ini_write_real("Settings", "buffeduppercut", optionsaved_buffeduppercut);
 				ini_close();
-				global.buffedUppercut = optionsaved_buffedUppercut;
+				global.buffeduppercut = optionsaved_buffeduppercut;
 			}
 			break;
 	}

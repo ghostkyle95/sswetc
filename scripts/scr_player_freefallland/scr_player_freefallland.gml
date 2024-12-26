@@ -18,7 +18,7 @@ function scr_player_freefallland()
 		vsp = 0;
 	if (floor(image_index) == (image_number - 1))
 	{
-		if (global.impactJump == true)
+		if (global.impactjump == true)
 		{
 			sprite_index = spr_machfreefall;
 			vsp = -8;
