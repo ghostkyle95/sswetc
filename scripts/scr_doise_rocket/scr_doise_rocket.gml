@@ -158,9 +158,18 @@ function scr_doise_rocketjump()
 		state = states.jetpackdoise;
 	}
 	
-    if (grounded && vsp >= 0 && sprite_index == spr_wallbounce)
-    {
-        state = states.normal
-        movespeed = abs(hsp)
-    }
+	if (grounded && vsp >= 0 && sprite_index == spr_wallbounce) {
+		if key_attack {
+			jumpstop = true
+			sprite_index = spr_mach4
+			state = states.mach3
+			movespeed = 12
+			flash = true
+			image_index = 0;
+			with instance_create(x, y, obj_crazyrunothereffect) image_xscale = other.xscale
+		} else {
+			state = states.normal;
+			movespeed = abs(hsp);
+		}
+	}
 }
