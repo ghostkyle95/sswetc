@@ -52,143 +52,89 @@ else
 	DrawY = lerp(DrawY, 0, 0.15);
 	alpha = 1;
 }
-if ((global.hurtcounter >= global.hurtmilestone) && global.hurtcounter != 0 && global.hurtmilestone != 0)
-{
-	alarm[0] = 150;
-	if (obj_player.character == CHARACTERS.PIZZELLE)
-		character = "Pizelle";
-	else if (obj_player.character == CHARACTERS.PIZZANO)
-		character = "The Pizzano";
-	else if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == false)
-		character = "The Noise";
-	else if (obj_player.character == CHARACTERS.NOISE && obj_player.doisemode == true)
-		character = "The Doise";
-	else if (obj_player.character == CHARACTERS.SWAB)
-		character = "Swab";
-	message = "You have hurt " + string(character) + " " + string(global.hurtmilestone) + " times...";
-	global.hurtmilestone += 10;
-}
+
 if (obj_player.state == states.keyget)
 {
 	showtext = true;
 	message = "Key obtained!";
 	alarm[0] = 50;
 }
+
+var _secret = (string_count("secret", room_get_name(room)) != 0);
 if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
 {
 	switch (obj_player.state)
 	{
 		default:
-			if !global.panic
-			{
-				if !(global.combo >= 3)
-					if (!obj_player.angry)
-					{
-						if (string_pos("secret", room_get_name(room)) != 0)
-						{
-							tvcount = choose(500, 450, 400, 550);
-							tvsprite = secrettvspr;
-						}
-						else
-						{
-							if (tvsprite != idletvspr && !(tvsprite == tvchange1 || tvsprite == tvchange2))
-							{
-								tvcount = choose(500, 450, 400, 550);
-								tvsprite = idletvspr;
-								image_index = 0;
-							}
-							if (tvsprite == idletvspr && tvcount < 1)
-							{
-								tvsprite = choose(tvchange1, tvchange2, tvchange2, tvchange1);
-								image_index = 0;
-							}
-							if ((tvsprite == tvchange1 || tvsprite == tvchange2) && animation_end())
-							{
-								tvcount = choose(500, 450, 400, 550);
-								tvsprite = idletvspr;
-								image_index = 0;
-							}
-							if (tvsprite == idletvspr)
-								tvcount--;
-						}
-					}
-					else
-					{
-						tvsprite = angrytvspr;
-					}
-				else
-				{
-					tvsprite = combotvspr;
-				}
-			}
-			else
-			{
-				tvsprite = panictvspr;
-			}
-			break;
-		case states.minecart:
-			tvsprite = minecarttvspr;
-			break;
-		case states.fireass:
-			tvsprite = firetvspr;
-			break;
-		case states.bombpep:
-			tvsprite = bombtvspr;
-			break;
-		case states.fling:
-			tvsprite = orbtvspr;
-			break;
-		case states.cotton:
-		case states.cottondrill:
-		case states.cottonroll:
-			tvsprite = cottontvspr;
-			break;
-		case states.mach2:
-		case states.machslide:
-		case states.climbwall:
-		case states.mach3:
-			if (obj_player.state == states.mach3 && obj_player.sprite_index != obj_player.spr_crazyrun)
-				tvsprite = mach3tvspr;
-			else if (obj_player.sprite_index == obj_player.spr_crazyrun)
-				tvsprite = crazyruntvspr
-			else
-				tvsprite = machtvspr;
-			break;
-		case states.puddle:
-			tvsprite = sliptvspr;
-			break;
-		case states.hurt:
-			tvsprite = hurttvspr;
-			break;
-		case states.freefallland:
-		case states.Sjumpland:
-			tvsprite = impacttvspr;
-			break;
-	}
-	if (OLDtvsprite != tvsprite && tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != spr_tvoff && tvsprite != spr_tvturnon && tvsprite != spr_tvoff_nopropeller && tvsprite != spr_tvturnon_nopropeller)
-	{
-		animation.change.image_index = 0;
+			// enviornment check
+			var _idlespr = idletvspr;
+			if global.panic _idlespr = panictvspr;
+			if _secret _idlespr = secrettvspr;
+			
+			// animate idle
+			if (_idlespr == idletvspr) {
+				var _change = (tvsprite == tvchange1 || tvsprite == tvchange2);
+				if (tvsprite != idletvspr && !_change) {
+					tvcount = choose(500, 450, 400, 550);
+					tvsprite = idletvspr;
+					image_index = 0;
+				};
+				if (tvsprite == idletvspr && tvcount < 1) {
+					tvsprite = choose(tvchange1, tvchange2);
+					image_index = 0;
+				};
+				if (_change && animation_end()) {
+					tvcount = choose(500, 450, 400, 550);
+					tvsprite = idletvspr;
+					image_index = 0;
+				};
+				if (tvsprite == idletvspr) tvcount--;
+			};
+			
+			// emotion check
+			if (global.combo < 3) _idlespr = combotvspr;
+			if obj_player.angry _idlespr = angrytvspr;
+			
+			// speed check
+			if (obj_player.movespeed >= 6) _idlespr = machtvspr;
+			else if (obj_player.movespeed >= 12) _idlespr = mach3tvspr;
+			else if (obj_player.movespeed > 20) _idlespr = crazyruntvspr;
+			
+			tvsprite = _idlespr;
+			OLDtvsprite = tvsprite;
+		break;
+		case states.minecart: tvsprite = minecarttvspr; break;
+		case states.fireass: tvsprite = firetvspr; break;
+		case states.bombpep: tvsprite = bombtvspr; break;
+		case states.fling: tvsprite = orbtvspr; break;
+		case states.cotton: case states.cottondrill: case states.cottonroll:
+			tvsprite = cottontvspr; break;
+		case states.puddle: tvsprite = sliptvspr; break;
+		case states.hurt: tvsprite = hurttvspr; break;
+		case states.freefallland: case states.Sjumpland: tvsprite = impacttvspr; break;
+	};
+	
+	// draw static
+	if (OLDtvsprite != tvsprite) {
 		staticdraw = true;
 		savedsprite = OLDtvsprite;
 		OLDtvsprite = tvsprite;
-	}
+	};
 }
 else if (tvsprite != spr_tvturnon && tvsprite != spr_tvturnon_nopropeller && ds_queue_size(global.newhudtvanim) > 1)
 {
 	tvsprite = ds_queue_dequeue(global.newhudtvanim);
 	tvlength = ds_queue_dequeue(global.newhudtvanim);
 }
-if (tvlength > 0)
+
+if (tvlength > 0 && OLDtvsprite != tvsprite)
 {
-	if (OLDtvsprite != tvsprite && tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != spr_tvoff && tvsprite != spr_tvturnon && tvsprite != spr_tvoff_nopropeller && tvsprite != spr_tvturnon_nopropeller)
-	{
-		animation.change.image_index = 0;
-		staticdraw = true;
-		savedsprite = OLDtvsprite;
-		OLDtvsprite = tvsprite;
-	}
+	staticdraw = true;
+	savedsprite = OLDtvsprite;
+	OLDtvsprite = tvsprite;
 }
 tvlength--;
+
 if (global.key_inv)
 	invsprite = spr_invkey;
 else if (global.treat)
@@ -200,16 +146,14 @@ if ((tvsprite == spr_tvturnon || tvsprite == spr_tvturnon_nopropeller) && floor(
 sprite_index = tvsprite;
 global.combotime = clamp(global.combotime, 0, 60);
 
+// background sprite
 switch global.levelname {
-	case "entryway":
-		tvbgsprite = (global.panic ? spr_tvbg_wafer_panic : spr_tvbg_wafer); break;
-	case "steamy":
-		tvbgsprite = (global.panic ? spr_tvbg_steamy_panic : spr_tvbg_steamy); break;
-	case "molasses":
-		tvbgsprite = (global.panic ? spr_tvbg_mlass_panic : spr_tvbg_mlass); break;
-	case "mines":
-		tvbgsprite = (global.panic ? spr_tvbg_mines_panic : spr_tvbg_mines); break;
 	default: tvbgsprite = spr_tvbg_hub; break;
+	case "entryway": tvbgsprite = spr_tvbg_wafer; break;
+	case "steamy": tvbgsprite = spr_tvbg_steamy; break;
+	case "molasses": tvbgsprite = spr_tvbg_mlass; break;
+	case "mines": tvbgsprite = spr_tvbg_mines; break;
 };
-var _letters = string_letters(room_get_name(room));
-if string_ends_with(_letters, "secret") tvbgsprite = spr_tvbg_secret;
+if _secret tvbgsprite = spr_tvbg_secret; 
+var _panicbg = asset_get_index($"{tvbgsprite}_panic");
+if (global.panic && sprite_exists(_panicbg)) tvbgsprite = _panicbg;
