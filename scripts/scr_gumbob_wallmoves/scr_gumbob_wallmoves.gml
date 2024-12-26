@@ -55,13 +55,6 @@ function scr_gumbob_wallbounce(){
 		freefallsmash = false;
 	}
 	
-	if (key_down && !place_meeting(x, y, obj_dashpad) && !grounded && sprite_index != spr_dive)
-	{
-		flash = false;
-		state = states.machroll;
-		vsp = 10;
-	}
-	
 	if (grounded)
 	{
 		if (key_attack)
