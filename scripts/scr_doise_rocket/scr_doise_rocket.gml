@@ -132,6 +132,7 @@ function scr_doise_rocket()
 	}
 	image_speed = 0.35;
 }
+
 function scr_doise_rocketjump()
 {
 	sprite_index = spr_wallbounce;
@@ -144,7 +145,7 @@ function scr_doise_rocketjump()
 		xscale *= -1
 	}
 	
-	if key_attack && !grounded
+	if (key_attack2 && !grounded)
 	{
 		flash = true;
 		charged = false;
@@ -157,18 +158,7 @@ function scr_doise_rocketjump()
 		state = states.jetpackdoise;
 	}
 	
-    if (grounded && key_attack && vsp >= 0 && sprite_index == spr_wallbounce)
-    {
-        jumpstop = true
-        sprite_index = spr_mach4
-        state = states.mach3
-        movespeed = 12
-        flash = true
-        image_index = 0
-        with (instance_create(x, y, obj_crazyrunothereffect))
-            image_xscale = other.xscale
-    }
-    if (grounded && vsp >= 0 && !key_attack && sprite_index == spr_wallbounce)
+    if (grounded && vsp >= 0 && sprite_index == spr_wallbounce)
     {
         state = states.normal
         movespeed = abs(hsp)

@@ -1,3 +1,4 @@
+obj_tv.message = "";
 if (!fadein)
 {
 	fadealpha = approach(fadealpha, 1, 0.1);
