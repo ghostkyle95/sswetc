@@ -57,9 +57,10 @@ if (!_offspr && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
 	{
 		// normal
 		default:
-			tvsprite = idletvspr;
+			if (tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != idletvspr)
+				tvsprite = idletvspr;
 			
-			if (tvsprite == idletvspr) {
+			if (tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite == idletvspr) {
 				tvcount--;
 				if (tvcount <= 0) {
 					tvsprite = choose(tvchange1, tvchange2);
