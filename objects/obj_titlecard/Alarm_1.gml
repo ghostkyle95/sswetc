@@ -1,5 +1,7 @@
 // noise stickers
 
+if obj_player.character != CHARACTERS.NOISE return;
+
 var add_spot = function(argument0, argument1, argument2) //gml_Script_anon_gml_Object_obj_titlecard_Alarm_1_74_gml_Object_obj_titlecard_Alarm_1
 {
     var q = 
