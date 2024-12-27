@@ -13,6 +13,10 @@ struct_foreach(animation, function(_name, _value) {
 	}
 });
 
+
+
+
+#region COMBO STUFF
 if global.combotime > 0 && global.combo > 0 
 {
 	showcombo = true;
@@ -88,9 +92,16 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 		}
 	}
 }
+#endregion
 
-// draw tv
+
+
+
+
+#region tv stuff
+
 var _tvx = 693, _tvy = -60 + DrawY, _float = 0;
+
 if (string_count("turnon", sprite_get_name(sprite_index)) == 0 && 
 string_count("off", sprite_get_name(sprite_index)) == 0) {
 	if global.combohudtype != combotype.horizontalcombo
@@ -131,6 +142,14 @@ var _doise = (obj_player.doisemode || obj_player.character >= CHARACTERS.SWAB);
 pal_swap_set(spr_paltv, obj_player.character + real(_doise), 0)
 draw_sprite(((string_count("turnon", sprite_get_name(sprite_index)) == 0) ? spr_tvframe : spr_tvturnon_frame), image_index, _tvx, _tvy + _float);
 pal_swap_reset();
+
+#endregion
+
+
+
+
+
+#region COMBO STUFF 2: ELECTRIC BOOGALOO
 
 if (global.combohudtype != combotype.verticalcombo) draw_sprite(invsprite, 0, 700, 57 + DrawY);
 
@@ -180,3 +199,5 @@ if (global.combotime > 0 && global.combo > 0)
 		}
 	}
 }
+
+#endregion
