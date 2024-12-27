@@ -93,8 +93,11 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 var _tvx = 832, _tvy = 74 + DrawY, _float = 0;
 if (string_count("turnon", sprite_get_name(sprite_index)) == 0 && 
 string_count("off", sprite_get_name(sprite_index)) == 0) {
-	_float = wave(2, -2, 3, 0);
-	draw_sprite(spr_tvpropeller, animation.propeller.image_index, _tvx, _tvy + _float);
+	if global.combohudtype != combotype.horizontalcombo
+	{
+		_float = wave(2, -2, 3, 0);
+		draw_sprite(spr_tvpropeller, animation.propeller.image_index, _tvx, _tvy + _float);
+	}
 };
 
 draw_sprite(tvbgsprite, 0, _tvx, _tvy + _float);
