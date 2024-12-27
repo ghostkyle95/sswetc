@@ -47,27 +47,27 @@ var _change = function() {
 		staticdraw = true;
 		savedsprite = OLDtvsprite;
 		OLDtvsprite = tvsprite;
-	};
-}, _offspr = (tvsprite == spr_tvturnon || tvsprite == spr_tvturnon_nopropeller);
+	}
+};
 
 // change sprite (this is where all the MAGIC happens)
-if (!_offspr && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
+if (string_count("turnon", sprite_get_name(sprite_index)) == 0 && 
+ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
 {
 	switch (obj_player.state)
 	{
 		// normal
 		default:
-			if (tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite != idletvspr)
-				tvsprite = idletvspr;
-			
-			if (tvsprite != tvchange1 && tvsprite != tvchange2 && tvsprite == idletvspr) {
-				tvcount--;
-				if (tvcount <= 0) {
-					tvsprite = choose(tvchange1, tvchange2);
-					image_index = 0;
-				};
-			};
-			if ((tvsprite == tvchange1 || tvsprite == tvchange2) && animation_end()) {
+			if (tvsprite != tvchange1 && tvsprite != tvchange2) {
+				if (tvsprite != idletvspr) tvsprite = idletvspr;
+				else {
+					tvcount--;
+					if (tvcount <= 0) {
+						tvsprite = choose(tvchange1, tvchange2);
+						image_index = 0;
+					}
+				}
+			} else if animation_end() {
 				tvcount = choose(500, 450, 400, 550);
 				tvsprite = idletvspr;
 				image_index = 0;
@@ -84,7 +84,6 @@ if (!_offspr && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
 		case states.mach2: case states.machslide: case states.climbwall: case states.mach3:
 			tvsprite = machtvspr;
 			
-			// speed check
 			if (obj_player.movespeed >= 12) tvsprite = mach3tvspr;
 			if (obj_player.sprite_index == obj_player.spr_crazyrun) tvsprite = crazyruntvspr;
 			
@@ -106,7 +105,8 @@ if (!_offspr && ds_queue_size(global.newhudtvanim) < 1 && tvlength <= 0)
 	};
 	_change();
 }
-else if (!_offspr && ds_queue_size(global.newhudtvanim) > 1)
+else if (string_count("turnon", sprite_get_name(sprite_index)) == 0 && 
+ds_queue_size(global.newhudtvanim) > 1)
 {
 	tvsprite = ds_queue_dequeue(global.newhudtvanim);
 	tvlength = ds_queue_dequeue(global.newhudtvanim);
@@ -118,6 +118,6 @@ invsprite = spr_invempty;
 if global.key_inv invsprite = spr_invkey;
 else if global.treat invsprite = spr_invdonut;
 
-if (_offspr && animation_end()) tvsprite = idletvspr;
+if (string_count("turnon", sprite_get_name(sprite_index)) != 0 && animation_end()) tvsprite = idletvspr;
 sprite_index = tvsprite;
 global.combotime = clamp(global.combotime, 0, 60);

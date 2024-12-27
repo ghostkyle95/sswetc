@@ -1138,6 +1138,7 @@
     {"id":{"name":"spr_playerN_suplexmash1","path":"sprites/spr_playerN_suplexmash1/spr_playerN_suplexmash1.yy",},},
     {"id":{"name":"spr_slope2","path":"sprites/spr_slope2/spr_slope2.yy",},},
     {"id":{"name":"scr_playerN_hookshot","path":"scripts/scr_playerN_hookshot/scr_playerN_hookshot.yy",},},
+    {"id":{"name":"spr_paltv","path":"sprites/spr_paltv/spr_paltv.yy",},},
     {"id":{"name":"scr_playerreset","path":"scripts/scr_playerreset/scr_playerreset.yy",},},
     {"id":{"name":"sfx_escapecollectbig","path":"sounds/sfx_escapecollectbig/sfx_escapecollectbig.yy",},},
     {"id":{"name":"scr_player_bossdefeat","path":"scripts/scr_player_bossdefeat/scr_player_bossdefeat.yy",},},

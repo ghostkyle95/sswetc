@@ -991,6 +991,7 @@
     {"name":"spr_playerN_suplexmash1","order":156,"path":"sprites/spr_playerN_suplexmash1/spr_playerN_suplexmash1.yy",},
     {"name":"spr_slope2","order":5,"path":"sprites/spr_slope2/spr_slope2.yy",},
     {"name":"scr_playerN_hookshot","order":111,"path":"scripts/scr_playerN_hookshot/scr_playerN_hookshot.yy",},
+    {"name":"spr_paltv","order":8,"path":"sprites/spr_paltv/spr_paltv.yy",},
     {"name":"scr_playerreset","order":1,"path":"scripts/scr_playerreset/scr_playerreset.yy",},
     {"name":"sfx_escapecollectbig","order":4,"path":"sounds/sfx_escapecollectbig/sfx_escapecollectbig.yy",},
     {"name":"scr_player_bossdefeat","order":17,"path":"scripts/scr_player_bossdefeat/scr_player_bossdefeat.yy",},
