@@ -33,7 +33,7 @@ yi = approach(yi, showtext ? 475 : 675, showtext ? 5 : 1);
 
 var _collide = (obj_player.y < 180 + obj_camera.Cam_y && obj_player.x > view_hport[0] - 350 + obj_camera.Cam_x);
 DrawY = lerp(DrawY, _collide ? -300 : 0, 0.15);
-alpha = (_collide ? 0.5 : 0);
+alpha = (_collide ? 0.5 : 1);
 
 if (obj_player.state == states.keyget) {
 	showtext = true;
