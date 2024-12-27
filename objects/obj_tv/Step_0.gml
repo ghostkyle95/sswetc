@@ -4,8 +4,8 @@ event_user(0);
 // rank requirement
 if (room == asset_get_index($"{global.levelname}_1")) {
 	switch global.levelname {
-		case "entryway": global.srank = 22000; break;
-		case "steamy": global.srank = 10000; break;
+		case "entryway": global.srank = 14000; break;
+		case "steamy": global.srank = 22000; break;
 		case "molasses": global.srank = 21000; break;
 		case "mines": global.srank = 24000; break;
 	};

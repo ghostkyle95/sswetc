@@ -34,6 +34,7 @@ character = "PIZZELLE";
 BarSurface = -4;
 BarSurfaceV = -4;
 BarSurfaceD1 = -4;
+TVSurface = -4;
 BarX = 0;
 tvcount = 500;
 draw_combo = false;

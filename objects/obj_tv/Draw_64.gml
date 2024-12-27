@@ -90,7 +90,7 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 }
 
 // draw tv
-var _tvx = 832, _tvy = 74 + DrawY, _float = 0;
+var _tvx = 693, _tvy = -60 + DrawY, _float = 0;
 if (string_count("turnon", sprite_get_name(sprite_index)) == 0 && 
 string_count("off", sprite_get_name(sprite_index)) == 0) {
 	if global.combohudtype != combotype.horizontalcombo
@@ -101,8 +101,25 @@ string_count("off", sprite_get_name(sprite_index)) == 0) {
 };
 
 draw_sprite(tvbgsprite, 0, _tvx, _tvy + _float);
-pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
-draw_sprite((!staticdraw) ? tvsprite : savedsprite, image_index, _tvx, _tvy + _float);
+
+if (!surface_exists(TVSurface))
+	TVSurface = surface_create(sprite_get_width(spr_tv_mask), sprite_get_height(spr_tv_mask))
+else
+{
+	surface_set_target(TVSurface)
+	draw_clear_alpha(c_black, 0);
+	
+	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
+	draw_sprite_ext((!staticdraw) ? tvsprite : savedsprite, image_index, 0, 0, 1, 1, 0, c_white, 1);
+	pal_swap_reset()
+	gpu_set_blendmode(bm_subtract);
+	
+	draw_sprite_ext((string_count("turnon", sprite_get_name(tvsprite)) == 0) ? spr_tvturnon_mask : spr_tv_mask, 0, 0, 0, 1, 1, 0, c_white, 1);
+	gpu_set_blendmode(bm_normal);
+	surface_reset_target();
+	
+	draw_surface(TVSurface, _tvx, _tvy + _float)
+}
 if global.panic draw_sprite(spr_tv_panicline, animation.panic.image_index, _tvx, _tvy + _float);
 if staticdraw {
 	draw_sprite(spr_tvtransition, animation.change.image_index, _tvx, _tvy + _float);
@@ -110,10 +127,9 @@ if staticdraw {
 };
 
 var _doise = (obj_player.doisemode || obj_player.character >= CHARACTERS.SWAB);
+
 pal_swap_set(spr_paltv, obj_player.character + real(_doise), 0)
-if (string_count("turnon", sprite_get_name(sprite_index)) == 0 && 
-string_count("off", sprite_get_name(sprite_index)) == 0)
-	draw_sprite(spr_tvframe, 0, _tvx, _tvy + _float);
+draw_sprite(((string_count("turnon", sprite_get_name(sprite_index)) == 0) ? spr_tvframe : spr_tvturnon_frame), image_index, _tvx, _tvy + _float);
 pal_swap_reset();
 
 if (global.combohudtype != combotype.verticalcombo) draw_sprite(invsprite, 0, 700, 57 + DrawY);
