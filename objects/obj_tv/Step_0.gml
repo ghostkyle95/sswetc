@@ -67,7 +67,26 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 	{
 		// normal
 		default:
-			tvsprite = idletvspr;
+			// tv anims
+			if (!(tvsprite == tvchange1 || tvsprite == tvchange2) && tvsprite != idletvspr) // checks for if the sprite isnt idle tv spr and sets it, so no need for the sprite set at the start
+			{
+				tvcount = choose(500, 450, 400, 550);
+				tvsprite = idletvspr;
+				image_index = 0;
+			}
+			if (tvsprite == idletvspr && tvcount < 1)
+			{
+				tvsprite = choose(tvchange1, tvchange2, tvchange2, tvchange1);
+				image_index = 0;
+			}
+			if ((tvsprite == tvchange1 || tvsprite == tvchange2) && animation_end())
+			{
+				tvcount = choose(500, 450, 400, 550);
+				tvsprite = idletvspr;
+				image_index = 0;
+			}
+			if (tvsprite == idletvspr)
+				tvcount--;
 			
 			// enviornment check
 			if global.panic tvsprite = panictvspr;
@@ -106,6 +125,7 @@ if (tvsprite != spr_tvturnon && ds_queue_size(global.newhudtvanim) < 1 && tvleng
 	// draw static
 	if (OLDtvsprite != tvsprite) {
 		staticdraw = true;
+		animation.change.image_index = 0;
 		savedsprite = OLDtvsprite;
 		OLDtvsprite = tvsprite;
 	};
@@ -119,6 +139,7 @@ else if (tvsprite != spr_tvturnon && tvsprite != spr_tvturnon_nopropeller && ds_
 if (tvlength > 0 && OLDtvsprite != tvsprite)
 {
 	staticdraw = true;
+	animation.change.image_index = 0;
 	savedsprite = OLDtvsprite;
 	OLDtvsprite = tvsprite;
 }
