@@ -143,6 +143,15 @@ pal_swap_set(spr_paltv, obj_player.character + real(_doise), 0)
 draw_sprite(((string_count("turnon", sprite_get_name(sprite_index)) == 0) ? spr_tvframe : spr_tvturnon_frame), image_index, _tvx, _tvy + _float);
 pal_swap_reset();
 
+// little section for sprites that go outside the tv frame
+
+if tvsprite == spr_pizzanotv_angry && !staticdraw
+{
+	pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
+	draw_sprite_ext(spr_pizzanotv_angry, image_index, _tvx, _tvy + _float, 1, 1, 0, c_white, 1);
+	pal_swap_reset()
+}
+
 #endregion
 
 
