@@ -1936,6 +1936,7 @@
     {"name":"spr_swed_chargestart","order":2,"path":"sprites/spr_swed_chargestart/spr_swed_chargestart.yy",},
     {"name":"spr_swedscared","order":4,"path":"sprites/spr_swedscared/spr_swedscared.yy",},
     {"name":"spr_noisetv_fire","order":9,"path":"sprites/spr_noisetv_fire/spr_noisetv_fire.yy",},
+    {"name":"spr_titlecard_noise","order":10,"path":"sprites/spr_titlecard_noise/spr_titlecard_noise.yy",},
     {"name":"ts_newhub_sprite","order":19,"path":"sprites/ts_newhub_sprite/ts_newhub_sprite.yy",},
     {"name":"spr_playerN_taunt","order":163,"path":"sprites/spr_playerN_taunt/spr_playerN_taunt.yy",},
     {"name":"spr_swedstun","order":5,"path":"sprites/spr_swedstun/spr_swedstun.yy",},

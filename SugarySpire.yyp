@@ -2166,6 +2166,7 @@
     {"id":{"name":"spr_swed_chargestart","path":"sprites/spr_swed_chargestart/spr_swed_chargestart.yy",},},
     {"id":{"name":"spr_swedscared","path":"sprites/spr_swedscared/spr_swedscared.yy",},},
     {"id":{"name":"spr_noisetv_fire","path":"sprites/spr_noisetv_fire/spr_noisetv_fire.yy",},},
+    {"id":{"name":"spr_titlecard_noise","path":"sprites/spr_titlecard_noise/spr_titlecard_noise.yy",},},
     {"id":{"name":"ts_newhub_sprite","path":"sprites/ts_newhub_sprite/ts_newhub_sprite.yy",},},
     {"id":{"name":"spr_playerN_taunt","path":"sprites/spr_playerN_taunt/spr_playerN_taunt.yy",},},
     {"id":{"name":"spr_swedstun","path":"sprites/spr_swedstun/spr_swedstun.yy",},},

@@ -13,3 +13,6 @@ titlecardx = -1930
 titlecardtitley = -1090
 titlecardtitlex = -1930
 bobbingtitle = 0
+noisehead = [];
+noisespots = [];
+alarm[1] = 1;

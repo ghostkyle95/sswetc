@@ -3,6 +3,19 @@ if (start)
 	draw_sprite(titlecard_sprite, titlecard_index, titlecardx, 0);
 	var s = 1;
 	draw_sprite(title_sprite, title_index, titlecardtitlex, titlecardtitley + bobbingtitle);
+	
+	for (var i = 0; i < array_length(noisehead); i++)
+    {
+        var head = noisehead[i]
+        if (!head.visible)
+        {
+        }
+        else
+        {
+            head.visual_scale = approach(head.visual_scale, 1, 0.25)
+            draw_sprite_ext(spr_titlecard_noise, head.image_index, head.x, head.y, (head.scale * head.visual_scale), (head.scale * head.visual_scale), 0, c_white, 1)
+        }
+    }
 }
 if (!instance_exists(obj_fadeout))
 	draw_set_alpha(fadealpha);
