@@ -88,14 +88,14 @@ if !(global.combotime < 0 && global.combo < 0) && showcombo && ComboY > ((global
 		}
 	}
 }
-
-pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
 var _tvx = 832, _tvy = 74 + DrawY, _float = 0;
 if (tvsprite != spr_tvoff && tvsprite != spr_tvturnon && global.combohudtype != combotype.horizontalcombo) {
 	_float = wave(2, -2, 3, 0);
 	draw_sprite(spr_tvpropeller, animation.propeller.image_index, _tvx, _tvy + _float);
 };
 draw_sprite(tvbgsprite, 0, _tvx, _tvy + _float);
+
+pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
 draw_sprite((!staticdraw) ? tvsprite : savedsprite, image_index, _tvx, _tvy + _float);
 
 if global.panic draw_sprite(spr_tv_panicline, animation.panic.image_index, _tvx, _tvy + _float);
@@ -104,9 +104,12 @@ if staticdraw {
 	if animation_end(animation.change.image_index, sprite_get_number(spr_tvtransition)) staticdraw = false;
 };
 
-draw_sprite(spr_tvframe, 0, _tvx, _tvy + _float);
-if (global.combohudtype != combotype.verticalcombo) draw_sprite(invsprite, 0, 700, 57 + DrawY);
+if !(tvsprite == spr_tvturnon || tvsprite == spr_tvturnon_nopropeller) && (tvsprite == spr_tvoff || tvsprite == spr_tvoff_nopropeller)
+	draw_sprite(spr_tvframe, 0, _tvx, _tvy + _float);
+	
 pal_swap_reset();
+	
+if (global.combohudtype != combotype.verticalcombo) draw_sprite(invsprite, 0, 700, 57 + DrawY);
 
 if global.combohudtype == combotype.democombo
 	draw_sprite_ext(spr_tvcomboshadow, image_index, _tvx, _tvy + _float, 1, 1, 0, c_white, combofade);
