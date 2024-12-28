@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 9,
   "parent": {
-    "name": "Titlecards",
-    "path": "folders/Sprites/Titlecards.yy",
+    "name": "Levels",
+    "path": "folders/Sprites/Titlecards/Levels.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
