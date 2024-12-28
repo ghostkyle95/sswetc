@@ -28,6 +28,14 @@ switch (titlecard_sprite)
 		add_spot(280, 330, 1.5);
 		add_spot(450, 430, 1.2);
 	break;
+	case (spr_molassestitlecard):
+		add_spot(310, 425, 1.5);
+		add_spot(300, 100, 2);
+	break;
+	case (spr_sugarshacktitlecard):
+		add_spot(540, 335, 1.5);
+		add_spot(485, 80, 1.7);
+	break;
 }
 
 for (i = 0; i < array_length(noisespots); i++)

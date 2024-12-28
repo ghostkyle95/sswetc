@@ -13,7 +13,9 @@ if (start)
         else
         {
             head.visual_scale = approach(head.visual_scale, 1, 0.25)
+			pal_swap_set(obj_player.spr_palette, obj_player.paletteselect, 0);
             draw_sprite_ext(spr_titlecard_noise, head.image_index, head.x, head.y, (head.scale * head.visual_scale), (head.scale * head.visual_scale), 0, c_white, 1)
+			pal_swap_reset()
         }
     }
 }
