@@ -926,6 +926,7 @@
     {"name":"scr_player_keyget","order":61,"path":"scripts/scr_player_keyget/scr_player_keyget.yy",},
     {"name":"scr_player_knightpep","order":62,"path":"scripts/scr_player_knightpep/scr_player_knightpep.yy",},
     {"name":"scr_player_knightpepattack","order":63,"path":"scripts/scr_player_knightpepattack/scr_player_knightpepattack.yy",},
+    {"name":"spr_rudy_taunt","order":5,"path":"sprites/spr_rudy_taunt/spr_rudy_taunt.yy",},
     {"name":"spr_playerSW_grindland","order":42,"path":"sprites/spr_playerSW_grindland/spr_playerSW_grindland.yy",},
     {"name":"scr_player_knightpepslopes","order":64,"path":"scripts/scr_player_knightpepslopes/scr_player_knightpepslopes.yy",},
     {"name":"spr_playerN_cheesedland","order":36,"path":"sprites/spr_playerN_cheesedland/spr_playerN_cheesedland.yy",},

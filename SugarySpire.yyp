@@ -1073,6 +1073,7 @@
     {"id":{"name":"scr_player_keyget","path":"scripts/scr_player_keyget/scr_player_keyget.yy",},},
     {"id":{"name":"scr_player_knightpep","path":"scripts/scr_player_knightpep/scr_player_knightpep.yy",},},
     {"id":{"name":"scr_player_knightpepattack","path":"scripts/scr_player_knightpepattack/scr_player_knightpepattack.yy",},},
+    {"id":{"name":"spr_rudy_taunt","path":"sprites/spr_rudy_taunt/spr_rudy_taunt.yy",},},
     {"id":{"name":"spr_playerSW_grindland","path":"sprites/spr_playerSW_grindland/spr_playerSW_grindland.yy",},},
     {"id":{"name":"scr_player_knightpepslopes","path":"scripts/scr_player_knightpepslopes/scr_player_knightpepslopes.yy",},},
     {"id":{"name":"spr_playerN_cheesedland","path":"sprites/spr_playerN_cheesedland/spr_playerN_cheesedland.yy",},},
